@@ -1,6 +1,9 @@
 %\documentclass[UTF8]{ctexart} % use larger type; default would be 10pt
 \documentclass[a4paper]{article}
 \usepackage{xeCJK}
+%\usepackage{ctex}
+%\usepackage{luatexja-fontspec}
+%\setmainjfont{FandolSong}
 %\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
 
 %%% Examples of Article customizations
@@ -10,7 +13,7 @@
 %%% PAGE DIMENSIONS
 \usepackage{geometry} % to change the page dimensions
 \geometry{a4paper} % or letterpaper (US) or a5paper or....
-\geometry{margin=1in} % for example, change the margins to 2 inches all round
+% \geometry{margin=2in} % for example, change the margins to 2 inches all round
 % \geometry{landscape} % set up the page for landscape
 %   read geometry.pdf for detailed page layout information
 
@@ -63,48 +66,38 @@
 \usepackage{empheq}
 \usepackage{extarrows}
 \usepackage{textcomp}
-\usepackage{fontspec}
+\usepackage{mhchem}
 \usepackage{braket}
 \usepackage{siunitx}
-\sisetup{
-	separate-uncertainty = true,
-	inter-unit-product = \ensuremath{{}\cdot{}}
-}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz-feynman}
+\usepackage{feynmp}
+
 
 \DeclareMathOperator{\p}{\prime}
 \DeclareMathOperator{\ti}{\times}
-\DeclareMathOperator{\intinf}{\int_0^\infty}
-\DeclareMathOperator{\intdinf}{\int_{-\infty}^\infty}
-\DeclareMathOperator{\intzpi}{\int_0^\pi}
-\DeclareMathOperator{\intztpi}{\int_0^{2\pi}}
-\DeclareMathOperator{\suminf}{\sum_{n=1}^{\infty}}
-\DeclareMathOperator{\suminfz}{\sum_{n=0}^\infty}
-\DeclareMathOperator{\sumkinf}{\sum_{k=1}^{\infty}}
-\DeclareMathOperator{\sumkinfz}{\sum_{k=0}^\infty}
+
 \DeclareMathOperator{\e}{\mathrm{e}}
 \DeclareMathOperator{\I}{\mathrm{i}}
 \DeclareMathOperator{\Arg}{\mathrm{Arg}}
+\newcommand{\NA}{N_\mathrm{A}}
+\newcommand{\kB}{k_\mathrm{B}}
+
 \DeclareMathOperator{\ra}{\rightarrow}
 \DeclareMathOperator{\llra}{\longleftrightarrow}
 \DeclareMathOperator{\lra}{\longrightarrow}
-\DeclareMathOperator{\dlra}{\Leftrightarrow}
-\DeclareMathOperator{\dra}{\Rightarrow}
+\DeclareMathOperator{\dlra}{\;\Leftrightarrow\;}
+\DeclareMathOperator{\dra}{\;\Rightarrow\;}
+
+%%%%%%%%%%%% QUANTUM MECHANICS %%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\bkk}[1]{\Braket{#1|#1}}
 \newcommand{\bk}[2]{\Braket{#1|#2}}
 \newcommand{\bkev}[2]{\Braket{#2|#1|#2}}
 
+\DeclareMathOperator{\na}{\bm{\nabla}}
+\DeclareMathOperator{\nna}{\nabla^2}
+\DeclareMathOperator{\drrr}{\dd[3]\vb{r}}
 
-
-\DeclareMathOperator{\hV}{\hat{\vb{V}}}
-
-\DeclareMathOperator{\hx}{\hat{\vb{x}}}
-\DeclareMathOperator{\hy}{\hat{\vb{y}}}
-\DeclareMathOperator{\hz}{\hat{\vb{z}}}
-
-\DeclareMathOperator{\hA}{\hat{\vb{A}}}
-
-\DeclareMathOperator{\hQ}{\hat{\vb{Q}}}
-\DeclareMathOperator{\hI}{\hat{\vb{I}}}
 \DeclareMathOperator{\psis}{\psi^\ast}
 \DeclareMathOperator{\Psis}{\Psi^\ast}
 \DeclareMathOperator{\hi}{\hat{\vb{i}}}
@@ -113,105 +106,82 @@
 \DeclareMathOperator{\hr}{\hat{\vb{r}}}
 \DeclareMathOperator{\hT}{\hat{\vb{T}}}
 \DeclareMathOperator{\hH}{\hat{H}}
-\DeclareMathOperator{\hh}{\hat{h}}               % helicity
+
 \DeclareMathOperator{\hL}{\hat{\vb{L}}}
 \DeclareMathOperator{\hp}{\hat{\vb{p}}}
-
+\DeclareMathOperator{\hx}{\hat{\vb{x}}}
 \DeclareMathOperator{\ha}{\hat{\vb{a}}}
 \DeclareMathOperator{\hS}{\hat{\vb{S}}}
 \DeclareMathOperator{\hSigma}{\hat{\bm\Sigma}}
 \DeclareMathOperator{\hJ}{\hat{\vb{J}}}
-\DeclareMathOperator{\hP}{\hat{\vb{P}}}          % Parity
-\DeclareMathOperator{\hC}{\hat{\vb{C}}} 
+
 \DeclareMathOperator{\Tdv}{-\dfrac{\hbar^2}{2m}\dv[2]{x}}
 \DeclareMathOperator{\Tna}{-\dfrac{\hbar^2}{2m}\nabla^2}
-\DeclareMathOperator{\vna}{\vnabla}
-\DeclareMathOperator{\nna}{\nabla^2}
-\newcommand{\naCarExpd}[1]{\pdv[2]{#1}{x} + \pdv[2]{#1}{y} + \pdv[2]{#1}{z}}
-\newcommand{\naCyl}{\qty[\dfrac{1}{\rho}\pdv{\rho}\qty(\rho\pdv{\rho}) + \dfrac{1}{\rho^2}\pdv[2]{\phi} + \pdv[2]{z}]}
 
-%\DeclareMathOperator{\g#0}{\gamma^0}
-%\DeclareMathOperator{\g1}{\gamma^1}
-%\DeclareMathOperator{\g2}{\gamma^2}
-%\DeclareMathOperator{\g3}{\gamma^3}
+%\DeclareMathOperator{\s}{\sum_{n=1}^{\infty}}
+\DeclareMathOperator{\intinf}{\int_0^\infty}
+\DeclareMathOperator{\intdinf}{\int_{-\infty}^\infty}
+%\DeclareMathOperator{\suminf}{\sum_{n=0}^\infty}
+\DeclareMathOperator{\sumnzinf}{\sum_{n=0}^\infty}
+\DeclareMathOperator{\sumnoinf}{\sum_{n=1}^\infty}
+\DeclareMathOperator{\sumndinf}{\sum_{n=-\infty}^\infty}
+\DeclareMathOperator{\sumizinf}{\sum_{i=0}^\infty}
+
+%%%%%%%%%%%%%%%%% PARTICLE PHYSICS %%%%%%%%%%%%%%%%
+\DeclareMathOperator{\hh}{\hat{h}}               % helicity
+\DeclareMathOperator{\hP}{\hat{\vb{P}}}          % Parity
+\DeclareMathOperator{\hU}{\hat{U}}
+\DeclareMathOperator{\hG}{\hat{G}}
+
+\DeclareMathOperator{\GeV}{\si{GeV}}
+\DeclareMathOperator{\LI}{\mathscr{L}.I.}
 %\DeclareMathOperator{\g5}{\gamma^5}
-\newcommand{\g}[1]{\gamma^{#1}}
 \DeclareMathOperator{\gmuu}{\gamma^\mu}
 \DeclareMathOperator{\gmud}{\gamma_\mu}
-\newcommand{\G}[2]{g^{#1#2}}
+\DeclareMathOperator{\gnuu}{\gamma^\nu}
+\DeclareMathOperator{\gnud}{\gamma_\nu}
 
-\newcommand{\subsbul}{\subsection*{$ \bullet $}}
-\newcommand{\ex}[1]{\paragraph{Ex #1}}
-\newcommand{\subex}[1]{\subparagraph{#1}}
+\renewcommand{\u}{\mathrm{u}}
+\renewcommand{\d}{\mathrm{d}}
+\DeclareMathOperator{\s}{\mathrm{s}}
+
+\DeclareMathOperator{\q}{\mathrm{q}}
+\DeclareMathOperator{\bq}{\bar{\mathrm{q}}}
+
+\DeclareMathOperator{\g}{\mathrm{g}}
+\DeclareMathOperator{\W}{\mathrm{W}}
+\DeclareMathOperator{\Z}{\mathrm{Z}}
+
+%%% Feynman Diagram
+\newcommand{\pa}{particle}
+\newcommand{\mo}{momentum}
+\newcommand{\el}{edge label}
+
 \newcommand{\dis}{\displaystyle}
 \numberwithin{equation}{section}
-%\allowdisplaybreaks[4]
 
-\title{\textbf{Modern Quantum Chemistry, Szabo \& Ostlund}\\HW}
-\author{王石嵘
-\vspace{5pt}\\
-%161240065\\
-%Email: shirong\_wang@berkeley.edu
-}
-\date{\today} % Activate to display a given date or no date (if empty),
+\title{Notes of \textbf{Modern Quantum Chemistry, Szabo \& Ostlund}}
+\author{hebrewsnabla}
+%\date{} % Activate to display a given date or no date (if empty),
          % otherwise the current date is printed 
 
 \begin{document}
 % \boldmath
-
 \maketitle
 
 \tableofcontents
 
 \newpage
 
-%\setcounter{section}{1}
-\section{Mathematical Review}
-\subsection{Linear Algebra}
-\subsubsection{3-D Vector Algebra}
-\ex{1.1}
-\subex{a)}
-\begin{equation}\label{key}
-\mathcal{O}\vb{e}_j = \sum_{i=1}^3 \vb{e}_i O_{ij}
-\end{equation}
-\begin{equation}\label{key}
-\vb{e}_i \cdot \mathcal{O}\vb{e}_j = \vb{e}_i \cdot \sum_{i=1}^3 \vb{e}_i O_{ij} = O_{ij}
-\end{equation}
-\subex{b)}
-\begin{equation}\label{key}
-\begin{aligned}
-\vb{b} &= \mathcal{O}\vb{a} = \sum_{i=1}^3 a_i\sum_{j=1}^3 \vb{e}_jO_{ji}\\
-&=\sum_{j=1}^3 a_j\sum_{i=1}^3 \vb{e}_iO_{ij} = \sum_{i=1}^3 \vb{e}_i\sum_{j=1}^3 a_jO_{ij}
-\end{aligned}
-\end{equation}
-thus
-\begin{equation}\label{key}
-\vb{b}_i = \sum_{j=1}^3 a_jO_{ij}
-\end{equation}
-
-\ex{1.2}
-\begin{equation}\label{key}
-[\vb{A},\vb{B}] = \mqty[0& -2& 4\\2& 0& 3\\-4& -3& 0]
-\end{equation}
-\begin{equation}\label{key}
-\{\vb{A},\vb{B}\} = \mqty[0& 0& -2\\0& -2& 3\\-2& 3& -2]
-\end{equation}
-
-\subsubsection{Matrices}
-\ex{1.3}
-\begin{equation}\label{key}
-(AB)_{nk} = \sum_m^M A_{nm}B_{mk}
-\end{equation}
-\begin{equation}\label{key}
-(AB)^\dagger_{kn} = (AB)_{nk}^* = \sum_m^M A_{nm}^*B_{mk}^* = \sum_m^M B^\dagger_{km} A^\dagger_{mn} = (B^\dagger A^\dagger)_{kn}
-\end{equation}
-thus
-\begin{equation}\label{key}
-(\vb{A}\vb{B})^\dagger = \vb{B}^\dagger \vb{A}^\dagger
-\end{equation}
-
-\ex{1.4}
-\subex{a.}
-
+\setcounter{section}{0}
+spatial mol orb -- $ \psi $ -- $ i,j,k,... $\\
+spatial basis fxn -- $ \phi $ -- $ \mu,\nu,\lambda,... $\\
+spin orb -- $ \chi $\\
+occ mol orb -- $ a,b,c,... $\\
+vir mol orb -- $ r,s,t,... $\\
+exact many-elec wfn -- $ \Phi $\\
+approx many-elec wfn -- $ \Psi $\\
+exact energy -- $ \mathscr{E} $\\
+approx energy -- $ E $
 
 \end{document}
