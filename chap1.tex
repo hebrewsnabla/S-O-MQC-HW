@@ -144,6 +144,7 @@
 \newcommand{\ex}[1]{\paragraph{Ex #1}}
 \newcommand{\subex}[1]{\subparagraph{#1}}
 \newcommand{\dis}{\displaystyle}
+\newcommand{\iden}{{\large \bm{1}}}
 \numberwithin{equation}{section}
 %\allowdisplaybreaks[4]
 
@@ -212,6 +213,43 @@ thus
 
 \ex{1.4}
 \subex{a.}
+suppose $ \vb{A} $ is $ N\cross M $ and $ \vb{B} $ is $ M\cross N $
+\begin{equation}\label{key}
+\tr \vb{A}\vb{B} = \sum_n^N (AB)_{nn} = \sum_n^N \sum_m^M A_{nm}B_{mn} = \sum_m^M\sum_n^N  B_{mn}A_{nm} = \sum_m^M (BA)_{mm} = \tr \vb{B}\vb{A}
+\end{equation}
+\subex{b.}
+\begin{equation}\label{key}
+\vb{AB}(\vb{AB})^{-1} = \iden
+\end{equation}
+\begin{equation}\label{key}
+\vb{B}^{-1}\vb{A}^{-1}\vb{A}\vb{B}(\vb{AB})^{-1} = \vb{B}^{-1}\vb{A}^{-1}\iden
+\end{equation}
+\begin{equation}\label{key}
+\vb{B}^{-1}(\vb{A}^{-1}\vb{A})\vb{B}(\vb{AB})^{-1} = \vb{B}^{-1}\vb{A}^{-1}
+\end{equation}
+\begin{equation}\label{key}
+\vb{B}^{-1} \iden \vb{B}(\vb{AB})^{-1} = \vb{B}^{-1}\vb{A}^{-1}
+\end{equation}
+thus
+\begin{equation}\label{key}
+(\vb{AB})^{-1} = \vb{B}^{-1}\vb{A}^{-1}
+\end{equation}
+\subex{c.}
+\begin{equation}\label{key}
+\vb{B} = \vb{U}^\dagger \vb{A} \vb{U}
+\end{equation}
+\begin{equation}\label{key}
+\vb{U} \vb{B} \vb{U}^\dagger = \vb{U} \vb{U}^\dagger \vb{A} \vb{U} \vb{U}^\dagger = \iden \vb{A} \iden = \vb{A}
+\end{equation}
+\subex{d.}
+$ \because \vb{C}$ is Hermitian, $ \therefore $
+\begin{equation}\label{key}
+\vb{C} = \vb{C}^\dagger
+\end{equation}
+\begin{equation}\label{key}
+\vb{A}\vb{B} = (\vb{A}\vb{B})^\dagger
+\end{equation}
+
 
 
 \end{document}
