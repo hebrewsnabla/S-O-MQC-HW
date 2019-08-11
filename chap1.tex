@@ -237,7 +237,7 @@ thus
 \subex{c.}
 \begin{equation}\label{key}
 \vb{B} = \vb{U}^\dagger \vb{A} \vb{U}
-\end{equation}
+\end{equation}huhhj
 \begin{equation}\label{key}
 \vb{U} \vb{B} \vb{U}^\dagger = \vb{U} \vb{U}^\dagger \vb{A} \vb{U} \vb{U}^\dagger = \iden \vb{A} \iden = \vb{A}
 \end{equation}
@@ -247,9 +247,59 @@ $ \because \vb{C}$ is Hermitian, $ \therefore $
 \vb{C} = \vb{C}^\dagger
 \end{equation}
 \begin{equation}\label{key}
-\vb{A}\vb{B} = (\vb{A}\vb{B})^\dagger
+\vb{A}\vb{B} = (\vb{A}\vb{B})^\dagger = \vb{B}^\dagger \vb{A}^\dagger
+\end{equation}
+Since $ \vb{A} $, $ \vb{B} $ are Hermitian,
+\begin{equation}\label{key}
+\vb{A}\vb{B} = \vb{B}^\dagger \vb{A}^\dagger = \vb{B}\vb{A}
+\end{equation}
+$ \therefore $
+\begin{equation}\label{key}
+[\vb{A}, \vb{B}] = \vb{A}\vb{B} - \vb{B}\vb{A} = 0
+\end{equation}
+i.e. $ \vb{A} $, $ \vb{B} $ commute
+\subex{e.}
+Since $ \vb{A} $ is Hermitian,
+\begin{equation}\label{key}
+\vb{A} = \vb{A}^\dagger
+\end{equation}
+thus
+\begin{equation}\label{key}
+(\vb{A}^{1-})^\dagger \vb{A} = (\vb{A}^{1-})^\dagger \vb{A}^\dagger = (\vb{A}\vb{A}^{-1})^\dagger = \iden^\dagger = \iden
+\end{equation}
+thus
+\begin{equation}\label{key}
+(\vb{A}^{1-})^\dagger \vb{A} \vb{A}^{-1} = \vb{A}^{-1}
+\end{equation}
+\begin{equation}\label{key}
+(\vb{A}^{1-})^\dagger = \vb{A}^{-1}
+\end{equation}
+i.e. $ \vb{A}^{-1} $, if it exists, is Hermitian.
+\subex{f.}
+Suppose
+\begin{equation}\label{key}
+\vb{A}^{-1} = \mqty(x & y\\z & w)
+\end{equation}
+thus
+\begin{equation}\label{key}
+\mqty(A_{11} & A_{12}\\A_{21} & A_{22})\mqty(x & y\\z & w) = \mqty(1 & 0\\0 & 1)
+\end{equation}
+the solution is
+\begin{equation}\label{key}
+\mqty{
+	&x = \dfrac{A_{22}}{A_{11}A_{22} - A_{12}A_{21}}\\
+	&y = \dfrac{-A_{12}}{A_{11}A_{22} - A_{12}A_{21}}\\
+	&z = \dfrac{-A_{21}}{A_{11}A_{22} - A_{12}A_{21}}\\
+	&w = \dfrac{A_{11}}{A_{11}A_{22} - A_{12}A_{21}}\\ 
+}
+\end{equation}
+thus
+\begin{equation}\label{key}
+\vb{A}^{-1} = \dfrac{1}{\det(\vb{A})} \mqty(A_{22} & -A_{12}\\ -A_{21} & A_{11})
 \end{equation}
 
+\ex{1.5}
+\subex{1.}
 
 
 \end{document}
