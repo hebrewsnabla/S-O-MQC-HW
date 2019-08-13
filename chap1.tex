@@ -299,7 +299,94 @@ thus
 \end{equation}
 
 \ex{1.5}
+Suppose 
+\begin{equation}\label{key}
+\vb{A} = \mqty(A_{11} & A_{12}\\A_{21} & A_{22})
+\end{equation}
 \subex{1.}
+\begin{equation}\label{key}
+\mqty|0 & 0\\A_{21} & A_{22}| = 0\cdot A_{22} - 0\cdot A_{21} = 0
+\end{equation}
+\begin{equation}\label{key}
+\mqty|0 & A_{12}\\0 & A_{22}| = 0\cdot A_{22} - 0\cdot A_{12} = 0
+\end{equation}
+\subex{2.}
+\begin{equation}\label{key}
+\det(\vb{A}) = A_{11}A_{22} -  0\cdot 0 = A_{11}A_{22}
+\end{equation}
+\subex{3.}
+\begin{equation}\label{key}
+\det(\vb{A}) = A_{11}A_{22} -  A_{12}A_{21}
+\end{equation}
+\begin{equation}\label{key}
+\mqty| A_{21} & A_{22}\\A_{11} & A_{12} | = A_{21}A_{12} - A_{22}A_{11} = -\det(\vb{A})
+\end{equation}
+\subex{4.}
+\begin{equation}\label{key}
+\det(\vb{A}^\dagger)^* = \mqty|A_{11}^* & A_{21}^*\\A_{12}^* & A_{22}^*|^* = (A_{11}^*A_{22}^* - A_{21}^*A_{12}^*)^* = A_{11}A_{22} -  A_{12}A_{21} = \det(\vb{A})
+\end{equation}
+\subex{5.}
+Suppose $ \vb{B} = \mqty(B_{11} & B_{12}\\B_{21} & B_{22}) $
+\begin{equation}\label{key}
+\begin{aligned}
+\det(\vb{A}\vb{B}) &= 
+\mqty|A_{11}B_{11}+A_{12}B_{21} & A_{11}B_{12}+A_{12}B_{22}\\
+A_{21}B_{11}+A_{22}B_{21} & A_{21}B_{12}+A_{22}B_{22}|\\
+&= (A_{11}B_{11}+A_{12}B_{21})(A_{21}B_{12}+A_{22}B_{22}) - (A_{11}B_{12}+A_{12}B_{22})(A_{21}B_{11}+A_{22}B_{21})\\
+&= A_{11}B_{11}A_{21}B_{12} + A_{11}B_{11}A_{22}B_{22} + A_{12}B_{21}A_{21}B_{12} + A_{12}B_{21}A_{22}B_{22}\\
+&\quad - (A_{11}B_{12}A_{21}B_{11} +  A_{11}B_{12}A_{22}B_{21} + A_{12}B_{22}A_{21}B_{11} + A_{12}B_{22}A_{22}B_{21})\\
+&= A_{11}B_{11}A_{22}B_{22} + A_{12}B_{21}A_{21}B_{12} - A_{11}B_{12}A_{22}B_{21} - A_{12}B_{22}A_{21}B_{11}
+\end{aligned}
+\end{equation}
+\begin{equation}\label{key}
+\begin{aligned}
+\det(\vb{A})\det(\vb{B}) &= (A_{11}A_{22} -  A_{12}A_{21})(B_{11}B_{22} -  B_{12}B_{21})\\
+&= A_{11}A_{22}B_{11}B_{22} - A_{11}A_{22}B_{12}B_{21} - A_{12}A_{21}B_{11}B_{22} + A_{12}A_{21}B_{12}B_{21}\\
+&= A_{11}B_{11}A_{22}B_{22} + A_{12}B_{21}A_{21}B_{12}- A_{11}B_{12}A_{22}B_{21} - A_{12}B_{22}A_{21}B_{11} \\
+\end{aligned}
+\end{equation}
+$ \therefore $
+\begin{equation}\label{key}
+\det(\vb{A})\det(\vb{B}) = \det(\vb{A}\vb{B})
+\end{equation}
+
+\ex{1.6}
+\subex{6.}
+If two rows (e.g. $ i $th and $ j $th) are equal
+\begin{equation}\label{key}
+\det(\vb{A}) = \mqty|  & ... & ... & \\
+      A_{i1} & A_{i2} & ... & A_{in}\\
+        & ... & ... & \\
+      A_{j1} & A_{j2} & ... & A_{jn}\\
+        & ... & ... & \\|
+\xlongequal{1.5.3} -\mqty|  & ... & ... & \\
+A_{j1} & A_{j2} & ... & A_{jn}\\
+& ... & ... & \\
+A_{i1} & A_{i2} & ... & A_{in}\\
+& ... & ... & \\|
+= - \mqty|  & ... & ... & \\
+A_{i1} & A_{i2} & ... & A_{in}\\
+& ... & ... & \\
+A_{j1} & A_{j2} & ... & A_{jn}\\
+& ... & ... & \\|
+\end{equation}
+i.e.
+\begin{equation}\label{key}
+\det(\vb{A}) = -\det(\vb{A})
+\end{equation}
+thus
+\begin{equation}\label{key}
+\det(\vb{A}) = 0
+\end{equation}
+\subex{7.}
+From Ex 1.5.5, we have
+\begin{equation}\label{key}
+\det(\vb{A})\det(\vb{A}^{-1}) = \det(\iden) = 1
+\end{equation}
+thus
+\begin{equation}\label{key}
+\det(\vb{A}^{-1}) = \det(\vb{A})^{-1}
+\end{equation}
 
 
 \end{document}
