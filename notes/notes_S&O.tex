@@ -186,6 +186,43 @@ exact energy -- $ \mathscr{E} $\\
 approx energy -- $ E $
 
 \section{}
+\subsection{}
+\subsection{}
+\subsection{}
+\subsection{N-D Complex Vector Spaces}
+Suppose
+\begin{equation}\label{key}
+\mathcal{O}\ket{a} = \ket{b}
+\end{equation}
+\begin{equation}\label{key}
+\Braket{i | \mathcal{O} | j} = O_{ij}
+\end{equation}
+def the \textbf{adjoint} of $ \mathcal{O} $ as $ \mathcal{O}^\dagger $
+\begin{equation}\label{key}
+\bra{a}\mathcal{O}^\dagger = \bra{b}
+\end{equation}
+\begin{equation}\label{key}
+\Braket{i | \mathcal{O}^\dagger | j} = O_{ji}^*
+\end{equation}
+
+\subsubsection{Change of Basis}
+\begin{equation}\label{key}
+\ket{\alpha} = \sum_i\ket{i}\braket{i | \alpha} = \sum_i\ket{i} U_{i\alpha}
+\end{equation}
+\begin{equation}\label{key}
+\ket{i} = \sum_\alpha \ket{\alpha}\braket{i | \alpha} = \sum_\alpha \ket{\alpha} U_{i\alpha}^*
+\end{equation}
+If $ i, \alpha $ are all orthonormal, $ \vb{U} $ must be unitary.
+
+\begin{equation}\label{key}
+\Omega_{\alpha\beta} = \Braket{\alpha | \mathcal{O} | \beta} = ... \sum_{ij} U_{\alpha i}^* O_{ij} U_{j\beta}
+\end{equation}
+or
+\begin{equation}\label{key}
+\bm\Omega = \vb{U}^\dagger \vb{O} \vb{U}
+\end{equation}
+
+
 
 
 \end{document}

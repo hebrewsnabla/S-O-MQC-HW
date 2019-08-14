@@ -420,6 +420,29 @@ $  \square $
 
 \subsubsection{N-D Complex Vector Spaces}
 
+\subsubsection{Change of Basis}
+\ex{1.8}
+\begin{equation}\label{key}
+\Omega_{\alpha\beta} = \sum_{ij} U_{\alpha i}^\dagger O_{ij} U_{j\beta}
+\end{equation}
+gives
+\begin{equation}\label{key}
+\begin{aligned}
+\tr\bm\Omega &= \sum_\alpha \Omega_{\alpha\alpha} = \sum_\alpha \sum_{ij} U_{\alpha i}^\dagger O_{ij} U_{j\alpha}\\
+&= \sum_{ij} O_{ij} \sum_\alpha U_{j\alpha} U_{\alpha i}^\dagger = \sum_{ij} O_{ij} \delta_{ji} = \tr\vb{O}
+\end{aligned}
+\end{equation}
+%while
+%\begin{equation}\label{key}
+%O_{ij} = \sum_{\alpha\beta} U_{i\alpha} \Omega_{\alpha\beta} U_{\beta j}^\dagger
+%\end{equation}
+%gives
+%\begin{equation}\label{key}
+%\tr \vb{O} = \sum_{i} O_{ii} = \sum_{\alpha\beta} U_{i\alpha} \Omega_{\alpha\beta} U_{i\beta}^*
+%\end{equation}
+
+\subsubsection{The Eigenvalue Problem}
+
 
 
 \end{document}
