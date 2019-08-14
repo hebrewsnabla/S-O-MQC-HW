@@ -145,6 +145,7 @@
 \newcommand{\subex}[1]{\subparagraph{#1}}
 \newcommand{\dis}{\displaystyle}
 \newcommand{\iden}{{\large \bm{1}}}
+\newcommand{\qed}{$ \Square $}
 \numberwithin{equation}{section}
 %\allowdisplaybreaks[4]
 
@@ -298,6 +299,7 @@ thus
 \vb{A}^{-1} = \dfrac{1}{\det(\vb{A})} \mqty(A_{22} & -A_{12}\\ -A_{21} & A_{11})
 \end{equation}
 
+\subsubsection{Determinants}
 \ex{1.5}
 Suppose 
 \begin{equation}\label{key}
@@ -387,6 +389,37 @@ thus
 \begin{equation}\label{key}
 \det(\vb{A}^{-1}) = \det(\vb{A})^{-1}
 \end{equation}
+\subex{8.}
+\begin{equation}\label{key}
+\vb{A}\vb{A}^\dagger = \iden \;\dra\; \det(\vb{A})\det(\vb{A}^\dagger) = \det(\iden) = 1
+\end{equation}
+From Ex 1.5.4, we have
+\begin{equation}\label{key}
+\det(\vb{A})\det(\vb{A})^* = 1
+\end{equation}
+\subex{9.}
+From Ex 1.5.5, we get
+\begin{equation}\label{key}
+\det(\vb{U}^\dagger)\det(\vb{O})\det(\vb{U}) = \det(\bm\Omega)
+\end{equation}
+and
+\begin{equation}\label{key}
+\det(\vb{U}^\dagger)\det(\vb{U}) = \det(\iden) = 1
+\end{equation}
+$ \therefore $
+\begin{equation}\label{key}
+\det(\vb{O}) = \det(\bm\Omega)
+\end{equation}
+
+\ex{1.7}
+If $ \det(\vb{A}) \neq 0 $, thus $ \vb{A}^{-1} $ exists, we have
+\begin{equation}\label{key}
+\vb{A}^{-1}\vb{A}\vb{c} = \bm{0} \;\dra\; \vb{c} = \bm{0}
+\end{equation}
+$  \square $
+
+\subsubsection{N-D Complex Vector Spaces}
+
 
 
 \end{document}
