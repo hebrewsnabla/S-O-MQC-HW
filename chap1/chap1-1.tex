@@ -146,7 +146,7 @@
 \newcommand{\dis}{\displaystyle}
 \newcommand{\iden}{{\large \bm{1}}}
 \newcommand{\qed}{$ \Square $}
-\numberwithin{equation}{section}
+\numberwithin{equation}{subsection}
 %\allowdisplaybreaks[4]
 
 \title{\textbf{Modern Quantum Chemistry, Szabo \& Ostlund}\\HW}
@@ -442,7 +442,34 @@ gives
 %\end{equation}
 
 \subsubsection{The Eigenvalue Problem}
-
-
+\ex{1.9}
+\begin{equation}\label{key}
+\vb{O}\vb{U} = \vb{U}\bm\omega \;\dra\; \vb{O}\mqty(\vb{c}^1 & \vb{c}^2 & \cdots & \vb{c}^N) = \mqty(\omega_1\vb{c}_1 & \omega_2\vb{c}_2 & \cdots & \omega_N\vb{c}_N)
+\end{equation}
+thus
+\begin{equation}\label{key}
+\vb{O}\vb{c}^\alpha = \omega_\alpha \vb{c}^\alpha
+\end{equation}
+\ex{1.10}
+\begin{equation}\label{key}
+\left\{
+\begin{aligned}
+&O_{11}-\omega + O_{12}c = 0\\
+&O_{21} + (O_{22}-\omega)c = 0
+\end{aligned}\right.
+\end{equation}
+\begin{equation}\label{key}
+(O_{11}-\omega)(O_{22}-\omega) - O_{21}O_{12} = 0
+\end{equation}
+\begin{equation}\label{key}
+\omega^2 - (O_{11}+O_{22})\omega + O_{11}O_{22} - O_{21}O_{12} = 0
+\end{equation}
+\begin{equation}\label{key}
+\left\{\begin{aligned}
+&\omega_1 = \dfrac{1}{2}\qty(O_{11}+O_{22} - \sqrt{(O_{11}-O_{22})^2 + 4O_{21}O_{12}})\\
+&\omega_2 = \dfrac{1}{2}\qty(O_{11}+O_{22} + \sqrt{(O_{11}-O_{22})^2 + 4O_{21}O_{12}})
+\end{aligned}\right.
+\end{equation}
+\ex{1.11}
 
 \end{document}
