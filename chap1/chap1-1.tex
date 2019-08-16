@@ -149,6 +149,11 @@
 \numberwithin{equation}{subsection}
 %\allowdisplaybreaks[4]
 
+\usepackage{xcolor}
+\definecolor{codegray}{gray}{0.9}
+\newfontfamily\Consolas{Consolas}
+\newcommand{\code}[1]{\colorbox{codegray}{{\Consolas#1}}}
+
 \title{\textbf{Modern Quantum Chemistry, Szabo \& Ostlund}\\HW}
 \author{王石嵘
 \vspace{5pt}\\
@@ -471,5 +476,87 @@ thus
 \end{aligned}\right.
 \end{equation}
 \ex{1.11}
+\subex{a)}
+\begin{equation}\label{key}
+\mqty| 3-\omega & 1\\1 & 3-\omega| = 0 \;\dra\; (3-\omega)^2 - 1 = 0
+\end{equation}
+Eigenvalues
+\begin{equation}\label{key}
+\omega_1 = 2 \quad \omega_2 = 4
+\end{equation}
+Eigenvectors
+\begin{equation}\label{key}
+\vb{c}^1 = \mqty(1\\-1) \quad \vb{c}^2 = \mqty(1\\1)
+\end{equation}
+\begin{equation}\label{key}
+\mqty|3-\omega & 1\\1 & 2-\omega| = 0 \;\dra\; (3-\omega)(2-\omega) - 1 = 0
+\end{equation}
+Eigenvalues
+\begin{equation}\label{key}
+\omega_1 = \dfrac{5+\sqrt{5}}{2} \quad \omega_2 = \dfrac{5-\sqrt{5}}{2}
+\end{equation}
+Eigenvectors
+\begin{equation}\label{key}
+\vb{c}^1 = \mqty(\dfrac{1}{2}(1+\sqrt{5})\\1) \quad \vb{c}^2 = \mqty(\dfrac{1}{2}(1-\sqrt{5})\\1)
+\end{equation}
+\subex{b)}
+\begin{equation}\label{key}
+\theta_0 = \dfrac{1}{2}\tan^{-1}\dfrac{2O_{12}}{O_{11}-O_{12}}
+\end{equation}
+for $ \vb{A} $
+\begin{equation}\label{key}
+\theta_0 = \dfrac{1}{2}\tan^{-1}\dfrac{2\cross 1}{3-3} = \dfrac{\pi}{4} 
+\end{equation}
+Eigenvalues
+\begin{equation}\label{key}
+\omega_1 = 2 \quad \omega_2 = 4
+\end{equation}
+Eigenvectors
+\begin{equation}\label{key}
+\vb{c}^1 = \mqty(\sqrt{2}/2\\-\sqrt{2}/2) \quad \vb{c}^2 = \mqty(\sqrt{2}/2\\ \sqrt{2}/2)
+\end{equation}
+for $ \vb{B} $
+\begin{equation}\label{key}
+\theta_0 = \dfrac{1}{2}\tan^{-1}\dfrac{2\cross 1}{3-2} = \dfrac{1}{2}\tan^{-1}2 
+\end{equation}
+Eigenvalues
+\begin{equation}\label{key}
+\omega_1 = \dfrac{10}{5+\sqrt{5}} = \dfrac{5-\sqrt{5}}{2} \quad \omega_2 = \dfrac{10}{5-\sqrt{5}} = \dfrac{5+\sqrt{5}}{2}
+\end{equation}
+Eigenvectors
+\begin{equation}\label{key}
+\vb{c}^1 
+= \mqty(\sqrt{\dfrac{\sqrt{5}+5}{10}}\vspace{5pt}\\ \sqrt{\dfrac{2}{\sqrt{5}+5}}) 
+= \sqrt{\dfrac{2}{\sqrt{5}+5}} 
+\mqty(\dfrac{1+\sqrt{5}}{2} \vspace{5pt}\\1) 
+\end{equation}
+\begin{equation}\label{key}
+\vb{c}^2
+= \mqty(\sqrt{\dfrac{2}{\sqrt{5}+5}}\vspace{5pt}\\ -\sqrt{\dfrac{\sqrt{5}+5}{10}}) 
+= -\sqrt{\dfrac{\sqrt{5}+5}{10}}
+\mqty(\dfrac{1-\sqrt{5}}{2} \vspace{5pt}\\1) 
+\end{equation}
+Details are in \code{chap1-1.nb}
+
+\subsubsection{Functions of Matrices}
+\ex{1.12}
+\subex{a.}
+\begin{equation}\label{key}
+\vb{A}^n = \vb{U}\vb{a}^n\vb{U}^\dagger
+\end{equation}
+\begin{equation}\label{key}
+\det(\vb{A}^n) = \det(\vb{U})\det(\vb{a}^n)\det(\vb{U}^\dagger) =  \det(\vb{U})\det(\vb{U}^\dagger)
+\mqty|a_1^n & & & \\
+      & a_2^n & & \\
+      & & \ddots & \\
+      & & & a_N^n | = a_1^n a_2^n \cdots a_N^n
+\end{equation}
+\subex{b.}
+From 1.4.a, we have
+\begin{equation}\label{key}
+\tr \vb{A}^n = \tr(\vb{U}\vb{a}^n\vb{U}^\dagger) = \tr(\vb{U}\vb{U}^\dagger\vb{a}^n) = \tr(\vb{a}^n) = \sum_{\alpha=1}^N a_\alpha^n
+\end{equation}
+\subex{c.}
+
 
 \end{document}
