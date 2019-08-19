@@ -557,6 +557,66 @@ From 1.4.a, we have
 \tr \vb{A}^n = \tr(\vb{U}\vb{a}^n\vb{U}^\dagger) = \tr(\vb{U}\vb{U}^\dagger\vb{a}^n) = \tr(\vb{a}^n) = \sum_{\alpha=1}^N a_\alpha^n
 \end{equation}
 \subex{c.}
+\begin{equation}\label{key}
+\vb{U}^\dagger(\omega\iden - \vb{A})\vb{U} = \omega\iden - \vb{a}
+\end{equation}
+\begin{equation}\label{key}
+(\omega\iden - \vb{A})^{-1} = [(\vb{U}(\omega\iden - \vb{a})\vb{U}^\dagger]^{-1} = \vb{U}(\omega\iden - \vb{a})^{-1}\vb{U}^\dagger
+\end{equation}
+while
+\begin{equation}\label{key}
+(\omega\iden - \vb{a})^{-1} = 
+\mqty(\omega-a_{1} & & & \\
+      & \omega-a_{2} & & \\
+      & & \ddots & \\
+      & & & \omega-a_{N} )^{-1}
+= \mqty(\dfrac{1}{\omega-a_{1}} & & & \\
+        & \dfrac{1}{\omega-a_{2}} & & \\
+        & & \ddots & \\
+        & & & \dfrac{1}{\omega-a_{N}} )
+\end{equation}
+thus
+\begin{equation}\label{key}
+\vb{G}(\omega) = (\omega\iden - \vb{A})^{-1} = \vb{U}
+\mqty(\dfrac{1}{\omega-a_{1}} & & & \\
+& \dfrac{1}{\omega-a_{2}} & & \\
+& & \ddots & \\
+& & & \dfrac{1}{\omega-a_{N}} )
+\vb{U}^\dagger
+\end{equation}
+\begin{equation}\label{key}
+\vb{G}(\omega)_{ij} = \sum_\alpha U_{i\alpha}\dfrac{1}{\omega-a_\alpha}U^\dagger_{\alpha j} = \sum_\alpha \dfrac{U_{i\alpha}U_{j\alpha}^*}{\omega-a_\alpha}
+\end{equation}
+Since $U_{i\alpha} = \Braket{i | \alpha}  $, $ U^\dagger_{\alpha j} = U_{j\alpha}^* = \Braket{\alpha | j} $
+\begin{equation}\label{key}
+\vb{G}(\omega)_{ij} = \sum_\alpha \dfrac{\Braket{i | \alpha} \Braket{\alpha | j}}{\omega-a_\alpha}
+\end{equation}
+\ex{1.13}
+The eigenvalues and eigenvectors of $ \vb{A} $ are
+\begin{equation}\label{key}
+\omega_1 = a-b \quad \omega_2 = a+b
+\end{equation}
+\begin{equation}\label{key}
+\vb{c}^1 = \mqty(1\\ -1) \quad \vb{c}^2 = \mqty(1\\ 1)
+\end{equation}
+\begin{equation}\label{key}
+\vb{A} = \vb{U}\vb{a}\vb{U}^\dagger 
+=\dfrac{\sqrt{2}}{2}\mqty(1 & 1\\1 & -1)\mqty(a+b & 0\\0 & a-b) \dfrac{\sqrt{2}}{2}\mqty(1 & 1\\1 & -1)
+\end{equation}
+\begin{equation}\label{key}
+\begin{aligned}
+f(\vb{A}) &= \vb{U}f(\vb{a})\vb{U}^\dagger = \dfrac{1}{2}\mqty(1 & 1\\1 & -1) \mqty(f(a+b) & 0\\0 & f(a-b)) \mqty(1 & 1\\1 & -1)\\
+&= \dfrac{1}{2}\mqty(f(a+b) & f(a-b)\\ f(a+b) & -f(a-b)) \mqty(1 & 1\\1 & -1)\\
+&= \dfrac{1}{2}\mqty(f(a+b)+f(a-b) & f(a+b)-f(a-b) \\ f(a+b)-f(a-b) & f(a+b)+f(a-b) )
+\end{aligned}
+\end{equation}
 
+\subsection{Orthogonal Functions, Eigenfunctions, and Operators}
+\ex{1.14}
+\begin{equation}\label{key}
+\intdinf \dd x a(x)\delta(x) = \lim_{\varepsilon\ra 0} \int_{-\varepsilon}^\varepsilon \dd x a(x)\dfrac{1}{2\varepsilon} = \lim_{\varepsilon\ra 0} \dfrac{1}{2\varepsilon} \int_{-\varepsilon}^\varepsilon \dd x a(x) 
+\xlongequal{\text{L'H\^opital}} \lim_{\varepsilon\ra 0} \dfrac{a(\varepsilon) - [-a(-\varepsilon)]}{2} = a(0)
+\end{equation}
+\subsubsection{}
 
 \end{document}
