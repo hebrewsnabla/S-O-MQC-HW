@@ -617,6 +617,20 @@ f(\vb{A}) &= \vb{U}f(\vb{a})\vb{U}^\dagger = \dfrac{1}{2}\mqty(1 & 1\\1 & -1) \m
 \intdinf \dd x a(x)\delta(x) = \lim_{\varepsilon\ra 0} \int_{-\varepsilon}^\varepsilon \dd x a(x)\dfrac{1}{2\varepsilon} = \lim_{\varepsilon\ra 0} \dfrac{1}{2\varepsilon} \int_{-\varepsilon}^\varepsilon \dd x a(x) 
 \xlongequal{\text{L'H\^opital}} \lim_{\varepsilon\ra 0} \dfrac{a(\varepsilon) - [-a(-\varepsilon)]}{2} = a(0)
 \end{equation}
+\ex{1.15}
+\begin{equation}\label{key}
+\begin{aligned}
+\int \dd x \psi_j^*(x)\mathcal{O}\psi_i(x) &= \int\dd x \psi_j^*(x)\sum_k\psi_k(x)O_{ki} = \sum_k O_{ki}\int\dd x \psi_j^*(x)\psi_k(x)\\
+&= \sum_k O_{ki}\delta_{jk} =  O_{ji}
+\end{aligned}
+\end{equation}
+In bra-ket notation, (1) becomes
+\begin{equation}\label{key}
+\mathcal{O}\ket{i} = \sum_j \ket{j} \Braket{j | \mathcal{O} | i}
+\end{equation}
+which is identical to Eq.(1.55) in the textbook.
+
+
 \subsubsection{}
 
 \end{document}
