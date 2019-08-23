@@ -77,8 +77,10 @@
 \DeclareMathOperator{\intdinf}{\int_{-\infty}^\infty}
 \DeclareMathOperator{\intzpi}{\int_0^\pi}
 \DeclareMathOperator{\intztpi}{\int_0^{2\pi}}
-\DeclareMathOperator{\suminf}{\sum_{n=1}^{\infty}}
-\DeclareMathOperator{\suminfz}{\sum_{n=0}^\infty}
+\DeclareMathOperator{\sumninf}{\sum_{n=1}^{\infty}}
+\DeclareMathOperator{\sumninfz}{\sum_{n=0}^\infty}
+\DeclareMathOperator{\sumiinf}{\sum_{i=1}^{\infty}}
+\DeclareMathOperator{\sumiinfz}{\sum_{i=0}^\infty}
 \DeclareMathOperator{\sumkinf}{\sum_{k=1}^{\infty}}
 \DeclareMathOperator{\sumkinfz}{\sum_{k=0}^\infty}
 \DeclareMathOperator{\e}{\mathrm{e}}
@@ -629,7 +631,34 @@ In bra-ket notation, (1) becomes
 \mathcal{O}\ket{i} = \sum_j \ket{j} \Braket{j | \mathcal{O} | i}
 \end{equation}
 which is identical to Eq.(1.55) in the textbook.
+\ex{1.16}
+With bra-ket notation,
+\begin{equation}\label{key}
+\mathcal{O}\sumiinf c_i\ket{i} = \omega\sumiinf c_i\ket{i}
+\end{equation}
+Multiply by $ \bra{j} $
+\begin{equation}\label{key}
+\sumiinf c_i \Braket{j | \mathcal{O} | i} = \omega\sumiinf c_i \Braket{j | i} = \omega c_j
+\end{equation}
+i.e.
+\begin{equation}\label{key}
+\sumiinf O_{ji} c_i = \omega c_j
+\end{equation}
+\begin{equation}\label{key}
+\vb{O}\vb{c} = \omega\vb{c}
+\end{equation}
+It's similar to prove that without bra-ket notation.
 
+\ex{1.17}
+\subex{a.}
+\begin{equation}\label{key}
+\int\dd x \Bra{i|x}\Braket{x|j} = \Braket{i|j} = \delta_{ij}
+\end{equation}
+i.e.
+\begin{equation}\label{key}
+\int\dd x \psi_i^*(x)\Psi_j(x) = \delta_{ij}
+\end{equation}
+\subex{b.}
 
 \subsubsection{}
 
