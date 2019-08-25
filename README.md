@@ -1,1 +1,1 @@
-# S-O-MQC-HW
+# Solutions for Modern Quantum Chemistry, Szabo & Ostlund
