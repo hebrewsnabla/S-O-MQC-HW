@@ -667,9 +667,31 @@ thus
  \sumiinf \psi_i^*(x)\psi_i(x') = \sumiinf \Braket{x|i}\Braket{i|x'} = \delta(x-x')
 \end{equation}
 \subex{c.}
+\begin{equation}\label{key}
+\int\dd x \Braket{x'|x}\Braket{x|a} = \Braket{x'|a}
+\end{equation}
+thus
+\begin{equation}\label{key}
+\int\dd x \delta(x' - x) a(x) = a(x')
+\end{equation}
+i.e.
+\begin{equation}\label{key}
+\int\dd x' \delta(x-x')a(x') = a(x)
+\end{equation}
+\subex{d.}
+\begin{equation}\label{key}
+\Braket{x' | \mathcal{O} | a} = \int\dd x \Braket{x' | \mathcal{O} | x} \Braket{x|a} = \Braket{x'|b}
+\end{equation}
+$ \therefore $
+\begin{equation}\label{key}
+\mathcal{O}a(x') = \int\dd x O(x',x)a(x) = b(x')
+\end{equation}
+i.e.
+\begin{equation}\label{key}
+b(x) = \mathcal{O}a(x) = \int\dd x' O(x,x')a(x')
+\end{equation}
+\subex{e.}
 
-
-
-\subsubsection{}
+\subsection{}
 
 \end{document}
