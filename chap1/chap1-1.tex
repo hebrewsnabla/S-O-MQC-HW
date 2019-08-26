@@ -691,7 +691,35 @@ i.e.
 b(x) = \mathcal{O}a(x) = \int\dd x' O(x,x')a(x')
 \end{equation}
 \subex{e.}
+\begin{equation}\label{key}
+\begin{aligned}
+O(x,x') &= \Braket{x | \mathcal{O} | x'} = \bra{x} \qty(\sum_i \ket{i}\bra{i}) \mathcal{O} \qty(\sum_j\ket{j}\bra{j}) \ket{x'}\\
+&= \sum_{ij} \Braket{x|i}\Braket{i | \mathcal{O} | j} \Braket{j|x'}\\
+&= \sum_{ij} \psi_i(x) O_{ij} \psi_j^*(x')
+\end{aligned}
+\end{equation}
 
-\subsection{}
+\subsection{The Variation Method}
+\subsubsection{The Variation Principle}
+\ex{1.18}
+\begin{equation}\label{key}
+\begin{aligned}
+\mathscr{E} &= \dfrac{\Braket{\tilde{\Psi} | -\tfrac{1}{2}\dv[2]{x}-\delta(x) | \tilde{\Psi}}}{\Braket{\tilde{\Psi} | \tilde{\Psi}}} = \dfrac{N^2 \intdinf \e^{-\alpha x^2}\qty[-\dfrac{1}{2}(-2\alpha+4\alpha^2 x^2) - \delta(x)]\e^{-\alpha x^2}}{N^2\intdinf \e^{-2\alpha x^2}}\\
+&= \dfrac{\alpha\dfrac{\pi^{1/2}}{(2\alpha)^{1/2}} - 2\alpha^2\dfrac{2\pi^{1/2}}{4(2\alpha)^{3/2}} - 1}{\dfrac{\pi^{1/2}}{(2\alpha)^{1/2}}}\\
+&= \dfrac{\alpha \pi^{1/2} - \alpha^2\dfrac{\pi^{1/2}}{(2\alpha)} - (2\alpha)^{1/2}}{\pi^{1/2}}\\
+&= \alpha - \dfrac{1}{2}\alpha - \dfrac{(2\alpha)^{1/2}}{\pi^{1/2}}\\
+&= \dfrac{1}{2}\alpha - \dfrac{(2\alpha)^{1/2}}{\pi^{1/2}}
+\end{aligned}
+\end{equation}
+Let $ \dv{\mathscr{E}}{\alpha} = 0 $, we have
+\begin{equation}\label{key}
+\dfrac{1}{2} - \dfrac{1}{(2\pi\alpha)^{1/2}} = 0 \;\dra\; \alpha = \dfrac{2}{\pi}
+\end{equation}
+thus
+\begin{equation}\label{key}
+\mathsf{E}_{min} = 
+\end{equation}
+
+
 
 \end{document}
