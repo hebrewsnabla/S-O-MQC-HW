@@ -148,7 +148,11 @@
 \newcommand{\dis}{\displaystyle}
 \newcommand{\iden}{{\large \bm{1}}}
 \newcommand{\qed}{$ \Square $}
+\newcommand{\tPhi}{\tilde{\Phi} }
+
 \numberwithin{equation}{subsection}
+%\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
 %\allowdisplaybreaks[4]
 
 \usepackage{xcolor}
@@ -198,7 +202,8 @@ thus
 \vb{b}_i = \sum_{j=1}^3 a_jO_{ij}
 \end{equation}
 
-\ex{1.2}
+%.
+\ex{1.2} 
 \begin{equation}\label{key}
 [\vb{A},\vb{B}] = \mqty[0& -2& 4\\2& 0& 3\\-4& -3& 0]
 \end{equation}
@@ -307,6 +312,7 @@ thus
 \end{equation}
 
 \subsubsection{Determinants}
+%.
 \ex{1.5}
 Suppose 
 \begin{equation}\label{key}
@@ -360,6 +366,7 @@ $ \therefore $
 \end{equation}
 
 \ex{1.6}
+%.
 \subex{6.}
 If two rows (e.g. $ i $th and $ j $th) are equal
 \begin{equation}\label{key}
@@ -418,6 +425,7 @@ $ \therefore $
 \det(\vb{O}) = \det(\bm\Omega)
 \end{equation}
 
+%.
 \ex{1.7}
 If $ \det(\vb{A}) \neq 0 $, thus $ \vb{A}^{-1} $ exists, we have
 \begin{equation}\label{key}
@@ -449,6 +457,7 @@ gives
 %\end{equation}
 
 \subsubsection{The Eigenvalue Problem}
+%.
 \ex{1.9}
 \begin{equation}\label{key}
 \vb{O}\vb{U} = \vb{U}\bm\omega \;\dra\; \vb{O}\mqty(\vb{c}^1 & \vb{c}^2 & \cdots & \vb{c}^N) = \mqty(\omega_1\vb{c}_1 & \omega_2\vb{c}_2 & \cdots & \omega_N\vb{c}_N)
@@ -477,6 +486,8 @@ thus
 &\omega_2 = \dfrac{1}{2}\qty(O_{11}+O_{22} + \sqrt{(O_{11}-O_{22})^2 + 4O_{21}O_{12}})
 \end{aligned}\right.
 \end{equation}
+
+%.
 \ex{1.11}
 \subex{a)}
 \begin{equation}\label{key}
@@ -704,7 +715,7 @@ O(x,x') &= \Braket{x | \mathcal{O} | x'} = \bra{x} \qty(\sum_i \ket{i}\bra{i}) \
 \ex{1.18}
 \begin{equation}\label{key}
 \begin{aligned}
-\mathscr{E} &= \dfrac{\Braket{\tilde{\Psi} | -\tfrac{1}{2}\dv[2]{x}-\delta(x) | \tilde{\Psi}}}{\Braket{\tilde{\Psi} | \tilde{\Psi}}} = \dfrac{N^2 \intdinf\dd x \e^{-\alpha x^2}\qty[-\dfrac{1}{2}(-2\alpha+4\alpha^2 x^2) - \delta(x)]\e^{-\alpha x^2}}{N^2\intdinf\dd x \e^{-2\alpha x^2}}\\
+\mathscr{E} &= \dfrac{\Braket{\tilde{\Phi} | -\tfrac{1}{2}\dv[2]{x}-\delta(x) | \tilde{\Phi}}}{\Braket{\tilde{\Phi} | \tilde{\Phi}}} = \dfrac{N^2 \intdinf\dd x \e^{-\alpha x^2}\qty[-\dfrac{1}{2}(-2\alpha+4\alpha^2 x^2) - \delta(x)]\e^{-\alpha x^2}}{N^2\intdinf\dd x \e^{-2\alpha x^2}}\\
 &= \dfrac{\alpha\dfrac{\pi^{1/2}}{(2\alpha)^{1/2}} - 2\alpha^2\dfrac{2\pi^{1/2}}{4(2\alpha)^{3/2}} - 1}{\dfrac{\pi^{1/2}}{(2\alpha)^{1/2}}}\\
 &= \dfrac{\alpha \pi^{1/2} - \alpha^2\dfrac{\pi^{1/2}}{(2\alpha)} - (2\alpha)^{1/2}}{\pi^{1/2}}\\
 &= \alpha - \dfrac{1}{2}\alpha - \dfrac{(2\alpha)^{1/2}}{\pi^{1/2}}\\
@@ -723,7 +734,7 @@ thus
 \ex{1.19}
 \begin{equation}\label{key}
 \begin{aligned}
-\mathscr{E} &= \dfrac{\Braket{\tilde{\Psi} | -\dfrac{1}{2}\nabla^2 - \dfrac{1}{r} | \tilde{\Psi}}}{\Braket{\tilde{\Psi} | \tilde{\Psi}}} = \dfrac{N^2 \cdot 4\pi \intdinf r^2\dd r \e^{-\alpha r^2}\qty[-\dfrac{1}{2}(4 \alpha^2 r^2 - 6\alpha ) - \dfrac{1}{r}]\e^{-\alpha r^2}}{N^2\cdot 4\pi \intdinf r^2\dd r \e^{-2\alpha r^2}}\\
+\mathscr{E} &= \dfrac{\Braket{\tilde{\Phi} | -\dfrac{1}{2}\nabla^2 - \dfrac{1}{r} | \tilde{\Phi}}}{\Braket{\tilde{\Phi} | \tilde{\Phi}}} = \dfrac{N^2 \cdot 4\pi \intdinf r^2\dd r \e^{-\alpha r^2}\qty[-\dfrac{1}{2}(4 \alpha^2 r^2 - 6\alpha ) - \dfrac{1}{r}]\e^{-\alpha r^2}}{N^2\cdot 4\pi \intdinf r^2\dd r \e^{-2\alpha r^2}}\\
 &= \dfrac{-2\alpha^2\dfrac{24\pi^{1/2}}{64(2\alpha)^{5/2}} + 3\alpha\dfrac{2\pi^{1/2}}{8(2\alpha)^{3/2}} - \dfrac{1}{2(2\alpha)} }{\dfrac{2\pi^{1/2}}{8(2\alpha)^{3/2}}}\\
 &= -2\alpha^2\dfrac{12}{8(2\alpha)} + 3\alpha - \dfrac{2(2\alpha)^{1/2}}{\pi^{1/2} } \\
 &= \dfrac{3}{2}\alpha - \dfrac{2(2\alpha)^{1/2}}{\pi^{1/2} }
@@ -763,6 +774,55 @@ O_{11} (-2\cos\theta\sin\theta) + O_{12}\cdot 2\cos 2\theta + O_{22}\cdot 2\sin\
 which are exactly the results in Eq. (1.105) and Eq. (1.106a) in the textbook. We get the result because the trial vector $ \vb{c} $ is the exact eigenvector of $ \vb{O} $.
 
 \subsubsection{The Linear Variational Problem}
+\ex{1.21}
+\subex{a.}
+\begin{equation}\label{key}
+\Braket{\tPhi' | \tPhi'} = 1 = \sum_{\alpha\beta} \Braket{\tPhi' | \Phi_\alpha} \Braket{\Phi_\alpha | \Phi_\beta} \Braket{\Phi_\beta | \tPhi'}
+\end{equation}
+Since $ \Braket{\tPhi' | \Phi_0} = 0 $, we have
+\begin{equation}\label{key}
+\sum_{\alpha=1}^\infty \sum_{\beta=1}^\infty \Braket{\tPhi' | \Phi_\alpha} \Braket{\Phi_\alpha | \Phi_\beta} \Braket{\Phi_\beta | \tPhi'} = 1
+\end{equation}
+thus
+\begin{equation}\label{key}
+\sum_{\alpha=1}^\infty \sum_{\beta=1}^\infty \Braket{\tPhi' | \Phi_\alpha} \delta_{\alpha\beta} \Braket{\Phi_\beta | \tPhi'} = 1
+\end{equation}
+\begin{equation}\label{key}
+\sum_{\alpha=1}^\infty \Braket{\tPhi' | \Phi_\alpha} \Braket{\Phi_\alpha | \tPhi'} = 1
+\end{equation}
+\begin{equation}\label{key}
+\sum_{\alpha=1}^\infty \abs{\Braket{\Phi_\alpha | \tPhi'}}^2 = 1
+\end{equation}
+Similarly,
+\begin{equation}\label{key}
+\Braket{\tPhi' | \mathscr{H} | \tPhi'} = \sum_{\alpha\beta} \Braket{\tPhi' | \Phi_\alpha} \Braket{\Phi_\alpha | \mathscr{H} | \Phi_\beta} \Braket{\Phi_\beta | \tPhi'} = \sum_{\alpha=1}^\infty \sum_{\beta=1}^\infty \Braket{\tPhi' | \Phi_\alpha} \Braket{\Phi_\alpha | \mathscr{H} | \Phi_\beta} \Braket{\Phi_\beta | \tPhi'}
+\end{equation}
+From Eq. (1.170) from the textbook, we get
+\begin{equation}\label{key}
+\Braket{\Phi_\alpha | \mathscr{H} | \Phi_\beta} = \mathscr{E}_\alpha \delta_{\alpha\beta}
+\end{equation}
+thus
+\begin{equation}\label{key}
+\Braket{\tPhi' | \mathscr{H} | \tPhi'} =\sum_{\alpha=1}^\infty \abs{\Braket{\Phi_\alpha | \tPhi'}}^2 \mathscr{E}_\alpha \geq \sum_{\alpha=1}^\infty \abs{\Braket{\Phi_\alpha | \tPhi'}}^2 \mathscr{E}_1 = \mathscr{E}_1
+\end{equation}
+\subex{b.}
+\begin{equation}\label{key}
+\Braket{\tPhi' | \tPhi'} = 1 = \qty(x^* \bra{\tPhi_0} + y^*\bra{\tPhi_1}) \qty(x\ket{\tPhi_0} + y\ket{\tPhi_1}) = \abs{x}^2 + \abs{y}^2
+\end{equation}
+\subex{c.}
+\begin{equation}\label{key}
+\begin{aligned}
+\Braket{\tPhi' | \mathscr{H} | \tPhi'} &= \abs{x}^2 \Braket{\tPhi_0 | \mathscr{H} | \tPhi_0} + \abs{y}^2 \Braket{\tPhi_1 | \mathscr{H} | \tPhi_1} + x^* y \Braket{\tPhi_0 | \mathscr{H} | \tPhi_1} + x y^* \Braket{\tPhi_1 | \mathscr{H} | \tPhi_0}\\
+&= E_1 - \abs{x}^2(E_1 - E_0)
+\end{aligned}
+\end{equation}
+thus
+\begin{equation}\label{key}
+\mathscr{E}_1 \leq \Braket{\tPhi' | \mathscr{H} | \tPhi'} \leq E_1 - \abs{x}^2(E_1-E_1) = E_1
+\end{equation}
+
+\ex{1.22}
+
 
 
 \end{document}
