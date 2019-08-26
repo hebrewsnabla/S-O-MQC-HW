@@ -704,7 +704,7 @@ O(x,x') &= \Braket{x | \mathcal{O} | x'} = \bra{x} \qty(\sum_i \ket{i}\bra{i}) \
 \ex{1.18}
 \begin{equation}\label{key}
 \begin{aligned}
-\mathscr{E} &= \dfrac{\Braket{\tilde{\Psi} | -\tfrac{1}{2}\dv[2]{x}-\delta(x) | \tilde{\Psi}}}{\Braket{\tilde{\Psi} | \tilde{\Psi}}} = \dfrac{N^2 \intdinf \e^{-\alpha x^2}\qty[-\dfrac{1}{2}(-2\alpha+4\alpha^2 x^2) - \delta(x)]\e^{-\alpha x^2}}{N^2\intdinf \e^{-2\alpha x^2}}\\
+\mathscr{E} &= \dfrac{\Braket{\tilde{\Psi} | -\tfrac{1}{2}\dv[2]{x}-\delta(x) | \tilde{\Psi}}}{\Braket{\tilde{\Psi} | \tilde{\Psi}}} = \dfrac{N^2 \intdinf\dd x \e^{-\alpha x^2}\qty[-\dfrac{1}{2}(-2\alpha+4\alpha^2 x^2) - \delta(x)]\e^{-\alpha x^2}}{N^2\intdinf\dd x \e^{-2\alpha x^2}}\\
 &= \dfrac{\alpha\dfrac{\pi^{1/2}}{(2\alpha)^{1/2}} - 2\alpha^2\dfrac{2\pi^{1/2}}{4(2\alpha)^{3/2}} - 1}{\dfrac{\pi^{1/2}}{(2\alpha)^{1/2}}}\\
 &= \dfrac{\alpha \pi^{1/2} - \alpha^2\dfrac{\pi^{1/2}}{(2\alpha)} - (2\alpha)^{1/2}}{\pi^{1/2}}\\
 &= \alpha - \dfrac{1}{2}\alpha - \dfrac{(2\alpha)^{1/2}}{\pi^{1/2}}\\
@@ -717,9 +717,52 @@ Let $ \dv{\mathscr{E}}{\alpha} = 0 $, we have
 \end{equation}
 thus
 \begin{equation}\label{key}
-\mathsf{E}_{min} = 
+\mathscr{E}_{min} = -\dfrac{1}{\pi}
 \end{equation}
 
+\ex{1.19}
+\begin{equation}\label{key}
+\begin{aligned}
+\mathscr{E} &= \dfrac{\Braket{\tilde{\Psi} | -\dfrac{1}{2}\nabla^2 - \dfrac{1}{r} | \tilde{\Psi}}}{\Braket{\tilde{\Psi} | \tilde{\Psi}}} = \dfrac{N^2 \cdot 4\pi \intdinf r^2\dd r \e^{-\alpha r^2}\qty[-\dfrac{1}{2}(4 \alpha^2 r^2 - 6\alpha ) - \dfrac{1}{r}]\e^{-\alpha r^2}}{N^2\cdot 4\pi \intdinf r^2\dd r \e^{-2\alpha r^2}}\\
+&= \dfrac{-2\alpha^2\dfrac{24\pi^{1/2}}{64(2\alpha)^{5/2}} + 3\alpha\dfrac{2\pi^{1/2}}{8(2\alpha)^{3/2}} - \dfrac{1}{2(2\alpha)} }{\dfrac{2\pi^{1/2}}{8(2\alpha)^{3/2}}}\\
+&= -2\alpha^2\dfrac{12}{8(2\alpha)} + 3\alpha - \dfrac{2(2\alpha)^{1/2}}{\pi^{1/2} } \\
+&= \dfrac{3}{2}\alpha - \dfrac{2(2\alpha)^{1/2}}{\pi^{1/2} }
+\end{aligned}
+\end{equation}
+Let $ \dv{\mathscr{E}}{r} = 0 $,
+\begin{equation}\label{key}
+\dfrac{3}{2} - \dfrac{2}{\sqrt{2\pi\alpha}} = 0 \;\dra\; \alpha = \dfrac{8}{9\pi}
+\end{equation}
+\begin{equation}\label{key}
+\mathscr{E}_{min} = \dfrac{4}{3\pi} - \dfrac{8}{3\pi} = -\dfrac{4}{3\pi}
+\end{equation}
+
+\ex{1.20}
+\begin{equation}\label{key}
+\begin{aligned}
+\omega(\theta) &= \vb{c}^\dagger \vb{O} \vb{c} = \mqty(\cos\theta & \sin\theta) \mqty(O_{11}\cos\theta + O_{12}\sin\theta\\ O_{12}\cos\theta + O_{22}\sin\theta)\\
+&= O_{11}\cos^2\theta + 2O_{12}\cos\theta\sin\theta + O_{22}\sin^2\theta\\
+\end{aligned}
+\end{equation}
+Let $ \dv{\omega}{\theta} = 0 $, thus
+\begin{equation}\label{key}
+O_{11} (-2\cos\theta\sin\theta) + O_{12}\cdot 2\cos 2\theta + O_{22}\cdot 2\sin\theta\cos\theta = 0
+\end{equation}
+\begin{equation}\label{key}
+(O_{22}-O_{11})\sin 2\theta + 2O_{12}\cos 2\theta = 0
+\end{equation}
+\begin{equation}\label{key}
+\theta = \dfrac{1}{2}\arctan\dfrac{2O_{12}}{O_{11}-O_{22}}
+\end{equation}
+%\begin{equation}\label{key}
+%\omega_{min} = \dfrac{1}{2}\qty(O_{11}+O_{22} \pm \sqrt{(O_{11}-O_{22})^2 + 4O_{12}^2})
+%\end{equation}
+\begin{equation}\label{key}
+\omega = O_{11}\cos^2\theta + O_{12}\sin 2\theta + O_{22}\sin^2\theta
+\end{equation}
+which are exactly the results in Eq. (1.105) and Eq. (1.106a) in the textbook. We get the result because the trial vector $ \vb{c} $ is the exact eigenvector of $ \vb{O} $.
+
+\subsubsection{The Linear Variational Problem}
 
 
 \end{document}
