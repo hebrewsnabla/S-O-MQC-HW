@@ -822,7 +822,25 @@ thus
 \end{equation}
 
 \ex{1.22}
-
+\begin{equation}\label{key}
+\begin{aligned}
+H_{11} &= \Braket{1s | \mathscr{H} | 1s} = -\dfrac{1}{2} + F\Braket{1s| r\cos\theta | 1s} = -\dfrac{1}{2}\\
+H_{12} &= H_{21} = \Braket{1s | \mathscr{H} | 2p_z} = 0 + F\Braket{1s| r\cos\theta | 2p_z} = \dfrac{512 \sqrt{2} \pi }{243}F\\
+H_{22} &= \Braket{2p_z | \mathscr{H} | 2p_z} = -\dfrac{1}{8} + F\Braket{2p_z| r\cos\theta | 2p_z} = -\dfrac{1}{8}
+\end{aligned}
+\end{equation}
+Suppose $ \vb{c} = \mqty(\cos p\\ \sin p) $,
+\begin{equation}\label{key}
+p = \dfrac{1}{2}\arctan\dfrac{2H_{12}}{H_{11} - H_{22}} = -\dfrac{1}{2} \tan ^{-1}\qty(\dfrac{2048 \sqrt{2} F}{729})
+\end{equation}
+thus
+\begin{equation}\label{key}
+\mathscr{E}(F) = H_{11}\cos^2 p + H_{12}\sin 2p + H_{22}\sin^2 p = -\dfrac{1}{2}-\dfrac{262144}{177147}F^2+\mathcal{O}(F^3)
+\end{equation}
+$ \therefore $
+\begin{equation}\label{key}
+\alpha = 2\cross\dfrac{262144}{177147} = 2.96
+\end{equation}
 
 
 \end{document}
