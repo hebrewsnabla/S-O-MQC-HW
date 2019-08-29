@@ -187,9 +187,59 @@
 \subsection{Orbitals, Slater Determinants, and Basis Functions}
 \subsubsection{Spin Orbitals and Spatial Orbitals}
 \ex{2.1}
+Consider $ \Braket{\chi_k | \chi_m} $. If $ k=m $,
 \begin{equation}\label{key}
-\Braket{\chi_{2i-1} | \chi_{2i-1}} = \Braket{\psi_i^\alpha | \psi_i^\alpha} \Braket{\alpha|\alpha} = 
+\Braket{\chi_{2i-1} | \chi_{2i-1}} = \Braket{\psi_i^\alpha | \psi_i^\alpha} \Braket{\alpha|\alpha} = 1
 \end{equation}
+\begin{equation}\label{key}
+\Braket{\chi_{2i} | \chi_{2i}} = \Braket{\psi_i^\beta | \psi_i^\beta} \Braket{\alpha|\alpha} = 1
+\end{equation}
+thus
+\begin{equation}\label{key}
+\Braket{\chi_k | \chi_k} = 1
+\end{equation}
+If $ k\neq m $, three cases may occur as below
+\begin{equation}\label{key}
+\Braket{\chi_{2i-1} | \chi_{2j-1}} = \Braket{\psi_i^\alpha | \psi_j^\alpha}\Braket{\alpha|\alpha} = 0\cdot 1 = 0 \qquad (i\neq j)
+\end{equation}
+\begin{equation}
+\Braket{\chi_{2i-1} | \chi_{2j}} = \Braket{\psi_i^\alpha | \psi_j^\beta}\Braket{\alpha|\beta} = S_{ij}\cdot 0 = 0
+\end{equation}
+\begin{equation}\label{key}
+\Braket{\chi_{2i} | \chi_{2j}} = \Braket{\psi_i^\beta | \psi_j^\beta}\Braket{\beta|\beta} = 0\cdot 1 = 0 \qquad (i\neq j)
+\end{equation}
+thus
+\begin{equation}\label{key}
+\Braket{\chi_k | \chi_m} = 0 \qquad (k\neq m)
+\end{equation}
+Overall,
+\begin{equation}\label{key}
+\Braket{\chi_k | \chi_m} = \delta_{km}
+\end{equation}
+
+\subsubsection{Hartree Products}
+%.
+\ex{2.2}
+\begin{equation}\label{key}
+\begin{aligned}
+\mathscr{H}\Psi^{HP} &= \sum_{i=1}^N h(i)\chi_i(\vb{x}_1)\chi_j(\vb{x}_2)\cdots\chi_k(\vb{x}_N)\\
+&= \varepsilon_i\chi_i(\vb{x}_1)\chi_j(\vb{x}_2)\cdots\chi_k(\vb{x}_N) + \chi_i(\vb{x}_1)[\varepsilon_j\chi_j(\vb{x}_2)]\cdots\chi_k(\vb{x}_N) + \cdots + \chi_i(\vb{x}_1)\chi_j(\vb{x}_2)\cdots[\varepsilon_k\chi_k(\vb{x}_N)]\\
+&= (\varepsilon_i +\varepsilon_j + \cdots + \varepsilon_k)\Psi^{HP}
+\end{aligned}
+\end{equation}
+
+\subsubsection{Slater Determinants}
+%.
+\ex{2.3}
+\begin{equation}\label{key}
+\begin{aligned}
+\Braket{\Psi | \Psi} 
+&= \dfrac{1}{2}\qty(\Braket{\chi_i|\chi_i}\Braket{\chi_j|\chi_j} - \Braket{\chi_i|\chi_j}\Braket{\chi_j|\chi_i} - \Braket{\chi_j|\chi_i}\Braket{\chi_i|\chi_j} + \Braket{\chi_j|\chi_j}\Braket{\chi_i|\chi_i})\\
+&= \dfrac{1}{2}(1+0+0+1) = 1
+\end{aligned}
+\end{equation}
+\ex{2.4}
+
 
 
 
