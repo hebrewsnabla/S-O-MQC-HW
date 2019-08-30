@@ -70,6 +70,7 @@
 	separate-uncertainty = true,
 	inter-unit-product = \ensuremath{{}\cdot{}}
 }
+\usepackage{mhchem}
 
 \DeclareMathOperator{\p}{\prime}
 \DeclareMathOperator{\ti}{\times}
@@ -252,8 +253,28 @@ For the antisymmetrized wave function,
 
 \ex{2.5}
 \begin{equation}\label{key}
-\Braket{K | L} = 
+\begin{aligned}
+\Braket{K | L} &= \dfrac{1}{2}\Braket{\chi_i(\vb{x}_1)\chi_j(\vb{x}_2) - \chi_j(\vb{x}_1)\chi_i(\vb{x}_2) | \chi_k(\vb{x}_1)\chi_l(\vb{x}_2) - \chi_l(\vb{x}_1)\chi_k(\vb{x}_2)}\\
+&= \dfrac{1}{2}\qty(\Braket{\chi_i|\chi_k}\Braket{\chi_j|\chi_l} - \Braket{\chi_i|\chi_l}\Braket{\chi_j|\chi_k} - \Braket{\chi_j|\chi_k}\Braket{\chi_i|\chi_l} + \Braket{\chi_j|\chi_l}\Braket{\chi_i|\chi_k})\\
+&= \dfrac{1}{2}\qty(\delta_{ik}\delta_{jl} - \delta_{il}\delta_{jk} - \delta_{jk}\delta_{il} + \delta_{jl}\delta_{ik})\\
+&= \delta_{ik}\delta_{jl} - \delta_{il}\delta_{jk}
+\end{aligned}
 \end{equation}
+
+\subsubsection{The Hartree-Fock Approximation}
+\subsubsection{The Minimal Basis $ \ce{H_2} $ Model}
+\ex{2.6}
+\begin{equation}\label{key}
+\Braket{\psi_1 | \psi_1} = \dfrac{1}{2(1+S_{12})}\qty(\Braket{\phi_1|\phi_1} + 2\Braket{\phi_1|\phi_2} + \Braket{\phi_2|\phi_2}) = \dfrac{2 + 2S_{12}}{2(1+S_{12})} = 1
+\end{equation}
+\begin{equation}\label{key}
+\Braket{\psi_2 | \psi_2} = \dfrac{1}{2(1-S_{12})}\qty(\Braket{\phi_1|\phi_1} - 2\Braket{\phi_1|\phi_2} + \Braket{\phi_2|\phi_2}) = \dfrac{2 - 2S_{12}}{2(1-S_{12})} = 1
+\end{equation}
+\begin{equation}\label{key}
+\Braket{\psi_1 | \psi_2} = \dfrac{1}{2\sqrt{1+S_{12}}\sqrt{1-S_{12}}}\qty(\Braket{\phi_1|\phi_1} - \Braket{\phi_2|\phi_2}) = 0
+\end{equation}
+\subsubsection{Excited Determinants}
+\subsubsection{Form of the Exact Wfn and CI}
 
 
 
