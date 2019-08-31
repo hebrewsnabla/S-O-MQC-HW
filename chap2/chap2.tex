@@ -276,10 +276,54 @@ For the antisymmetrized wave function,
 \subsubsection{Excited Determinants}
 \subsubsection{Form of the Exact Wfn and CI}
 \ex{2.7}
+Size of full CI matrix
 \begin{equation}\label{key}
-C_{72}^{42} = 164307576757973059488
+C_{72}^{42} = 164307576757973059488 \approx \num{1.64e20}
+\end{equation}
+The number of singly excited determinants
+\begin{equation}\label{key}
+42\cross 30 = 1260
+\end{equation}
+The number of doubly excited determinants
+\begin{equation}\label{key}
+C_{42}^2 C_{30}^2 = 374535
 \end{equation}
 
+\subsection{Operators and Matrix Elements}
+\subsubsection{Minimal Basis $ \ce{H_2} $ Matrix Elements}
+\ex{2.8}
+\begin{equation}\label{key}
+\begin{aligned}
+\Braket{\Psi_{12}^{34} | h(1) | \Psi_{12}^{34}} &= \dfrac{1}{2}\Braket{\chi_3(\vb{x}_1)\chi_4(\vb{x}_2) - \chi_3(\vb{x}_2)\chi_4(\vb{x}_1) | h(1) | \chi_3(\vb{x}_1)\chi_4(\vb{x}_2) - \chi_3(\vb{x}_2)\chi_4(\vb{x}_1)}\\
+&= \dfrac{1}{2}\qty(\Braket{\chi_3|h(1)|\chi_3} - 0 - 0 + \Braket{\chi_4|h(1)|\chi_4})\\
+&= \dfrac{1}{2}\qty(\Braket{\chi_3|h(1)|\chi_3} + \Braket{\chi_4|h(1)|\chi_4})
+\end{aligned}
+\end{equation}
+thus
+\begin{equation}\label{key}
+\Braket{\Psi_{12}^{34} | \mathcal{O}_1 | \Psi_{12}^{34}} = \Braket{3|h|3} + \Braket{4|h|4}
+\end{equation}
+\begin{equation}\label{key}
+\begin{aligned}
+\Braket{\Psi_0 | h(1) | \Psi_{12}^{34}} &= \dfrac{1}{2}\Braket{\chi_1(\vb{x}_1)\chi_2(\vb{x}_2) - \chi_2(\vb{x}_2)\chi_1(\vb{x}_1) | h(1) | \chi_3(\vb{x}_1)\chi_4(\vb{x}_2) - \chi_3(\vb{x}_2)\chi_4(\vb{x}_1)}\\
+&= \dfrac{1}{2}\qty(0 - 0 - 0 + 0)\\
+&= 0
+\end{aligned}
+\end{equation}
+thus
+\begin{equation}\label{key}
+\Braket{\Psi_0 | \mathcal{O}_1 | \Psi_{12}^{34}} = 0
+\end{equation}
+Similarly, we get
+\begin{equation}\label{key}
+\Braket{\Psi_{12}^{34} | \mathcal{O}_1 | \Psi_0} = 0
+\end{equation}
+
+\ex{2.9}
+From Eq. (2.92) in textbook, we get
+\begin{equation}\label{key}
+\Braket{\Psi_0 | \mathscr{H} | \Psi_0} = \Braket{1|h|1} +　\Braket{2|h|2} + \Braket{12|12} + \Braket{12|21}
+\end{equation}
 
 
 
