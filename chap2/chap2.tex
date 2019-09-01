@@ -322,7 +322,7 @@ Similarly, we get
 \ex{2.9}
 From Eq. (2.92) in textbook, we get
 \begin{equation}\label{key}
-\Braket{\Psi_0 | \mathscr{H} | \Psi_0} = \Braket{1|h|1} +　\Braket{2|h|2} + \Braket{12|12} + \Braket{12|21}
+\Braket{\Psi_0 | \mathscr{H} | \Psi_0} = \Braket{1|h|1} +　\Braket{2|h|2} + \Braket{12|12} - \Braket{12|21}
 \end{equation}
 From Ex 2.8, we get
 \begin{equation}\label{key}
@@ -354,6 +354,76 @@ thus
 
 \subsubsection{Notations for 1- and 2-Electron Integrals}
 \subsubsection{General Rules for Matrix Elements}
+%.
+\ex{2.10}
+\begin{equation}\label{key}
+\Braket{K | \mathscr{H} | K} = \sum_m^N [m|h|m] + \dfrac{1}{2}\sum_m^N\sum_n^N \Braket{mn||mn} = \sum_m^N [m|h|m] + \dfrac{1}{2}\sum_m^N\sum_n^N \qty([mm|nn] - [mn|nm])
+\end{equation}
+When $ m=n $,
+\begin{equation}\label{key}
+[mm|mm] - [mm|mm] = 0
+\end{equation}
+thus
+\begin{equation}\label{key}
+\Braket{K | \mathscr{H} | K} = \sum_m^N [m|h|m] + \dfrac{1}{2}\sum_m^N\sum_{n\neq m}^N \qty([mm|nn] - [mn|nm]) = \sum_m^N [m|h|m] + \sum_m^N\sum_{n> m}^N \qty([mm|nn] - [mn|nm])
+\end{equation}
+%.
+\ex{2.11}
+\begin{equation}\label{key}
+\begin{aligned}
+\Braket{K | \mathscr{H} | K} &= \Braket{K | \mathcal{O}_1 + \mathcal{O}_2 | K} = \sum_m^N [m|h|m] + \sum_m^N\sum_{n>m}^N \Braket{mn||mn}\\
+&= \Braket{1|h|1} + \Braket{2|h|2} + \Braket{3|h|3} + \Braket{12||12} + \Braket{13||13} + \Braket{23||23} 
+\end{aligned}
+\end{equation}
+
+%.
+\ex{2.12}
+\begin{equation}\label{key}
+\begin{aligned}
+\Braket{\Psi_0 | \mathscr{H} | \Psi_0} &= \Braket{1|h|1} +　\Braket{2|h|2} + \Braket{12||12} \\
+&= \Braket{1|h|1} +　\Braket{2|h|2} + \Braket{12|12} - \Braket{12|21}
+\end{aligned}
+\end{equation}
+\begin{equation}\label{key}
+\begin{aligned}
+\Braket{\Psi_0 | \mathscr{H} | \Psi_{12}^{34}} = \Braket{12||34}
+= \Braket{12|34} - \Braket{12|43}
+\end{aligned}
+\end{equation}
+\begin{equation}\label{key}
+\begin{aligned}
+\Braket{\Psi_{12}^{34} | \mathscr{H} | \Psi_0} = \Braket{34||12}
+= \Braket{34|12} - \Braket{34|21}
+\end{aligned}
+\end{equation}
+\begin{equation}\label{key}
+\begin{aligned}
+\Braket{\Psi_{12}^{34} | \mathscr{H} | \Psi_{12}^{34}} &= \Braket{3|h|3} + \Braket{4|h|4} + \Braket{34||34}\\
+&= \Braket{3|h|3} + \Braket{4|h|4} + \Braket{34|34} - \Braket{34|43}
+\end{aligned}
+\end{equation}
+Which are exactly the same with Ex 2.9.
+
+\ex{2.13}
+if $ a=b $, $ r=s $
+\begin{equation}\label{key}
+\Braket{\Psi_a^r | \mathcal{O} | \Psi_b^s} = \Braket{\Psi_a^r | \mathcal{O}_1 | \Psi_a^r} = \sum_c^N\Braket{c|h|c} - \Braket{a|h|a} + \Braket{r|h|r}
+\end{equation}
+if $ a=b $, $ r\neq s $
+\begin{equation}\label{key}
+\Braket{\Psi_a^r | \mathcal{O} | \Psi_b^s} = \Braket{\Psi_a^r | \mathcal{O}_1 | \Psi_a^s} = \Braket{r|h|s}
+\end{equation}
+if $ a\neq b $, $ r=s $
+\begin{equation}\label{key}
+\Braket{\Psi_a^r | \mathcal{O} | \Psi_b^s} = \Braket{\Psi_a^r | \mathcal{O}_1 | \Psi_b^r} = \Braket{\Psi_a^r | \mathcal{O}_1 | -(\Psi_a^r)_b^a} = -\Braket{b|h|a}
+\end{equation}
+if $ a\neq b $, $ r\neq s $
+\begin{equation}\label{key}
+\Braket{\Psi_a^r | \mathcal{O} | \Psi_b^s} = \Braket{\Psi_a^r | \mathcal{O}_1 | (\Psi_a^r)_{rb}^{as}} = 0
+\end{equation}
+
+\ex{2.14}
+
 
 
 \end{document}

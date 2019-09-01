@@ -278,4 +278,27 @@ For spatial orb
 \begin{equation}\label{key}
 (ij|kl) = \Braket{\psi_i(1)\psi_j(1) | \dfrac{1}{r_{12}} | \psi_k(2)\psi_l(2)}
 \end{equation}
+
+\subsubsection{General Rules for Matrix Elements}
+\begin{enumerate}
+	\item $ \ket{K} = \ket{\cdots m n\cdots} $
+	\begin{equation}\label{key}
+	\Braket{K | \mathscr{H} | K} = \sum_m^N [m|h|m] + \dfrac{1}{2}\sum_m^N\sum_n^N \qty([mm|nn] - [mn|nm])
+	\end{equation}
+	or (Since $ [mm|mm] - [mm|mm] = 0 $)
+	\begin{equation}\label{key}
+	\Braket{K | \mathscr{H} | K} = \sum_m^N [m|h|m] + \sum_m^N\sum_{n>m}^N \qty([mm|nn] - [mn|nm])
+	\end{equation}
+	\item $ \ket{K} = \ket{\cdots m n\cdots} $, $ \ket{L} = \ket{\cdots p n\cdots} $
+	\begin{equation}\label{key}
+	\Braket{K | \mathscr{H} | L} = [m|h|p] + \sum_n^N \qty([mp|nn] - [mn|np])
+	\end{equation}
+	\item $ \ket{K} = \ket{\cdots m n\cdots} $, $ \ket{L} = \ket{\cdots p q\cdots} $
+	\begin{equation}\label{key}
+	\Braket{K | \mathscr{H} | L} = [mp|nq] - [mq|np]
+	\end{equation}
+\end{enumerate}
+
+
+
 \end{document}
