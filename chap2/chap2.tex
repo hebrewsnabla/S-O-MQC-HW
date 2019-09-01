@@ -332,10 +332,28 @@ thus
 \begin{equation}\label{key}
 \begin{aligned}
 \Braket{\Psi_0 | \mathscr{H} | \Psi_{12}^{34}} &= \Braket{\Psi_0 | \mathcal{O}_2 | \Psi_{12}^{34}}\\
-&= \dfrac{1}{2}\Braket{\chi_1(\vb{x}_1)\chi_2(\vb{x}_2) - \chi_2(\vb{x}_2)\chi_1(\vb{x}_1) | \dfrac{1}{r_{12}} | \chi_3(\vb{x}_1)\chi_4(\vb{x}_2) - \chi_3(\vb{x}_2)\chi_4(\vb{x}_1)}\\
+&= \dfrac{1}{2}\Braket{\chi_1(\vb{x}_1)\chi_2(\vb{x}_2) - \chi_1(\vb{x}_2)\chi_2(\vb{x}_1) | \dfrac{1}{r_{12}} | \chi_3(\vb{x}_1)\chi_4(\vb{x}_2) - \chi_3(\vb{x}_2)\chi_4(\vb{x}_1)}\\
+&= \Braket{12|34} - \Braket{12|43}
+\end{aligned}
+\end{equation}
+\begin{equation}\label{key}
+\begin{aligned}
+\Braket{\Psi_{12}^{34} | \mathscr{H} | \Psi_0} &= \Braket{\Psi_{12}^{34} | \mathcal{O}_2 | \Psi_0}\\
+&= \dfrac{1}{2}\Braket{\chi_3(\vb{x}_1)\chi_4(\vb{x}_2) - \chi_3(\vb{x}_2)\chi_4(\vb{x}_1) | \dfrac{1}{r_{12}} | \chi_1(\vb{x}_1)\chi_2(\vb{x}_2) - \chi_2(\vb{x}_2)\chi_1(\vb{x}_1)}\\
+&= \Braket{34|12} - \Braket{34|21}
+\end{aligned}
+\end{equation}
+\begin{equation}\label{key}
+\begin{aligned}
+\Braket{\Psi_{12}^{34} | \mathscr{H} | \Psi_{12}^{34}} &= \Braket{\Psi_{12}^{34} | h(1) +h(2) + \dfrac{1}{r_{12}} | \Psi_{12}^{34}}\\
+&= 2\cross\dfrac{1}{2}\Braket{\chi_3(\vb{x}_1)\chi_4(\vb{x}_2) - \chi_3(\vb{x}_2)\chi_4(\vb{x}_1) | h(1) | \chi_3(\vb{x}_1)\chi_4(\vb{x}_2) - \chi_3(\vb{x}_2)\chi_4(\vb{x}_1)}\\
+&+ \dfrac{1}{2}\Braket{\chi_3(\vb{x}_1)\chi_4(\vb{x}_2) - \chi_3(\vb{x}_2)\chi_4(\vb{x}_1) | \dfrac{1}{r_{12}} | \chi_3(\vb{x}_1)\chi_4(\vb{x}_2) - \chi_3(\vb{x}_2)\chi_4(\vb{x}_1)}\\
+&= \Braket{3|h|3} + \Braket{4|h|4} + \Braket{34|34} - \Braket{34|43}
 \end{aligned}
 \end{equation}
 
+\subsubsection{Notations for 1- and 2-Electron Integrals}
+\subsubsection{General Rules for Matrix Elements}
 
 
 \end{document}
