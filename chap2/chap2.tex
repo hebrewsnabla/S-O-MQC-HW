@@ -434,6 +434,29 @@ if $ a\neq b $, $ r\neq s $
 \end{equation}
 
 \subsubsection{Derivation of the Rules for Matrix Elements}
+\ex{2.15}
+\begin{equation}\label{key}
+\begin{aligned}
+\Braket{\Psi | \mathscr{H} | \Psi} &= \dfrac{1}{N!} \Braket{\sum_{n=1}^{N!} (-1)^{p_n}\mathscr{P}_n\{\chi_i(1)\chi_j(2)\cdots\chi_k(N)\} | \sum_{c=1}^N h(c) | \sum_{m=1}^{N!} (-1)^{p_m}\mathscr{P}_m\{\chi_i(1)\chi_j(2)\cdots\chi_k(N)\}}\\
+&= \dfrac{1}{N!} \sum_{n=1}^{N!} \sum_{m=1}^{N!} (-1)^{p_n + p_m} \sum_{c=1}^N \Braket{ \mathscr{P}_n \{\chi_i(1)\chi_j(2)\cdots\chi_k(N)\} |  h(c) | \mathscr{P}_m \{ \chi_i(1)\chi_j(2)\cdots\chi_k(N)\}}\\
+\end{aligned}
+\end{equation}
+Since the integral inside equals $ 0 $ when $ \mathscr{P}_n \neq \mathscr{P}_m $,
+\begin{equation}\label{key}
+\Braket{\Psi | \mathscr{H} | \Psi} = \dfrac{1}{N!} \sum_{n=1}^{N!} (-1)^{p_n + p_n} (\varepsilon_i+\varepsilon_j+\cdots+\varepsilon_k) = \varepsilon_i+\varepsilon_j+\cdots+\varepsilon_k
+\end{equation}
+
+\ex{2.16}
+Suppose
+\begin{equation}\label{key}
+c = \Braket{K^{HP} | \mathscr{H} | L} = \Braket{K^{HP} | \mathscr{H} | \sum_{m=1}^{N!}(-1)^{p_m}\mathscr{P}_m L^{HP}}
+\end{equation}
+thus
+\begin{equation}\label{key}
+\Braket{K | \mathscr{H} | L} = \sum_{n=1}^{N!} (-1)^{p_n} \Braket{\mathscr{P}_n K^{HP} | \mathscr{H} | \sum_{m=1}^{N!}(-1)^{p_m}\mathscr{P}_m L^{HP}}
+\end{equation}
+
+
 
 
 
