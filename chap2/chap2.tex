@@ -478,9 +478,44 @@ thus
 \end{equation}
 
 \ex{2.18}
+\begin{equation}\label{key}
+\begin{aligned}
+\abs{\Braket{ab||rs}}^2 &= (\Braket{ab|rs} - \Braket{ab|sr})^*(\Braket{ab|rs} - \Braket{ab|sr})\\
+&= \Braket{rs|ab}\Braket{ab|rs} - \Braket{rs|ab}\Braket{ab|sr} - \Braket{sr|ab}\Braket{ab|rs} + \Braket{sr|ab}\Braket{ab|sr}\\
+&= [ra|sb][ar|bs] - [ra|sb][as|br] - [sa|rb][ar|bs] + [sa|rb][as|br]\\
+&= [ar|bs]^2 - 2[ar|bs][as|br] + [as|br]^2
+\end{aligned}
+\end{equation}
+Let's calculate $ E_0^{(2)} $ term by term.
+\begin{equation}\label{key}
+\begin{aligned}
+\qty(E_0^{(2)})_1 &= \dfrac{1}{4}\sum_{abrs} \dfrac{[ar|bs]^2}{\varepsilon_a+\varepsilon_b-\varepsilon_r-\varepsilon_s}\\
+&= \dfrac{1}{4}\sum_{a,b}^{N/2}\sum_{r,s=N/2+1}^K \dfrac{[ar|bs]^2 +[\bar{a}\bar{r}|bs]^2 + [ar|\bar{b}\bar{s}]^2 +[\bar{a}\bar{r}|\bar{b}\bar{s}]^2}{\varepsilon_a+\varepsilon_b-\varepsilon_r-\varepsilon_s}\\
+&= \sum_{a,b}^{N/2}\sum_{r,s=N/2+1}^K \dfrac{[ar|bs]^2}{\varepsilon_a+\varepsilon_b-\varepsilon_r-\varepsilon_s}\\
+&= \sum_{a,b}^{N/2}\sum_{r,s=N/2+1}^K \dfrac{\Braket{ab|rs}\Braket{rs|ab}}{\varepsilon_a+\varepsilon_b-\varepsilon_r-\varepsilon_s}
+\end{aligned}
+\end{equation}
+\begin{equation}\label{key}
+\begin{aligned}
+\qty(E_0^{(2)})_2 &= \dfrac{1}{4}\sum_{abrs} \dfrac{-2[ar|bs][as|br]}{\varepsilon_a+\varepsilon_b-\varepsilon_r-\varepsilon_s}\\
+&= -\dfrac{1}{2}\sum_{a,b}^{N/2}\sum_{r,s=N/2+1}^K \dfrac{[ar|bs][as|br] +[\bar{a}\bar{r}|\bar{b}\bar{s}][\bar{a}\bar{s}|\bar{b}\bar{r}]}{\varepsilon_a+\varepsilon_b-\varepsilon_r-\varepsilon_s}\\
+&= -\sum_{a,b}^{N/2}\sum_{r,s=N/2+1}^K \dfrac{[ar|bs][as|br]}{\varepsilon_a+\varepsilon_b-\varepsilon_r-\varepsilon_s}\\
+&= -\sum_{a,b}^{N/2}\sum_{r,s=N/2+1}^K \dfrac{\Braket{ab|rs}\Braket{rs|ba}}{\varepsilon_a+\varepsilon_b-\varepsilon_r-\varepsilon_s}
+\end{aligned}
+\end{equation}
+\begin{equation}\label{key}
+\begin{aligned}
+\qty(E_0^{(2)})_3 &= \dfrac{1}{4}\sum_{abrs} \dfrac{[as|br]^2}{\varepsilon_a+\varepsilon_b-\varepsilon_r-\varepsilon_s} = \dfrac{1}{4}\sum_{absr}\dfrac{[ar|bs]^2}{\varepsilon_a+\varepsilon_b-\varepsilon_s-\varepsilon_r}\\
+&= \sum_{a,b}^{N/2}\sum_{r,s=N/2+1}^K \dfrac{\Braket{ab|rs}\Braket{rs|ab}}{\varepsilon_a+\varepsilon_b-\varepsilon_r-\varepsilon_s}
+\end{aligned}
+\end{equation}
+thus,
+\begin{equation}\label{key}
+E_0^{(2)} = \sum_{a,b}^{N/2}\sum_{r,s=N/2+1}^K \dfrac{\Braket{ab|rs}(2\Braket{rs|ab} - \Braket{rs|ba})}{\varepsilon_a+\varepsilon_b-\varepsilon_r-\varepsilon_s}
+\end{equation}
 
-
-
+\subsubsection{Coulomb and Exchange Integrals}
+\ex{2.19}
 
 
 
