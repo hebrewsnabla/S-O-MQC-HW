@@ -520,10 +520,10 @@ E_0^{(2)} = \sum_{a,b}^{N/2}\sum_{r,s=N/2+1}^K \dfrac{\Braket{ab|rs}(2\Braket{rs
 J_{ii} = (ii|ii) = K_{ii} 
 \end{equation}
 \begin{equation}\label{key}
-J_{ij}^* = \Braket{ij|ij}^* = \Braket{ij|ij} = J_{ji}
+J_{ij}^* = \Braket{ij|ij}^* = \Braket{ij|ij} = J_{ij}
 \end{equation}
 \begin{equation}\label{key}
-K_{ij}^* = \Braket{ij|ji}^* = \Braket{ji|ij} = K_{ji}
+K_{ij}^* = \Braket{ij|ji}^* = \Braket{ji|ij} = \Braket{ij|ji} = K_{ij}
 \end{equation}
 \begin{equation}\label{key}
 J_{ij} = (ii|jj) = (jj|ii) = J_{ji}
@@ -533,7 +533,32 @@ K_{ij} = (ij|ji) = (ji|ij) = K_{ji}
 \end{equation}
 
 \ex{2.20}
+For real spatial orbitals
+\begin{equation}\label{key}
+K_{ij} = (ij|ji) = (ij|ij) = (ji|ji)
+\end{equation}
+\begin{equation}\label{key}
+K_{ij} = \Braket{ij|ji} = \Braket{ii|jj} = \Braket{jj|ii}
+\end{equation}
 
+%.
+\ex{2.21}
+\begin{equation}\label{key}
+\vb{H} = \mqty(2(1|h|1) + (11|11) & (12|12)\\
+(21|21) & 2(2|h|2) + (22|22)) = 
+\mqty(2h_{11} + J_{11} & K_{12}\\
+      K_{12} & 2h_{22} + J_{22})
+\end{equation}
+
+\ex{2.22}
+\begin{equation}\label{key}
+E_{\uparrow\downarrow}^{HP} = \Braket{\Psi_{\uparrow\downarrow}^{HP} | h(1) + h(2) + \dfrac{1}{r_{12}} | \Psi_{\uparrow\downarrow}^{HP}} = (1|h|1)+(2|h|2)+(11|22) = h_{11}+h_{22}+J_{12}
+\end{equation}
+\begin{equation}\label{key}
+E_{\downarrow\downarrow}^{HP} = \Braket{\Psi_{\downarrow\downarrow}^{HP} | h(1) + h(2) + \dfrac{1}{r_{12}} | \Psi_{\downarrow\downarrow}^{HP}} = (1|h|1)+(2|h|2)+(11|22) = h_{11}+h_{22}+J_{12}
+\end{equation}
+
+\subsubsection{Pseudo-Classical Interpretation of Determinantal Energies}
 
 
 
