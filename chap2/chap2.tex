@@ -589,12 +589,38 @@ for any $ \ket{K} $.
 where $ \ket{0} $ is the vacuum state.
 
 \ex{2.27}
-First, if $ i\neq j $,
-\begin{equation}\label{key}
-\Braket{K | a_i^\dagger a_j | K} = \Braket{K | - a_j a_i^\dagger  | K}
+First, if $ i\notin \{1,2,\cdots,N\} $ or $ j\notin \{1,2,\cdots,N\} $, \begin{equation}\label{key}
+\Braket{K | a_i^\dagger a_j | K} = 0
 \end{equation}
-if $ j\notin \{1,2,\cdots,N\} $, $ \Braket{K | a_i^\dagger a_j | K} $ must be $ 0 $.\\
-If 
+because inexistent electron cannot be annihilated.\\
+Thus, $ i,j\in \{1,2,\cdots,N\} $, and
+\begin{equation}\label{key}
+\Braket{K | a_i^\dagger a_j | K} = \delta_{ij}\Braket{K|K} - \Braket{K | a_j a_i^\dagger | K}
+\end{equation}
+$ \Braket{K | a_j a_i^\dagger | K} $ would be $ 0 $ because $ \chi_i $ is created twice. Thus,
+\begin{equation}\label{key}
+\Braket{K | a_i^\dagger a_j | K} = \delta_{ij}
+\end{equation}
+Overall, $ \Braket{K | a_i^\dagger a_j | K} = 1$ when $ i=j $ and $ i\in \{1,2,\cdots,N\} $, but is $ 0 $ otherwise.
+
+\ex{2.28}
+\subex{a.}
+That's obvious since inexistent electron cannot be annihilated.
+\subex{b.}
+That's obvious since an electron cannot be created twice.
+\subex{c.}
+\begin{equation}\label{key}
+\begin{aligned}
+a_r^\dagger a_a\ket{\Psi_0} &= a_r^\dagger a_a (-\ket{\chi_a\cdots\chi_1\chi_b\cdots\chi_N}) = -a_r^\dagger\ket{\cdots\chi_1\chi_b\cdots\chi_N}\\
+&= -\ket{\chi_r\cdots\chi_1\chi_b\cdots\chi_N} = \ket{\chi_1\cdots\chi_r\chi_b\cdots\chi_N}\\
+&= \ket{\Psi_a^r}
+\end{aligned}
+\end{equation}
+\subex{d.}
+
+\subex{e.}
+
+\subex{f.}
 
 
 
