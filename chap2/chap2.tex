@@ -154,7 +154,7 @@
 \numberwithin{equation}{subsection}
 %\setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{4}
-%\allowdisplaybreaks[4]
+\allowdisplaybreaks[4]
 
 \usepackage{xcolor}
 \definecolor{codegray}{gray}{0.9}
@@ -619,7 +619,7 @@ a_r^\dagger a_a\ket{\Psi_0} &= a_r^\dagger a_a (-\ket{\chi_a\cdots\chi_1\chi_b\c
 \end{aligned}
 \end{equation}
 \subex{d.}
-That's similar to 2.28.c
+That's similar to 2.28.c.
 \subex{e.}
 \begin{equation}\label{key}
 \begin{aligned}
@@ -632,9 +632,53 @@ a_s^\dagger a_b a_r^\dagger a_a\ket{\Psi_0}
 &= \ket{\Psi_{ab}^{rs}}
 \end{aligned}
 \end{equation}
-
+$ \therefore $
+\begin{equation}\label{key}
+\ket{\Psi_{ab}^{rs}} = a_s^\dagger a_b a_r^\dagger a_a\ket{\Psi_0} = a_s^\dagger (-a_r^\dagger a_b) a_a\ket{\Psi_0} = a_r^\dagger a_s^\dagger  a_b a_a\ket{\Psi_0} 
+\end{equation}
 \subex{f.}
+That's similar to 2.28.e.
 
+\subsubsection{Second-Quantized Operators and Their Matrix Elements}
+\ex{2.29}
+\begin{equation}\label{key}
+\begin{aligned}
+\Braket{\Psi_0 | \mathcal{O}_1 | \Psi_0} &= \sum_{ij}\Braket{i|h|j}\Bra{0}a_2 a_1 a_i^\dagger a_j a_1^\dagger a_2^\dagger \ket{0}\\
+&= \sum_{ij}\Braket{i|h|j}\Bra{0}a_2 a_1 (\delta_{ij} -  a_j^\dagger a_i) a_1^\dagger a_2^\dagger \ket{0} \\
+&= \sum_i\Braket{i|h|i} \Bra{0}a_2 a_1 a_1^\dagger a_2^\dagger \ket{0} - \sum_{ij}\Braket{i|h|j}\Bra{0}a_2 a_1 a_j a_i^\dagger a_1^\dagger  a_2^\dagger \ket{0}
+\end{aligned}
+\end{equation}
+The second terms must be $ 0 $ since $ i\in{1,2} $.\\
+Thus,
+\begin{equation}\label{key}
+\begin{aligned}
+\Braket{\Psi_0 | \mathcal{O}_1 | \Psi_0} &= \sum_i\Braket{i|h|i} \Bra{0}a_2 a_1 a_1^\dagger a_2^\dagger \ket{0} = \Braket{1|h|1} +\Braket{2|h|2}
+\end{aligned}
+\end{equation}
 
+\ex{2.30}
+%\begin{equation}
+\allowdisplaybreaks
+\begin{align}
+\Braket{\Psi_a^r | \mathcal{O}_1 | \Psi_0} &= \sum_{ij}\Braket{i|h|j}\Braket{\Psi_0 | a_a^\dagger a_r a_i^\dagger a_j | \Psi_0} = \sum_{ij}\Braket{i|h|j}\Braket{\Psi_0 | a_a^\dagger (\delta_{ri} -  a_i^\dagger a_r) a_j | \Psi_0}\notag\\
+&= \sum_j\Braket{r|h|j}\Braket{\Psi_0 | a_a^\dagger a_j|\Psi_0} - \sum_{ij}\Braket{i|h|j}\Braket{\Psi_0 | a_a^\dagger a_i^\dagger a_r a_j | \Psi_0}\notag\\
+%\displaybreak
+&= \sum_j\Braket{r|h|j}\Braket{\Psi_0 | (\delta_{aj} - a_j a_a^\dagger)|\Psi_0}\notag\\
+&= \Braket{r|h|a}\Braket{\Psi_0 | \Psi_0} - \sum_j\Braket{r|h|j}\Braket{\Psi_0 | a_j a_a^\dagger|\Psi_0}\notag\\
+&= \Braket{r|h|a}
+\end{align}
+%\end{equation}
+
+\ex{2.31}
+\begin{align}
+\Braket{\Psi_a^r | \mathcal{O}_2 | \Psi_0} &= \Braket{\Psi_0 | a_a^\dagger a_r a_i^\dagger a_j^\dagger a_l a_k | \Psi_0} \notag \\
+&= \Braket{\Psi_0 | a_a^\dagger \delta_{ri} a_j^\dagger a_l a_k | \Psi_0} - \Braket{\Psi_0 | a_a^\dagger a_i^\dagger a_r a_j^\dagger a_l a_k | \Psi_0} \notag\\
+&= \delta_{ri} \qty(\Braket{\Psi_0 | a_j^\dagger \delta_{ak} a_l | \Psi_0}  - \Braket{\Psi_0 | a_j^\dagger a_k a_a^\dagger a_l | \Psi_0} ) \notag\\ 
+  & \quad{} - \qty(\Braket{\Psi_0 | a_a^\dagger a_i^\dagger \delta_{rj} a_l a_k | \Psi_0} - \Braket{\Psi_0 | a_a^\dagger a_i^\dagger a_j^\dagger a_r a_l a_k | \Psi_0})\notag\\
+&= \delta_{ri}\delta_{ak} \Braket{\Psi_0 | a_j^\dagger  a_l | \Psi_0}  - \delta_{ri}\delta_{al}\Braket{\Psi_0 | a_j^\dagger a_k | \Psi_0} \notag\\ 
+  & \quad{} - \delta_{rj}\qty(\Braket{\Psi_0 | a_i^\dagger \delta_{ak} a_l| \Psi_0} - \Braket{\Psi_0 | a_i^\dagger a_k a_a^\dagger  a_l | \Psi_0} ) + 0 \notag\\
+&= \delta_{ri}\delta_{ak} \Braket{\Psi_0 | a_j^\dagger  a_l | \Psi_0}  - \delta_{ri}\delta_{al}\Braket{\Psi_0 | a_j^\dagger a_k | \Psi_0} \notag\\ 
+  & \quad{} - \delta_{rj}\delta_{ak} \Braket{\Psi_0 | a_i^\dagger a_l| \Psi_0} + \delta_{rj}\delta_{al} \Braket{\Psi_0 | a_i^\dagger a_k | \Psi_0}
+\end{align}
 
 \end{document}
