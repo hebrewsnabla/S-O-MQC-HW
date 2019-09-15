@@ -671,7 +671,11 @@ Thus,
 
 \ex{2.31}
 \begin{align}
-\Braket{\Psi_a^r | \mathcal{O}_2 | \Psi_0} &= \Braket{\Psi_0 | a_a^\dagger a_r a_i^\dagger a_j^\dagger a_l a_k | \Psi_0} \notag \\
+\Braket{\Psi_a^r | \mathcal{O}_2 | \Psi_0} &= \dfrac{1}{2} \sum_{ijkl} \Braket{ij|kl} \Braket{\Psi_0 | a_a^\dagger a_r a_i^\dagger a_j^\dagger a_l a_k | \Psi_0} 
+\end{align}
+while
+\begin{align}
+\Braket{\Psi_0 | a_a^\dagger a_r a_i^\dagger a_j^\dagger a_l a_k | \Psi_0} 
 &= \Braket{\Psi_0 | a_a^\dagger \delta_{ri} a_j^\dagger a_l a_k | \Psi_0} - \Braket{\Psi_0 | a_a^\dagger a_i^\dagger a_r a_j^\dagger a_l a_k | \Psi_0} \notag\\
 &= \delta_{ri} \qty(\Braket{\Psi_0 | a_j^\dagger \delta_{ak} a_l | \Psi_0}  - \Braket{\Psi_0 | a_j^\dagger a_k a_a^\dagger a_l | \Psi_0} ) \notag\\ 
   & \quad{} - \qty(\Braket{\Psi_0 | a_a^\dagger a_i^\dagger \delta_{rj} a_l a_k | \Psi_0} - \Braket{\Psi_0 | a_a^\dagger a_i^\dagger a_j^\dagger a_r a_l a_k | \Psi_0})\notag\\
@@ -679,6 +683,11 @@ Thus,
   & \quad{} - \delta_{rj}\qty(\Braket{\Psi_0 | a_i^\dagger \delta_{ak} a_l| \Psi_0} - \Braket{\Psi_0 | a_i^\dagger a_k a_a^\dagger  a_l | \Psi_0} ) + 0 \notag\\
 &= \delta_{ri}\delta_{ak} \Braket{\Psi_0 | a_j^\dagger  a_l | \Psi_0}  - \delta_{ri}\delta_{al}\Braket{\Psi_0 | a_j^\dagger a_k | \Psi_0} \notag\\ 
   & \quad{} - \delta_{rj}\delta_{ak} \Braket{\Psi_0 | a_i^\dagger a_l| \Psi_0} + \delta_{rj}\delta_{al} \Braket{\Psi_0 | a_i^\dagger a_k | \Psi_0}
+\end{align}
+According to Ex. 2.27, we have
+\begin{align}
+\Braket{\Psi_a^r | \mathcal{O}_2 | \Psi_0} &= \dfrac{1}{2} \sum_{ijkl} \left( \Braket{rj|al}\Braket{\Psi_0 | a_j^\dagger  a_l | \Psi_0} - \Braket{rj|ka}\Braket{\Psi_0 | a_j^\dagger  a_k | \Psi_0}\right. \notag\\
+&  \left. \hspace{40pt} {} - \Braket{ir|al}\Braket{\Psi_0 | a_i^\dagger  a_l | \Psi_0} + \Braket{ir|ka}\Braket{\Psi_0 | a_i^\dagger  a_k | \Psi_0}\right)
 \end{align}
 
 \end{document}
