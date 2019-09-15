@@ -121,6 +121,7 @@
 \DeclareMathOperator{\hp}{\hat{\vb{p}}}
 
 \DeclareMathOperator{\ha}{\hat{\vb{a}}}
+\DeclareMathOperator{\hs}{\hat{\vb{s}}}
 \DeclareMathOperator{\hS}{\hat{\vb{S}}}
 \DeclareMathOperator{\hSigma}{\hat{\bm\Sigma}}
 \DeclareMathOperator{\hJ}{\hat{\vb{J}}}
@@ -154,7 +155,7 @@
 \numberwithin{equation}{subsection}
 %\setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{4}
-\allowdisplaybreaks[4]
+\allowdisplaybreaks[1]
 
 \usepackage{xcolor}
 \definecolor{codegray}{gray}{0.9}
@@ -686,8 +687,37 @@ while
 \end{align}
 According to Ex. 2.27, we have
 \begin{align}
-\Braket{\Psi_a^r | \mathcal{O}_2 | \Psi_0} &= \dfrac{1}{2} \sum_{ijkl} \left( \Braket{rj|al}\Braket{\Psi_0 | a_j^\dagger  a_l | \Psi_0} - \Braket{rj|ka}\Braket{\Psi_0 | a_j^\dagger  a_k | \Psi_0}\right. \notag\\
-&  \left. \hspace{40pt} {} - \Braket{ir|al}\Braket{\Psi_0 | a_i^\dagger  a_l | \Psi_0} + \Braket{ir|ka}\Braket{\Psi_0 | a_i^\dagger  a_k | \Psi_0}\right)
+\Braket{\Psi_a^r | \mathcal{O}_2 | \Psi_0} &= \dfrac{1}{2} \left( \sum_{jl}\Braket{rj|al}\Braket{\Psi_0 | a_j^\dagger  a_l | \Psi_0} - \sum_{jk}\Braket{rj|ka}\Braket{\Psi_0 | a_j^\dagger  a_k | \Psi_0}\right. \notag\\
+&  \left. \hspace{30pt} {} - \sum_{il}\Braket{ir|al}\Braket{\Psi_0 | a_i^\dagger  a_l | \Psi_0} + \sum_{ik}\Braket{ir|ka}\Braket{\Psi_0 | a_i^\dagger  a_k | \Psi_0}\right) \notag\\
+&= \dfrac{1}{2}\qty(\sum_j^N\Braket{rj|aj} - \sum_j^N\Braket{rj|ja} - \sum_i^N\Braket{ir|ai} + \sum_i^N\Braket{ir|ia}) \notag\\
+&= \sum_j^N\Braket{rj|aj} - \sum_j^N\Braket{rj|ja} \notag\\
+&= \sum_j^N\Braket{rj||aj}
 \end{align}
+
+\subsection{Spin-adapted Configurations}
+\subsubsection{Spin Operators}
+\ex{2.32}
+\subex{a)}
+\begin{align}
+\hs_+\ket{\alpha} &= (\hs_x + \I\hs_y)\ket{\alpha} = \qty(\dfrac{1}{2} + \I\dfrac{\I}{2})\ket{\beta} = 0\\
+\hs_+\ket{\beta} &= (\hs_x + \I\hs_y)\ket{\beta} = \qty(\dfrac{1}{2} - \I\dfrac{\I}{2})\ket{\alpha} = \ket{\alpha}\\
+\hs_-\ket{\alpha} &= (\hs_x - \I\hs_y)\ket{\alpha} = \qty(\dfrac{1}{2} - \I\dfrac{\I}{2})\ket{\beta} = \ket{\beta}\\
+\hs_-\ket{\beta} &= (\hs_x - \I\hs_y)\ket{\beta} = \qty(\dfrac{1}{2} + \I\dfrac{\I}{2})\ket{\alpha} = 0
+\end{align}
+\subex{b)}
+\begin{align}
+\hs_+\hs_- &= (\hs_x + \I\hs_y)(\hs_x - \I\hs_y) = \hs_x^2 + \hs_y^2 + \I(\hs_y\hs_x - \hs_x\hs_y) = \hs_x^2 + \hs_y^2 + \hs_z\\\
+\hs_-\hs_+ &= (\hs_x - \I\hs_y)(\hs_x + \I\hs_y) = \hs_x^2 + \hs_y^2 + \I(\hs_x\hs_y - \hs_y\hs_x) = \hs_x^2 + \hs_y^2 - \hs_z
+\end{align}
+thus,
+\begin{align}
+\hs^2 &= \hs_x^2 + \hs_y^2 + \hs_z^2 = \hs_+\hs_- - \hs_z + \hs_z^2\\
+&= \hs_-\hs_+ + \hs_z + \hs_z^2
+\end{align}
+
+\ex{2.33}
+
+
+
 
 \end{document}
