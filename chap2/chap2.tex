@@ -134,6 +134,15 @@
 \newcommand{\naCarExpd}[1]{\pdv[2]{#1}{x} + \pdv[2]{#1}{y} + \pdv[2]{#1}{z}}
 \newcommand{\naCyl}{\qty[\dfrac{1}{\rho}\pdv{\rho}\qty(\rho\pdv{\rho}) + \dfrac{1}{\rho^2}\pdv[2]{\phi} + \pdv[2]{z}]}
 
+%% MQC
+\DeclareMathOperator{\sH}{\mathscr{H}}
+\DeclareMathOperator{\sA}{\mathscr{A}}
+\newcommand{\iden}{{\large \bm{1}}}
+\newcommand{\qed}{$ \Square $}
+\newcommand{\tPhi}{\tilde{\Phi} }
+\newcommand{\hsP}{\hat{\mathscr{P}}}
+\newcommand{\hsS}{\hat{\mathscr{S}}}
+
 %\DeclareMathOperator{\g#0}{\gamma^0}
 %\DeclareMathOperator{\g1}{\gamma^1}
 %\DeclareMathOperator{\g2}{\gamma^2}
@@ -148,9 +157,7 @@
 \newcommand{\ex}[1]{\paragraph{Ex #1}}
 \newcommand{\subex}[1]{\subparagraph{#1}}
 \newcommand{\dis}{\displaystyle}
-\newcommand{\iden}{{\large \bm{1}}}
-\newcommand{\qed}{$ \Square $}
-\newcommand{\tPhi}{\tilde{\Phi} }
+
 
 \numberwithin{equation}{subsection}
 %\setcounter{secnumdepth}{4}
@@ -694,7 +701,7 @@ According to Ex. 2.27, we have
 &= \sum_j^N\Braket{rj||aj}
 \end{align}
 
-\subsection{Spin-adapted Configurations}
+\subsection{Spin-Adapted Configurations}
 \subsubsection{Spin Operators}
 \ex{2.32}
 \subex{a)}
@@ -716,7 +723,59 @@ thus,
 \end{align}
 
 \ex{2.33}
+\begin{equation}\label{key}
+\hs^2 = \mqty(\dfrac{3}{4} & 0\\ 0 & \dfrac{3}{4}) \quad 
+\hs_z = \mqty(\dfrac{1}{2} & 0\\ 0 & -\dfrac{1}{2}) \quad
+\hs_+ = \mqty(0 & 1\\ 0 & 0) \quad \hs_- = \mqty(0 & 0\\ 1 & 0)
+\end{equation}
+thus
+\begin{align}
+\hs_+\hs_- - \hs_z + \hs_z^2 &= \mqty(1 & 0\\ 0 & 0) - \mqty(\dfrac{1}{2} & 0\\ 0 & -\dfrac{1}{2}) + \mqty(\dfrac{1}{4} & 0\\ 0 & \dfrac{1}{4}) = \mqty(\dfrac{3}{4} & 0\\ 0 & \dfrac{3}{4}) = \hs^2\\
+\hs_-\hs_+ + \hs_z + \hs_z^2 &= \mqty(0 & 0\\ 0 & 1) + \mqty(\dfrac{1}{2} & 0\\ 0 & -\dfrac{1}{2}) + \mqty(\dfrac{1}{4} & 0\\ 0 & \dfrac{1}{4}) = \mqty(\dfrac{3}{4} & 0\\ 0 & \dfrac{3}{4}) = \hs^2
+\end{align}
 
+\ex{2.34}
+\begin{align}
+[\hs^2, \hs_z] &= [\hs_+\hs_- - \hs_z + \hs_z^2, \hs_z] \notag\\
+&= \hs_+[\hs_-, \hs_z] + [\hs_+, \hs_z]\hs_- - 0 + 0 \notag\\
+&= \hs_+[\hs_x - \I\hs_y, \hs_z] + [\hs_x + \I\hs_y, \hs_z]\hs_- \notag\\
+&= \hs_+(-\I\hs_y -\I\cdot\I\hs_x) + (-\I\hs_y + \I\cdot\I\hs_x)\hs_- \notag\\
+&= \hs_+ \hs_- - \hs_+\hs_- \notag\\
+&= 0
+\end{align}
+
+\ex{2.35}
+\begin{equation}\label{key}
+\mathscr{H} \mathscr{A}\ket{\Phi} =  \mathscr{A}\mathscr{H} \ket{\Phi} =  \mathscr{A} E \ket{\Phi} = E\mathscr{A} \ket{\Phi}
+\end{equation}
+thus $ \mathscr{A} \ket{\Phi} $ is also an eigenfunction of $ \mathscr{H} $ with eigenvalue $ E $.
+
+\ex{2.36}
+\begin{equation}\label{key}
+\Braket{\Psi_1 | \mathscr{H} \mathscr{A} | \Psi_2} = a_2 \Braket{\Psi_1 | \sH | \Psi_2}
+\end{equation}
+Since $ [\sA, \sH]=0 $ and $ \sA $ is Hermitian,
+\begin{equation}\label{key}
+\Braket{\Psi_1 | \mathscr{H} \mathscr{A} | \Psi_2} = \Braket{\Psi_1 | \mathscr{A}\mathscr{H}  | \Psi_2} = \Braket{\Psi_1 | \mathscr{A}^\dagger \mathscr{H}  | \Psi_2} = a_1 \Braket{\Psi_1 | \mathscr{H} | \Psi_2}
+\end{equation}
+thus
+\begin{equation}\label{key}
+(a_1 - a_2) \Braket{\Psi_1 | \sH |\Psi_2} = 0
+\end{equation}
+Since $ a_1 \neq a_2 $,
+\begin{equation}\label{key}
+\Braket{\Psi_1 | \sH |\Psi_2} = 0
+\end{equation}
+
+\ex{2.37}
+\begin{align}
+\hsS_z \ket{\chi_i\chi_j\cdots\chi_k} &= \hsS_z \dfrac{1}{\sqrt{N!}}\sum_{n=1}^{N!}(-1)^{p_n} \hsP_n\{\chi_i(1)\chi_j(2)\cdots\chi_k(N)\} \notag\\
+&= \dfrac{1}{\sqrt{N!}}\sum_{n=1}^{N!}(-1)^{p_n} \hsP_n\{\hsS_z \chi_i(1)\chi_j(2)\cdots\chi_k(N)\} \notag\\
+&= \dfrac{1}{\sqrt{N!}}\sum_{n=1}^{N!}(-1)^{p_n} \hsP_n\qty{\sum_{i=1}^{N} \hs_z(i)\chi_i(1)\chi_j(2)\cdots\chi_k(N)} \notag\\
+&= \dfrac{1}{\sqrt{N!}}\sum_{n=1}^{N!}(-1)^{p_n} \hsP_n\qty{\qty(\dfrac{1}{2}N^\alpha - \dfrac{1}{2}N^\beta)\chi_i(1)\chi_j(2)\cdots\chi_k(N)} \notag\\
+&= \dfrac{1}{2}(N^\alpha - N^\beta) \ket{\chi_i\chi_j\cdots\chi_k} 
+\end{align}
+\subsubsection{Restricted Determinants and Spin-Adapted Configurations}
 
 
 

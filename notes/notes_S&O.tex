@@ -111,6 +111,7 @@
 \DeclareMathOperator{\hp}{\hat{\vb{p}}}
 \DeclareMathOperator{\hx}{\hat{\vb{x}}}
 \DeclareMathOperator{\ha}{\hat{\vb{a}}}
+\DeclareMathOperator{\hs}{\hat{\vb{s}}}
 \DeclareMathOperator{\hS}{\hat{\vb{S}}}
 \DeclareMathOperator{\hSigma}{\hat{\bm\Sigma}}
 \DeclareMathOperator{\hJ}{\hat{\vb{J}}}
@@ -161,6 +162,8 @@
 \newcommand{\iden}{{\large \bm{1}}}
 \newcommand{\qed}{$ \Square $}
 \newcommand{\tPhi}{\tilde{\Phi} }
+\newcommand{\hsP}{\hat{\mathscr{P}}}
+\newcommand{\hsS}{\hat{\mathscr{S}}}
 
 \newcommand{\dis}{\displaystyle}
 \numberwithin{equation}{section}
@@ -317,6 +320,24 @@ a_i^\dagger a_j^\dagger + a_j^\dagger a_i^\dagger = 0 \quad a_i a_j + a_j a_i^ =
 \begin{equation}\label{key}
 \{a_i, a_j^\dagger\} \equiv a_i a_j^\dagger + a_j^\dagger a_i = \delta_{ij}
 \end{equation}
+
+\subsection{Spin-Adapted Configurations}
+\subsubsection{Spin Operators}
+total spin
+\begin{align}
+\hat{\mathscr{P}} &= \sum_i^N \hs(i)\\
+\hsS_x &= \sum_i^N \hs_x(i)\\
+\hsS_+ &= \sum_i^N \hs_+(i)\\
+\hsS^2 &= \hsS_+\hsS_- - \hsS_z + \hsS_z^2
+\end{align}
+\begin{align}
+\hsS^2\ket{\Phi} &= S(S+1)\ket{\Phi}\\
+\hsS_z\ket{\Phi} &= M_S\ket{\Phi}
+\end{align}
+\begin{equation}\label{key}
+\hsS_z\ket{ij\cdots k} = \dfrac{1}{2}(N^\alpha - N^\beta)\ket{ij\cdots k}
+\end{equation}
+
 
 
 
