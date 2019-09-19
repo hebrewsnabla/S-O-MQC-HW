@@ -775,8 +775,47 @@ Since $ a_1 \neq a_2 $,
 &= \dfrac{1}{\sqrt{N!}}\sum_{n=1}^{N!}(-1)^{p_n} \hsP_n\qty{\qty(\dfrac{1}{2}N^\alpha - \dfrac{1}{2}N^\beta)\chi_i(1)\chi_j(2)\cdots\chi_k(N)} \notag\\
 &= \dfrac{1}{2}(N^\alpha - N^\beta) \ket{\chi_i\chi_j\cdots\chi_k} 
 \end{align}
-\subsubsection{Restricted Determinants and Spin-Adapted Configurations}
 
+\subsubsection{Restricted Determinants and Spin-Adapted Configurations}
+\ex{2.38}
+From Ex 2.37, we have
+\begin{equation}\label{key}
+\hsS_z \ket{\psi_i\bar{\psi}_i\psi_j\bar{\psi}_j\cdots} = 0
+\end{equation}
+thus
+\begin{equation}\label{key}
+\hsS_z^2 \ket{\psi_i\bar{\psi}_i\psi_j\bar{\psi}_j\cdots} = 0
+\end{equation}
+While
+\begin{align}
+\hsS_+ \ket{\psi_i\bar{\psi}_i\cdots\psi_k\bar{\psi}_k\cdots} &= \hsS_+ \dfrac{1}{\sqrt{N!}}\sum_{n=1}^{N!}(-1)^{p_n} \hsP_n\{\psi_i\bar{\psi}_i\cdots\psi_k\bar{\psi}_k\cdots\} \notag\\
+&= \dfrac{1}{\sqrt{N!}}\sum_{n=1}^{N!}(-1)^{p_n} \hsP_n\{\hsS_+ \psi_i\bar{\psi}_i\cdots\psi_k\bar{\psi}_k\cdots\}  \notag\\\
+&= \dfrac{1}{\sqrt{N!}}\sum_{n=1}^{N!}(-1)^{p_n} \hsP_n\qty{\sum_a^N \hs_+(a) \psi_i\bar{\psi}_i\cdots\psi_k\bar{\psi}_k\cdots}  \notag\\
+&= \sum_a^N \dfrac{1}{\sqrt{N!}}\sum_{n=1}^{N!}(-1)^{p_n} \hsP_n\qty{ \hs_+(a) \psi_i\bar{\psi}_i\cdots\psi_k\bar{\psi}_k\cdots}  
+\end{align}
+Since 
+\begin{equation}\label{key}
+\hs_+(a)\psi_k(a) = 0 \quad \hs_+(a)\bar{\psi}_k(a) = \psi_k(a)
+\end{equation}
+\begin{align}
+\hsS_+ \ket{\psi_i\bar{\psi}_i\cdots\psi_k\bar{\psi}_k\cdots} 
+= \sum_a^N 0 = 0
+\end{align}
+thus
+\begin{equation}\label{key}
+\hsS_-\hsS_+ \ket{\psi_i\bar{\psi}_i\psi_j\bar{\psi}_j\cdots} 
+= 0
+\end{equation}
+Therefore,
+\begin{equation}\label{key}
+\hsS^2 \ket{\psi_i\bar{\psi}_i\psi_j\bar{\psi}_j\cdots}  = (\hsS_-\hsS_+ + \hsS_z + \hsS_z^2)\ket{\psi_i\bar{\psi}_i\psi_j\bar{\psi}_j\cdots} = 0
+\end{equation}
+
+\ex{2.39}
+\begin{align}
+\hsS^2\ket{^1\Psi_1^2} &= (\hsS_-\hsS_+ + \hsS_z + \hsS_z^2)\dfrac{1}{2}(\psi_1(1)\psi_2(2) + \psi_2(1)\psi_1(2))(\alpha(1)\beta(2) - \beta(1)\alpha(2)) \notag\\
+&= \dfrac{1}{2}(\psi_1(1)\psi_2(2) + \psi_2(1)\psi_1(2))(\hsS_-\hsS_+ + \hsS_z + \hsS_z^2)(\alpha(1)\beta(2) - \beta(1)\alpha(2)) \notag\\
+\end{align}
 
 
 \end{document}
