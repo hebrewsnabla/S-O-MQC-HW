@@ -812,10 +812,40 @@ Therefore,
 \end{equation}
 
 \ex{2.39}
+\subex{$ \bullet $}
 \begin{align}
 \hsS^2\ket{^1\Psi_1^2} &= (\hsS_-\hsS_+ + \hsS_z + \hsS_z^2)\dfrac{1}{2}(\psi_1(1)\psi_2(2) + \psi_2(1)\psi_1(2))(\alpha(1)\beta(2) - \beta(1)\alpha(2)) \notag\\
-&= \dfrac{1}{2}(\psi_1(1)\psi_2(2) + \psi_2(1)\psi_1(2))(\hsS_-\hsS_+ + \hsS_z + \hsS_z^2)(\alpha(1)\beta(2) - \beta(1)\alpha(2)) \notag\\
+&= \dfrac{1}{2}(\psi_1(1)\psi_2(2) + \psi_2(1)\psi_1(2))(\hsS_-\hsS_+ + \hsS_z + \hsS_z^2)(\alpha(1)\beta(2) - \beta(1)\alpha(2))
 \end{align}
-
+$ \because $
+\begin{align}
+\hsS_-\hsS_+ (\alpha(1)\beta(2) - \beta(1)\alpha(2)) = \hsS_-(\alpha(1)\alpha(2) - \alpha(1)\alpha(2)) = 0
+\end{align}
+\begin{align}
+\hsS_z (\alpha(1)\beta(2) - \beta(1)\alpha(2)) = [1/2+(-1/2)]\alpha(1)\beta(2) - [-1/2+1/2]\beta(1)\alpha(2) = 0
+\end{align}
+$ \therefore $
+\begin{equation}\label{key}
+\hsS^2\ket{^1\Psi_1^2} = 0
+\end{equation}
+thus $ \ket{^1\Psi_1^2} $ is singlet.
+\subex{$ \bullet $}
+\begin{align}
+\hsS^2\ket{^3\Psi_1^2} &= (\hsS_-\hsS_+ + \hsS_z + \hsS_z^2)\dfrac{1}{2}(\psi_1(1)\psi_2(2) - \psi_2(1)\psi_1(2))(\alpha(1)\beta(2) + \beta(1)\alpha(2)) \notag\\
+&= \dfrac{1}{2}(\psi_1(1)\psi_2(2) + \psi_2(1)\psi_1(2))(\hsS_-\hsS_+ + \hsS_z + \hsS_z^2)(\alpha(1)\beta(2) - \beta(1)\alpha(2))
+\end{align}
+$ \because $
+\begin{align}
+\hsS_-\hsS_+ (\alpha(1)\beta(2) + \beta(1)\alpha(2)) = \hsS_-(\alpha(1)\alpha(2) + \alpha(1)\alpha(2)) = 2(\alpha(1)\beta(2) + \beta(1)\alpha(2))
+\end{align}
+\begin{align}
+\hsS_z (\alpha(1)\beta(2) + \beta(1)\alpha(2)) = [1/2+(-1/2)]\alpha(1)\beta(2) + [-1/2+1/2]\beta(1)\alpha(2) = 0
+\end{align}
+$ \therefore $
+\begin{equation}\label{key}
+\hsS^2\ket{^3\Psi_1^2} = 2\ket{^3\Psi_1^2}
+\end{equation}
+i.e. $ S=1 $,\\
+thus $ \ket{^3\Psi_1^2} $ is triplet.
 
 \end{document}
