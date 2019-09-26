@@ -881,11 +881,20 @@ i.e. $ S=1 $,\\
 thus $ \ket{\Psi_{\bar{1}}^2} $ is triplet.
 
 \ex{2.40}
+\subex{$ \bullet $}
 \begin{align}
 \Braket{^1\Psi_1^2 | \sH | ^1\Psi_1^2} &= \dfrac{1}{4} \Braket{\psi_1(1)\psi_2(2) + \psi_1(2)\psi_2(1) | \sH | \psi_1(1)\psi_2(2) + \psi_1(2)\psi_2(1)} \notag\\
   &\quad{} \Braket{\alpha(1)\beta(2) - \beta(1)\alpha(2) | \alpha(1)\beta(2) - \beta(1)\alpha(2)}\notag\\
-&= \dfrac{1}{4}((1|h|1) + (2|h|2) + (12|12))
+&= \dfrac{1}{4}((1|h|1) + (2|h|2) + (11|22) + (12|21) + (21|12) + (2|h|2) + (1|h|1) + (22|11) ) (1 - 0 - 0 + 1) \notag\\
+&= h_{11} + h_{22} + J_{12} + K_{12}
 \end{align}
 
+\subex{$ \bullet $}
+\begin{align}
+\Braket{^3\Psi_1^2 | \sH | ^3\Psi_1^2} &= \dfrac{1}{4} \Braket{\psi_1(1)\psi_2(2) - \psi_1(2)\psi_2(1) | \sH | \psi_1(1)\psi_2(2) - \psi_1(2)\psi_2(1)} \notag\\
+&\quad{} \Braket{\alpha(1)\beta(2) + \beta(1)\alpha(2) | \alpha(1)\beta(2) + \beta(1)\alpha(2)}\notag\\
+&= \dfrac{1}{4}((1|h|1) + (2|h|2) + (11|22) - (12|21) - (21|12) + (2|h|2) + (1|h|1) + (22|11) ) (1 + 0 + 0 + 1) \notag\\
+&= h_{11} + h_{22} + J_{12} - K_{12}
+\end{align}
 
 \end{document}
