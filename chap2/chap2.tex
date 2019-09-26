@@ -819,10 +819,8 @@ Therefore,
 \end{align}
 $ \because $
 \begin{align}
-\hsS_-\hsS_+ (\alpha(1)\beta(2) - \beta(1)\alpha(2)) = \hsS_-(\alpha(1)\alpha(2) - \alpha(1)\alpha(2)) = 0
-\end{align}
-\begin{align}
-\hsS_z (\alpha(1)\beta(2) - \beta(1)\alpha(2)) = [1/2+(-1/2)]\alpha(1)\beta(2) - [-1/2+1/2]\beta(1)\alpha(2) = 0
+\hsS_-\hsS_+ (\alpha(1)\beta(2) - \beta(1)\alpha(2)) &= \hsS_-(\alpha(1)\alpha(2) - \alpha(1)\alpha(2)) = 0\\
+\hsS_z (\alpha(1)\beta(2) - \beta(1)\alpha(2)) &= [1/2+(-1/2)]\alpha(1)\beta(2) - [-1/2+1/2]\beta(1)\alpha(2) = 0
 \end{align}
 $ \therefore $
 \begin{equation}\label{key}
@@ -836,10 +834,8 @@ thus $ \ket{^1\Psi_1^2} $ is singlet.
 \end{align}
 $ \because $
 \begin{align}
-\hsS_-\hsS_+ (\alpha(1)\beta(2) + \beta(1)\alpha(2)) = \hsS_-(\alpha(1)\alpha(2) + \alpha(1)\alpha(2)) = 2(\alpha(1)\beta(2) + \beta(1)\alpha(2))
-\end{align}
-\begin{align}
-\hsS_z (\alpha(1)\beta(2) + \beta(1)\alpha(2)) = [1/2+(-1/2)]\alpha(1)\beta(2) + [-1/2+1/2]\beta(1)\alpha(2) = 0
+\hsS_-\hsS_+ (\alpha(1)\beta(2) + \beta(1)\alpha(2)) &= \hsS_-(\alpha(1)\alpha(2) + \alpha(1)\alpha(2)) = 2(\alpha(1)\beta(2) + \beta(1)\alpha(2))\\
+\hsS_z (\alpha(1)\beta(2) + \beta(1)\alpha(2)) &= [1/2+(-1/2)]\alpha(1)\beta(2) + [-1/2+1/2]\beta(1)\alpha(2) = 0
 \end{align}
 $ \therefore $
 \begin{equation}\label{key}
@@ -847,5 +843,49 @@ $ \therefore $
 \end{equation}
 i.e. $ S=1 $,\\
 thus $ \ket{^3\Psi_1^2} $ is triplet.
+
+\subex{$ \bullet $}
+\begin{align}
+\hsS^2\ket{\Psi_1^{\bar{2}}} &= (\hsS_-\hsS_+ + \hsS_z + \hsS_z^2)\dfrac{-1}{2}(\psi_1(1)\psi_2(2) - \psi_2(1)\psi_1(2))\beta(1)\beta(2) \notag\\
+&= \dfrac{-1}{2}(\psi_1(1)\psi_2(2) + \psi_2(1)\psi_1(2))(\hsS_-\hsS_+ + \hsS_z + \hsS_z^2)\beta(1)\beta(2)
+\end{align}
+$ \because $
+\begin{align}
+\hsS_-\hsS_+ \beta(1)\beta(2) &= \hsS_-(\alpha(1)\beta(2) + \beta(1)\alpha(2)) = 2\beta(1)\beta(2) \\
+\hsS_z \beta(1)\beta(2) &= -\beta(1)\beta(2)\\
+\hsS_z^2 \beta(1)\beta(2) &= \beta(1)\beta(2)\\
+\end{align}
+$ \therefore $
+\begin{align}
+\hsS^2\ket{\Psi_1^{\bar{2}}} &= 2\ket{\Psi_1^{\bar{2}}}
+\end{align}
+i.e. $ S=1 $,\\
+thus $ \ket{\Psi_1^{\bar{2}}} $ is triplet.
+
+\subex{$ \bullet $}
+\begin{align}
+\hsS^2\ket{\Psi_{\bar{1}}^2} &= (\hsS_-\hsS_+ + \hsS_z + \hsS_z^2)\dfrac{1}{2}(\psi_1(1)\psi_2(2) - \psi_2(1)\psi_1(2))\alpha(1)\alpha(2) \notag\\
+&= \dfrac{1}{2}(\psi_1(1)\psi_2(2) + \psi_2(1)\psi_1(2))(\hsS_-\hsS_+ + \hsS_z + \hsS_z^2)\alpha(1)\alpha(2)
+\end{align}
+$ \because $
+\begin{align}
+\hsS_-\hsS_+ \alpha(1)\alpha(2) &= 0 \\
+\hsS_z \alpha(1)\alpha(2) &= \alpha(1)\alpha(2)\\
+\hsS_z^2 \alpha(1)\alpha(2) &= \alpha(1)\alpha(2)\\
+\end{align}
+$ \therefore $
+\begin{align}
+\hsS^2\ket{\Psi_{\bar{1}}^2} &= 2\ket{\Psi_{\bar{1}}^2}
+\end{align}
+i.e. $ S=1 $,\\
+thus $ \ket{\Psi_{\bar{1}}^2} $ is triplet.
+
+\ex{2.40}
+\begin{align}
+\Braket{^1\Psi_1^2 | \sH | ^1\Psi_1^2} &= \dfrac{1}{4} \Braket{\psi_1(1)\psi_2(2) + \psi_1(2)\psi_2(1) | \sH | \psi_1(1)\psi_2(2) + \psi_1(2)\psi_2(1)} \notag\\
+  &\quad{} \Braket{\alpha(1)\beta(2) - \beta(1)\alpha(2) | \alpha(1)\beta(2) - \beta(1)\alpha(2)}\notag\\
+&= \dfrac{1}{4}((1|h|1) + (2|h|2) + (12|12))
+\end{align}
+
 
 \end{document}
