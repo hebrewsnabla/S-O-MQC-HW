@@ -897,4 +897,39 @@ thus $ \ket{\Psi_{\bar{1}}^2} $ is triplet.
 &= h_{11} + h_{22} + J_{12} - K_{12}
 \end{align}
 
+\subsubsection{Unrestricted Determinants}
+\ex{2.41}
+\subex{a.}
+\begin{align}
+\hsS^2\ket{K} &= \qty(\hsS_-\hsS_+ + \hsS_z + \hsS_z^2) \dfrac{1}{\sqrt{2}} \qty(\psi_1^\alpha(1)\psi_1^\beta(2)\alpha(1)\beta(2) - \psi_1^\beta(1)\psi_1^\alpha(2)\beta(1)\alpha(2))\notag \\
+&= \dfrac{1}{\sqrt{2}} \psi_1^\alpha(1)\psi_1^\beta(2) \qty(\hsS_-\alpha(1)\alpha(2) + 0 + 0) - \psi_1^\beta(1)\psi_1^\alpha(2) \qty(\hsS_-\alpha(1)\alpha(2) + 0 + 0) \notag\\
+&= \dfrac{1}{\sqrt{2}} \qty(\psi_1^\alpha(1)\psi_1^\beta(2) - \psi_1^\beta(1)\psi_1^\alpha(2)) \qty(\alpha(1)\beta(2) + \beta(1)\alpha(2)) \notag\\
+&= \dfrac{1}{\sqrt{2}} \qty[\psi_1^\alpha(1)\psi_1^\beta(2)\alpha(1)\beta(2) 
++ \psi_1^\alpha(1)\psi_1^\beta(2)\beta(1)\alpha(2) %\notag\\
+%&\quad{} 
+- \psi_1^\beta(1)\psi_1^\alpha(2)\alpha(1)\beta(2) 
+- \psi_1^\beta(1)\psi_1^\alpha(2)\beta(1)\alpha(2)] \notag\\
+&= \ket{K} + \dfrac{1}{\sqrt{2}} \qty[\psi_1^\alpha(1)\psi_1^\beta(2)\beta(1)\alpha(2) 
+- \psi_1^\beta(1)\psi_1^\alpha(2)\alpha(1)\beta(2)]
+\end{align}
+thus, $ \ket{K} $ being an eigenfunction of $ \hsS^2 $ requires
+\begin{align}
+\psi_1^\alpha(1)\psi_1^\beta(2)\beta(1)\alpha(2) 
+- \psi_1^\beta(1)\psi_1^\alpha(2)\alpha(1)\beta(2) = k\ket{K}
+\end{align}
+which requires
+\begin{equation}\label{key}
+\psi_1^\alpha = \psi_1^\beta
+\end{equation}
+
+\subex{b.}
+\begin{align}
+\Braket{K | \hsS^2 | K} &= \dfrac{1}{2} \Braket{\psi_1^\alpha(1)\psi_1^\beta(2)\alpha(1)\beta(2) - \psi_1^\beta(1)\psi_1^\alpha(2)\beta(1)\alpha(2) | (\psi_1^\alpha(1)\psi_1^\beta(2) - \psi_1^\beta(1)\psi_1^\alpha(2)) (\alpha(1)\beta(2) + \beta(1)\alpha(2))} \notag\\
+&= \dfrac{1}{2} \Braket{\psi_1^\alpha(1)\psi_1^\beta(2) | \psi_1^\alpha(1)\psi_1^\beta(2) - \psi_1^\beta(1)\psi_1^\alpha(2)} - \Braket{\psi_1^\beta(1)\psi_1^\alpha(2) | \psi_1^\alpha(1)\psi_1^\beta(2) - \psi_1^\beta(1)\psi_1^\alpha(2)} \notag\\
+&= \dfrac{1}{2}\qty[\qty(1 - \abs{S_{11}^{\alpha\beta}}^2) - \qty(\abs{S_{11}^{\alpha\beta}}^2 - 1)] \notag\\
+&= 1 - \abs{S_{11}^{\alpha\beta}}^2
+\end{align}
+
+
+
 \end{document}
