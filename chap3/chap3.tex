@@ -194,9 +194,19 @@
 \subsubsection{The Fock Operator}
 \ex{3.1}
 \begin{align}
-\Braket{\chi_i | \hat{f} | \chi_j} &= \Braket{ \chi_i | h(1) + \sum_{b} [\mathscr{J}_b(1) - \mathscr{K}_b(1)] | \chi_j} \notag\\
-&= [i|h|j] +   
+\Braket{\chi_i | \hat{f} | \chi_j} &= \Braket{ \chi_i(1) | h(1) + \sum_{b} [\mathscr{J}_b(1) - \mathscr{K}_b(1)] | \chi_j(1)} \notag\\
+&= [i|h|j] + \sum_b\qty[\Braket{\chi_i(1) \chi_b(2) | \dfrac{1}{r_{12}} | \chi_b(2)\chi_j(1)} - \Braket{\chi_i(1)\chi_b(2) | \dfrac{1}{r_{12}} | \chi_b(1)\chi_j(2)}] \notag\\
+&= [i|h|j] + \sum_b\qty([ij|bb] - [ib|bj]) \notag\\
+&= \Braket{i|h|j} + \sum_b\qty(\Braket{ib|jb} - \Braket{ib|bj}) \notag\\
+&= \Braket{i|h|j} + \sum_b\Braket{ib||jb}
 \end{align}
+
+\subsection{Derivation of the Hartree-Fock Equations}
+\subsubsection{Functional Variation}
+\subsubsection{Minimization of the Energy of a Single Determinant}
+\ex{3.2}
+
+
 
 
 
