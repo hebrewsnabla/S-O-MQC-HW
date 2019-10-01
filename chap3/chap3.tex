@@ -189,7 +189,7 @@
 
 \setcounter{section}{2}
 \section{The Hartree-Fock Approximation}
-\subsection{The Hartree-Fock Equations}
+\subsection{The HF Equations}
 \subsubsection{The Coulomb and Exchange Operators}
 \subsubsection{The Fock Operator}
 \ex{3.1}
@@ -201,7 +201,7 @@
 &= \Braket{i|h|j} + \sum_b\Braket{ib||jb}
 \end{align}
 
-\subsection{Derivation of the Hartree-Fock Equations}
+\subsection{Derivation of the HF Equations}
 \subsubsection{Functional Variation}
 \subsubsection{Minimization of the Energy of a Single Determinant}
 \ex{3.2}
@@ -227,8 +227,32 @@ $ \therefore $
 \end{equation}
 
 \ex{3.3}
+$ \because $
+\begin{align}
+[\delta\chi_a | h | \chi_a] &= [\chi_a | h | \delta\chi_a]^*\\
+[\chi_a\delta\chi_a | \chi_b\chi_b] &= [\delta\chi_a\chi_a | \chi_b\chi_b]^*\\
+[\chi_a\chi_a | \chi_b\delta\chi_b] &= [\chi_a\chi_a | \delta\chi_b\chi_b]^*\\
+[\chi_a\chi_b | \chi_b\delta\chi_a] &= [\chi_b\delta\chi_a | \chi_a\chi_b] = [\delta\chi_a\chi_b | \chi_b\chi_a]^*\\
+[\chi_a\chi_b | \delta\chi_b\chi_a] &= [\delta\chi_b\chi_a | \chi_a\chi_b] = [\chi_a\delta\chi_b | \chi_b\chi_a]^*
+\end{align}
+$ \therefore $
+\begin{align}
+\delta E_0 &= \sum_a^N[\delta\chi_a | h | \chi_a] 
++ \dfrac{1}{2}\sum_a^N\sum_b^N \qty([\delta\chi_a\chi_a | \chi_b\chi_b] + [\chi_a\chi_a | \delta\chi_b\chi_b]) \notag\\
+&\quad{} - \dfrac{1}{2}\sum_a^N\sum_b^N \qty([\delta\chi_a\chi_b | \chi_b\chi_a] + [\chi_a\chi_b | \delta\chi_b\chi_a]) + \text{complex conjugates}
+\end{align}
+while
+\begin{align}
+\sum_a^N\sum_b^N [\chi_a\chi_a | \delta\chi_b\chi_b] &= \sum_b^N\sum_a^N [\chi_b\chi_b | \delta\chi_a\chi_a] = \sum_a^N\sum_b^N [\delta\chi_a\chi_a | \chi_b\chi_b]\\
+\sum_a^N\sum_b^N [\chi_a\chi_b | \delta\chi_b\chi_a] &= \sum_b^N\sum_a^N [\chi_b\chi_a | \delta\chi_a\chi_b] = \sum_a^N\sum_b^N [\delta\chi_a\chi_b | \chi_b\chi_a]
+\end{align}
+thus
+\begin{equation}\label{key}
+\delta E_0 = \sum_a^N[\delta\chi_a | h | \chi_a] 
++ \sum_a^N\sum_b^N \qty([\delta\chi_a\chi_a | \chi_b\chi_b] - [\delta\chi_a\chi_b | \chi_b\chi_a]) + \text{complex conjugates}
+\end{equation}
 
-
+\subsubsection{The Canonical HF Equations}
 
 
 
