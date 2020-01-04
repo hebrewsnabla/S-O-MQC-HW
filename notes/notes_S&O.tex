@@ -38,14 +38,14 @@
 
 %%% SECTION TITLE APPEARANCE
 \usepackage{sectsty}
-\allsectionsfont{\sffamily\mdseries\upshape} % (See the fntguide.pdf for font help)
+%\allsectionsfont{\sffamily\mdseries\upshape} % (See the fntguide.pdf for font help)
 % (This matches ConTeXt defaults)
 
 %%% ToC (table of contents) APPEARANCE
 \usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
 \usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
-\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
-\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
+%\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+%\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
 
 %%% END Article customizations
 
@@ -72,6 +72,13 @@
 \usepackage[utf8]{inputenc}
 \usepackage{tikz-feynman}
 \usepackage{feynmp}
+\usepackage{fontspec}
+%\sffamily
+\setmainfont{CMU Serif}
+\setsansfont{CMU Sans Serif}
+\setmonofont{CMU Typewriter Text}
+
+
 
 
 \DeclareMathOperator{\p}{\prime}
@@ -355,6 +362,11 @@ total spin
 
 \subsection{Interpretation of Solutions to the HF Equations}
 \subsubsection{Orbital Energies and Koopmans' Theorem}
+\begin{align}\label{key}
+\varepsilon_i &= \Braket{i|h|i} + \sum_b \Braket{ib||ib} \\
+&= \Braket{i|h|i} + \sum_b \qty(\Braket{ib|ib} - \Braket{ib|bi})
+\end{align}
+
 
 
 \end{document}

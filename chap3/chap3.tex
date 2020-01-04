@@ -35,14 +35,14 @@
 
 %%% SECTION TITLE APPEARANCE
 \usepackage{sectsty}
-\allsectionsfont{\sffamily\mdseries\upshape} % (See the fntguide.pdf for font help)
+%\allsectionsfont{\sffamily\mdseries\upshape} % (See the fntguide.pdf for font help)
 % (This matches ConTeXt defaults)
 
 %%% ToC (table of contents) APPEARANCE
 \usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
 \usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
-\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
-\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
+%\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+%\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
 
 %%% END Article customizations
 
@@ -64,6 +64,11 @@
 \usepackage{extarrows}
 \usepackage{textcomp}
 \usepackage{fontspec}
+
+\setmainfont{CMU Serif}
+\setsansfont{CMU Sans Serif}
+\setmonofont{CMU Typewriter Text}
+
 \usepackage{braket}
 \usepackage{siunitx}
 \sisetup{
@@ -275,7 +280,15 @@ f_{ji}^* &= \Braket{\chi_j | f | \chi_i}^* = \Braket{j|h|i}^* + \sum_b\Braket{jb
 \end{align}
 thus the Fock operator is Hermitian.
 
-
+\ex{3.5}
+\begin{align}
+IP &= ^{N-2}E - E_0 \notag\\
+&= \sum_{a\neq c,d}\Braket{a|h|a} + \dfrac{1}{2}\sum_{a\neq c,d}\sum_{b\neq c,d} \Braket{ab||ab}  - \qty[\sum_a\Braket{a|h|a} + \dfrac{1}{2}\sum_a\sum_b \Braket{ab||ab} ] \notag\\
+&= -\Braket{c|h|c} - \Braket{d|h|d} -  \dfrac{1}{2}\sum_{a\neq c,d}\Braket{ac||ac}  -  \dfrac{1}{2}\sum_{a\neq c,d}\Braket{ad||ad} - \dfrac{1}{2}\sum_{b\neq c,d} \Braket{cb||cb} - \dfrac{1}{2}\sum_{b\neq c,d} \Braket{db||db}  - \Braket{cd||cd} \notag\\
+&= -\Braket{c|h|c} - \Braket{d|h|d} -  \sum_{a\neq c,d}\Braket{ac||ac}  -  \sum_{a\neq c,d}\Braket{ad||ad}   - \Braket{cd||cd} \notag\\
+&= -\Braket{c|h|c} - \Braket{d|h|d} - \qty( \sum_{a\neq c}\Braket{ac||ac} - \Braket{dc||dc}) -  \qty(\sum_{a\neq d}\Braket{ad||ad} - \Braket{cd||cd})  - \Braket{cd||cd} \notag\\
+&= -\varepsilon_c - \varepsilon_d + \Braket{cd|cd} - \Braket{cd|dc}
+\end{align}
 
 
 
