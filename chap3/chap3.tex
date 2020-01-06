@@ -282,7 +282,7 @@ thus the Fock operator is Hermitian.
 
 \ex{3.5}
 \begin{align}
-IP &= ^{N-2}E - E_0 \notag\\
+\text{IP} &= ^{N-2}E - E_0 \notag\\
 &= \sum_{a\neq c,d}\Braket{a|h|a} + \dfrac{1}{2}\sum_{a\neq c,d}\sum_{b\neq c,d} \Braket{ab||ab}  - \qty[\sum_a\Braket{a|h|a} + \dfrac{1}{2}\sum_a\sum_b \Braket{ab||ab} ] \notag\\
 &= -\Braket{c|h|c} - \Braket{d|h|d} -  \dfrac{1}{2}\sum_{a\neq c,d}\Braket{ac||ac}  -  \dfrac{1}{2}\sum_{a\neq c,d}\Braket{ad||ad} - \dfrac{1}{2}\sum_{b\neq c,d} \Braket{cb||cb} - \dfrac{1}{2}\sum_{b\neq c,d} \Braket{db||db}  - \Braket{cd||cd} \notag\\
 &= -\Braket{c|h|c} - \Braket{d|h|d} -  \sum_{a\neq c,d}\Braket{ac||ac}  -  \sum_{a\neq c,d}\Braket{ad||ad}   - \Braket{cd||cd} \notag\\
@@ -290,7 +290,40 @@ IP &= ^{N-2}E - E_0 \notag\\
 &= -\varepsilon_c - \varepsilon_d + \Braket{cd|cd} - \Braket{cd|dc}
 \end{align}
 
+\ex{3.6}
+\begin{align}
+^N E_0 - ^{N+1}E^r &= \sum_a\Braket{a|h|a} + \dfrac{1}{2}\sum_a\sum_b \Braket{ab||ab} \notag\\
+&{}\quad - \qty[\sum_a\Braket{a|h|a} + \Braket{r|h|r} + \dfrac{1}{2}\sum_a\sum_b \Braket{ab||ab} + \dfrac{1}{2}\sum_b \Braket{rb||rb} + \dfrac{1}{2}\sum_a \Braket{ar||ar}] \notag\\
+&= - \Braket{r|h|r} - \dfrac{1}{2}\sum_b \Braket{rb||rb} - \dfrac{1}{2}\sum_b \Braket{br||br} \notag\\
+&= - \Braket{r|h|r} - \sum_b \Braket{rb||rb}
+\end{align}
 
+\subsubsection{Brillouin's Theorem}
+\subsubsection{The HF Hamiltonian}
+\ex{3.7}
+Suppose $ \mathscr{H}_0 $ commutes with $ \mathscr{P}_n $,
+\begin{align}\label{key}
+\mathscr{H}_0\ket{\Psi_0} &= \mathscr{H}_0 \dfrac{1}{\sqrt{N!}} \sum_n^{N!}(-1)^{p_n} \mathscr{P}_n \qty{\sum_i^N  f(i)\chi_j(1)\cdots\chi_k(N)} \notag\\
+&= \dfrac{1}{\sqrt{N!}} \sum_n^{N!}(-1)^{p_n} \mathscr{P}_n \qty{ (\varepsilon_j + \cdots + \varepsilon_k) \chi_j(1)\cdots\chi_k(N)} \notag\\
+&= \sum_a \varepsilon_a
+\end{align}
+Now we show $ \mathscr{H}_0 $ commutes with $ \mathscr{P}_n $, for example, $ \mathscr{P}_{ab} $
+\begin{equation}\label{key}
+\mathscr{P}_{ab}\mathscr{H}_0 = \mathscr{P}_{ab}(\cdots + f(a) + \cdots + f(b) + \cdots) = (\cdots + f(b) + \cdots + f(a) + \cdots)\mathscr{P}_{ab} = \mathscr{H}_0 \mathscr{P}_{ab}
+\end{equation}
+
+\ex{3.8}
+\begin{equation}\label{key}
+\mathscr{V} = \sum_i^N \sum_{j>i}^N \mathscr{O}_2 - \sum_i^N\sum_b^N [\mathscr{G}_b(i) - \mathscr{K}_b(i)]
+\end{equation}
+thus
+\begin{align}
+\Braket{\Psi_0 | \mathscr{V} | \Psi_0} &= \sum_i^N \sum_{j>i}^N \Braket{\Psi_0 | \mathscr{O}_2 | \Psi_0} - \sum_i^N\sum_b^N [\Braket{\Psi_0 | \mathscr{G}_b(i) - \mathscr{K}_b(i)| \Psi_0}] \notag\\
+&= \dfrac{1}{2}\sum_a^N \sum_b^N \Braket{ab||ab} - \sum_i^N\sum_b^N [\Braket{ib|ib} - \Braket{ib|bi}] \notag\\
+&= -\dfrac{1}{2}\sum_a^N \sum_b^N \Braket{ab||ab}
+\end{align}
+
+\subsection{Restricted Closed-shell HF: The Roothaan Equations}
 
 
 \end{document}
