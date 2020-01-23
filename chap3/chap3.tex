@@ -328,9 +328,21 @@ thus
 \ex{3.9}
 \begin{align}
 \varepsilon_i %&= \Braket{\chi_i | h | \chi_i} + \sum_b^N \Braket{\chi_i\chi_b || \chi_i\chi_b} \notag\\
-&= (i|h|i) + 2\sum_c^{N/2} + \sum_b^N(\Braket{ib|ib} - \Braket{ib|bi}) \notag\\
-&= (i|h|i) + 2\sum_c^{N/2} + \sum_c^{N/2}(\Braket{ic|ic} - \Braket{ic|ci}) \notag\\
+&= (i|h|i) + \sum_b^N(\Braket{ib|ib} - \Braket{ib|bi}) \notag\\
+&= (i|h|i) + \sum_c^{N/2}(\Braket{ic|ic} - \Braket{ic|ci}) + \sum_{\bar{c}}^{N/2}(\Braket{i\bar{c}|i\bar{c}} - \Braket{i\bar{c}|\bar{c}i}) 
 \end{align}
+Assume $ \chi_j $ has $ \alpha $ spin, since assuming $ \alpha $ or $ \beta $ is identical
+\begin{align}
+\varepsilon_i &= (i|h|i) + \sum_c^{N/2}\qty[ (ic|ic)\Braket{\alpha|\alpha}\Braket{\alpha|\alpha} 
+- (ic|ci)\Braket{\alpha|\alpha}\Braket{\alpha|\alpha}]
++ \sum_c^{N/2}\qty[(ic|ic)\Braket{\alpha|\alpha}\Braket{\beta|\beta} 
+- (ic|ci)\Braket{\alpha|\beta}\Braket{\beta|\alpha}] \notag\\
+&= (i|h|i) + \sum_c^{N/2}\qty[ 2(ic|ic) - (ic|ci)] \notag\\
+&= (i|h|i) + \sum_n^{N/2} (2J_{ib} - K_{ib})
+\end{align}
+
+\subsubsection{Introduction of a Basis: The Roothaan Equations}
+
 
 
 
