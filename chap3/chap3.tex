@@ -356,7 +356,22 @@ thus
 
 \subsubsection{The Charge Density}
 \ex{3.11}
+\begin{align}
+\rho(\vb{r}) &= \Braket{\Psi_0 | \hat{\rho}(\vb{r}) | \Psi_0} \notag\\
+&= \sum_i^N \dfrac{1}{N!} \sum_I^{N!}\sum_J^{N!} (-1)^{p_I} (-1)^{p_J} \int \dd \vb{x}_1\cdots \dd \vb{x}_N \hsP_I\{\chi_1(1)\cdots\chi_N(N)\}^* \delta(\vb{r}_i - \vb{r}) \hsP_J\{\chi_1(1)\cdots\chi_N(N)\}
+\end{align}
+Since $ \{\chi_m\} $ are orthogonal,
+\begin{align}
+\rho(\vb{r}) 
+&= \sum_i^N \dfrac{1}{N!} \sum_I^{N!} \int \dd \vb{x}_1\cdots \dd \vb{x}_N \hsP_I\{\chi_1(1)\cdots\chi_N(N)\}^* \delta(\vb{r}_i - \vb{r}) \hsP_I\{\chi_1(1)\cdots\chi_N(N)\} \notag\\
+&= \sum_i^N \dfrac{1}{N!} (N-1)!\sum_s^N\int \dd \vb{x}_i \chi_s^*(\vb{x}_i) \delta(\vb{r}_i - \vb{r}) \chi_s(\vb{x}_i) \notag\\
+&= \sum_i^N \dfrac{1}{N}\cdot 2\sum_s^{N/2}\int \dd \vb{r}_i \phi_s(\vb{r}_i) \delta(\vb{r}_i - \vb{r}) \phi_s(\vb{r}_i) \notag\\
+&= \sum_i^N \dfrac{2}{N} \sum_s^{N/2} \phi_s(\vb{r}) \phi_s(\vb{r}) \notag\\
+&= N \dfrac{2}{N} \sum_s^{N/2} \phi_s(\vb{r}) \phi_s(\vb{r}) \notag\\
+&= 2 \sum_s^{N/2} \phi_s(\vb{r}) \phi_s(\vb{r}) 
+\end{align}
 
+\ex{3.12}
 
 
 
