@@ -345,7 +345,7 @@ Assume $ \chi_j $ has $ \alpha $ spin, since assuming $ \alpha $ or $ \beta $ is
 \ex{3.10}
 \begin{align}
 (\vb{C}^\dagger \vb{S} \vb{C})_{\mu\nu} &= \sum_i\sum_j C^\dagger_{\mu i} S_{ij} C_{j\nu} \notag\\
-&= \sum_i\sum_j C^\dagger_{\mu i} \Braket{\phi_i| \phi_j} C_{j\nu} \notag\\
+&= \sum_i\sum_j C^*_{i\mu} \Braket{\phi_i| \phi_j} C_{j\nu} \notag\\
 &= \Braket{\phi_\mu | \phi_\nu} \notag\\
 &= \delta_{\mu\nu}
 \end{align}
@@ -372,7 +372,44 @@ Since $ \{\chi_m\} $ are orthogonal,
 \end{align}
 
 \ex{3.12}
+From Ex 3.10, we have
+\begin{equation}\label{key}
+\vb{C}^\dagger \vb{S} \vb{C} = \iden
+\end{equation}
+i.e.
+\begin{equation}\label{key}
+\sum_i^K\sum_j^K C^*_{i\mu} S_{ij} C_{j\nu} = \delta_{\mu\nu}
+\end{equation}
+thus
+\begin{align}
+(\vb{P}\vb{S}\vb{P})_{\mu\sigma} &= \sum_\nu^K\sum_\lambda^K P_{\mu\nu} S_{\nu\lambda} P_{\lambda\sigma} \notag\\
+&= 4\sum_\nu^K\sum_\lambda^K \sum_a^{N/2}C_{\mu a}C_{\nu a}^* S_{\nu\lambda} \sum_b^{N/2}C_{\lambda b}C_{\sigma b}^* \notag\\
+&= 4\sum_a^{N/2}\sum_b^{N/2} C_{\mu a}\qty(\sum_\nu^K\sum_\lambda^K C_{\nu a}^* S_{\nu\lambda} C_{\lambda b}) C_{\sigma b}^* \notag\\
+&= 4\sum_a^{N/2}\sum_b^{N/2}  C_{\mu a} \delta_{ab} C_{\sigma b}^* \notag\\
+&= 4\sum_a^{N/2} C_{\mu a} C_{\sigma a}^* \notag\\
+&= 2 P_{\mu\sigma}
+\end{align}
+thus
+\begin{equation}\label{key}
+\vb{P}\vb{S}\vb{P} = 2\vb{P}
+\end{equation}
 
-
+\ex{3.13}
+Eq. 3.122 shows
+\begin{equation}\label{key}
+f(\vb{r}_1) = h(\vb{r}_1) + \sum_a^{N/2}\int \dd\vb{r}_2 \psi_a^*(\vb{r}_2) (2-\hsP_{12}) r_{12}^{-1} \psi_a(\vb{r}_2)
+\end{equation}
+thus
+\begin{align}
+f(\vb{r}_1) &= h(\vb{r}_1) 
++ \sum_a^{N/2}\int \dd\vb{r}_2 
+\sum_\sigma C_{\sigma a}^* \phi_\sigma^*(\vb{r}_2) (2-\hsP_{12}) r_{12}^{-1} \sum_\lambda C_{\lambda a} \phi_\lambda(\vb{r}_2) \notag\\
+&= h(\vb{r}_1) 
++ \sum_\sigma\sum_\lambda \qty(\sum_a^{N/2} C_{\sigma a}^*C_{\lambda a} )
+\int \dd\vb{r}_2 \phi_\sigma^*(\vb{r}_2) (2-\hsP_{12}) r_{12}^{-1}  \phi_\lambda(\vb{r}_2) \notag\\
+&= h(\vb{r}_1) 
++ \dfrac{1}{2} \sum_{\sigma,\lambda} P_{\lambda\sigma}
+\int \dd\vb{r}_2 \phi_\sigma^*(\vb{r}_2) (2-\hsP_{12}) r_{12}^{-1}  \phi_\lambda(\vb{r}_2) 
+\end{align}
 
 \end{document}
