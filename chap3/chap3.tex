@@ -412,4 +412,27 @@ f(\vb{r}_1) &= h(\vb{r}_1)
 \int \dd\vb{r}_2 \phi_\sigma^*(\vb{r}_2) (2-\hsP_{12}) r_{12}^{-1}  \phi_\lambda(\vb{r}_2) 
 \end{align}
 
+\subsubsection{Expression for the Fock Matrix}
+\ex{3.14}
+In expression $ (\mu\nu|\lambda\sigma) $, there are three interchangeable pairs, i.e. $\mu\leftrightarrow\nu $, $ \lambda\leftrightarrow\sigma $, and $ \mu\nu\leftrightarrow\lambda\sigma $. Thus $ (\mu\nu|\lambda\sigma) $ has an 8-fold symmetry. Similarly, %$ ,  $ have 4-fold symmetry, 
+$ (\mu\mu|\lambda\sigma), (\mu\nu|\mu\lambda), (\mu\nu|\mu\nu), (\mu\mu|\sigma\sigma) $ has 2-fold symmetry, and $ (\mu\mu|\mu\nu), (\mu\mu|\mu\mu) $ has 1-fold symmetry.\\
+Therefore, the number of unique 2e integrals is
+\begin{table}[H]
+	\centering
+	\begin{tabular}{ccc}
+		\hline
+		expression & number & $ K=100 $\\ \hline
+		 $ (\mu\nu|\lambda\sigma) $ & $ K(K-1)(K-2)(K-3)/8 $ & 11763675 \\
+		 $ (\mu\mu|\lambda\sigma)$ & $ K(K-1)(K-2)/2 $& 485100\\
+		 $ (\mu\nu|\mu\lambda)$ & $ K(K-1)(K-2)/2 $& 485100\\
+		 $ (\mu\nu|\mu\nu) $ & $ K(K-1)/2 $ & 4950\\
+		 $ (\mu\mu|\sigma\sigma) $ & $ K(K-1)/2 $ & 4950\\
+		 $ (\mu\mu|\mu\nu) $ & $ K(K-1) $ & 9900\\
+		 $ (\mu\mu|\mu\mu) $ & $ K $ & 100\\
+		 \hline
+	\end{tabular}
+\end{table}
+thus the total number is $ \num{12753775} $.
+
+
 \end{document}
