@@ -472,7 +472,42 @@ $ \therefore $
 s_i > 0
 \end{equation}
 
+\ex{3.16}
+\subex{$ \bullet $} (3.174)\\
+Since ($ \phi,\phi',\psi $ are row vectors)
+%\begin{equation}\label{key}
+%\bm\phi' = \bm\phi \vb{X}
+%\end{equation}
+\begin{equation}\label{key}
+\bm\psi = \bm\phi \vb{C} 
+\end{equation}
+\begin{equation}\label{key}
+\bm\psi = \bm\phi' \vb{C}' = \bm\phi \vb{X} \vb{C}'
+\end{equation}
+we have
+\begin{equation}\label{key}
+\vb{C} = \vb{X} \vb{C}'
+\end{equation}
+i.e.
+\begin{equation}\label{key}
+\vb{C}' = \vb{X}^{-1} \vb{C}
+\end{equation}
 
+\subex{$ \bullet $} (3.177)
+\begin{align}
+F'_{\mu\nu} &= \Braket{\phi'_\mu | f | \phi'_\nu} \notag\\
+&= \Braket{\sum_i \phi_i X_{i\mu} | f | \sum_j \phi_j X_{j\nu}} \notag\\
+&= \sum_i\sum_j X^*_{i\mu} X_{j\nu} \Braket{\phi_i | f | \phi_j} \notag\\
+&= \sum_i\sum_j X^*_{i\mu} F_{ij} X_{j\nu} 
+\end{align}
+i.e.
+\begin{equation}\label{key}
+\vb{F}' = \vb{X}^\dagger \vb{F} \vb{X}
+\end{equation}
+
+\subsubsection{The SCF Procedure}
+
+\subsubsection{Expectation Values and Population Analysis}
 
 
 
