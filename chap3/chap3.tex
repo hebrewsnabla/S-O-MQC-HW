@@ -147,6 +147,7 @@
 \newcommand{\tPhi}{\tilde{\Phi} }
 \newcommand{\hsP}{\hat{\mathscr{P}}}
 \newcommand{\hsS}{\hat{\mathscr{S}}}
+\DeclareMathOperator{\core}{\mathrm{core}}
 
 %\DeclareMathOperator{\g#0}{\gamma^0}
 %\DeclareMathOperator{\g1}{\gamma^1}
@@ -508,7 +509,21 @@ i.e.
 \subsubsection{The SCF Procedure}
 
 \subsubsection{Expectation Values and Population Analysis}
-
+\ex{3.17}
+From (3.148) in the textbook, we get
+\begin{equation}\label{key}
+F_{\mu\nu} = H_{\mu\nu}^{\core} + G_{\mu\nu} = H_{\mu\nu}^{\core} + \sum_a^{N/2}[ 2(\mu\nu|aa) - (\mu a| a\nu)]
+\end{equation}
+thus
+\begin{align}
+E_0 &= \sum_a^{N/2} [2 h_{aa} + \sum_b^{N/2} (2 J_{ab} - K_{ab})] \notag\\
+&= 2 \sum_a^{N/2} (a|h|a) + \sum_a^{N/2}\sum_b^{N/2} [2 (aa|bb) - (ab|ba)] \notag\\
+&= 2 \sum_a^{N/2} \sum_\mu\sum_\nu C_{\mu a}^* C_{\nu a} (\mu| h |\nu) 
++ \sum_a^{N/2}\sum_b^{N/2} \qty[2\sum_\mu\sum_\nu C_{\mu a}^* C_{\nu a} (\mu\nu|bb) - \sum_\mu\sum_\nu C_{\mu a}^* C_{\nu a} (\mu b| b\nu)] \notag\\
+&= 2\sum_\mu\sum_\nu P_{\mu\nu} H_{\mu\nu}^{\core} + \sum_b^{N/2}\sum_\mu\sum_\nu[2 P_{\mu\nu}(\mu\nu|bb) - P_{\mu\nu}(\mu b|b\nu)] \notag\\
+&= \sum_\mu\sum_\nu P_{\mu\nu} [2 H_{\mu\nu}^{\core} + G_{\mu\nu}] \notag\\
+&= \sum_\mu\sum_\nu P_{\mu\nu} [H_{\mu\nu}^{\core} + F_{\mu\nu}] \notag\\
+\end{align}
 
 
 
