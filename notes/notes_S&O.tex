@@ -394,5 +394,57 @@ E_0 = 2\sum_a h_{aa} + \sum_a\sum_b(2J_{ab} - K_{ab})
 
 \subsubsection{Expression for the Fock Matrix}
 
+\subsubsection{Orthogonalization of the Basis}
+\begin{equation}\label{key}
+\vb{X}^\dagger \vb{S} \vb{X} = \iden
+\end{equation}
+$ \vb{S} $ can be diagonalized by unitary matrix $ \vb{U} $:
+\begin{equation}\label{key}
+\vb{U}^\dagger \vb{S} \vb{U} = \vb{s}
+\end{equation}
+\paragraph{Symmetric Orthogonalization}
+\begin{equation}\label{key}
+\vb{X} = \vb{S}^{-1/2} = \vb{U}\vb{s}^{-1/2}\vb{U}^\dagger
+\end{equation}
+(linear dependence must be removed)
+\paragraph{Canonical Orthogonalization}
+\begin{equation}\label{key}
+\vb{X} = \vb{U}\vb{S}^{-1/2} = \vb{U}\vb{s}^{-1/2}\vb{U}^\dagger
+\end{equation}
+Suppose $ \vb{s} $ has $ m $ small values, we make a truncated $ K\cross (K-m) $matrix
+\begin{equation}\label{key}
+\tilde{\vb{X}} = ...
+\end{equation}
+thus
+\begin{equation}\label{key}
+\phi_\mu' = \sum_\nu^K \phi_\nu \tilde{X}_{\nu\mu} \qquad \mu = 1,2,\cdots,K-m
+\end{equation}
+However, calculate 2e integrals in transformed matrix is very time-consuming.\\
+Since
+\begin{equation}\label{key}
+\bm\phi' = \bm\phi \vb{X}
+\end{equation}
+\begin{equation}\label{key}
+\bm\psi = \bm\phi \vb{C}
+\end{equation}
+we have
+\begin{equation}\label{key}
+\bm\psi = \bm\phi' \vb{X}^{-1} \vb{C}
+\end{equation}
+Let
+\begin{equation}\label{key}
+\vb{C}' = \vb{X}^{-1} \vb{C} \qquad or \; \vb{C} = \vb{X}\vb{C}'
+\end{equation}
+thus
+\begin{equation}\label{key}
+\vb{F} \vb{X}\vb{C}' = \vb{S} \vb{X}\vb{C}' \bm\varepsilon
+\end{equation}
+\begin{equation}\label{key}
+(\vb{X}^\dagger \vb{F}\vb{X}) \vb{C}' = (\vb{X}^\dagger \vb{S}\vb{X}) \vb{C}' \bm\varepsilon = \vb{C}'\bm\varepsilon 
+\end{equation}
+def:
+\begin{equation}\label{key}
+\vb{F}' = \vb{X}^\dagger \vb{F}\vb{X}
+\end{equation}
 
 \end{document}

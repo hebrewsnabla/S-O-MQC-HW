@@ -434,5 +434,49 @@ Therefore, the number of unique 2e integrals is
 \end{table}
 thus the total number is $ \num{12753775} $.
 
+\subsubsection{Orthogonalization of the Basis}
+\ex{3.15}
+$ \because $
+\begin{equation}\label{key}
+\vb{U}^\dagger \vb{S} \vb{U} = \vb{s}
+\end{equation}
+$ \therefore $
+\begin{equation}\label{key}
+\vb{S} \vb{U} = \vb{U} \vb{s}
+\end{equation}
+i.e.
+\begin{equation}\label{key}
+\sum_\nu S_{\mu\nu} U_{\nu i} = U_{\mu i} s_i
+\end{equation}
+thus
+\begin{equation}\label{key}
+\sum_\mu U_{\mu i}^* \sum_\nu S_{\mu\nu} U_{\nu i} = \sum_\mu U_{\mu i}^* U_{\mu i} s_i
+\end{equation}
+\begin{equation}\label{key}
+\sum_\mu \sum_\nu U_{\mu i}^* \Braket{\phi_\mu| \phi_\nu} U_{\nu i} = s_i \sum_\mu \abs{ U_{\mu i}}^2 
+\end{equation}
+Suppose
+\begin{equation}\label{key}
+\phi'_i = \sum_\nu U_{\nu i}\phi_\nu
+\end{equation}
+thus
+\begin{equation}\label{key}
+\Braket{\phi'_i | \phi'_i} = s_i \sum_\mu \abs{ U_{\mu i}}^2 
+\end{equation}
+$ \because $
+\begin{equation}\label{key}
+\Braket{\phi'_i | \phi'_i} > 0 \qquad \abs{ U_{\mu i}}^2 > 0
+\end{equation}
+$ \therefore $
+\begin{equation}\label{key}
+s_i > 0
+\end{equation}
+
+
+
+
+
+
+
 
 \end{document}
