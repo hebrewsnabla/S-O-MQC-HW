@@ -556,8 +556,54 @@ thus
 \subsubsection{The $ 1s $ Minimal STO-3G Basis Set}
 \ex{3.19}
 \begin{align}
-\phi_{1s}^{\GF}
+\phi_{1s}^{\GF}(\alpha,\vb{r}-\vb{R}_A)\phi_{1s}^{\GF}(\alpha,\vb{r}-\vb{R}_B) &= \qty(\dfrac{2\alpha}{\pi})^{3/4} \e^{-\alpha\abs{\vb{r}-\vb{R}_A}^2} \qty(\dfrac{2\beta}{\pi})^{3/4} \e^{-\beta\abs{\vb{r}-\vb{R}_B}^2} \notag\\
+&= \qty(\dfrac{2\alpha}{\pi})^{3/4} \qty(\dfrac{2\beta}{\pi})^{3/4} \e^{-\alpha\abs{\vb{r}-\vb{R}_A}^2 - \beta\abs{\vb{r}-\vb{R}_B}^2} \notag\\
+&= \qty(\dfrac{2\alpha}{\pi})^{3/4} \qty(\dfrac{2\beta}{\pi})^{3/4} \exp(-\qty[(\alpha+\beta)\abs{\vb{r}}^2 
+	- 2\vb{r}\cdot(\alpha\vb{R}_A + \beta\vb{R}_B) 
+	+ \alpha\abs{\vb{R}_A}^2 +\beta\abs{\vb{R}_B}^2])
 \end{align}
+Let
+\begin{equation}\label{key}
+p = \alpha + \beta \qquad \vb{R}_P = \dfrac{\alpha\vb{R}_A + \beta\vb{R}_B} {\alpha+\beta}
+\end{equation}
+we have
+\begin{align}
+\phi_{1s}^{\GF}(\alpha,\vb{r}-\vb{R}_A)\phi_{1s}^{\GF}(\alpha,\vb{r}-\vb{R}_B)
+&= \qty(\dfrac{2\alpha}{\pi}\dfrac{\beta}{\pi})^{3/4} 
+\exp(-\qty[p\abs{\vb{r}}^2 
+	- 2\vb{r}\cdot(p\vb{R}_P) 
+	+ \alpha\abs{\vb{R}_A}^2 +\beta\abs{\vb{R}_B}^2]) \notag\\
+&= \qty(\dfrac{2\alpha}{\pi}\dfrac{2\beta}{\pi})^{3/4} 
+\exp(-\qty[p\abs{\vb{r} - \vb{R}_P}^2 
+	- p\abs{\vb{R}_P}^2
+	+ \alpha\abs{\vb{R}_A}^2 +\beta\abs{\vb{R}_B}^2]) \notag\\
+&= \qty(\dfrac{2\alpha\beta/p}{\pi})^{3/4} \qty(\dfrac{2p}{\pi})^{3/4} 
+\e^{-p\abs{\vb{r} - \vb{R}_P}^2 }
+\exp(p\abs{\vb{R}_P}^2 - \alpha\abs{\vb{R}_A}^2 - \beta\abs{\vb{R}_B}^2) 
+\end{align}
+Let
+\begin{equation}\label{key}
+\phi_{1s}^{\GF}(\alpha,\vb{r}-\vb{R}_A)\phi_{1s}^{\GF}(\alpha,\vb{r}-\vb{R}_B) = K_{AB} \qty(\dfrac{2p}{\pi})^{3/4} 
+\e^{-p\abs{\vb{r} - \vb{R}_P}^2 }
+\end{equation}
+thus
+\begin{align}
+K_{AB} &= \qty(\dfrac{2\alpha\beta/p}{\pi})^{3/4} 
+\exp(p\abs{\vb{R}_P}^2 - \alpha\abs{\vb{R}_A}^2 -\beta\abs{\vb{R}_B}^2) \notag\\
+&= \qty(\dfrac{2\alpha\beta/p}{\pi})^{3/4} 
+\exp(\dfrac{1}{p}(
+\alpha^2\abs{\vb{R}_A}^2 +\beta^2\abs{\vb{R}_B}^2 + 2\alpha\beta\vb{R}_A\cdot\vb{R}_B )
+- \alpha\abs{\vb{R}_A}^2 -\beta\abs{\vb{R}_B}^2) \notag\\
+&= \qty(\dfrac{2\alpha\beta/p}{\pi})^{3/4} 
+\exp(\dfrac{1}{p} \qty(\alpha^2\abs{\vb{R}_A}^2 +\beta^2\abs{\vb{R}_B}^2 + 2\alpha\beta\vb{R}_A\cdot\vb{R}_B 
+- p\alpha\abs{\vb{R}_A}^2 -p\beta\abs{\vb{R}_B}^2)) \notag\\
+&= \qty(\dfrac{2\alpha\beta/p}{\pi})^{3/4} 
+\exp(\dfrac{1}{p} \qty(-\alpha\beta\abs{\vb{R}_A}^2 -\alpha\beta\abs{\vb{R}_B}^2 + 2\alpha\beta\vb{R}_A\cdot\vb{R}_B )) \notag\\
+&= \qty(\dfrac{2\alpha\beta}{p\pi})^{3/4} 
+\exp(-\dfrac{\alpha\beta}{p} \abs{\vb{R}_A - \vb{R}_B}^2 ) 
+\end{align}
+
+\ex{3.20}
 
 
 
