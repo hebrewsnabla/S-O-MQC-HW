@@ -139,16 +139,6 @@
 \newcommand{\naCarExpd}[1]{\pdv[2]{#1}{x} + \pdv[2]{#1}{y} + \pdv[2]{#1}{z}}
 \newcommand{\naCyl}{\qty[\dfrac{1}{\rho}\pdv{\rho}\qty(\rho\pdv{\rho}) + \dfrac{1}{\rho^2}\pdv[2]{\phi} + \pdv[2]{z}]}
 
-%% MQC
-\DeclareMathOperator{\sH}{\mathscr{H}}
-\DeclareMathOperator{\sA}{\mathscr{A}}
-\newcommand{\iden}{{\large \bm{1}}}
-\newcommand{\qed}{$ \Square $}
-\newcommand{\tPhi}{\tilde{\Phi} }
-\newcommand{\hsP}{\hat{\mathscr{P}}}
-\newcommand{\hsS}{\hat{\mathscr{S}}}
-\DeclareMathOperator{\core}{\mathrm{core}}
-
 %\DeclareMathOperator{\g#0}{\gamma^0}
 %\DeclareMathOperator{\g1}{\gamma^1}
 %\DeclareMathOperator{\g2}{\gamma^2}
@@ -158,6 +148,21 @@
 \DeclareMathOperator{\gmuu}{\gamma^\mu}
 \DeclareMathOperator{\gmud}{\gamma_\mu}
 \newcommand{\G}[2]{g^{#1#2}}
+
+
+%% MQC
+\DeclareMathOperator{\sH}{\mathscr{H}}
+\DeclareMathOperator{\sA}{\mathscr{A}}
+\newcommand{\iden}{{\large \bm{1}}}
+\newcommand{\qed}{$ \Square $}
+\newcommand{\tPhi}{\tilde{\Phi} }
+\newcommand{\hsP}{\hat{\mathscr{P}}}
+\newcommand{\hsS}{\hat{\mathscr{S}}}
+\DeclareMathOperator{\core}{\mathrm{core}}
+\DeclareMathOperator{\GF}{\mathrm{GF}}
+\DeclareMathOperator{\SF}{\mathrm{SF}}
+
+
 
 \newcommand{\subsbul}{\subsection*{$ \bullet $}}
 \newcommand{\ex}[1]{\paragraph{Ex #1}}
@@ -525,7 +530,34 @@ E_0 &= \sum_a^{N/2} [2 h_{aa} + \sum_b^{N/2} (2 J_{ab} - K_{ab})] \notag\\
 &= \sum_\mu\sum_\nu P_{\mu\nu} [H_{\mu\nu}^{\core} + F_{\mu\nu}] \notag\\
 \end{align}
 
+\ex{3.18}
+For symmetrically orthogonalized basis,
+\begin{equation}\label{key}
+\vb{C}' = \vb{S}^{1/2}\vb{C}
+\end{equation}
+thus
+\begin{align}
+P'_{\mu\nu} &=  2\sum_a^{N/2} C'_{\mu a}C'^*_{\nu a} \notag\\
+&=  2\sum_a^{N/2}  \sum_i S^{1/2}_{\mu i} C_{i a} \sum_j S^{1/2*}_{\nu j} C^*_{ja}  \notag\\
+&=  \sum_i\sum_j  S^{1/2}_{\mu i} \qty( 2\sum_a^{N/2} C_{i a} C^*_{ja} ) S^{1/2*}_{\nu j}  \notag\\
+&= \sum_i\sum_j  S^{1/2}_{\mu i} P_{ij} S^{1/2*}_{\nu j}  \notag\\
+&= \sum_i\sum_j  S^{1/2}_{\mu i} P_{ij} S^{1/2}_{j\nu}
+\end{align}
+i.e.
+\begin{equation}\label{key}
+\vb{P}' = \vb{S}^{1/2} \vb{P} \vb{S}^{1/2}
+\end{equation}
+thus
+\begin{equation}\label{key}
+\sum_\mu (\vb{S}^{1/2} \vb{P} \vb{S}^{1/2})_{\mu\mu} = \sum_\mu \vb{P}'_{\mu\mu}
+\end{equation}
 
+\subsection{Model Calculations on \ce{H_2} and \ce{HeH^+}}
+\subsubsection{The $ 1s $ Minimal STO-3G Basis Set}
+\ex{3.19}
+\begin{align}
+\phi_{1s}^{\GF}
+\end{align}
 
 
 
