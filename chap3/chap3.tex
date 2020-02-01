@@ -617,6 +617,48 @@ while
 
 \subsubsection{STO-3G \ce{H_2}}
 \ex{3.21}
+\begin{equation}\label{key}
+\phi_{1s}^{\text{CGF}}(\zeta=1.0, \text{STO-1G}) = \phi_{1s}^{\text{GF}}(\num{0.270950})
+\end{equation}
+Since $ \alpha = \alpha_{(\zeta=1.0)}\cross \zeta^2 $,
+\begin{equation}\label{key}
+\phi_{1s}^{\text{CGF}}(\zeta=1.24, \text{STO-1G}) = \phi_{1s}^{\text{GF}}(\num{0.416613})
+\end{equation}
+thus
+\begin{align}
+S_{12} &= K_{AB} \qty(\dfrac{2\cdot 2\alpha}{\pi})^{3/4} \int \dd\vb{r} \e^{-2\alpha\abs{\vb{r}-\vb{R}_P}^2} \notag\\
+&= \qty(\dfrac{2\alpha}{2\pi})^{3/4} \e^{-\tfrac{\alpha}{2}R^2} \qty(\dfrac{2\cdot 2\alpha}{\pi})^{3/4} \int \dd\vb{r} \e^{-2\alpha\abs{\vb{r}-\vb{R}_A}^2} \notag\\
+&= \qty(\dfrac{2\alpha}{\pi})^{3/2} \e^{-\tfrac{\alpha}{2}R^2} 4\pi \int \dd r r^2 \e^{-2\alpha r^2} \notag\\
+&= \qty(\dfrac{2\alpha}{\pi})^{3/2} \e^{-\tfrac{\alpha}{2}R^2} 4\pi \dfrac{\sqrt{\pi}}{8\sqrt{2} \alpha^{3/2}} \notag\\
+&= \e^{-\tfrac{\alpha}{2}R^2}  
+\end{align}
+At $ R = 1.4, \alpha = \num{0.416613} $,
+\begin{equation}\label{key}
+S_{12} = \num{0.6648}
+\end{equation}
+
+\ex{3.22}
+Let 
+\begin{equation}\label{key}
+\psi_1 = c_1 (\phi_1 + \phi_2) \qquad \psi_2 = c_2 (\phi_1 - \phi_2)
+\end{equation}
+\begin{align}
+1 &= \Braket{\phi_1|\psi_1} = c_1^2 (S_{11} + S_{12} + S_{21} + S_{22}) \notag\\
+&= c_1^2 (2 + 2S_{12})
+\end{align}
+$ \therefore $
+\begin{equation}\label{key}
+c_1 = [2(1 + S_{12})]^{-1/2}
+\end{equation}
+\begin{align}
+1 &= \Braket{\phi_2|\psi_2} = c_2^2 (S_{11} - S_{12} - S_{21} + S_{22}) \notag\\
+&= c_2^2 (2 - 2S_{12})
+\end{align}
+$ \therefore $
+\begin{equation}\label{key}
+c_2 = [2(1 - S_{12})]^{-1/2}
+\end{equation}
+
 
 
 
