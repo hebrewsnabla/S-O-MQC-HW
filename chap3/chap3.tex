@@ -525,9 +525,9 @@ E_0 &= \sum_a^{N/2} [2 h_{aa} + \sum_b^{N/2} (2 J_{ab} - K_{ab})] \notag\\
 &= 2 \sum_a^{N/2} (a|h|a) + \sum_a^{N/2}\sum_b^{N/2} [2 (aa|bb) - (ab|ba)] \notag\\
 &= 2 \sum_a^{N/2} \sum_\mu\sum_\nu C_{\mu a}^* C_{\nu a} (\mu| h |\nu) 
 + \sum_a^{N/2}\sum_b^{N/2} \qty[2\sum_\mu\sum_\nu C_{\mu a}^* C_{\nu a} (\mu\nu|bb) - \sum_\mu\sum_\nu C_{\mu a}^* C_{\nu a} (\mu b| b\nu)] \notag\\
-&= 2\sum_\mu\sum_\nu P_{\mu\nu} H_{\mu\nu}^{\core} + \sum_b^{N/2}\sum_\mu\sum_\nu[2 P_{\mu\nu}(\mu\nu|bb) - P_{\mu\nu}(\mu b|b\nu)] \notag\\
-&= \sum_\mu\sum_\nu P_{\mu\nu} [2 H_{\mu\nu}^{\core} + G_{\mu\nu}] \notag\\
-&= \sum_\mu\sum_\nu P_{\mu\nu} [H_{\mu\nu}^{\core} + F_{\mu\nu}] \notag\\
+&= \sum_\mu\sum_\nu P_{\nu\mu} H_{\mu\nu}^{\core} + \dfrac{1}{2}\sum_b^{N/2}\sum_\mu\sum_\nu[2 P_{\nu\mu}(\mu\nu|bb) - P_{\nu\mu}(\mu b|b\nu)] \notag\\
+&= \sum_\mu\sum_\nu P_{\nu\mu} [H_{\mu\nu}^{\core} + \dfrac{1}{2}G_{\mu\nu}] \notag\\
+&= \dfrac{1}{2}\sum_\mu\sum_\nu P_{\nu\mu} [H_{\mu\nu}^{\core} + F_{\mu\nu}] \notag\\
 \end{align}
 
 \ex{3.18}
@@ -713,7 +713,26 @@ $ \therefore $
 thus the Schmidt transformation produces orthonormal basis.
 
 \ex{3.29}
+\begin{align}
+E_0(R\ra \infty) &= \dfrac{1}{2}\sum_\mu\sum_\nu P_{\nu\mu}(R\ra \infty) [2H_{\mu\nu}^{\core} + G_{\mu\nu}] 
+\end{align}
+where
+\begin{equation}\label{key}
+P_{\nu\mu}(R\ra \infty) = \mqty( 2 & 0\\ 0 & 0)
+\end{equation}
+\begin{align}\label{key}
+G_{\mu\nu} &= \sum_\lambda\sum_\sigma P_{\lambda\sigma}(R\ra\infty) \qty[(\mu\nu|\sigma\lambda) - \dfrac{1}{2}(\mu\lambda|\sigma\nu)] \notag\\
+&= 2\qty[(\mu\nu|\phi_1\phi_1) - \dfrac{1}{2}(\mu\phi_1|\phi_1\nu)]
+\end{align}
+thus
+\begin{align}
+E_0(R\ra \infty) &= \dfrac{1}{2}\sum_\mu\sum_\nu P_{\nu\mu}(R\ra \infty) [2H_{\mu\nu}^{\core} + G_{\mu\nu}] \notag\\
+&= \dfrac{1}{2}\times 2[2H_{11}^{\core} + G_{11}] \notag\\
+&= 2(T_{11} + V^1_{11}) + 2\qty[(\phi_1\phi_1|\phi_1\phi_1) - \dfrac{1}{2}(\phi_1\phi_1|\phi_1\phi_1)] \notag\\
+&= 2T_{11} + 2V^1_{11} + (\phi_1\phi_1|\phi_1\phi_1) 
+\end{align}
 
+\subsection{Polyatomic Basis Sets}
 
 
 
