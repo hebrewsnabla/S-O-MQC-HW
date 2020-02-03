@@ -735,7 +735,28 @@ E_0(R\ra \infty) &= \dfrac{1}{2}\sum_\mu\sum_\nu P_{\nu\mu}(R\ra \infty) [2H_{\m
 \subsection{Polyatomic Basis Sets}
 \subsubsection{Contracted Gaussian Functions}
 \subsubsection{Minimal Basis Sets: STO-3G}
+\subsubsection{Double Zeta Basis Sets: 4-31G}
+\ex{3.30}
+The outer basis function
+\begin{equation}\label{key}
+\phi''_{1s}(\vb{r}) = g_{1s}(0.298073, \vb{r})
+\end{equation}
+The inner basis function
+\begin{equation}\label{key}
+\phi'_{1s}(\vb{r}) = N[0.46954 g_{1s}(1.242567, \vb{r}) 
++ 0.15457 g_{1s}(5.782948, \vb{r}) + 0.02373 g_{1s}(38.47497, \vb{r})]
+\end{equation}
+Renormalize it, we get
+\begin{equation}\label{key}
+N = 1.689
+\end{equation}
+thus
+\begin{equation}\label{key}
+\phi'_{1s}(\vb{r}) = 0.79330 g_{1s}(1.242567, \vb{r}) 
++ 0.26115 g_{1s}(5.782948, \vb{r}) + 0.04009 g_{1s}(38.47497, \vb{r})
+\end{equation}
 
+\subsubsection{Polarized Basis Sets: 6-31G* and 6-31G**}
 
 
 \end{document}
