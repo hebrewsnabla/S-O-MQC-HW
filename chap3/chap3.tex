@@ -76,6 +76,7 @@
 	inter-unit-product = \ensuremath{{}\cdot{}}
 }
 \usepackage{mhchem}
+\usepackage{multirow}
 
 \DeclareMathOperator{\p}{\prime}
 \DeclareMathOperator{\ti}{\times}
@@ -773,8 +774,36 @@ thus
 \end{table}
 
 \subsection{Some Illustrative Closed-shell Calculations}
-
-
+\subsubsection{Total Energies}
+\ex{3.32}
+Reaction I
+\begin{table}[H]
+	\begin{tabular}{ccc|c}
+		\hline
+		basis & $ \Delta E /  $ a.u.& $ \Delta E /(\si{kcal/mol}) $& \\
+		\hline
+		STO-3G   & -0.061 & -38.28 &\\
+		4-31G    & -0.069 & -43.30 &\\
+		6-31G*   & -0.045 & -28.24 & exoergic\\ 
+		6-31G**  & -0.055 &	-34.51 & \\
+		HF-limit & -0.051 & -32.00 &\\
+		\hline		
+	\end{tabular}
+\end{table}
+Reaction II
+\begin{table}[H]
+	\begin{tabular}{ccc|c}
+		\hline
+		basis & $ \Delta E /  $ a.u.& $ \Delta E /(\si{kcal/mol}) $ &\\
+		\hline
+		STO-3G   &  0.186 &	116.72 & endoergic	\\ \cline{4-4}
+		4-31G    & -0.114 &	-71.54 & \multirow{4}{*}{exoergic}\\
+		6-31G*   & -0.088 &	-55.22 &\\
+		6-31G**  & -0.095 &	-59.61 &\\
+		HF-limit & -0.097 &	-60.87 &\\
+		\hline		
+	\end{tabular}
+\end{table}
 
 
 
