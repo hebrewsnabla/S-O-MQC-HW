@@ -917,8 +917,24 @@ The formulation for $ \beta $ spin is similar.
 \ex{3.39}
 \begin{align}
 \ev{\hat\rho^S} &= \Braket{\Psi_0 | \hat\rho^S | \Psi_0} \notag\\
-&= \dfrac{1}{N!}\sum_{ij}^{N!} (-1)^{p_i}(-1)^{p_j} \int\dd x_1\cdots\dd x_N \hsP_i\{\chi_i(1)\cdots\chi_k(N)\} \sum_m^N 2\delta(\vb{r}_m)s_z(m) \hsP_j\{\chi_i(1)\cdots\chi_k(N)\} \notag\\
-&= 
+&= \dfrac{1}{N!}\sum_{i,j}^{N!} (-1)^{p_i}(-1)^{p_j} \int\dd\vb{x}_1\cdots\dd\vb{x}_N \hsP_i\{\chi_1(1)\cdots\chi_N(N)\} \sum_m^N 2\delta(\vb{r}_m - \vb{R})s_z(m) \hsP_j\{\chi_1(1)\cdots\chi_N(N)\} \notag\\
+&= \dfrac{2}{N!}\sum_{i}^{N!} \sum_m^N  \int\dd\vb{x}_1\cdots\dd\vb{x}_N \hsP_i\{\chi_1(1)\cdots\chi_N(N)\} \delta(\vb{r}_m - \vb{R})s_z(m) \hsP_i\{\chi_1(1)\cdots\chi_N(N)\} \notag\\
+&= \dfrac{2}{N}\sum_{s}^{N} \sum_m^N  \int\dd\vb{x}_m \chi_s^*(m) \delta(\vb{r}_m - \vb{R})s_z(m) \chi_s(m) \notag\\
+&= \dfrac{2}{N}\sum_m^N  \qty[ \sum_{s}^{N_\alpha} \int\dd\vb{r}_m \psi_s^{\alpha*}(m) \delta(\vb{r}_m - \vb{R})s_z(m) \psi_s^\alpha(m) 
++ \sum_{s}^{N_\beta} \int\dd\vb{r}_m \psi_s^{\beta*}(m) \delta(\vb{r}_m - \vb{R})s_z(m) \psi_s^\beta(m) ] \notag\\
+&= \dfrac{2}{N}\sum_m^N  \qty[ \dfrac{1}{2}\sum_{s}^{N_\alpha} \int\dd\vb{r}_m \psi_s^{\alpha*}(m) \delta(\vb{r}_m - \vb{R}) \psi_s^\alpha(m) 
+- \dfrac{1}{2}\sum_{s}^{N_\beta} \int\dd\vb{r}_m \psi_s^{\beta*}(m) \delta(\vb{r}_m - \vb{R}) \psi_s^\beta(m) ] \notag\\
+&= \dfrac{2}{N}N  \qty[ \dfrac{1}{2}\sum_{s}^{N_\alpha} \psi_s^{\alpha*}(\vb{R})\psi_s^\alpha(\vb{R}) 
+- \dfrac{1}{2}\sum_{s}^{N_\beta} \psi_s^{\beta*}(\vb{R})\psi_s^\beta(\vb{R}) ] \notag\\
+&= 2 \qty[ \dfrac{1}{2} \rho^\alpha(\vb{R}) 
+- \dfrac{1}{2}\rho^\beta(\vb{R}) ] \notag\\
+&= \rho^S(\vb{R})
+\end{align}
+where
+\begin{align}
+\rho^S(\vb{R}) &= \sum_\nu\sum_\mu P^S_{\nu\mu} \phi_\mu^*(\vb{R})\phi_\nu(\vb{R}) \notag\\
+&= \sum_\nu (\vb{P}^S\vb{A})_{\nu\nu} \notag\\
+&= \tr(\vb{P}^S\vb{A})
 \end{align}
 
 \end{document}
