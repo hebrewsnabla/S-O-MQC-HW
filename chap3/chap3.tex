@@ -816,7 +816,7 @@ The contribution of zero-point vibrations to the energy change of reaction I wou
 \subsubsection{Open-shell HF: Unrestricted Spin Orbitals}
 \ex{3.33}
 \begin{align}
-f^\alpha(\vb{r}_1, \omega_1) &= \int\dd\omega_1 \alpha^*(\omega_1) 
+f^\alpha(1) &= \int\dd\omega_1 \alpha^*(\omega_1) 
 \qty[h(1) + \sum_a\int\dd\vb{x}_2 \chi_a^*(2)r_{12}^{-1}(1-\hsP_{12})\chi_a(2)] \alpha(\omega_1) \notag\\
 &= h(1) + \sum_a^{N_\alpha} 
 \qty[ \int\dd\omega_1 \alpha^*(\omega_1) \int\dd\vb{x}_2 \chi_a^*(2)r_{12}^{-1}\chi_a(2) \alpha(\omega_1) 
@@ -871,5 +871,54 @@ E_0 = \sum_i^{N_\alpha} \varepsilon_i^\alpha
 
 \subsubsection{Introduction of a Basis: The Pople-Nesbet Equations}
 
+\subsubsection{Unrestricted Density Matrices}
+\ex{3.36}
+\begin{align}
+\int\dd\vb{r} \rho^S(\vb{r}) &= \int\dd\vb{r} \qty[\rho^\alpha(\vb{r}) - \rho^\beta(\vb{r})] \\
+&= N_\alpha - N_\beta
+\end{align}
+Since
+\begin{equation}\label{key}
+\ev{\hsS_z} = \dfrac{1}{2}(N_\alpha - N_\beta)
+\end{equation}
+we get
+\begin{equation}\label{key}
+\int\dd\vb{r} \rho^S(\vb{r}) = 2\ev{\hsS_z}
+\end{equation}
+
+\ex{3.37}
+\begin{align}
+\rho^\alpha(\vb{r}) &= \sum_a^{N_\alpha}  \psi_a^{\alpha*}(\vb{r})\psi_a^\alpha(\vb{r}) \notag\\
+&=  \sum_a^{N_\alpha} \sum_\nu C^{\alpha*}_{\nu a}\phi_\nu^*(\vb{r}) 
+\sum_\mu C_{\mu a}^\alpha\phi_\mu(\vb{r}) \notag\\
+&= \sum_\nu\sum_\mu \qty[\sum_a^{N_\alpha} C^{\alpha*}_{\nu a}C_{\mu a}^\alpha ] \phi_\nu^*(\vb{r})\phi_\mu(\vb{r}) \notag\\
+\end{align}
+Let
+\begin{equation}\label{key}
+P^\alpha_{\mu\nu} = \sum_a^{N_\alpha} C^{\alpha*}_{\nu a}C_{\mu a}^\alpha 
+\end{equation}
+thus
+\begin{equation}\label{key}
+\rho^\alpha(\vb{r}) = \sum_\nu\sum_\mu P^\alpha_{\mu\nu} \phi_\mu(\vb{r}) \phi_\nu^*(\vb{r})
+\end{equation}
+The formulation for $ \beta $ spin is similar.
+
+\ex{3.38}
+\begin{align}
+\ev{\mathscr{O}_1} &= \sum_i^N \Braket{\chi_i | h | \chi_i} \notag\\
+&= \sum_i^{N_\alpha} (\psi_i^\alpha | h | \psi_i^\alpha) + \sum_i^{N_\beta} (\psi_i^\beta | h | \psi_i^\beta) \notag\\
+&= \sum_i^{N_\alpha} \sum_\nu\sum_\mu C_{\nu a}^{\alpha*} (\phi_\nu | h | \phi_\mu) C_{\mu a}^\alpha 
++ \sum_i^{N_\beta} \sum_\nu\sum_\mu C_{\nu a}^{\beta*} (\phi_\nu | h | \phi_\mu) C_{\mu a}^\beta \notag\\
+&= \sum_\nu\sum_\mu P_{\mu\nu}^\alpha (\phi_\nu | h | \phi_\mu) 
++ \sum_\nu\sum_\mu P_{\mu\nu}^\beta (\phi_\nu | h | \phi_\mu)  \notag\\
+&= \sum_\nu\sum_\mu P_{\mu\nu}^T (\phi_\nu | h | \phi_\mu) 
+\end{align}
+
+\ex{3.39}
+\begin{align}
+\ev{\hat\rho^S} &= \Braket{\Psi_0 | \hat\rho^S | \Psi_0} \notag\\
+&= \dfrac{1}{N!}\sum_{ij}^{N!} (-1)^{p_i}(-1)^{p_j} \int\dd x_1\cdots\dd x_N \hsP_i\{\chi_i(1)\cdots\chi_k(N)\} \sum_m^N 2\delta(\vb{r}_m)s_z(m) \hsP_j\{\chi_i(1)\cdots\chi_k(N)\} \notag\\
+&= 
+\end{align}
 
 \end{document}

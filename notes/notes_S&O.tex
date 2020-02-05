@@ -516,6 +516,27 @@ Spherical: $ 3z^2-r^2, x^2-y^2, xy, yz, zx $, ($ r^2 $ is removed)
 
 \subsection{Unrestricted Open-shell HF: The Pople-Nesbet Equations}
 \subsubsection{Open-shell HF: Unrestricted Spin Orbitals}
+\begin{equation}\label{key}
+f^\alpha(1) = h(1) + \sum_a^{N_\alpha}\qty[J_a^\alpha(1) - K_a^{\alpha}(1) ] + \sum_a^{N_\beta} J_a^\beta(1) 
+\end{equation}
+\begin{equation}\label{key}
+E_0 = \sum_a h_{aa} + \dfrac{1}{2}\sum_a^{N_\alpha}\sum_b^{N_\alpha} (J_{ab}^{\alpha\alpha} - K_{ab}^{\alpha\alpha}) + \dfrac{1}{2}\sum_a^{N_\beta}\sum_b^{N_\beta} (J_{ab}^{\beta\beta} - K_{ab}^{\beta\beta}) 
++ \sum_a^{N_\alpha}\sum_b^{N_\beta} J_{ab}^{\alpha\beta}
+\end{equation}
+
 \subsubsection{Introduction of a Basis: The Pople-Nesbet Equations}
+\begin{align}
+\vb{F}^\alpha \vb{C}^\alpha = \vb{S} \vb{C}^\alpha \bm\varepsilon^\alpha \\
+\vb{F}^\beta \vb{C}^\beta = \vb{S} \vb{C}^\beta \bm\varepsilon^\beta
+\end{align}
+
+\subsubsection{Unrestricted Density Matrices}
+spin density
+\begin{equation}\label{key}
+\rho^S(\vb{r}) = \rho^\alpha(\vb{r}) - \rho^\beta(\vb{r})
+\end{equation}
+\begin{equation}\label{key}
+\vb{P}^S = \vb{P}^\alpha - \vb{P}^\beta
+\end{equation}
 
 \end{document}
