@@ -937,4 +937,32 @@ where
 &= \tr(\vb{P}^S\vb{A})
 \end{align}
 
+\subsubsection{Expression for the Fock Matrices}
+
+\subsubsection{Solution of the Unrestricted SCF Equations}
+\ex{3.40}
+\begin{align}
+E_0 &= \sum_a^{N_\alpha} h_{aa}^\alpha + \sum_a^{N_\beta} h_{aa}^\beta + \dfrac{1}{2}\sum_a^{N_\alpha}\sum_b^{N_\alpha} (J_{ab}^{\alpha\alpha} - K_{ab}^{\alpha\alpha}) + \dfrac{1}{2}\sum_a^{N_\beta}\sum_b^{N_\beta} (J_{ab}^{\beta\beta} - K_{ab}^{\beta\beta}) 
++ \sum_a^{N_\alpha}\sum_b^{N_\beta} J_{ab}^{\alpha\beta} \notag\\
+&= \sum_\mu\sum_\nu P^\alpha_{\nu\mu}H^{\core}_{\mu\nu} + \sum_\mu\sum_\nu P^\beta_{\nu\mu}H^{\core}_{\mu\nu} + \dfrac{1}{2}\sum_\mu\sum_\nu\sum_\lambda\sum_\sigma P^\alpha_{\nu\mu}P^\alpha_{\sigma\lambda} [(\mu\nu|\lambda\sigma) - (\mu\sigma|\lambda\nu)] \notag\\
+&\quad{} + \dfrac{1}{2}\sum_\mu\sum_\nu\sum_\lambda\sum_\sigma P^\beta_{\nu\mu}P^\beta_{\sigma\lambda} [(\mu\nu|\lambda\sigma) - (\mu\sigma|\lambda\nu)] + \sum_\mu\sum_\nu\sum_\lambda\sum_\sigma P^\alpha_{\nu\mu}P^\beta_{\sigma\lambda} (\mu\nu|\lambda\sigma) \notag\\
+&= \sum_\mu\sum_\nu P^\alpha_{\nu\mu} \qty{H^{\core}_{\mu\nu} + \dfrac{1}{2}\sum_\lambda\sum_\sigma P^\alpha_{\sigma\lambda} [(\mu\nu|\lambda\sigma) - (\mu\sigma|\lambda\nu)] 
++ \dfrac{1}{2}\sum_\lambda\sum_\sigma P^\beta_{\sigma\lambda} (\mu\nu|\lambda\sigma)}      \notag\\
+&\quad{} + \sum_\mu\sum_\nu P^\beta_{\nu\mu} \qty{ H^{\core}_{\mu\nu} + \dfrac{1}{2}\sum_\lambda\sum_\sigma P^\beta_{\sigma\lambda} [(\mu\nu|\lambda\sigma) - (\mu\sigma|\lambda\nu)] 
++ \dfrac{1}{2}\sum_\lambda\sum_\sigma P^\alpha_{\sigma\lambda}(\mu\nu|\lambda\sigma)} \notag\\
+&= \sum_\mu\sum_\nu P^\alpha_{\nu\mu} \qty{H^{\core}_{\mu\nu} + \dfrac{1}{2}\sum_\lambda\sum_\sigma [P^T_{\sigma\lambda} (\mu\nu|\lambda\sigma) - P^\alpha_{\sigma\lambda}(\mu\sigma|\lambda\nu)] }      \notag\\
+&\quad{} + \sum_\mu\sum_\nu P^\beta_{\nu\mu} \qty{H^{\core}_{\mu\nu} + \dfrac{1}{2}\sum_\lambda\sum_\sigma [P^T_{\sigma\lambda} (\mu\nu|\lambda\sigma) - P^\beta_{\sigma\lambda}(\mu\sigma|\lambda\nu)] } \notag\\
+\end{align}
+while
+\begin{align}
+F^\alpha_{\mu\nu} &= H^{\core}_{\mu\nu} + \sum_\lambda\sum_\sigma \qty[ P^T_{\lambda\sigma}(\mu\nu|\sigma\lambda) - P^\alpha_{\lambda\sigma}(\mu\lambda|\sigma\nu)] \\
+F^\beta_{\mu\nu} &= H^{\core}_{\mu\nu} + \sum_\lambda\sum_\sigma \qty[ P^T_{\lambda\sigma}(\mu\nu|\sigma\lambda) - P^\beta_{\lambda\sigma}(\mu\lambda|\sigma\nu)]
+\end{align}
+thus
+\begin{align}
+E_0 &= \sum_\mu\sum_\nu \qty{P^\alpha_{\nu\mu} \qty[\dfrac{1}{2} H^{\core}_{\mu\nu} + \dfrac{1}{2} F^\alpha_{\mu\nu} ]  
++ P^\beta_{\nu\mu} \qty[\dfrac{1}{2} H^{\core}_{\mu\nu} + \dfrac{1}{2} F^\beta_{\mu\nu} ]} \notag\\
+&= \dfrac{1}{2} \sum_\mu\sum_\nu \qty[P^T_{\nu\mu} H^{\core}_{\mu\nu} + P^\alpha_{\nu\mu}F^\alpha_{\mu\nu}  + P^\beta_{\nu\mu}F^\beta_{\mu\nu} ]
+\end{align}
+
 \end{document}

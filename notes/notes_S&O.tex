@@ -171,6 +171,7 @@
 \newcommand{\tPhi}{\tilde{\Phi} }
 \newcommand{\hsP}{\hat{\mathscr{P}}}
 \newcommand{\hsS}{\hat{\mathscr{S}}}
+\DeclareMathOperator{\core}{\mathrm{core}}
 
 \newcommand{\dis}{\displaystyle}
 \numberwithin{equation}{section}
@@ -538,5 +539,15 @@ spin density
 \begin{equation}\label{key}
 \vb{P}^S = \vb{P}^\alpha - \vb{P}^\beta
 \end{equation}
+
+\subsubsection{Expression for the Fock Matrices}
+\begin{align}
+F^\alpha_{\mu\nu} &= H^{\core}_{\mu\nu} + \sum_\lambda\sum_\sigma \qty[ P^T_{\lambda\sigma}(\mu\nu|\sigma\lambda) - P^\alpha_{\lambda\sigma}(\mu\lambda|\sigma\nu)] \\
+F^\beta_{\mu\nu} &= H^{\core}_{\mu\nu} + \sum_\lambda\sum_\sigma \qty[ P^T_{\lambda\sigma}(\mu\nu|\sigma\lambda) - P^\beta_{\lambda\sigma}(\mu\lambda|\sigma\nu)]
+\end{align}
+
+\subsubsection{Solution of the Unrestricted SCF Equations}
+
+
 
 \end{document}
