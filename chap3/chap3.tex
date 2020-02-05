@@ -818,11 +818,58 @@ The contribution of zero-point vibrations to the energy change of reaction I wou
 \begin{align}
 f^\alpha(\vb{r}_1, \omega_1) &= \int\dd\omega_1 \alpha^*(\omega_1) 
 \qty[h(1) + \sum_a\int\dd\vb{x}_2 \chi_a^*(2)r_{12}^{-1}(1-\hsP_{12})\chi_a(2)] \alpha(\omega_1) \notag\\
-&=
+&= h(1) + \sum_a^{N_\alpha} 
+\qty[ \int\dd\omega_1 \alpha^*(\omega_1) \int\dd\vb{x}_2 \chi_a^*(2)r_{12}^{-1}\chi_a(2) \alpha(\omega_1) 
+ - \int\dd\omega_1 \alpha^*(\omega_1) \int\dd\vb{x}_2 \chi_a^*(2)r_{12}^{-1}\chi_a(1) \alpha(\omega_2) ] \notag\\
+&\quad {} + \sum_a^{N_\beta}
+\qty[ \int\dd\omega_1 \alpha^*(\omega_1) \int\dd\vb{x}_2 \chi_a^*(2)r_{12}^{-1}\chi_a(2) \alpha(\omega_1) 
+-  \int\dd\omega_1 \alpha^*(\omega_1) \int\dd\vb{x}_2 \chi_a^*(2)r_{12}^{-1}\chi_a(1) \alpha(\omega_2) ]  \notag\\
+&= h(1) + \sum_a^{N_\alpha}
+\qty[\int\dd\vb{r}_2 \psi_a^{\alpha*}(\vb{r}_2) r_{12}^{-1} \psi_a^\alpha(\vb{r}_2)
+- \int\dd\vb{r}_2\int\dd\omega_2\int\dd\omega_1 
+\alpha^*(\omega_1)\alpha^*(\omega_2) \psi_a^{\alpha*}(\vb{r}_2) r_{12}^{-1} \psi_a^{\alpha}(\vb{r}_1) \alpha(\omega_1) \alpha(\omega_2) ] \notag\\
+&\quad {} + \sum_a^{N_\beta}\qty[\int\dd\vb{r}_2 \psi_a^{\beta*}(\vb{r}_2) r_{12}^{-1} \psi_a^\beta(\vb{r}_2)
+- \int\dd\vb{r}_2\int\dd\omega_2\int\dd\omega_1 
+\alpha^*(\omega_1)\beta^*(\omega_2) \psi_a^{\beta*}(\vb{r}_2) r_{12}^{-1} \psi_a^{\beta}(\vb{r}_1) \beta(\omega_1) \alpha(\omega_2) ]  \notag\\
+&= h(1) + \sum_a^{N_\alpha}
+\qty[\int\dd\vb{r}_2 \psi_a^{\alpha*}(\vb{r}_2) r_{12}^{-1} \psi_a^\alpha(\vb{r}_2)
+- \int\dd\vb{r}_2 \psi_a^{\alpha*}(\vb{r}_2) r_{12}^{-1} \psi_a^{\alpha}(\vb{r}_1) ] 
++ \sum_a^{N_\beta} \qty[\int\dd\vb{r}_2 \psi_a^{\beta*}(\vb{r}_2)r_{12}^{-1} \psi_a^\beta(\vb{r}_2) - 0 ]  \notag\\
+&= h(1) + \sum_a^{N_\alpha}\qty[J_a^\alpha(1) - K_a^{\alpha}(1) ] + \sum_a^{N_\beta} J_a^\beta(1) 
 \end{align}
 
+\ex{3.34}
+\begin{align}
+E_0 &= \sum_a h_{aa} + \dfrac{1}{2}\sum_a^{N_\alpha}\sum_b^{N_\alpha} (J_{ab}^{\alpha\alpha} - K_{ab}^{\alpha\alpha}) 
+%+ \dfrac{1}{2}\sum_a^{N_\beta}\sum_b^{N_\beta} (J_{ab}^{\beta\beta} - K_{ab}^{\beta\beta}) 
++ \sum_a^{N_\alpha}\sum_b^{N_\beta} J_{ab}^{\alpha\beta} \notag\\
+&= h_{11}^\alpha + h_{22}^\alpha + h_{11}^\alpha + J_{12}^{\alpha\alpha} - K_{12}^{\alpha\alpha} + J_{11}^{\alpha\beta} + J_{21}^{\alpha\beta}
+\end{align}
 
+\ex{3.35}
+\begin{align}
+\varepsilon_i^\alpha &= (\psi_i^\alpha(1) | h(1) + \sum_a^{N_\alpha}\qty[J_a^\alpha(1) - K_a^{\alpha}(1) ] + \sum_a^{N_\beta} J_a^\beta(1) | \psi_i^\alpha(1)) \notag\\
+&= h_{ii}^\alpha + \sum_a^{N_\alpha}\qty[J_{ia}^{\alpha\alpha} - K_{ia}^{\alpha\alpha}] + \sum_a^{N_\beta} J_{ia}^{\alpha\beta}
+\end{align}
+\begin{align}
+\varepsilon_i^\beta &= (\psi_i^\beta(1) | h(1) + \sum_a^{N_\alpha}\qty[J_a^\beta(1) - K_a^{\beta}(1) ] + \sum_a^{N_\beta} J_a^\alpha(1) | \psi_i^\beta(1)) \notag\\
+&= h_{ii}^\beta + \sum_a^{N_\alpha}\qty[J_{ia}^{\beta\beta} - K_{ia}^{\beta\beta}] + \sum_a^{N_\beta} J_{ia}^{\beta\alpha}
+\end{align}
+Since
+\begin{equation}\label{key}
+E_0 = \sum_a h_{aa} + \dfrac{1}{2}\sum_a^{N_\alpha}\sum_b^{N_\alpha} (J_{ab}^{\alpha\alpha} - K_{ab}^{\alpha\alpha}) + \dfrac{1}{2}\sum_a^{N_\beta}\sum_b^{N_\beta} (J_{ab}^{\beta\beta} - K_{ab}^{\beta\beta}) 
++ \sum_a^{N_\alpha}\sum_b^{N_\beta} J_{ab}^{\alpha\beta}
+\end{equation}
+we have
+\begin{align}
+E_0 = \sum_i^{N_\alpha} \varepsilon_i^\alpha 
++ \sum_i^{N_\beta} \varepsilon_i^\beta 
+- \dfrac{1}{2}\sum_i^{N_\alpha}\sum_a^{N_\alpha} (J_{ia}^{\alpha\alpha} - K_{ia}^{\alpha\alpha}) 
+- \dfrac{1}{2}\sum_i^{N_\beta}\sum_a^{N_\beta} (J_{ia}^{\beta\beta} - K_{ia}^{\beta\beta}) 
+- \sum_i^{N_\beta}\sum_a^{N_\alpha} J_{ia}^{\beta\alpha}
+\end{align}
 
+\subsubsection{Introduction of a Basis: The Pople-Nesbet Equations}
 
 
 \end{document}

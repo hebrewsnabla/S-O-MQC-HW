@@ -354,6 +354,17 @@ total spin
 \section{The Hartree-Fock Approximation}
 \subsection{The HF Equations}
 \subsubsection{The Coulomb and Exchange Operators}
+\begin{equation}\label{key}
+\mathscr{J}_b(1) = \int\dd x_2 \chi_b^*(2)r_{12}^{-1} \chi_b(2)
+\end{equation}
+\begin{align}\label{key}
+\mathscr{K}_b(1) &= \int\dd x_2 \chi_b^*(2) r_{12}^{-1} \hsP_{12} \chi_b(2) \\
+&= \int\dd x_2 \chi_b^*(2) r_{12}^{-1} \chi_b(1) \hsP_{12} 
+\end{align}
+\begin{align}
+\Braket{\chi_a(1) | \mathscr{J}_b(1) | \chi_a(1)} &= J_{ab} \\
+\Braket{\chi_a(1) | \mathscr{K}_b(1) | \chi_a(1)} &= K_{ab} 
+\end{align}
 \subsubsection{The Fock Operator}
 \subsection{Derivation of the HF Equations}
 \subsubsection{Functional Variation}
@@ -505,6 +516,6 @@ Spherical: $ 3z^2-r^2, x^2-y^2, xy, yz, zx $, ($ r^2 $ is removed)
 
 \subsection{Unrestricted Open-shell HF: The Pople-Nesbet Equations}
 \subsubsection{Open-shell HF: Unrestricted Spin Orbitals}
-
+\subsubsection{Introduction of a Basis: The Pople-Nesbet Equations}
 
 \end{document}
