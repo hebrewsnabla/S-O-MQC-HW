@@ -550,5 +550,32 @@ F^\beta_{\mu\nu} &= H^{\core}_{\mu\nu} + \sum_\lambda\sum_\sigma \qty[ P^T_{\lam
 
 \subsubsection{Illustrative Unrestricted Calculations}
 
+\section{Configuration Interaction}
+\subsection{Multiconfigurational Wave Functions and the Structure of Full CI Matrix}
+\begin{enumerate}
+	\item 
+	\begin{equation}\label{key}
+	\Braket{\Psi_0 | \mathscr{H} | S} = 0
+	\end{equation}
+	\item 
+	Slater dets which differ by $ >2 $ spin orbitals are zero.\\
+	Non-zero blocks are sparse.
+	\item 
+	Single excitations have a very small effect on the ground state energy, but not small for dipole and excited states.
+\end{enumerate}
+
+\subsubsection{Intermediate Normalization and an Expression for the Correlation Energy}
+Intermediate Normalization:
+\begin{equation}\label{key}
+\ket{\Phi_0} = \ket{\Psi_0} + ...
+\end{equation}
+thus
+\begin{equation}\label{key}
+\Braket{\Psi_0|\Phi_0} = 0
+\end{equation}
+thus
+\begin{equation}\label{key}
+E_{corr} = \Braket{\Psi_0 | \mathscr{H} - E_0 | \Phi_0} = \sum_{c<d,t<u} c_{cd}^{tu} \Braket{\Psi_0 | \mathscr{H} | \Psi_{cd}^{tu}}
+\end{equation}
 
 \end{document}

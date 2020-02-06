@@ -1025,7 +1025,23 @@ notag\\
 
 \ex{3.44}
 \begin{align}
-\lim\limits_{R\ra\infty}
+\lim\limits_{R\ra\infty} \ket{\Psi_0} &= \dfrac{1}{2}\qty[\ket{\psi_1\bar{\psi}_1} - \ket{\psi_2\bar{\psi}_2} - {\sqrt{2}}\ket{^3\Psi_1^2}] \notag\\
+&= \dfrac{1}{2}\qty[\ket{\psi_1\bar{\psi}_1} - \ket{\psi_2\bar{\psi}_2} - \qty(\ket{\psi_1\bar{\psi}_2} - \ket{\psi_2\bar{\psi}_1})] \notag\\
+&= \dfrac{1}{2}\qty[\dfrac{1}{2}\ket{(\phi_1 + \phi_2)(\bar\phi_1 + \bar\phi_2)} 
+- \dfrac{1}{2}\ket{(\phi_1 - \phi_2)(\bar\phi_1 - \bar\phi_2)} 
+- \qty(\dfrac{1}{2}\ket{(\phi_1 + \phi_2)(\bar\phi_1 - \bar\phi_2)} 
+- \dfrac{1}{2}\ket{(\phi_1 - \phi_2)(\bar\phi_1 + \bar\phi_2)})] \notag\\
+&=\dfrac{1}{4}\qty(\ket{\phi_1\bar\phi_1} + \ket{\phi_1\bar\phi_2}  
++ \ket{\phi_2\bar\phi_1} + \ket{\phi_2\bar\phi_2} ) - \dfrac{1}{4}\qty(\ket{\phi_1\bar\phi_1} - \ket{\phi_1\bar\phi_2}  
+- \ket{\phi_2\bar\phi_1} + \ket{\phi_2\bar\phi_2} ) \notag\\
+&\quad{} - \dfrac{1}{4}\qty[\qty(\ket{\phi_1\bar\phi_1} - \ket{\phi_1\bar\phi_2}  
++ \ket{\phi_2\bar\phi_1} - \ket{\phi_2\bar\phi_2} )
+- \qty(\ket{\phi_1\bar\phi_1} + \ket{\phi_1\bar\phi_2}  
+- \ket{\phi_2\bar\phi_1} - \ket{\phi_2\bar\phi_2} )] \notag\\
+&= \dfrac{1}{2}\qty(\ket{\phi_1\bar\phi_2}  + \ket{\phi_2\bar\phi_1} )
+- \dfrac{1}{4}\qty(- 2\ket{\phi_1\bar\phi_2} + 2\ket{\phi_2\bar\phi_1}) \notag\\
+&= \ket{\phi_1\bar\phi_2} 
 \end{align}
+
 
 \end{document}
