@@ -965,4 +965,63 @@ E_0 &= \sum_\mu\sum_\nu \qty{P^\alpha_{\nu\mu} \qty[\dfrac{1}{2} H^{\core}_{\mu\
 &= \dfrac{1}{2} \sum_\mu\sum_\nu \qty[P^T_{\nu\mu} H^{\core}_{\mu\nu} + P^\alpha_{\nu\mu}F^\alpha_{\mu\nu}  + P^\beta_{\nu\mu}F^\beta_{\mu\nu} ]
 \end{align}
 
+\subsubsection{Illustrative Unrestricted Calculations}
+\ex{3.41}
+\begin{align}
+\ev{\hsS^2} &= \Braket{c_1 {^2\Psi} + c_2 {^4\Psi} | \hsS^2 | c_1 {^2\Psi} + c_2 {^4\Psi}} \notag\\
+&= \dfrac{3}{4}c_1^2 + \dfrac{15}{4}c_2^2 \notag\\
+&= \dfrac{3}{4}(1 - c_2^2) + \dfrac{15}{4}c_2^2 \notag\\
+&= \dfrac{3}{4} + 3c_2^2
+\end{align}
+thus
+\linespread{1.2}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{cccc}
+		\hline
+		basis & $ \ev{\hsS^2} $ & $ c_2 $ & contamination/\% \\ \hline		
+		STO-3G & 0.7652 & 0.07118 & 0.5067\\
+		4-31G  & 0.7622 & 0.06377 & 0.4067\\
+		6-31G* & 0.7618 & 0.06272 & 0.3933\\
+		6-31G**& 0.7614 & 0.06164 & 0.3800\\
+		\hline
+	\end{tabular}
+\end{table}
+\linespread{1.0}
+
+\subsubsection{The Dissociation Problem and Its Unrestricted Solution}
+\ex{3.42}
+\begin{align}
+\Braket{\psi_1^\alpha|\psi_1^\alpha} &= \Braket{\cos\theta\psi_1 + \sin\theta\psi_2 | \cos\theta\psi_1 + \sin\theta\psi_2} = \cos\theta^2 + \sin\theta^2 = 1 \\
+\Braket{\psi_2^\alpha|\psi_2^\alpha} &= \Braket{-\sin\theta\psi_1 + \cos\theta\psi_2 | -\sin\theta\psi_1 + \cos\theta\psi_2} = \sin\theta^2 + \cos\theta^2 = 1 \\
+\Braket{\psi_1^\alpha|\psi_2^\alpha} &= \Braket{\cos\theta\psi_1 + \sin\theta\psi_2 | -\sin\theta\psi_1 + \cos\theta\psi_2} = -\cos\theta\sin\theta + \sin\theta\cos\theta = 0
+\end{align}
+thus $ \{\psi_1^\alpha, \psi_2^\alpha\} $ is orthonormal.\\
+Similarly conclusion can be derived for $ \beta $ orbitals.
+
+\ex{3.43}
+For $ R = 1.4 $,
+\begin{align}
+\eta &= \dfrac{h_{22} - h_{11} + J_{22} - J_{12} + 2K_{12}}{J_{11} + J_{22} - 2J_{12} + 4K_{12}} \notag\\
+&= \dfrac{(\varepsilon_2 − 2J_{12} + K_{12} ) - (\varepsilon_1 - J_{11}) + J_{22} - J_{12} + 2K_{12}}{J_{11} + J_{22} - 2J_{12} + 4K_{12}} \notag\\
+&= \dfrac{\varepsilon_2 - \varepsilon_1 + J_{11} + J_{22} − 3J_{12} + 3K_{12}   }{J_{11} + J_{22} - 2J_{12} + 4K_{12}} \notag\\
+&= \dfrac{0.6703 + 0.5782 + 0.6746 + 0.6975 - 3\times 0.6636 + 3\times 0.1813}{0.6746 + 0.6975 - 2\times 0.6636 + 4\times 0.1813} 
+notag\\
+&= 1.524 > 1
+\end{align}
+thus unrestricted solution does not exist for this case.\\
+For $ R = 4.0 $,
+\begin{align}
+\eta %&= \dfrac{h_{22} - h_{11} + J_{22} - J_{12} + 2K_{12}}{J_{11} + J_{22} - 2J_{12} + 4K_{12}} \notag\\
+%&= \dfrac{(\varepsilon_2 − 2J_{12} + K_{12} ) - (\varepsilon_1 - J_{11}) + J_{22} - J_{12} + 2K_{12}}{J_{11} + J_{22} - 2J_{12} + 4K_{12}} \notag\\
+&= \dfrac{\varepsilon_2 - \varepsilon_1 + J_{11} + J_{22} − 3J_{12} + 3K_{12}   }{J_{11} + J_{22} - 2J_{12} + 4K_{12}} \notag\\
+&= \dfrac{0.0916 + 0.2542 + 0.5026 + 0.5259 - 3\times 0.5121 + 3\times 0.2651}{ 0.5026 + 0.5259 - 2\times 0.5121 + 4\times 0.2651} 
+notag\\
+&= 0.5948
+\end{align}
+\begin{equation}\label{key}
+\theta = \arccos(\sqrt{\eta}) = 0.6900 = 39.53\textdegree
+\end{equation}
+
+
 \end{document}
