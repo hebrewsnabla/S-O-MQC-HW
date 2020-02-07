@@ -594,4 +594,28 @@ thus
 \begin{equation}\label{key}
 \mqty(0 & \vb{B}^\dagger\\ \vb{B} & \vb{D})\mqty(1\\ \vb{c}) = E_{\corr} \mqty(1\\ \vb{c})
 \end{equation}
+then diagonalize.\\
+Another way:
+\begin{equation}\label{key}
+E_{\corr} = -\vb{B}^\dagger (\vb{D} - E_{\corr}\iden)^{-1} \vb{B}
+\end{equation}
+solve it iteratively.
+
+\subsection{Some Illustrative Calculations}
+
+\subsection{Natural Orbitals and the 1-Particle Reduced DM}
+reduced density function
+\begin{equation}\label{key}
+\rho(\vb{x}_1) = N\int \dd\vb{x}_2\cdots\dd\vb{x}_N \Phi^*(\vb{x}_1,\cdots,\vb{x}_N)\Phi(\vb{x}_1,\cdots,\vb{x}_N)
+\end{equation}
+1st-order reduced DM, or 1-P reduced DM
+\begin{equation}\label{key}
+\gamma(\vb{x}_1,\vb{x}'_1) = N\int \dd\vb{x}_2\cdots\dd\vb{x}_N \Phi^*(\vb{x}_1,\cdots,\vb{x}_N)\Phi(\vb{x}'_1,\cdots,\vb{x}_N)
+\end{equation}
+\begin{equation}\label{key}
+\gamma(\vb{x}_1,\vb{x}'_1) = \sum_{ij} \chi_i(\vb{x}_1) \gamma_{ij} \chi_j^*(\vb{x}'_1)
+\end{equation}
+
+
+
 \end{document}
