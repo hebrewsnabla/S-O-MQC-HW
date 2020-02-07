@@ -162,7 +162,7 @@
 \DeclareMathOperator{\core}{\mathrm{core}}
 \DeclareMathOperator{\GF}{\mathrm{GF}}
 \DeclareMathOperator{\SF}{\mathrm{SF}}
-
+\DeclareMathOperator{\corr}{\mathrm{corr}}
 
 
 \newcommand{\subsbul}{\subsection*{$ \bullet $}}
@@ -205,6 +205,80 @@
 
 \subsubsection{Intermediate Normalization and an Expression for the Correlation Energy}
 \ex{4.1}
+If $ a\notin \{c,d,e\} $ and $ r\notin\{t,u,v\} $,
+\begin{equation}\label{key}
+\Braket{\Psi_a^r | \mathscr{H} | \Psi_{cde}^{tuv}} = 0
+\end{equation}
+Let's suppose $ a = e $, thus
+\begin{equation}\label{key}
+\Braket{\Psi_a^r | \mathscr{H} | \Psi_{cde}^{tuv}} = \Braket{\Psi_a^r | \mathscr{H} | \Psi_{acd}^{vtu}} 
+\end{equation}
+if $ r\neq v $, this term will still be zero, thus
+\begin{equation}\label{key}
+\sum_{c<d<e,t<u<v} c_{cde}^{tuv} \Braket{\Psi_a^r | \mathscr{H} | \Psi_{cde}^{tuv}} = \sum_{c<d,t<u} c_{acd}^{rtu} \Braket{\Psi_a^r | \mathscr{H} | \Psi_{acd}^{rtu}} 
+\end{equation}
 
+\ex{4.2}
+\begin{equation}\label{key}
+\mqty|-E_{\corr} & K_{12}\\ K_{12} & 2\Delta-E_{\corr}| = 0
+\end{equation}
+\begin{equation}\label{key}
+-E_{\corr}(2\Delta-E_{\corr}) - K_{12}^2 = 0
+\end{equation}
+\begin{equation}\label{key}
+E_{\corr} = \dfrac{2\Delta \pm \sqrt{4\Delta^2 + 4K_{12}^2}}{2} = \Delta \pm \sqrt{\Delta^2 + K_{12}^2}
+\end{equation}
+choosing the lowest eigenvalue,
+\begin{equation}\label{key}
+E_{\corr} = \Delta - \sqrt{\Delta^2 + K_{12}^2}
+\end{equation}
+
+\ex{4.3}
+At $ R = 1.4 $,
+\begin{align}
+\Delta &= \varepsilon_2 - \varepsilon_1 + \dfrac{1}{2}(J_{11} + J_{22}) - 2J_{12} + K_{12} \notag\\
+&= 0.6703 + 0.5782 + \dfrac{1}{2}(0.6746 + 0.6975) - 2\times 0.6636 + 0.1813 \notag\\
+&= 0.78865
+\end{align}
+\begin{align}
+E_{\corr} = \Delta - \sqrt{\Delta^2 + K_{12}^2} = 0.78865 - \sqrt{0.78865^2 + 0.1813^2} = -0.020571
+\end{align}
+\begin{equation}\label{key}
+c = \dfrac{E_{\corr}}{K_{12}} = \dfrac{-0.020571}{0.1813} = -0.1135
+\end{equation}
+As $ R\ra\infty $, $ \varepsilon_2 - \varepsilon_1 \ra 0 $, all 2e integrals $ \ra \dfrac{1}{2}(\phi_1\phi_1|\phi_1\phi_1) $, thus
+\begin{align}
+\lim\limits_{R\ra\infty}\Delta = 0 + \lim\lim\limits_{R\ra\infty} \qty[\dfrac{1}{2}(J_{11} + J_{22}) - 2J_{12} + K_{12}] = 0
+\end{align}
+\begin{equation}\label{key}
+\lim\limits_{R\ra\infty} E_{\corr} =  -\lim\limits_{R\ra\infty} K_{12}
+\end{equation}
+\begin{equation}\label{key}
+\lim\limits_{R\ra\infty} c = \lim\limits_{R\ra\infty} \dfrac{E_{\corr}}{K_{12}} = -1
+\end{equation}
+As $ R\ra\infty $, the full CI wave function will be
+\begin{equation}\label{key}
+\ket{\Phi_0} = \ket{\Psi_0} - \ket{\Psi_{1\bar{1}}^{2\bar{2}}} = \ket{\psi_1\bar\psi_1} - \ket{\psi_2\bar\psi_2}
+\end{equation}
+Since
+\begin{align}
+\psi_1 &= \dfrac{1}{\sqrt{2(1 + S_{12})}}(\phi_1 + \phi_2) \\
+\psi_2 &= \dfrac{1}{\sqrt{2(1 - S_{12})}}(\phi_1 - \phi_2)
+\end{align}
+we get
+\begin{align}
+\ket{\psi_1\bar\psi_1} &= \dfrac{1}{2(1 + S_{12})} \qty(\ket{\phi_1\bar\phi_1} + \ket{\phi_1\bar\phi_2} + \ket{\phi_2\bar\phi_1} + \ket{\phi_2\bar\phi_2}) \\
+\ket{\psi_2\bar\psi_2} &= \dfrac{1}{2(1 - S_{12})} \qty(\ket{\phi_1\bar\phi_1} - \ket{\phi_1\bar\phi_2} - \ket{\phi_2\bar\phi_1} + \ket{\phi_2\bar\phi_2})
+\end{align}
+As $ R\ra\infty $, $ S_{12}\ra 0 $, thus
+\begin{align}
+\ket{\Phi_0} = \ket{\psi_1\bar\psi_1} - \ket{\psi_2\bar\psi_2} = \dfrac{1}{2}\qty(\ket{\phi_1\bar\phi_2} + \ket{\phi_2\bar\phi_1})
+\end{align}
+Renormalize it, we get
+\begin{equation}\label{key}
+\ket{\Phi_0} = \dfrac{1}{\sqrt{2}}\qty(\ket{\phi_1\bar\phi_2} + \ket{\phi_2\bar\phi_1})
+\end{equation}
+
+\subsection{Doubly Exited CI}
 
 \end{document}
