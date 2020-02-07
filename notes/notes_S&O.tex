@@ -172,6 +172,7 @@
 \newcommand{\hsP}{\hat{\mathscr{P}}}
 \newcommand{\hsS}{\hat{\mathscr{S}}}
 \DeclareMathOperator{\core}{\mathrm{core}}
+\DeclareMathOperator{\corr}{\mathrm{corr}}
 
 \newcommand{\dis}{\displaystyle}
 \numberwithin{equation}{section}
@@ -575,9 +576,22 @@ thus
 \end{equation}
 thus
 \begin{equation}\label{key}
-E_{corr} = \Braket{\Psi_0 | \mathscr{H} - E_0 | \Phi_0} = \sum_{c<d,t<u} c_{cd}^{tu} \Braket{\Psi_0 | \mathscr{H} | \Psi_{cd}^{tu}}
+E_{\corr} = \Braket{\Psi_0 | \mathscr{H} - E_0 | \Phi_0} = \sum_{c<d,t<u} c_{cd}^{tu} \Braket{\Psi_0 | \mathscr{H} | \Psi_{cd}^{tu}}
 \end{equation}
 
 \subsection{Doubly Exited CI}
-
+\begin{align}
+\sum_{c<d,t<u} c_{cd}^{tu} \Braket{\Psi_0 | \mathscr{H} | \Psi_{cd}^{tu}} &= E_{\corr} \\
+\Braket{\Psi_{ab}^{rs} | \mathscr{H} | \Psi_0} + \sum_{c<d,t<u} c_{cd}^{tu} \Braket{\Psi_{ab}^{rs} | \mathscr{H} - E_0 | \Psi_{cd}^{tu}} &= c_{ab}^{rs} E_{\corr} 
+\end{align}
+def
+\begin{align}
+B_{rasb} &= \Braket{\Psi_{ab}^{rs} | \mathscr{H} | \Psi_0} \\
+D_{rasb,tcud} &= \Braket{\Psi_{ab}^{rs} | \mathscr{H} - E_0 | \Psi_{cd}^{tu}} \\
+c_{rasb} &= c_{ab}^{rs}
+\end{align}
+thus
+\begin{equation}\label{key}
+\mqty(0 & \vb{B}^\dagger\\ \vb{B} & \vb{D})\mqty(1\\ \vb{c}) = E_{\corr} \mqty(1\\ \vb{c})
+\end{equation}
 \end{document}
