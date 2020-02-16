@@ -294,7 +294,25 @@ Renormalize it, we get
 &= \int\dd\vb{x}'_1\dd\vb{x}_1 \chi_j(\vb{x}'_1) \gamma(\vb{x}'_1,\vb{x}_1) \chi_i^*(\vb{x}_1) \notag\\
 &= \gamma_{ij}
 \end{align}
+$ \therefore \bm\gamma$ is Hermitian.
 
 \ex{4.5}
+\begin{align}
+\tr \bm\gamma &= \sum_i \gamma_{ii} \notag\\
+&= \sum_i \int\dd\vb{x}_1\dd\vb{x}'_1 \chi_i^*(\vb{x}_1) \gamma(\vb{x}_1,\vb{x}'_1) \chi_i(\vb{x}'_1) \notag\\
+&= \sum_i \int\dd\vb{x}_1\dd\vb{x}'_1 \chi_i^*(\vb{x}_1)  \chi_i(\vb{x}'_1)N\int \dd\vb{x}_2\cdots\dd\vb{x}_N \Phi^*(\vb{x}_1,\cdots,\vb{x}_N)\Phi(\vb{x}'_1,\cdots,\vb{x}_N) \notag\\
+&= N\sum_i \int \dd\vb{x}_2\cdots\dd\vb{x}_N \int\dd\vb{x}_1\chi_i^*(\vb{x}_1)\Phi^*(\vb{x}_1,\cdots,\vb{x}_N) \int\dd\vb{x}'_1  \chi_i(\vb{x}'_1) \Phi(\vb{x}'_1,\cdots,\vb{x}_N) 
+\end{align}
+Since
+\begin{equation}\label{key}
+\int\dd\vb{x}'_1  \chi_i(\vb{x}'_1) \Phi(\vb{x}'_1,\cdots,\vb{x}_N) = \int\dd\vb{x}_1\chi_i(\vb{x}_1)\Phi(\vb{x}_1,\cdots,\vb{x}_N) 
+\end{equation}
+we have
+\begin{align}
+\tr \bm\gamma &= N\sum_i \int \dd\vb{x}_2\cdots\dd\vb{x}_N \int\dd\vb{x}_1\chi_i^*(\vb{x}_1)\Phi^*(\vb{x}_1,\cdots,\vb{x}_N) \int\dd\vb{x}_1  \chi_i(\vb{x}_1) \Phi(\vb{x}_1,\cdots,\vb{x}_N) \notag\\
+&= N\sum_i \int\dd\vb{x}_1\chi_i^*(\vb{x}_1)  \chi_i(\vb{x}_1) 
+\int \dd\vb{x}_1\dd\vb{x}_2\cdots\dd\vb{x}_N \Phi^*(\vb{x}_1,\cdots,\vb{x}_N) \Phi(\vb{x}_1,\cdots,\vb{x}_N) \notag\\
+&= N\sum_i \int\dd\vb{x}_1\chi_i^*(\vb{x}_1)  \chi_i(\vb{x}_1) 
+\end{align}
 
 \end{document}
