@@ -706,7 +706,25 @@ For $ \ce{H_2^+} $,
 \end{equation}
 
 \ex{3.25}
-
+\begin{align}
+F_{\mu\nu} &= H^{\core}_{\mu\nu} + \sum_{\lambda\sigma} P_{\lambda\sigma} \qty[(\mu\nu|\sigma\lambda) - \dfrac{1}{2}(\mu\lambda|\sigma\nu)] \notag\\
+&= H^{\core}_{\mu\nu} + (1+S_{12})^{-1} \sum_{\lambda\sigma} \qty[(\mu\nu|\sigma\lambda) - \dfrac{1}{2}(\mu\lambda|\sigma\nu)] %\notag\\
+%&= H^{\core}_{\mu\nu} + (1+S_{12})^{-1} 
+%\qty[(\mu\nu|11) - \dfrac{1}{2}(\mu 1|1 \nu) 
+%+ (\mu\nu|21) - \dfrac{1}{2}(\mu 1|2 \nu)
+%+ (\mu\nu|12) - \dfrac{1}{2}(\mu 2|1 \nu)
+%+ (\mu\nu|22) - \dfrac{1}{2}(\mu 2|2 \nu)] \notag\\
+\end{align}
+$ \therefore $
+\begin{align}
+F_{11} &= H^{\core}_{11} + (1+S_{12})^{-1} 
+\qty[(11|11) - \dfrac{1}{2}(1 1|1 1) 
++ (11|21) - \dfrac{1}{2}(1 1|2 1)
++ (11|12) - \dfrac{1}{2}(1 2|1 1)
++ (11|22) - \dfrac{1}{2}(1 2|2 1)] \notag\\
+&= H^{\core}_{11} + (1+S_{12})^{-1} 
+\qty[\dfrac{1}{2}(1 1|1 1) + (1 1|2 1) + (11|22) - \dfrac{1}{2}(1 2|2 1)] 
+\end{align}
 
 \ex{3.26}
 
