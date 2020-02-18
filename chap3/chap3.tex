@@ -725,6 +725,7 @@ F_{11} &= H^{\core}_{11} + (1+S_{12})^{-1}
 &= H^{\core}_{11} + (1+S_{12})^{-1} 
 \qty[\dfrac{1}{2}(1 1|1 1) + (1 1|2 1) + (11|22) - \dfrac{1}{2}(1 2|2 1)] 
 \end{align}
+\iffalse
 \begin{align}
 F_{22} &= H^{\core}_{22} + (1+S_{12})^{-1} 
 \qty[(22|11) - \dfrac{1}{2}(2 1|1 2) 
@@ -740,16 +741,46 @@ F_{22} &= H^{\core}_{22} + (1+S_{12})^{-1}
 + (11|12) 
 + \dfrac{1}{2}(11|11)] 
 \end{align}
+\fi
 \begin{align}
 F_{11} = F_{22} &= -1.1204 + (1 + 0.6593)^{-1} \qty(\dfrac{1}{2}\times 0.7746 + 0.4441 + 0.5697 -\dfrac{1}{2}\times 0.2970) \notag\\
 &= -0.3655
 \end{align}
 
-\ex{3.26}
+\begin{align}
+F_{12} &= H^{\core}_{12} + (1+S_{12})^{-1} 
+\qty[(12|11) - \dfrac{1}{2}(1 1|1 2) 
++ (12|21) - \dfrac{1}{2}(1 1|22)
++ (12|12) - \dfrac{1}{2}(1 2|1 2)
++ (12|22) - \dfrac{1}{2}(1 2|2 2)] \notag\\
+&= H^{\core}_{12} + (1+S_{12})^{-1} 
+\qty[ (1 1|1 2) 
+ - \dfrac{1}{2}(1 1|22)
++  \dfrac{3}{2}(1 2|1 2)] 
+\end{align}
+\begin{align}
+F_{12} = F_{21} &= -0.9584 + (1 + 0.6593)^{-1} \qty(0.4441 - \dfrac{1}{2}\times 0.5697 + \dfrac{3}{2}\times 0.2970) \notag\\
+&= -0.5939
+\end{align}
 
+\ex{3.26}
+Similar to the procedure in Ex 3.23, we get
+\begin{align}
+\varepsilon_1 &= \dfrac{F_{11} + F_{12}}{1 + S_{12}} = \dfrac{-0.3655 -0.5939}{1 + 0.6593} = -0.5782 \\
+\varepsilon_2 &= \dfrac{F_{11} - F_{12}}{1 - S_{12}} = \dfrac{-0.3655 +0.5939}{1 - 0.6593} = 0.6703
+\end{align}
 
 \ex{3.27}
-
+\begin{align}
+E_0 &= \sum_{\mu\nu} \dfrac{1}{2}P_{\nu\mu} (H^{\core}_{\mu\nu} + F_{\mu\nu}) \notag\\
+&= \dfrac{1}{2}\dfrac{1}{1 + S_{12}} \qty(H^{\core}_{11} + F_{11} + H^{\core}_{12} + F_{12} + H^{\core}_{21} + F_{21} + H^{\core}_{22} + F_{22}) \notag\\
+&= \dfrac{H^{\core}_{11} + F_{11} + H^{\core}_{12} + F_{12}}{1 + S_{12}} \notag\\
+&= \dfrac{-1.1204 -0.3655 - 0.9584 - 0.5939}{1 + 0.6593} \notag\\
+&= -1.8310
+\end{align}
+\begin{equation}\label{key}
+E_{tot} = E_0 + \dfrac{1}{R} = -1.1167
+\end{equation}
 
 \subsubsection{An SCF Calculation on STO-3G \ce{HeH^+}}
 \ex{3.28}
