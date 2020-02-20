@@ -298,30 +298,35 @@ $ \therefore \bm\gamma$ is Hermitian.
 
 \ex{4.5}
 \begin{align}
-\tr \bm\gamma &= \sum_i \gamma_{ii} \notag\\
-&= \sum_i \int\dd\vb{x}_1\dd\vb{x}'_1 \chi_i^*(\vb{x}_1) \gamma(\vb{x}_1,\vb{x}'_1) \chi_i(\vb{x}'_1) \notag\\
-&= \sum_i \int\dd\vb{x}_1\dd\vb{x}'_1 \chi_i^*(\vb{x}_1)  \chi_i(\vb{x}'_1)N\int \dd\vb{x}_2\cdots\dd\vb{x}_N \Phi^*(\vb{x}_1,\cdots,\vb{x}_N)\Phi(\vb{x}'_1,\cdots,\vb{x}_N) \notag\\
-&= N\sum_i \int \dd\vb{x}_2\cdots\dd\vb{x}_N \int\dd\vb{x}_1\chi_i^*(\vb{x}_1)\Phi^*(\vb{x}_1,\cdots,\vb{x}_N) \int\dd\vb{x}'_1  \chi_i(\vb{x}'_1) \Phi(\vb{x}'_1,\cdots,\vb{x}_N) 
+\Braket{\Phi | \Phi} 
+&= \dfrac{1}{N} \int\dd\vb{x}_1  \gamma(\vb{x}_1,\vb{x}_1) \notag\\
+&= \int\dd\vb{x}_1  \sum_{ij} \chi_i(\vb{x}_1) \gamma_{ij} \chi_j^*(\vb{x}_1) \notag\\
+&= \dfrac{1}{N} \sum_{ij} \qty[\int\dd\vb{x}_1 \chi_j^*(\vb{x}_1) \chi_i(\vb{x}_1)] \gamma_{ij}  \notag\\
+&= \dfrac{1}{N} \sum_{ij} \delta_{ji} \gamma_{ij} \notag\\
+&= \dfrac{1}{N} \tr \bm\gamma
 \end{align}
-Since
+thus
 \begin{equation}\label{key}
-\int\dd\vb{x}'_1  \chi_i(\vb{x}'_1) \Phi(\vb{x}'_1,\cdots,\vb{x}_N) = \int\dd\vb{x}_1\chi_i(\vb{x}_1)\Phi(\vb{x}_1,\cdots,\vb{x}_N) 
+\tr \bm\gamma = N
 \end{equation}
-we have
-\begin{align}
-\tr \bm\gamma &= N\sum_i \int \dd\vb{x}_2\cdots\dd\vb{x}_N \int\dd\vb{x}_1\chi_i^*(\vb{x}_1)\Phi^*(\vb{x}_1,\cdots,\vb{x}_N) \int\dd\vb{x}_1  \chi_i(\vb{x}_1) \Phi(\vb{x}_1,\cdots,\vb{x}_N) \notag\\
-&= N\sum_i \int\dd\vb{x}_1\chi_i^*(\vb{x}_1)  \chi_i(\vb{x}_1) 
-\int \dd\vb{x}_1\dd\vb{x}_2\cdots\dd\vb{x}_N \Phi^*(\vb{x}_1,\cdots,\vb{x}_N) \Phi(\vb{x}_1,\cdots,\vb{x}_N) \notag\\
-&= N\sum_i \int\dd\vb{x}_1\chi_i^*(\vb{x}_1)  \chi_i(\vb{x}_1) 
-\end{align}
-???
 
 \ex{4.6}
 \subex{a.}
 \begin{align}
 \Braket{\Phi | \mathscr{O}_1 | \Phi} &= \sum_i \Braket{\Phi | h(\vb{x}_1) | \Phi} \notag\\
-&= N \int\dd\vb{x}_1 h(\vb{x}_1) \int\dd\vb{x}_2\cdots\dd\vb{x}_N \Phi^*(\vb{x}_1,\cdots,\vb{x}_N) \Phi(\vb{x}_1,\cdots,\vb{x}_N) \notag\\
-&= N 
+&= N \int\dd\vb{x}_1 \int\dd\vb{x}_2\cdots\dd\vb{x}_N \Phi^*(\vb{x}_1,\cdots,\vb{x}_N) h(\vb{x}_1) \Phi(\vb{x}_1,\cdots,\vb{x}_N) \notag\\
+&= N \dfrac{1}{N}\int\dd\vb{x}_1 [h(\vb{x}_1) \gamma(\vb{x}_1,\vb{x}'_1)]_{\vb{x}'_1=\vb{x}_1} \notag\\
+&= \int\dd\vb{x}_1 [h(\vb{x}_1) \gamma(\vb{x}_1,\vb{x}'_1)]_{\vb{x}'_1=\vb{x}_1}
+\end{align}
+\subex{b.}
+\begin{align}
+\Braket{\Phi | \mathscr{O}_1 | \Phi} 
+&= \int\dd\vb{x}_1 [h(\vb{x}_1) \gamma(\vb{x}_1,\vb{x}'_1)]_{\vb{x}'_1=\vb{x}_1} \notag\\
+&= \int\dd\vb{x}_1 [h(\vb{x}_1) \sum_{ij} \chi_i(\vb{x}_1) \gamma_{ij} \chi_j^*(\vb{x}'_1)]_{\vb{x}'_1=\vb{x}_1} \notag\\
+&= \sum_{ij} \qty[\int\dd\vb{x}_1 \chi_j^*(\vb{x}_1) h(\vb{x}_1)\chi_i(\vb{x}_1)] \gamma_{ij}  \notag\\
+&= \sum_{ij} h_{ji} \gamma_{ij} \notag\\
+&= \sum_j (\vb{h}\bm\gamma)_{jj} \notag\\
+&= \tr (\vb{h}\bm\gamma)
 \end{align}
 
 \end{document}
