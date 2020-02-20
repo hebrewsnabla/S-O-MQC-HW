@@ -329,4 +329,80 @@ thus
 &= \tr (\vb{h}\bm\gamma)
 \end{align}
 
+\ex{4.7}
+\subex{a.}
+\begin{align}
+\Braket{\Phi | \mathscr{O}_1 | \Phi} 
+&= \sum_{ij} \Braket{i | h | j} \Braket{\Phi | a_i^+ a_j | \Phi}
+\end{align}
+while
+\begin{align}
+\Braket{\Phi | \mathscr{O}_1 | \Phi} 
+&= \sum_{ij} h_{ij} \gamma_{ji} 
+\end{align}
+$ \therefore $
+\begin{equation}\label{key}
+\gamma_{ji} = \Braket{\Phi | a_i^+ a_j | \Phi}
+\end{equation}
+i.e.
+\begin{equation}\label{key}
+\gamma_{ij} = \Braket{\Phi | a_j^+ a_i | \Phi}
+\end{equation}
+\subex{b.}
+\begin{equation}\label{key}
+\gamma_{ij}^{\text{HF}} = \Braket{\Psi_0 | a_j^+ a_i | \Psi_0} %= \delta_{ij} - \Braket{\Psi_0 | a_i a_j^+ | \Psi_0}
+\end{equation}
+If $ i $ is unoccupied, thus $ \gamma_{ij}^{\text{HF}} = 0 $ as we cannot annihilate electrons from it. If $ j $ is unoccupied, \\
+$ \gamma_{ij}^{\text{HF}} = \delta_{ij} - \Braket{\Psi_0 | a_i a_j^+ | \Psi_0} = \delta_{ij} - \delta_{ij} = 0 $.\\
+Otherwise, when $ i,j $ are occupied, it's clear that $ \gamma_{ij}^{\text{HF}} = \delta_{ij} $.\\
+Thus,
+\begin{equation}\label{key}
+\gamma_{ij}^{\text{HF}} = \left\{
+\mqty{\delta_{ij} & i,j\text{ are occupied} \vspace{5pt}\\
+	  0 & \text{otherwise} }\right.
+\end{equation}
+
+\ex{4.8}
+\subex{a.}
+Since 
+%$ \ket{^1\Psi_1^r}, \ket{^1\Psi_{11}^{rs}} $ can be expressed as linear combinations of $ \ket{\psi_i\bar\psi_j} $
+\begin{equation}\label{key}
+\ket{^1\Phi_0} = c_0\ket{\psi_1\bar\psi_1} + \sum_{r=2}^K c_1^r \dfrac{1}{\sqrt{2}}\qty(\ket{\psi_1\bar\psi_r} + \ket{\psi_r\bar\psi_1}) + \dfrac{1}{2}\sum_{r=2}^K\sum_{s=2}^K c_{11}^{rs}\dfrac{1}{\sqrt{2}} \qty(\ket{\psi_r\bar\psi_s} + \ket{\psi_s\bar\psi_r})
+\end{equation}
+we can write
+\begin{equation}\label{key}
+\ket{^1\Phi_0} = \sum_i^K \sum_j^K C_{ij}\ket{\psi_i\bar\psi_j}
+\end{equation}
+When one or two of $ i,j $ equals $ 1 $, it is clear that $ C_{ij} = C_{ji} $. Otherwise, $ c_{11}^{rs} = c_{11}^{sr} $. \\
+Thus, $ \vb{C} $ is symmetric.
+\subex{b.}
+\begin{align}
+\gamma(\vb{x}_1,\vb{x}'_1) &= 2\int\dd\vb{x}_2 \sum_{ij} C_{ij} \dfrac{1}{\sqrt{2}} \qty(\psi_i(\vb{x}_1)\bar\psi_j(\vb{x}_2) - \psi_i(\vb{x}_2)\bar\psi_j(\vb{x}_1)) 
+\sum_{kl} C^*_{kl} \dfrac{1}{\sqrt{2}} \qty(\psi_k^*(\vb{x}'_1)\bar\psi_l^*(\vb{x}_2) - \psi_k^*(\vb{x}_2)\bar\psi_l^*(\vb{x}'_1)) \notag\\
+&= \sum_{ij}\sum_{kl} C_{ij} C^*_{kl} \int\dd\vb{x}_2 \qty(\psi_i(\vb{x}_1)\bar\psi_j(\vb{x}_2) - \psi_i(\vb{x}_2)\bar\psi_j(\vb{x}_1)) 
+\qty(\psi_k^*(\vb{x}'_1)\bar\psi_l^*(\vb{x}_2) - \psi_k^*(\vb{x}_2)\bar\psi_l^*(\vb{x}'_1)) \notag\\
+&= \sum_{ij}\sum_{kl} C_{ij} C^*_{kl} 
+\qty[\psi_i(\vb{x}_1)\psi_k^*(\vb{x}'_1)\delta_{jl}
+ + \bar\psi_j(\vb{x}_1)\bar\psi_l^*(\vb{x}'_1)\delta_{ik}
+] \notag\\
+&= \sum_{ij}\sum_k C_{ij} C^*_{kj} \psi_i(\vb{x}_1)\psi_k^*(\vb{x}'_1)
++ \sum_{ij}\sum_l C_{ij} C^*_{il} \bar\psi_j(\vb{x}_1)\bar\psi_l^*(\vb{x}'_1)
+ \notag\\
+&= \sum_{ik} (\vb{C}\vb{C}^\dagger)_{ik} \psi_i(\vb{x}_1)\psi_k^*(\vb{x}'_1)
++ \sum_{jl} (\vb{C}^\dagger\vb{C})_{lj} \bar\psi_j(\vb{x}_1)\bar\psi_l^*(\vb{x}'_1)
+\notag\\
+&= \sum_{ij} (\vb{C}\vb{C}^\dagger)_{ij} \psi_i(\vb{x}_1)\psi_j^*(\vb{x}'_1)
++ \sum_{ij} (\vb{C}\vb{C}^\dagger)_{ji} \bar\psi_i(\vb{x}_1)\bar\psi_j^*(\vb{x}'_1)
+\notag\\
+&= \sum_{ij} (\vb{C}\vb{C}^\dagger)_{ij} \qty[\psi_i(\vb{x}_1)\psi_j^*(\vb{x}'_1)
++ \bar\psi_i(\vb{x}_1)\bar\psi_j^*(\vb{x}'_1)]
+\end{align}
+\subex{c.}
+Since $ \vb{U} $ is unitary and $ \vb{C} $ is symmetric,
+\begin{equation}\label{key}
+\vb{d}^2 = \vb{U}^\dagger\vb{C}\vb{U} \vb{U}^\dagger\vb{C}\vb{U} = \vb{U}^\dagger\vb{C}\vb{C}\vb{U} = \vb{U}^\dagger\vb{C}\vb{C}^\dagger\vb{U}
+\end{equation}
+
+
+
 \end{document}

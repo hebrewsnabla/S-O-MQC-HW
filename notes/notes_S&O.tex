@@ -615,7 +615,21 @@ reduced density function
 \begin{equation}\label{key}
 \gamma(\vb{x}_1,\vb{x}'_1) = \sum_{ij} \chi_i(\vb{x}_1) \gamma_{ij} \chi_j^*(\vb{x}'_1)
 \end{equation}
-
-
+def an orthonormal basis $ \{\eta_i\} $ (natural spin orb), 
+\begin{equation}\label{key}
+\eta_i = \sum_k \chi_k U_{ki}
+\end{equation}
+\begin{equation}\label{key}
+\gamma(\vb{x}_1,\vb{x}'_1) = \sum_{kl} \eta_k(\vb{x}_1) (\vb{U}^\dagger\bm\gamma\vb{U})_{kl} \eta_l^*(\vb{x}'_1)
+\end{equation}
+def 
+\begin{equation}\label{key}
+\bm\lambda = \vb{U}^\dagger\bm\gamma\vb{U}
+\end{equation}
+find a $ \vb{U} $ to make $ \bm\lambda $ diagonal, thus
+\begin{equation}\label{key}
+\gamma(\vb{x}_1,\vb{x}'_1) = \sum_{i} \lambda_i \eta_i(\vb{x}_1)  \eta_j^*(\vb{x}'_1)
+\end{equation}
+$ \lambda_i $ is called the occupation number of the natural spin orbs.
 
 \end{document}
