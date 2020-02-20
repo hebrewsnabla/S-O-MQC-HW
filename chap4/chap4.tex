@@ -394,15 +394,28 @@ Thus, $ \vb{C} $ is symmetric.
 &= \sum_{ij} (\vb{C}\vb{C}^\dagger)_{ij} \psi_i(\vb{x}_1)\psi_j^*(\vb{x}'_1)
 + \sum_{ij} (\vb{C}\vb{C}^\dagger)_{ji} \bar\psi_i(\vb{x}_1)\bar\psi_j^*(\vb{x}'_1)
 \notag\\
-&= \sum_{ij} (\vb{C}\vb{C}^\dagger)_{ij} \qty[\psi_i(\vb{x}_1)\psi_j^*(\vb{x}'_1)
-+ \bar\psi_i(\vb{x}_1)\bar\psi_j^*(\vb{x}'_1)]
+&= \sum_{ij} (\vb{C}\vb{C}^\dagger)_{ij} \qty[\psi_i(1)\psi_j^*(1')
++ \bar\psi_i(1)\bar\psi_j^*(1')]
 \end{align}
 \subex{c.}
 Since $ \vb{U} $ is unitary and $ \vb{C} $ is symmetric,
 \begin{equation}\label{key}
 \vb{d}^2 = \vb{U}^\dagger\vb{C}\vb{U} \vb{U}^\dagger\vb{C}\vb{U} = \vb{U}^\dagger\vb{C}\vb{C}\vb{U} = \vb{U}^\dagger\vb{C}\vb{C}^\dagger\vb{U}
 \end{equation}
-
+\subex{d.}
+Since
+\begin{equation}\label{key}
+\psi_k = \sum_i U^\dagger_{ik} \zeta_i
+\end{equation}
+\begin{align}
+\gamma(\vb{x}_1,\vb{x}'_1) &= \sum_{ij} (\vb{C}\vb{C}^\dagger)_{ij} \qty[\psi_i(1)\psi_j^*(1') 
++ \bar\psi_i(1)\bar\psi_j^*(1')] \notag\\
+&=  \sum_{ij} (\vb{U}\vb{d}^2\vb{U}^\dagger)_{ij} \qty[\sum_k U^*_{ki}\zeta_k(1)\sum_l U_{lj}\zeta_l^*(1')
++ \sum_k U^*_{ki}\bar\zeta_k(1)\sum_l U_{lj}\bar\zeta_l^*(1')] \notag\\
+%
+&= \sum_k \sum_m d^2_m \qty[\zeta_k(1) \zeta_k^*(1')
++ \bar\zeta_k(1) \bar\zeta_k^*(1')] \notag\\
+\end{align}
 
 
 \end{document}
