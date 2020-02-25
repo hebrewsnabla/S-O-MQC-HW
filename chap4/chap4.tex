@@ -410,11 +410,16 @@ Since
 \begin{align}
 \gamma(\vb{x}_1,\vb{x}'_1) &= \sum_{ij} (\vb{C}\vb{C}^\dagger)_{ij} \qty[\psi_i(1)\psi_j^*(1') 
 + \bar\psi_i(1)\bar\psi_j^*(1')] \notag\\
-&=  \sum_{ij} (\vb{U}\vb{d}^2\vb{U}^\dagger)_{ij} \qty[\sum_k U^*_{ki}\zeta_k(1)\sum_l U_{lj}\zeta_l^*(1')
-+ \sum_k U^*_{ki}\bar\zeta_k(1)\sum_l U_{lj}\bar\zeta_l^*(1')] \notag\\
-%
-&= \sum_k \sum_m d^2_m \qty[\zeta_k(1) \zeta_k^*(1')
-+ \bar\zeta_k(1) \bar\zeta_k^*(1')] \notag\\
+&=  \sum_{ij} (\vb{C}\vb{C}^\dagger)_{ij} \qty[\sum_k U^\dagger_{ki}\zeta_k(1)\sum_l U^{\dagger*}_{lj}\zeta_l^*(1')
++ \sum_k U^\dagger_{ki}\bar\zeta_k(1)\sum_l U^{\dagger*}_{lj}\bar\zeta_l^*(1')] \notag\\
+&=  \sum_k\sum_l \sum_{ij} U^\dagger_{ki} (\vb{C}\vb{C}^\dagger)_{ij} U_{jl} \qty[\zeta_k(1) \zeta_l^*(1')
++ \bar\zeta_k(1)\bar\zeta_l^*(1')] \notag\\
+&=  \sum_k\sum_l (\vb{U}^\dagger \vb{C}\vb{C}^\dagger \vb{U})_{kl} \qty[\zeta_k(1) \zeta_l^*(1')
++ \bar\zeta_k(1)\bar\zeta_l^*(1')] \notag\\
+&=  \sum_k\sum_l d^2_k \delta_{kl} \qty[\zeta_k(1) \zeta_l^*(1')
++ \bar\zeta_k(1)\bar\zeta_l^*(1')] \notag\\
+&= \sum_k d^2_k \qty[\zeta_k(1) \zeta_k^*(1')
++ \bar\zeta_k(1) \bar\zeta_k^*(1')] 
 \end{align}
 
 
