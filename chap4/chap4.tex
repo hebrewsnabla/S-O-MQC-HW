@@ -398,9 +398,16 @@ Thus, $ \vb{C} $ is symmetric.
 + \bar\psi_i(1)\bar\psi_j^*(1')]
 \end{align}
 \subex{c.}
-Since $ \vb{U} $ is unitary and $ \vb{C} $ is symmetric,
+%Since $ \vb{U} $ is unitary and $ \vb{C} $ is symmetric,
 \begin{equation}\label{key}
-\vb{d}^2 = \vb{U}^\dagger\vb{C}\vb{U} \vb{U}^\dagger\vb{C}\vb{U} = \vb{U}^\dagger\vb{C}\vb{C}\vb{U} = \vb{U}^\dagger\vb{C}\vb{C}^\dagger\vb{U}
+\vb{d} = \vb{U}^\dagger\vb{C}\vb{U} 
+\end{equation}
+\begin{equation}\label{key}
+\vb{d}^\dagger = (\vb{U}^\dagger\vb{C}\vb{U} )^\dagger = \vb{U}^\dagger\vb{C}^\dagger\vb{U} 
+\end{equation}
+Since $ \vb{U} $ is unitary
+\begin{equation}\label{key}
+\vb{d}^2 = \vb{d}\vb{d}^\dagger = \vb{U}^\dagger\vb{C}\vb{U} \vb{U}^\dagger\vb{C}^\dagger\vb{U} = \vb{U}^\dagger\vb{C}\vb{C}^\dagger\vb{U}
 \end{equation}
 \subex{d.}
 Since
@@ -420,6 +427,14 @@ Since
 + \bar\zeta_k(1)\bar\zeta_l^*(1')] \notag\\
 &= \sum_k d^2_k \qty[\zeta_k(1) \zeta_k^*(1')
 + \bar\zeta_k(1) \bar\zeta_k^*(1')] 
+\end{align}
+\subex{e.}
+\begin{align}
+\ket{^1\Phi_0} &= \sum_i^K \sum_j^K C_{ij} \ket{\psi_i\bar\psi_j} \notag\\
+&= \sum_i^K \sum_j^K C_{ij} \Ket{ \qty(\sum_k U^\dagger_{ki} \zeta_k)\qty(\sum_l U^\dagger_{lj} \bar\zeta_l)} \notag\\
+&= \sum_i^K \sum_j^K \sum_k\sum_l U^\dagger_{ki} C_{ij} U_{jl} \ket{ \zeta_k  \bar\zeta_l} \notag\\
+&= \sum_k\sum_l d_{k}\delta_{kl} \ket{ \zeta_k  \bar\zeta_l} \notag\\
+&= \sum_k d_{k} \ket{ \zeta_k  \bar\zeta_k}
 \end{align}
 
 
