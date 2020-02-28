@@ -305,7 +305,7 @@ For spatial orb
 \begin{enumerate}
 	\item $ \ket{K} = \ket{\cdots m n\cdots} $
 	\begin{equation}\label{key}
-	\Braket{K | \mathscr{H} | K} = \sum_m^N [m|h|m] + \dfrac{1}{2}\sum_m^N\sum_n^N \qty([mm|nn] - [mn|nm])
+	\Braket{K | \mathscr{H} | K} = \sum_m^N \Braket{m|h|m} + \dfrac{1}{2}\sum_m^N\sum_n^N \Braket{mn||mn} = \sum_m^N [m|h|m] + \dfrac{1}{2}\sum_m^N\sum_n^N \qty([mm|nn] - [mn|nm])
 	\end{equation}
 	or (Since $ [mm|mm] - [mm|mm] = 0 $)
 	\begin{equation}\label{key}
@@ -313,18 +313,18 @@ For spatial orb
 	\end{equation}
 	\item $ \ket{K} = \ket{\cdots m n\cdots} $, $ \ket{L} = \ket{\cdots p n\cdots} $
 	\begin{equation}\label{key}
-	\Braket{K | \mathscr{H} | L} = [m|h|p] + \sum_n^N \qty([mp|nn] - [mn|np])
+	\Braket{K | \mathscr{H} | L} = \Braket{m|h|p} + \sum_n^N \Braket{mn||pn} = [m|h|p] + \sum_n^N \qty([mp|nn] - [mn|np])
 	\end{equation}
 	\item $ \ket{K} = \ket{\cdots m n\cdots} $, $ \ket{L} = \ket{\cdots p q\cdots} $
 	\begin{equation}\label{key}
-	\Braket{K | \mathscr{H} | L} = [mp|nq] - [mq|np]
+	\Braket{K | \mathscr{H} | L} = \Braket{mn||pq} = [mp|nq] - [mq|np]
 	\end{equation}
 \end{enumerate}
 
 \subsection{Second Quantization}
 \subsubsection{Creation and Annihilation Operators and Their Anticommutation Relations}
 \begin{equation}\label{key}
-a_i^\dagger a_j^\dagger + a_j^\dagger a_i^\dagger = 0 \quad a_i a_j + a_j a_i^ = 0
+a_i^\dagger a_j^\dagger + a_j^\dagger a_i^\dagger = 0 \quad a_i a_j + a_j a_i = 0
 \end{equation}
 \begin{equation}\label{key}
 \{a_i, a_j^\dagger\} \equiv a_i a_j^\dagger + a_j^\dagger a_i = \delta_{ij}

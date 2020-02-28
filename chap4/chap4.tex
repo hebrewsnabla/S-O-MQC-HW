@@ -475,7 +475,30 @@ thus $ \ket{\Psi_{\gvb}} $ is identical to $ \ket{\Psi^{\text{MCSCF}}} $.
 
 \subsection{Truncated CI and the Size-consistency Problem}
 \ex{4.10}
-
+\begin{align}
+\Braket{\Psi_0 | \sH | 1_1\bar{1}_1 2_1 \bar{2}_1} &= \Braket{1_2\bar{1}_2 || 2_1 \bar{2}_1} \notag\\
+&= \Braket{1_2\bar{1}_2 | 2_1 \bar{2}_1} - \Braket{1_2\bar{1}_2 | \bar{2}_1 2_1 } \notag\\
+&= [1_2 2_1 | \bar{1}_2\bar{2}_1] - [1_2 \bar{2}_1 | \bar{1}_2 2_1] \notag\\
+&= (1_2 2_1 | 1_2 2_1) \notag\\
+&= 0
+\end{align}
+\begin{align}
+\Braket{2_1\bar{2}_1 1_2\bar{1}_2 | \sH | 1_1\bar{1}_1 2_1 \bar{2}_1} &= \Braket{2_1\bar{2}_1 1_2\bar{1}_2 | \sH | 2_1 \bar{2}_1 1_1\bar{1}_1} \notag\\
+&= \Braket{1_2\bar{1}_2 || 1_1\bar{1}_1} \notag\\
+&= \Braket{1_2\bar{1}_2 | 1_1\bar{1}_1} - \Braket{1_2\bar{1}_2 | \bar{1}_1 1_1} \notag\\
+&= [1_2 1_1 | \bar{1}_2\bar{1}_1] - [1_2 \bar{1}_1 | \bar{1}_2 1_1] \notag\\
+&= (1_2 1_1 | 1_2 1_1) \notag\\
+&= 0
+\end{align}
+\begin{align}
+\Braket{1_1\bar{1}_1 2_2\bar{2}_2 | \sH | 1_1\bar{1}_1 2_1 \bar{2}_1} 
+%&= \Braket{2_1\bar{2}_1 1_2\bar{1}_2 | \sH | 2_1 \bar{2}_1 1_1\bar{1}_1} \notag\\
+&= \Braket{2_2\bar{2}_2 || 2_1 \bar{2}_1} \notag\\
+&= \Braket{2_2\bar{2}_2 | 2_1 \bar{2}_1} - \Braket{2_2\bar{2}_2 | \bar{2}_1 2_1} \notag\\
+&= [2_2 2_1 | \bar{2}_2\bar{2}_1] - [2_2 \bar{2}_1 | \bar{2}_2 2_1] \notag\\
+&= (2_2 2_1 | 2_2 2_1) \notag\\
+&= 0
+\end{align}
 
 
 \end{document}
