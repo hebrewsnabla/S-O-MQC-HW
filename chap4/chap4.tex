@@ -163,6 +163,7 @@
 \DeclareMathOperator{\GF}{\mathrm{GF}}
 \DeclareMathOperator{\SF}{\mathrm{SF}}
 \DeclareMathOperator{\corr}{\mathrm{corr}}
+\DeclareMathOperator{\gvb}{\mathrm{GVB}}
 
 
 \newcommand{\subsbul}{\subsection*{$ \bullet $}}
@@ -438,8 +439,42 @@ Since
 \end{align}
 
 \subsection{The MCSCF and the GVB Methods}
+\ex{4.9}
+\subex{a.}
+\begin{align}
+\Braket{u|u} &= \dfrac{1}{a^2 + b^2} \Braket{a\psi_A + b\psi_B | a\psi_A + b\psi_B} \notag\\
+&= \dfrac{1}{a^2 + b^2} (a^2 + b^2) \notag\\
+&= 1
+\end{align}
+\begin{align}
+\Braket{v|v} &= \dfrac{1}{a^2 + b^2} \Braket{a\psi_A - b\psi_B | a\psi_A - b\psi_B} \notag\\
+&= \dfrac{1}{a^2 + b^2} (a^2 + b^2) \notag\\
+&= 1
+\end{align}
+\begin{align}
+\Braket{u|v} &= \dfrac{1}{a^2 + b^2} \Braket{a\psi_A + b\psi_B | a\psi_A - b\psi_B} \notag\\
+&= \dfrac{a^2 - b^2}{a^2 + b^2} 
+\end{align}
+\subex{b.}
+\begin{align}
+\ket{\Psi_{\gvb}} &= [2(1 + S^2)]^{-1/2} [u(1)v(2) + u(2)v(1)] 2^{-1/2} [\alpha(1)\beta(2) - \alpha(2)\beta(1)] \notag\\
+&= \qty[2 + 2\qty(\dfrac{a^2-b^2}{a^2+b^2})^2]^{-1/2} (a^2 + b^2)^{-1} \notag\\
+&{}\quad \cross [(a\psi_A(1) + b\psi_B(1))(a\psi_A(2) - b\psi_B(2)) + (a\psi_A(2) + b\psi_B(2))(a\psi_A(1) - b\psi_B(1))] \notag\\
+&{}\quad \cross 2^{-1/2} [\alpha(1)\beta(2) - \alpha(2)\beta(1)] \notag\\
+&= \qty[2(a^2 + b^2)^2 + 2\qty(a^2-b^2)^2]^{-1/2} [2a^2\psi_A(1)\psi_A(2) - 2b^2\psi_B(1)\psi_B(2)] \cross 2^{-1/2} [\alpha(1)\beta(2) - \alpha(2)\beta(1)] \notag\\
+&= \qty[4(a^4 + b^4)]^{-1/2} [2a^2\psi_A(1)\psi_A(2) - 2b^2\psi_B(1)\psi_B(2)] \cross 2^{-1/2} [\alpha(1)\beta(2) - \alpha(2)\beta(1)] \notag\\
+&= \qty(a^4 + b^4)^{-1/2} [a^2\psi_A(1)\psi_A(2) - b^2\psi_B(1)\psi_B(2)] \cross 2^{-1/2} [\alpha(1)\beta(2) - \alpha(2)\beta(1)]
+\end{align}
+i.e.
+\begin{align}
+\ket{\Psi_{\gvb}} &= \qty(a^4 + b^4)^{-1/2}a^2 \cross 2^{-1/2} \psi_A(1)\psi_A(2)[\alpha(1)\beta(2) - \alpha(2)\beta(1)] \notag\\
+&{}\quad - \qty(a^4 + b^4)^{-1/2}b^2 \cross 2^{-1/2} \psi_B(1)\psi_B(2)[\alpha(1)\beta(2) - \alpha(2)\beta(1)]  \notag\\
+&= \qty(a^4 + b^4)^{-1/2}a^2 \ket{\psi_A\bar\psi_A} - \qty(a^4 + b^4)^{-1/2}b^2 \ket{\psi_B\bar\psi_B}
+\end{align}
+thus $ \ket{\Psi_{\gvb}} $ is identical to $ \ket{\Psi^{\text{MCSCF}}} $.
 
-
+\subsection{Truncated CI and the Size-consistency Problem}
+\ex{4.10}
 
 
 
