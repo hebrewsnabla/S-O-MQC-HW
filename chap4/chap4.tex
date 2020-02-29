@@ -77,6 +77,7 @@
 }
 \usepackage{mhchem}
 \usepackage{multirow}
+\usepackage{booktabs}
 
 \DeclareMathOperator{\p}{\prime}
 \DeclareMathOperator{\ti}{\times}
@@ -499,6 +500,83 @@ thus $ \ket{\Psi_{\gvb}} $ is identical to $ \ket{\Psi^{\text{MCSCF}}} $.
 &= (2_2 2_1 | 2_2 2_1) \notag\\
 &= 0
 \end{align}
+
+\ex{4.11}
+\begin{align}
+\dfrac{^N E_{\corr}(\text{DCI})}{N} = \dfrac{\Delta - (\Delta^2 + N K_{12}^2)^{1/2}}{N}
+\end{align}
+From Ex 4.3, we get $ \Delta = 0.78865 $, $ K_{12} = 0.1813 $, thus
+\begin{table}[H]
+	\centering
+	\begin{tabular}{cc}
+		\hline 
+		\specialrule{0em}{1pt}{2pt}
+		$ N $ & $ ^N E_{\corr}(\text{DCI})/N $ 	\\ \hline
+		1   & -0.02057\\
+		10  & -0.01864\\
+		100 & -0.01188\\ \hline
+	\end{tabular}
+\end{table}
+
+\ex{4.12}
+\subex{a.}
+In addition to the matrix elements obtained in Eq. 4.56 in the textbook, we need to calculate the rest, i.e. those involving $ \ket{2_1\bar{2}_1 2_2\var{2}_2} $.
+\begin{align}
+\Braket{\Psi_0 | \sH | 2_1\bar{2}_1 2_2\bar{2}_2} &= 0 
+\end{align}
+\begin{align}
+\Braket{2_1 \bar{2}_1 1_2\bar{1}_2 | \sH | 2_1\bar{2}_1 2_2\bar{2}_2} &= \Braket{1_2\bar{1}_2 || 2_2\bar{2}_2} \notag\\
+&= \Braket{1_2\bar{1}_2 | 2_2\bar{2}_2} - \Braket{1_2\bar{1}_2 | \bar{2}_2 2_2} \notag\\
+&= [1_2 2_2|\bar{1}_2 \bar{2}_2] - [1_2 \bar{2}_2 |\bar{1}_2 2_2] \notag\\
+&= (12|12) \notag\\
+&= K_{12} \\
+\Braket{1_1 \bar{1}_1 2_2\bar{2}_2 | \sH | 2_1\bar{2}_1 2_2\bar{2}_2} &= \Braket{1_1 \bar{1}_1 || 2_1\bar{2}_1} \notag\\
+&= \Braket{1_1 \bar{1}_1 | 2_1\bar{2}_1} - \Braket{1_1 \bar{1}_1 |\bar{2}_1 2_1} \notag\\
+&= [1_1 2_1|\bar{1}_1 \bar{2}_1] - [1_1 \bar{2}_1 |\bar{1}_1 2_1] \notag\\
+&= (12|12) \notag\\
+&= K_{12}
+\end{align}
+\begin{align}
+\Braket{2_1\bar{2}_1 2_2\bar{2}_2 | \sH - E_0 | 2_1\bar{2}_1 2_2\bar{2}_2} &= 4h_{22} + 2J_{22} - 4h_{11} - 2J_{11} \notag\\
+&= 4\Delta
+\end{align}
+thus the full CI equation is
+\begin{equation}\label{key}
+\mqty(0 & K_{12} & K_{12} & 0\\
+      K_{12} & 2\Delta & 0 & K_{12}\\
+      K_{12} & 0 & 2\Delta & K_{12}\\
+      0 & K_{12} & K_{12} & 4\Delta)
+\mqty(1\\ c_1 \\ c_2 \\ c_3) = {^2 E}_{\corr} \mqty(1\\ c_1 \\ c_2 \\ c_3)
+\end{equation}
+\iffalse
+\subex{b.}
+\begin{align}
+K_{12} (c_1 + c_2) &= {^2 E}_{\corr} \\
+K_{12} + 2\Delta c_1 + K_{12}c_3 &= {^2 E}_{\corr}c_1 \label{b2}\\
+K_{12} + 2\Delta c_2 + K_{12}c_3 &= {^2 E}_{\corr}c_2 \label{b3}\\
+K_{12}(c_1 + c_2) + 4\Delta c_3 &= {^2 E}_{\corr}c_3 
+\end{align}
+From $ \eqref{b2}\eqref{b3} $, we get
+\begin{equation}\label{key}
+(2\Delta - {^2 E}_{\corr})(c_1 - c_2) = 0
+\end{equation}
+thus
+\begin{equation}\label{key}
+c_1 = c_2
+\end{equation}
+$ \therefore $
+\begin{equation}\label{key}
+{^2 E}_{\corr} = 2 K_{12} c_1
+\end{equation}
+\fi
+\subex{e.}
+Directly solve the full CI equation (see \code{4-11,12.nb}), we get the lowest eigenvalue
+\begin{equation}\label{key}
+{^2 E}_{\corr} = 2[\Delta - \sqrt{\Delta^2 + K_{12}^2}]
+\end{equation}
+
+\ex{4.13}
+
 
 
 \end{document}
