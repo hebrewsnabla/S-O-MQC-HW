@@ -432,5 +432,27 @@ c_1 = c_2 = c_3 = c_4  &= \dfrac{2\Delta + \sqrt{8K_{12}^2 + (2\Delta)^2}}{4\sqr
 &= \dfrac{\Delta + \sqrt{2K_{12}^2 + \Delta^2}}{2\sqrt{2}K_{12}}
 \end{align}
 
+\ex{5.8}
+\begin{align}
+E_{\corr}(\text{FO}) &= \sum_{A<B}\sum_{R<S} \dfrac{\abs{\Braket{AB||RS}}^2}{\varepsilon_A + \varepsilon_B - \varepsilon_R - \varepsilon_S} \notag\\
+&= \dfrac{\abs{\Braket{a\bar{a}||r\bar{r}}}^2 + \abs{\Braket{a\bar{a}||r\bar{s}}}^2 + \abs{\Braket{a\bar{a}||s\bar{r}}}^2 + \abs{\Braket{a\bar{a}||s\bar{s}}}^2}{\varepsilon_1 + \varepsilon_1 - \varepsilon_2 - \varepsilon_2} %\notag\\
+%&{}\quad 
++ \dfrac{\abs{\Braket{a\bar{b}||r\bar{r}}}^2 + \abs{\Braket{a\bar{b}||r\bar{s}}}^2 + \abs{\Braket{a\bar{b}||s\bar{r}}}^2 + \abs{\Braket{a\bar{b}||s\bar{s}}}^2}{\varepsilon_1 + \varepsilon_1 - \varepsilon_2 - \varepsilon_2} \notag\\
+&{}\quad + \dfrac{\abs{\Braket{b\bar{a}||r\bar{r}}}^2 + \abs{\Braket{b\bar{a}||r\bar{s}}}^2 + \abs{\Braket{b\bar{a}||s\bar{r}}}^2 + \abs{\Braket{b\bar{a}||s\bar{s}}}^2}{\varepsilon_1 + \varepsilon_1 - \varepsilon_2 - \varepsilon_2} %\notag\\
+%&{}\quad 
++ \dfrac{\abs{\Braket{b\bar{b}||r\bar{r}}}^2 + \abs{\Braket{b\bar{b}||r\bar{s}}}^2 + \abs{\Braket{b\bar{b}||s\bar{r}}}^2 + \abs{\Braket{b\bar{b}||s\bar{s}}}^2}{\varepsilon_1 + \varepsilon_1 - \varepsilon_2 - \varepsilon_2} \notag\\
+&= \dfrac{\abs{(ar|ar)}^2 + \abs{(ar|as)}^2 + \abs{(as|ar)}^2 + \abs{(as|as)}^2}{2(\varepsilon_1 - \varepsilon_2)} 
++ \dfrac{\abs{(ar|br)}^2 + \abs{(ar|bs)}^2 + \abs{(as|br)}^2 + \abs{(as|bs)}^2}{2(\varepsilon_1 - \varepsilon_2)} \notag\\
+&{}\quad + \dfrac{\abs{(br|ar)}^2 + \abs{(br|as)}^2 + \abs{(bs|ar)}^2 + \abs{(bs|as)}^2}{2(\varepsilon_1 - \varepsilon_2)} 
++ \dfrac{\abs{(br|br)}^2 + \abs{(br|bs)}^2 + \abs{(bs|br)}^2 + \abs{(bs|bs)}^2}{2(\varepsilon_1 - \varepsilon_2)} \notag\\
+&= \dfrac{\abs{\tfrac{1}{2}K_{12}}^2 + 0 + 0 + \abs{\tfrac{1}{2}K_{12}}^2}{2(\varepsilon_1 - \varepsilon_2)} 
++ \dfrac{0 + \abs{\tfrac{1}{2}K_{12}}^2 + \abs{\tfrac{1}{2}K_{12}}^2 + 0}{2(\varepsilon_1 - \varepsilon_2)} \notag\\
+&{}\quad + \dfrac{0 + 0 + \abs{\tfrac{1}{2}K_{12}}^2 + \abs{\tfrac{1}{2}K_{12}}^2}{2(\varepsilon_1 - \varepsilon_2)} 
++ \dfrac{\abs{\tfrac{1}{2}K_{12}}^2 + 0 + 0 + \abs{\tfrac{1}{2}K_{12}}^2}{2(\varepsilon_1 - \varepsilon_2)} \notag\\
+&= \dfrac{2K_{12}^2 }{2(\varepsilon_1 - \varepsilon_2)}
+\end{align}
+
+\ex{5.9}
+
 
 \end{document}
