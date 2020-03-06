@@ -235,9 +235,102 @@ $ \eqref{5.2a} $ gives
 \begin{align}
 K_{12} c_{1_i\bar{1}_i}^{2_i\bar{2}_i} = e_{1_i\bar{1}_i}
 \end{align}
-For $ \eqref{5.2b} $
+$ \eqref{5.2b} $ gives
 \begin{align}
-\Braket{\Psi_{1_i\bar{1}_i}^{2_i\bar{2}_i} | \sH | \Psi_0} + \sum_{jk} \Braket{\Psi_{1_i\bar{1}_i}^{2_i\bar{2}_i} | \sH - E_0 | \Psi_{1_i\bar{1}_i}^{2_j\bar{2}_k}} c_{1_i\bar{1}_i}^{2_j\bar{2}_k}  &= e_{1_i\bar{1}_i} c_{1_i\bar{1}_i}^{2_i\bar{2}_i} 
+K_{12} + \sum_{jk} \Braket{\Psi_{1_i\bar{1}_i}^{2_i\bar{2}_i} | \sH - E_0 | \Psi_{1_i\bar{1}_i}^{2_j\bar{2}_k}} c_{1_i\bar{1}_i}^{2_j\bar{2}_k}  &= e_{1_i\bar{1}_i} c_{1_i\bar{1}_i}^{2_i\bar{2}_i} 
 \end{align}
+Since
+\begin{align}
+\Braket{\Psi_{1_i\bar{1}_i}^{2_i\bar{2}_i} | \sH - E_0 | \Psi_{1_i\bar{1}_i}^{2_j\bar{2}_k}} c_{1_i\bar{1}_i}^{2_j\bar{2}_k} = \left\{
+\mqty{2\Delta & j=k=i\\
+0 & j=k\neq i\\
+0 & i=j=\neq k}
+\right.
+\end{align}
+we have
+\begin{align}
+K_{12} + 2\Delta c_{1_i\bar{1}_i}^{2_i\bar{2}_i}  &= e_{1_i\bar{1}_i} c_{1_i\bar{1}_i}^{2_i\bar{2}_i} 
+\end{align}
+
+\ex{5.3}
+\begin{align}
+{^2 E}_{\corr}(\text{FO}) &= \sum_i \dfrac{\abs{\Braket{1_i\bar{1}_i||2_i\bar{2}_i}}^2}{\varepsilon_1 + \varepsilon_1 - \varepsilon_2 - \varepsilon_2} \notag\\
+&= 2\times \dfrac{K_{12}^2}{2(\varepsilon_1 - \varepsilon_2)} \notag\\
+&= \dfrac{K_{12}^2}{(\varepsilon_1 - \varepsilon_2)}
+\end{align}
+
+\subsubsection{Invariance under Unitary Transformations: An Example}
+\ex{5.4}
+\begin{align}
+\ket{a\bar{a} b\bar{b}} &= 2^{-1/2} \qty(\ket{1_1\bar{a} b\bar{b}} + \ket{1_2\bar{a} b\bar{b}}) \notag\\
+&= 2^{-1} \qty(\ket{1_1\bar{1}_1 b\bar{b}} + \ket{1_1\bar{1}_2 b\bar{b}}  + \ket{1_2\bar{1}_1 b\bar{b}} + \ket{1_2\bar{1}_2 b\bar{b}}) \notag\\
+&= 2^{-2} (
+\ket{1_1\bar{1}_1 1_1\bar{1}_1} - \ket{1_1\bar{1}_1 1_1\bar{1}_2} - \ket{1_1\bar{1}_1 1_2\bar{1}_1} + \ket{1_1\bar{1}_1 1_2\bar{1}_2} \notag\\
+&{}\quad + \ket{1_1\bar{1}_2 1_1\bar{1}_1} - \ket{1_1\bar{1}_2 1_1\bar{1}_2} - \ket{1_1\bar{1}_2 1_2\bar{1}_1} + \ket{1_1\bar{1}_2 1_2\bar{1}_2} \notag\\
+&{}\quad + \ket{1_2\bar{1}_1 1_1\bar{1}_1} - \ket{1_2\bar{1}_1 1_1\bar{1}_2} - \ket{1_2\bar{1}_1 1_2\bar{1}_1} + \ket{1_2\bar{1}_1 1_2\bar{1}_2} \notag\\
+&{}\quad + \ket{1_2\bar{1}_2 1_1\bar{1}_1} - \ket{1_2\bar{1}_2 1_1\bar{1}_2} - \ket{1_2\bar{1}_2 1_2\bar{1}_1} + \ket{1_2\bar{1}_2 1_2\bar{1}_2}
+) \notag\\
+&= 2^{-2} (
+2\ket{1_1\bar{1}_1 1_1\bar{1}_1}   + 2\ket{1_1\bar{1}_1 1_2\bar{1}_2} 
+- 2\ket{1_1\bar{1}_2 1_1\bar{1}_2} - 2\ket{1_1\bar{1}_2 1_2\bar{1}_1}  
+) \notag\\
+&= 2^{-2} ( 2\ket{1_1\bar{1}_1 1_2\bar{1}_2} - 2\ket{1_1 \bar{1}_1 1_2\bar{1}_2}  ) \notag\\
+&= \ket{1_1\bar{1}_1 1_2\bar{1}_2}
+\end{align}
+
+\ex{5.5}
+\begin{align}
+\Braket{\Psi_0 | \sH | \Psi_{a\bar{a}}^{**}} &= 2^{-1/2}\qty(\Braket{\Psi_0 | \sH | \Psi_{a\bar{a}}^{r\bar{r}}} + \Braket{\Psi_0 | \sH | \Psi_{a\bar{a}}^{s\bar{s}}}) \notag\\
+&= 2^{-1/2}\qty(2\times \dfrac{1}{2}K_{12} ) \notag\\
+&= 2^{-1/2} K_{12}
+\end{align}
+\begin{align}
+\Braket{\Psi_{a\bar{a}}^{**} | \sH - E_0 | \Psi_{a\bar{a}}^{**}} &= 2^{-1} (\Braket{\Psi_{a\bar{a}}^{r\bar{r}} | \sH - E_0 | \Psi_{a\bar{a}}^{r\bar{r}}} 
++ \Braket{\Psi_{a\bar{a}}^{r\bar{r}} | \sH - E_0 | \Psi_{a\bar{a}}^{s\bar{s}}} \notag\\
+&{}\quad
++ \Braket{\Psi_{a\bar{a}}^{s\bar{s}} | \sH - E_0 | \Psi_{a\bar{a}}^{r\bar{r}}} 
++ \Braket{\Psi_{a\bar{a}}^{s\bar{s}} | \sH - E_0 | \Psi_{a\bar{a}}^{s\bar{s}}}) \notag\\
+&= 2^{-1} \Bigg[ \qty(2h_{11} + 2h_{22} + \dfrac{1}{2}J_{11} + \dfrac{1}{2}J_{22} + 2J_{12} - K_{12}) - (4h_{11} + 2J_{11}) \notag\\
+&{}\qquad + \dfrac{1}{2}J_{22} + \dfrac{1}{2}J_{22} \notag\\
+&{}\qquad + \qty(2h_{11} + 2h_{22} + \dfrac{1}{2}J_{11} + \dfrac{1}{2}J_{22} + 2J_{12} - K_{12}) - (4h_{11} + 2J_{11})
+ \Bigg] \notag\\
+&= 2^{-1} \qty(-2h_{11} + 2h_{22} - \dfrac{3}{2}J_{11} + J_{22} + 2J_{12} - K_{12})\times 2 \notag\\
+&= -2h_{11} + 2h_{22} - \dfrac{3}{2}J_{11} + J_{22} + 2J_{12} - K_{12}
+\end{align}
+Since
+\begin{equation}\label{key}
+\varepsilon_2 - \varepsilon_1 = h_{22} - h_{11} + 2J_{12} - K_{12} - J_{11}
+\end{equation}
+we have
+\begin{align}
+\Braket{\Psi_{a\bar{a}}^{**} | \sH - E_0 | \Psi_{a\bar{a}}^{**}} &= 2(\varepsilon_2 - \varepsilon_1) - 2J_{12} + K_{12} + \dfrac{1}{2}J_{11} + J_{22}
+\end{align}
+
+\ex{5.6}
+Since
+\begin{equation}\label{key}
+\ket{\Psi_{a\bar{b}}^{**}} = 2^{-1/2} (\ket{\Psi_{a\bar{b}}^{r\bar{s}}} + \ket{\Psi_{a\bar{b}}^{s\bar{r}}})
+\end{equation}
+\begin{align}
+\Braket{\Psi_0 | \sH | \Psi_{a\bar{b}}^{**}} &= 2^{-1/2}\qty(\Braket{\Psi_0 | \sH | \Psi_{a\bar{b}}^{r\bar{s}}} + \Braket{\Psi_0 | \sH | \Psi_{a\bar{b}}^{s\bar{r}}}) \notag\\
+&= 2^{-1/2}\qty(\Braket{a\bar{b}||r\bar{s}} + \Braket{a\bar{b}||s\bar{r}} ) \notag\\
+&= 2^{-1/2} \qty((ar|bs) + (as|br)) \notag\\
+&= 2^{-1/2} K_{12}
+\end{align}
+\begin{align}
+\Braket{\Psi_{a\bar{b}}^{**} | \sH - E_0 | \Psi_{a\bar{b}}^{**}} &= 2^{-1} (\Braket{\Psi_{a\bar{b}}^{r\bar{s}} | \sH - E_0 | \Psi_{a\bar{b}}^{r\bar{s}}} 
++ \Braket{\Psi_{a\bar{b}}^{r\bar{s}} | \sH - E_0 | \Psi_{a\bar{b}}^{s\bar{r}}} \notag\\
+&{}\quad
++ \Braket{\Psi_{a\bar{b}}^{s\bar{r}} | \sH - E_0 | \Psi_{a\bar{b}}^{r\bar{s}}} 
++ \Braket{\Psi_{a\bar{b}}^{s\bar{r}} | \sH - E_0 | \Psi_{a\bar{b}}^{s\bar{r}}}) \notag\\
+&= 2^{-1} \Bigg[ \qty(2h_{11} + 2h_{22} + \dfrac{1}{2}J_{11} + \dfrac{1}{2}J_{22} + 2J_{12} - K_{12}) - (4h_{11} + 2J_{11}) \notag\\
+&{}\qquad + \dfrac{1}{2}J_{22} + \dfrac{1}{2}J_{22} \notag\\
+&{}\qquad + \qty(2h_{11} + 2h_{22} + \dfrac{1}{2}J_{11} + \dfrac{1}{2}J_{22} + 2J_{12} - K_{12}) - (4h_{11} + 2J_{11})
+\Bigg] \notag\\
+&= ... \notag\\
+&= 2(\varepsilon_2 - \varepsilon_1) - 2J_{12} + K_{12} + \dfrac{1}{2}J_{11} + J_{22}
+\end{align}
+Thus the equations determining $ e_{a\bar{b}} $ are identical to that of $ e_{a\bar{a}} $. Similarly, $ e_{\bar{a}b} $ shares the same equations with them.\\
+$ \therefore e_{a\bar{b}} = e_{\bar{a}b} = e_{a\bar{a}}$.
 
 \end{document}
