@@ -412,8 +412,9 @@ The 4th-order perturbation energy of state $ i $ can be expressed as
 &\sum_{k,n,m\neq i} \dfrac{V_{ki}V_{nk}V_{mn}V_{im}}{(E_i^{(0)}-E_k^{(0)})(E_i^{(0)}-E_n^{(0)})(E_i^{(0)}-E_m^{(0)})} + \sum_{n\neq i} \dfrac{V_{ii}^2 V_{ni}V_{in}}{(E_i^{(0)}-E_n^{(0)})^3} - \sum_{m,n\neq i} \dfrac{V_{ii}V_{mi}V_{in}V_{nm}}{(E_i^{(0)}-E_m^{(0)})^2(E_i^{(0)}-E_n^{(0)})} \notag\\
 &- \sum_{m,n\neq i} \dfrac{V_{ii}V_{ni}V_{im}V_{mn}}{(E_i^{(0)}-E_m^{(0)})^2(E_i^{(0)}-E_n^{(0)})} - \sum_{m,n\neq i} \dfrac{V_{mi}V_{im}V_{in}V_{ni}}{(E_i^{(0)}-E_m^{(0)})(E_i^{(0)}-E_n^{(0)})(2E_i^{(0)}-E_n^{(0)}-E_m^{(0)})} \notag\\
 &- \sum_{m,n\neq i} \dfrac{V_{mi}V_{im}V_{in}V_{ni}}{(E_i^{(0)}-E_n^{(0)})^2(2E_i^{(0)}-E_n^{(0)}-E_m^{(0)})} \notag\\
-= &\sum_{k,n,m\neq i} \dfrac{V_{ki}V_{nk}V_{mn}V_{im}}{(E_i^{(0)}-E_k^{(0)})(E_i^{(0)}-E_n^{(0)})(E_i^{(0)}-E_m^{(0)})} + \sum_{n\neq i} \dfrac{V_{ii}^2 V_{ni}V_{in}}{(E_i^{(0)}-E_n^{(0)})^3} - \sum_{m,n\neq i} \dfrac{V_{ii}V_{mi}V_{in}V_{nm}}{(E_i^{(0)}-E_m^{(0)})^2(E_i^{(0)}-E_n^{(0)})} \notag\\
-&- \sum_{m,n\neq i} \dfrac{V_{ii}V_{ni}V_{im}V_{mn}}{(E_i^{(0)}-E_m^{(0)})^2(E_i^{(0)}-E_n^{(0)})} - \sum_{m,n\neq i} \dfrac{V_{mi}V_{im}V_{in}V_{ni}}{(E_i^{(0)}-E_m^{(0)})(E_i^{(0)}-E_n^{(0)})^2} 
+= &\sum_{k,n,m\neq i} \dfrac{V_{ki}V_{nk}V_{mn}V_{im}}{(E_i^{(0)}-E_k^{(0)})(E_i^{(0)}-E_n^{(0)})(E_i^{(0)}-E_m^{(0)})} + \sum_{n\neq i} \dfrac{V_{ii}^2 V_{ni}V_{in}}{(E_i^{(0)}-E_n^{(0)})^3} - 2\sum_{m,n\neq i} \dfrac{V_{ii}V_{mi}V_{in}V_{nm}}{(E_i^{(0)}-E_m^{(0)})^2(E_i^{(0)}-E_n^{(0)})} \notag\\
+&%- \sum_{m,n\neq i} \dfrac{V_{ii}V_{ni}V_{im}V_{mn}}{(E_i^{(0)}-E_m^{(0)})^2(E_i^{(0)}-E_n^{(0)})} 
+- \sum_{m,n\neq i} \dfrac{V_{mi}V_{im}V_{in}V_{ni}}{(E_i^{(0)}-E_m^{(0)})(E_i^{(0)}-E_n^{(0)})^2} 
 \end{align}
 while
 \begin{equation}\label{key}
@@ -454,12 +455,14 @@ E_i^{(4)} &= \Braket{i | \mathscr{V} | \Psi_i^{(3)}} \notag\\
  +  \qty[E_i^{(1)}]^2 \sum_{n\neq i} \dfrac{V_{in}V_{ni}}{\qty[E_i^{(0)} - E_n^{(0)}]^3} 
 -  E_i^{(2)} \sum_{n\neq i} \dfrac{V_{in}V_{ni}}{\qty[E_i^{(0)} - E_n^{(0)}]^2} \notag\\
 &= \sum_{n,m,k\neq i} \dfrac{V_{in} V_{nm}V_{mk}V_{ki}}{\qty[E_i^{(0)} - E_n^{(0)}]\qty[E_i^{(0)} - E_m^{(0)}]\qty[E_i^{(0)} - E_k^{(0)}]} 
-- V_{ii}\sum_{n,m\neq i} \dfrac{V_{in} V_{nm} V_{mi}}{\qty[E_i^{(0)} - E_n^{(0)}]\qty[E_i^{(0)} - E_m^{(0)}]^2}  \notag\\
-&{}\quad - V_{ii} \sum_{n,m\neq i} \dfrac{V_{in}V_{nm}V_{mi} }{\qty[E_i^{(0)} - E_n^{(0)}]^2\qty[E_i^{(0)} - E_m^{(0)}]} 
-+  V_{ii}^2 \sum_{n\neq i} \dfrac{V_{in}V_{ni}}{\qty[E_i^{(0)} - E_n^{(0)}]^3} \notag\\
-&{}\quad -  \sum_{m\neq i} \dfrac{V_{mi}V_{im}}{\qty[E_i^{(0)} - E_m^{(0)}]} \sum_{n\neq i} \dfrac{V_{in}V_{ni}}{\qty[E_i^{(0)} - E_n^{(0)}]^2} 
+- 2V_{ii}\sum_{n,m\neq i} \dfrac{V_{in} V_{nm} V_{mi}}{\qty[E_i^{(0)} - E_n^{(0)}]\qty[E_i^{(0)} - E_m^{(0)}]^2}  \notag\\
+&{}\quad %- V_{ii} \sum_{n,m\neq i} \dfrac{V_{in}V_{nm}V_{mi} }{\qty[E_i^{(0)} - E_n^{(0)}]^2\qty[E_i^{(0)} - E_m^{(0)}]} 
++  V_{ii}^2 \sum_{n\neq i} \dfrac{V_{in}V_{ni}}{\qty[E_i^{(0)} - E_n^{(0)}]^3} 
+-  \sum_{m\neq i} \dfrac{V_{mi}V_{im}}{\qty[E_i^{(0)} - E_m^{(0)}]} \sum_{n\neq i} \dfrac{V_{in}V_{ni}}{\qty[E_i^{(0)} - E_n^{(0)}]^2} 
 \end{align}
+which agrees with diagrammatic results above.
 
+\subsubsection{Summation of Diagrams}
 
 
 
