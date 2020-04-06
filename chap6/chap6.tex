@@ -464,6 +464,36 @@ which agrees with diagrammatic results above.
 
 \subsubsection{Summation of Diagrams}
 
+\subsection{Orbital Perturbation Theory: One-Particle Perturbations}
+\ex{6.3}
+Since $ n\neq 0 $ and $ v(i) $ is one-particle operator, $ n $ must be single-excited, i.e. $ \ket{\Psi_a^r} $. Thus,
+\begin{align}
+E_0^{(2)} &= \sum_{a,r} \dfrac{\abs{\Braket{\Psi_0 | \sum_i v(i) | \Psi_a^r}}^2}{\Braket{\Psi_0 | \sH | \Psi_0} - \Braket{\Psi_a^r| \sH | \Psi_a^r}} \notag\\
+&= \sum_{a,r} \dfrac{v_{ar} v_{ra}}{\sum_b \varepsilon_b^{(0)} - \qty(\sum_{b\neq a}\varepsilon_b^{(0)} + \varepsilon_r^{(0)})} \notag\\
+&= \sum_{a,r} \dfrac{v_{ar} v_{ra}}{\varepsilon_a^{(0)} - \varepsilon_r^{(0)}}
+\end{align}
+
+\ex{6.4}
+Eq 6.15 in textbook gives
+\begin{align}
+E_i^{(3)} &= \sum_{n,m\neq i} \dfrac{\Braket{i|\mathscr{V}|n} \Braket{n|\mathscr{V}|m} \Braket{m|\mathscr{V}|i}}{(E_i^{(0)}-E_n^{(0)}) (E_i^{(0)}-E_m^{(0)})} 
+- E_i^{(1)}\sum_{n\neq i} \dfrac{\abs{\Braket{i|\mathscr{V}|n}}^2 }{(E_i^{(0)}-E_n^{(0)})^2} \notag\\
+&= A_i^{(3)} + B_i^{(3)}
+\end{align}
+\subex{a.}
+\begin{align}
+B_0^{(3)} &= - E_0^{(1)}\sum_{n\neq 0} \dfrac{\abs{\Braket{\Psi_0|\mathscr{V}|n}}^2 }{(E_0^{(0)}-E_n^{(0)})^2} \notag\\
+&= -\sum_b v_{bb} \sum_{a,r}\dfrac{v_{ar}v_{ra}}{(\varepsilon_a - \varepsilon_r)^2} \notag\\
+&= - \sum_{a,b,r}\dfrac{v_{aa} v_{br}v_{rb}}{(\varepsilon_b - \varepsilon_r)^2} 
+\end{align}
+\subex{b.}
+\begin{align}
+A_0^{(3)} &= \sum_{n,m\neq 0} \dfrac{\Braket{\Psi_0|\mathscr{V}|n} \Braket{n|\mathscr{V}|m} \Braket{m|\mathscr{V}|\Psi_0}}{(E_0^{(0)}-E_n^{(0)}) (E_0^{(0)}-E_m^{(0)})} \notag\\
+&= \sum_{a,r,b,s} \dfrac{\Braket{\Psi_0|\mathscr{V}|\Psi_a^r} \Braket{\Psi_a^r|\mathscr{V}|\Psi_b^s} \Braket{\Psi_b^s|\mathscr{V}|\Psi_0}}{(\varepsilon_a^{(0)} - \varepsilon_r^{(0)}) (\varepsilon_b^{(0)} - \varepsilon_s^{(0)})} \notag\\
+&= \sum_{a,r,b,s} \dfrac{v_{ar}v_{sb} \Braket{\Psi_a^r|\mathscr{V}|\Psi_b^s} }{(\varepsilon_a^{(0)} - \varepsilon_r^{(0)}) (\varepsilon_b^{(0)} - \varepsilon_s^{(0)})} 
+\end{align}
+\subex{c.}
+
 
 
 
