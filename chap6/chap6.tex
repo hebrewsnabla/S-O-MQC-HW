@@ -483,8 +483,8 @@ E_i^{(3)} &= \sum_{n,m\neq i} \dfrac{\Braket{i|\mathscr{V}|n} \Braket{n|\mathscr
 \subex{a.}
 \begin{align}
 B_0^{(3)} &= - E_0^{(1)}\sum_{n\neq 0} \dfrac{\abs{\Braket{\Psi_0|\mathscr{V}|n}}^2 }{(E_0^{(0)}-E_n^{(0)})^2} \notag\\
-&= -\sum_b v_{bb} \sum_{a,r}\dfrac{v_{ar}v_{ra}}{(\varepsilon_a - \varepsilon_r)^2} \notag\\
-&= - \sum_{a,b,r}\dfrac{v_{aa} v_{br}v_{rb}}{(\varepsilon_b - \varepsilon_r)^2} 
+&= -\sum_b v_{bb} \sum_{a,r}\dfrac{v_{ar}v_{ra}}{(\varepsilon_a^{(0)} - \varepsilon_r^{(0)})^2} \notag\\
+&= - \sum_{a,b,r}\dfrac{v_{aa} v_{br}v_{rb}}{(\varepsilon_b^{(0)} - \varepsilon_r^{(0)})^2} 
 \end{align}
 \subex{b.}
 \begin{align}
@@ -493,6 +493,86 @@ A_0^{(3)} &= \sum_{n,m\neq 0} \dfrac{\Braket{\Psi_0|\mathscr{V}|n} \Braket{n|\ma
 &= \sum_{a,r,b,s} \dfrac{v_{ar}v_{sb} \Braket{\Psi_a^r|\mathscr{V}|\Psi_b^s} }{(\varepsilon_a^{(0)} - \varepsilon_r^{(0)}) (\varepsilon_b^{(0)} - \varepsilon_s^{(0)})} 
 \end{align}
 \subex{c.}
+Clearly, if $ a\neq b, r\neq s $
+\begin{align}
+\Braket{\Psi_a^r | \mathscr{V} | \Psi_b^s} = 0
+\end{align}
+If $ a=b, r\neq s $,
+\begin{align}
+\Braket{\Psi_a^r | \mathscr{V} | \Psi_b^s} 
+&= \Braket{r| v |s} \notag\\
+&= v_{rs}
+\end{align}
+If $ a\neq b, r= s $,
+\begin{align}
+\Braket{\Psi_a^r | \mathscr{V} | \Psi_b^s} 
+&= \Braket{\Psi_a^r | \mathscr{V} | \Psi_b^r} \notag\\
+&= \Braket{\Psi_a^r | \mathscr{V} | -\Psi_{ab}^{ra}} \notag\\
+&= -\Braket{b| v |a} \notag\\
+&= -v_{ba}
+\end{align}
+If $ a= b, r= s $,
+\begin{align}
+\Braket{\Psi_a^r | \mathscr{V} | \Psi_b^s} 
+&= \Braket{\Psi_a^r | \mathscr{V} | \Psi_a^r} \notag\\
+&= \sum_c v_{cc} - v_{aa} + v_{rr}
+\end{align}
+
+\subex{d.}
+\begin{align}
+E_0^{(3)} &= A_0^{(3)} + B_0^{(3)} \notag\\
+&= \sum_{a,r,b,s} 
+\dfrac{v_{ar}v_{sb} \Braket{\Psi_a^r|\mathscr{V}|\Psi_b^s} }{(\varepsilon_a^{(0)} - \varepsilon_r^{(0)}) (\varepsilon_b^{(0)} - \varepsilon_s^{(0)})} 
+- \sum_{a,b,r}\dfrac{v_{aa} v_{br}v_{rb}}{(\varepsilon_b - \varepsilon_r)^2}
+\notag\\
+&=  \sum_{a,r\neq s} 
+\dfrac{v_{ar}v_{sa} v_{rs} }{(\varepsilon_a^{(0)} - \varepsilon_r^{(0)}) (\varepsilon_a^{(0)} - \varepsilon_s^{(0)})} 
++ \sum_{a\neq b,r} 
+\dfrac{v_{ar}v_{rb}(-v_{ba}) }{(\varepsilon_a^{(0)} - \varepsilon_r^{(0)}) (\varepsilon_b^{(0)} - \varepsilon_r^{(0)})} 
+\notag\\
+&\quad {} + \sum_{a,r} 
+\dfrac{v_{ar}v_{ra} (\sum_c v_{cc} - v_{aa} + v_{rr}) }{(\varepsilon_a^{(0)} - \varepsilon_r^{(0)})^2} 
+- \sum_{a,b,r}\dfrac{v_{aa} v_{br}v_{rb}}{(\varepsilon_b^{(0)} - \varepsilon_r^{(0)})^2}
+\notag\\
+&=  \sum_{a,r\neq s} 
+\dfrac{v_{ar}v_{sa} v_{rs} }{(\varepsilon_a^{(0)} - \varepsilon_r^{(0)}) (\varepsilon_a^{(0)} - \varepsilon_s^{(0)})} 
++ \sum_{a\neq b,r} 
+\dfrac{v_{ar}v_{rb}(-v_{ba}) }{(\varepsilon_a^{(0)} - \varepsilon_r^{(0)}) (\varepsilon_b^{(0)} - \varepsilon_r^{(0)})} 
+\notag\\
+&\quad {} + \sum_{a,r} 
+\dfrac{v_{ar}v_{ra} (\sum_c v_{cc} - v_{aa} + v_{rr}) }{(\varepsilon_a^{(0)} - \varepsilon_r^{(0)})^2} 
+- \sum_{a,r}\dfrac{\sum_c v_{cc} v_{ar}v_{ra}}{(\varepsilon_a^{(0)} - \varepsilon_r^{(0)})^2}
+\notag\\
+&=  \sum_{a,r\neq s} 
+\dfrac{v_{ar}v_{sa} v_{rs} }{(\varepsilon_a^{(0)} - \varepsilon_r^{(0)}) (\varepsilon_a^{(0)} - \varepsilon_s^{(0)})} 
++ \sum_{a\neq b,r} 
+\dfrac{v_{ar}v_{rb}(-v_{ba}) }{(\varepsilon_a^{(0)} - \varepsilon_r^{(0)}) (\varepsilon_b^{(0)} - \varepsilon_r^{(0)})} 
++ \sum_{a,r} 
+\dfrac{v_{ar}v_{ra} ( - v_{aa} + v_{rr}) }{(\varepsilon_a^{(0)} - \varepsilon_r^{(0)})^2} 
+\notag\\
+&=  \sum_{a,r,s} 
+\dfrac{v_{ar}v_{sa} v_{rs} }{(\varepsilon_a^{(0)} - \varepsilon_r^{(0)}) (\varepsilon_a^{(0)} - \varepsilon_s^{(0)})} 
+- \sum_{a,b,r} 
+\dfrac{v_{ar}v_{rb}v_{ba} }{(\varepsilon_a^{(0)} - \varepsilon_r^{(0)}) (\varepsilon_b^{(0)} - \varepsilon_r^{(0)})} 
+\end{align}
+
+\subex{e.}
+That's obvious.
+
+\ex{6.5}
+Since $ a,b $ run over all $ n $ occupied orbitals $ i,j $ and $ r $ runs over all $ n $ unoccupied orbitals $ k^* $, we have
+\begin{align}
+-2\sum_{a,b,r}^{N/2} \dfrac{v_{ra}v_{ab}v_{br}}{(\varepsilon_a^{(0)} - \varepsilon_r^{(0)}) (\varepsilon_b^{(0)} - \varepsilon_r^{(0)})} 
+&= -\dfrac{2}{(2\beta)^2} \sum_i^n \sum_j^n \sum_k^n \Braket{i|v|j} \Braket{j|v|k^*} \Braket{k^*|v|i} \notag\\
+&= -\dfrac{2}{(2\beta)^2} \sum_i^3
+\mqty[\Braket{i|v|i+1} \Braket{i+1|v|(i+2)^*} \Braket{(i+2)^*|v|i} \\
++ \Braket{i|v|i+2} \Braket{i+2|v|(i+1)^*} \Braket{(i+1)^*|v|i} ] \notag\\
+&= -\dfrac{2}{(2\beta)^2} \sum_i^3 \qty[(\beta/2)(\beta/2)(-\beta/2) + (\beta/2)(-\beta/2)(\beta/2)] \notag\\
+&= -\dfrac{2}{(2\beta)^2} \times 3\times (-\beta^3/4) \notag\\
+&= 3\beta/8
+\end{align}
+
+
 
 
 
