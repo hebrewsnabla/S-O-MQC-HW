@@ -3,3 +3,4 @@
 *.gz
 *.toc
 *.out
+sol/*
