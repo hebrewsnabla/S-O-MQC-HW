@@ -572,7 +572,73 @@ Since $ a,b $ run over all $ n $ occupied orbitals $ i,j $ and $ r $ runs over a
 &= 3\beta/8
 \end{align}
 
+\ex{6.6}
+\subex{a.}
+Using the general expression, we get
+\begin{align}
+\mathscr{E}_0 &= 6\alpha - 2\sum_{j=-1}^1 (\beta_1^2 + \beta_2^2 + 2\beta_1\beta_2\cos\dfrac{2j\pi}{3})^{1/2} \notag\\
+&= 6\alpha - 2(\beta_1^2 + \beta_2^2 + 2\beta_1\beta_2\cos\dfrac{-2\pi}{3})^{1/2}
+- 2(\beta_1^2 + \beta_2^2 + 2\beta_1\beta_2\cos 0)^{1/2}
+- 2(\beta_1^2 + \beta_2^2 + 2\beta_1\beta_2\cos\dfrac{2\pi}{3})^{1/2} 
+\notag\\
+&= 6\alpha - 2(\beta_1^2 + \beta_2^2 - \beta_1\beta_2)^{1/2}
+- 2(\beta_1^2 + \beta_2^2 + 2\beta_1\beta_2)^{1/2}
+- 2(\beta_1^2 + \beta_2^2 - \beta_1\beta_2)^{1/2} \notag\\
+&= 6\alpha 
+- 2\abs{\beta_1 + \beta_2}
+- 4(\beta_1^2 + \beta_2^2 - \beta_1\beta_2)^{1/2} \notag\\
+&= 6\alpha + 2(\beta_1 + \beta_2)
+- 4(\beta_1^2 + \beta_2^2 - \beta_1\beta_2)^{1/2}
+\end{align}
 
+Using H\"uckel matrix:
+\begin{align}
+\vb{H} = \mqty( 
+\alpha  & \beta_1 & 0       & 0       & 0       & \beta_2\\
+\beta_1 & \alpha  & \beta_2 & 0       & 0       & 0      \\
+0       & \beta_2 & \alpha  & \beta_1 & 0       & 0      \\
+0       & 0       & \beta_1 & \alpha  & \beta_2 & 0      \\
+0       & 0       & 0       & \beta_2 & \alpha  & \beta_1\\
+\beta_2 & 0       & 0       & 0       & \beta_1 & \alpha  
+)
+\end{align}
+%Diagonalize $ \vb{H} - \bm\varepsilon $, we get
+Eigenvalues of $ \vb{H} $ are
+\begin{align}\label{key}
+&\alpha + (\beta_1 + \beta_2), \notag\\
+&\alpha - \sqrt{\beta_1^2 + \beta_2^2 - \beta_1\beta_2} \;\text{ (2-fold)}, \notag\\
+&\alpha + \sqrt{\beta_1^2 + \beta_2^2 - \beta_1\beta_2} \;\text{ (2-fold)}, \notag\\
+&\alpha - (\beta_1 + \beta_2),
+\end{align}
+thus
+\begin{align}
+\mathscr{E}_0 &= 2\qty[\alpha + (\beta_1 + \beta_2)] + 4\qty[\alpha - \sqrt{\beta_1^2 + \beta_2^2 - \beta_1\beta_2}] \notag\\
+&= 6\alpha + 2(\beta_1 + \beta_2) - 4\sqrt{\beta_1^2 + \beta_2^2 - \beta_1\beta_2}
+\end{align}
+
+\subex{b.}
+\begin{align}
+E_R &= \mathscr{E}_0 - (N\alpha + N\beta) \notag\\
+&= 6\alpha + 2(\beta_1 + \beta_2) - 4\sqrt{\beta_1^2 + \beta_2^2 - \beta_1\beta_2} - (6\alpha + 6\beta) \notag\\
+&= -4\beta_1 + 2\beta_2 - 4\sqrt{\beta_1^2 + \beta_2^2 - \beta_1\beta_2} \notag\\
+&= 4\beta\qty(-1 + \dfrac{1}{2}x + \sqrt{1 + x^2 - x})
+\end{align}
+
+\subex{c.}
+\begin{align}
+E_R &= 4\beta\qty(-1 + \dfrac{1}{2}x + \sqrt{1 + x^2 - x}) \notag\\
+&= 4\beta\qty[ -1 + \dfrac{1}{2}x 
++ 1 + \dfrac{1}{2}(x^2-x) - \dfrac{1}{8}(x^2-x)^2 + \dfrac{1}{16}(x^2-x)^3 - \dfrac{5}{128}(x^2-x)^4 ] \notag\\
+&= 4\beta\qty[ 
+\dfrac{1}{2}x^2 - \dfrac{1}{8}(x^4 + x^2 - 2x^3) 
++ \dfrac{1}{16}(-x^3 + 3x^4) - \dfrac{5}{128}x^4 + \cdots ] \notag\\
+&= 4\beta\qty[ 
+\dfrac{3}{8}x^2 + \dfrac{3}{16}x^3 + \dfrac{3}{128}x^4 + \cdots ] \notag\\
+&= \beta\qty[ 
+\dfrac{3}{2}x^2 + \dfrac{3}{4}x^3 + \dfrac{3}{32}x^4 + \cdots ]
+\end{align}
+
+\subsection{Diagrammatic Representation of Orbital Perturbation Theory}
 
 
 
