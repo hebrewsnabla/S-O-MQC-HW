@@ -639,6 +639,149 @@ E_R &= 4\beta\qty(-1 + \dfrac{1}{2}x + \sqrt{1 + x^2 - x}) \notag\\
 \end{align}
 
 \subsection{Diagrammatic Representation of Orbital Perturbation Theory}
+\ex{6.7}
+\subex{a.}
+~\\
+\begin{minipage}{0.2\linewidth}
+		\hfill
+	\begin{tikzpicture}
+	\begin{feynman}[small]
+	\vertex (a);
+	\vertex [below=of a] (b);
+	\vertex [below=of b] (c);
+	\vertex [below=of c] (d);
+	%\vertex [below=of d] (e);
+	\diagram[inline=(c)]{
+		(a) -- [fermion, quarter right, edge label'=a] (b)
+		-- [fermion, quarter right, edge label'=b] (d)
+		-- [fermion, quarter right, edge label'=s] (c)
+		-- [fermion, quarter right, edge label'=r] (a)
+		%-- [fermion, quarter right, edge label'=2] (a),
+	};
+	\end{feynman}
+	\end{tikzpicture}
+	\\
+	\vspace{25pt}\\
+\end{minipage}
+\begin{minipage}{0.8\linewidth}
+	\vspace{25pt}~\\
+	\begin{align}
+	&= - \sum_{a,b,r,s} \dfrac{v_{ab}v_{bs}v_{sr}v_{ra}}{(\varepsilon_a^{(0)} - \varepsilon_r^{(0)})(\varepsilon_b^{(0)} - \varepsilon_r^{(0)})(\varepsilon_b^{(0)} - \varepsilon_b^{(0)})}  &\notag\\
+	&= -\dfrac{1}{(2\beta)^3} \sum_{i,j,k,l} \Braket{i|v|j}\Braket{j|v|k^*}\Braket{k^*|v|l^*}\Braket{l^*|v|i} & \notag\\
+	&= -\dfrac{2}{(2\beta)^3} \sum_i^{N/2} [-1 + 1 -1 -1 +1 -1]\times (\beta/2)^4  & \notag\\
+	&= \dfrac{N\beta}{64}  & \notag\\
+	\end{align}
+\end{minipage}
+%\tikzfeynmanset{
+%}
+The pictorial representation of the summation are as follows\\
+\begin{center}
+	\begin{tikzpicture}
+	\begin{feynman}[nodes=circle, large]
+	\vertex (a) {$ (i) $};
+	\vertex [below right=of a] (b1) {$ (i-1) $};
+	\vertex [above right=of a] (b2) {$ (i+1) $};
+	\vertex [below right=of b1] (c1) {$ (i-2)^* $};
+	\vertex [above right=of b1] (c2) {$ (i)^* $};
+	\vertex [above right=of b2] (c3) {$ (i+2)^* $};
+	\vertex [above right=of c1] (d1) {$ (i-1)^* $};
+	\vertex [above right=of c2] (d2) {$ (i+1)^* $};
+	\vertex [above right=of d1] (e) {$ (i) $};
+	\diagram[inline=(c)]{
+		(a) -- [plain, edge label'=+] (b1);
+		(a) -- [plain, edge label=+] (b2);
+		(b1) -- [plain, edge label'=--] (c1);
+		(b1) -- [plain, edge label'=+] (c2);
+		(b2) -- [plain, edge label=--] (c2);
+		(b2) -- [plain, edge label=+] (c3);
+		(c1) -- [plain, edge label'=--] (d1);
+		(c2) -- [plain, edge label'=--] (d1);
+		(c2) -- [plain, edge label=--] (d2);
+		(c3) -- [plain, edge label=--] (d2);
+		(d1) -- [plain, edge label'=--] (e);
+		(d2) -- [plain, edge label=+] (e);
+		%-- [fermion, quarter right, edge label'=2] (a),
+	};
+	\end{feynman}
+	\end{tikzpicture}
+\end{center}
+
+\begin{minipage}{0.2\linewidth}
+	\hfill
+	\begin{tikzpicture}
+	\begin{feynman}[small]
+	\vertex (a);
+	\vertex [below=of a] (b);
+	\vertex [below=of b] (c);
+	\vertex [below=of c] (d);
+	%\vertex [below=of d] (e);
+	\diagram[inline=(c)]{
+		(a) -- [fermion, out=200, in=150, edge label'=a] (d)
+		-- [fermion, out=45, in=330, edge label'=r] (b)
+		-- [fermion, quarter left, edge label'=b] (c)
+		-- [fermion, quarter left, edge label=s] (a)
+		%-- [fermion, quarter right, edge label'=2] (a),
+	};
+	\end{feynman}
+	\end{tikzpicture}
+	\\
+	\vspace{25pt}\\
+\end{minipage}
+\begin{minipage}{0.8\linewidth}
+	\vspace{25pt}~\\
+	\begin{align}
+	&= - \sum_{a,r,b,s} \dfrac{v_{ar}v_{rb}v_{bs}v_{sa}}{(\varepsilon_a^{(0)} - \varepsilon_r^{(0)})(\varepsilon_a^{(0)} - \varepsilon_s^{(0)})(\varepsilon_a^{(0)} + \varepsilon_b^{(0)} - \varepsilon_r^{(0)} - \varepsilon_s^{(0)})}  &\notag\\
+	&= -\dfrac{1}{(2\beta)^2\times 4\beta} \sum_{i,j,k,l} \Braket{i|v|j^*}\Braket{j^*|v|k}\Braket{k|v|l^*}\Braket{l^*|v|i} & \notag\\
+	&= -\dfrac{2}{(2\beta)^2\times 4\beta} \sum_i^{N/2} 6\times (\beta/2)^4  & \notag\\
+	&= -\dfrac{3N\beta}{128}  & \notag\\
+	\end{align}
+\end{minipage}
+%\tikzfeynmanset{
+%}
+The pictorial representation of the summation are as follows\\
+\begin{center}
+	\begin{tikzpicture}
+	\begin{feynman}[nodes=circle, large]
+	\vertex (a) {$ (i) $};
+	\vertex [below right=of a] (b1) {$ (i-1)^* $};
+	\vertex [above right=of a] (b2) {$ (i+1)^* $};
+	\vertex [below right=of b1] (c1) {$ (i-2) $};
+	\vertex [above right=of b1] (c2) {$ (i) $};
+	\vertex [above right=of b2] (c3) {$ (i+2) $};
+	\vertex [above right=of c1] (d1) {$ (i-1)^* $};
+	\vertex [above right=of c2] (d2) {$ (i+1)^* $};
+	\vertex [above right=of d1] (e) {$ (i) $};
+	\diagram[inline=(c)]{
+		(a) -- [plain, edge label'=--] (b1);
+		(a) -- [plain, edge label=+] (b2);
+		(b1) -- [plain, edge label'=+] (c1);
+		(b1) -- [plain, edge label'=--] (c2);
+		(b2) -- [plain, edge label=+] (c2);
+		(b2) -- [plain, edge label=--] (c3);
+		(c1) -- [plain, edge label'=+] (d1);
+		(c2) -- [plain, edge label'=--] (d1);
+		(c2) -- [plain, edge label=+] (d2);
+		(c3) -- [plain, edge label=--] (d2);
+		(d1) -- [plain, edge label'=--] (e);
+		(d2) -- [plain, edge label=+] (e);
+		%-- [fermion, quarter right, edge label'=2] (a),
+	};
+	\end{feynman}
+	\end{tikzpicture}
+\end{center}
+thus
+\begin{equation}\label{key}
+E_0^{(4)} = \dfrac{N\beta}{64}
+\end{equation}
+
+\subex{b.}
+Let $ N=6 $, we get
+\begin{equation}\label{key}
+E_0^{(4)} = \dfrac{3\beta}{32}
+\end{equation}
+which agrees with the result in Ex 6.6.
+
+\subsection{Perturbation Expansion of the Correlation Energy}
 
 
 
