@@ -190,10 +190,8 @@
 %\usetikzlibrary{arrows.meta, bending, positioning}
 
 \title{\textbf{Modern Quantum Chemistry, Szabo \& Ostlund}\\HW}
-\author{王石嵘
+\author{wsr
 \vspace{5pt}\\
-%161240065\\
-%Email: shirong\_wang@berkeley.edu
 }
 \date{\today} % Activate to display a given date or no date (if empty),
          % otherwise the current date is printed 
@@ -771,7 +769,7 @@ The pictorial representation of the summation are as follows\\
 \end{center}
 thus
 \begin{equation}\label{key}
-E_0^{(4)} = \dfrac{N\beta}{64}
+E_0^{(4)} = 4\times \dfrac{N\beta}{64} + 3\times\qty(-\dfrac{3N\beta}{128}) =  \dfrac{N\beta}{64}
 \end{equation}
 
 \subex{b.}
@@ -782,6 +780,60 @@ E_0^{(4)} = \dfrac{3\beta}{32}
 which agrees with the result in Ex 6.6.
 
 \subsection{Perturbation Expansion of the Correlation Energy}
+\ex{6.8}
+\begin{align}
+E_0^{(2)} &= 
+\dfrac{1}{4}\sum_{a,b,r,s} \dfrac{\abs{\Braket{ab||rs}}^2}{\varepsilon_a + \varepsilon_b - \varepsilon_r - \varepsilon_s} \notag\\
+&= \dfrac{1}{4}\sum_{a,b,r,s} 
+\dfrac{\qty(\Braket{ab|rs} - \Braket{ab|sr}) \qty(\Braket{rs|ab} - \Braket{sr|ab})}{\varepsilon_a + \varepsilon_b - \varepsilon_r - \varepsilon_s} \notag\\
+&= \dfrac{1}{4}\sum_{a,b,r,s} 
+\dfrac{\Braket{ab|rs}\Braket{rs|ab} - \Braket{ab|sr}\Braket{rs|ab}  - \Braket{ab|rs}\Braket{sr|ab} + \Braket{ab|sr}\Braket{sr|ab}}{\varepsilon_a + \varepsilon_b - \varepsilon_r - \varepsilon_s} \notag\\
+&= \dfrac{1}{4}\qty[\sum_{a,b,r,s} 
+\dfrac{\Braket{ab|rs}\Braket{rs|ab}}{\varepsilon_a + \varepsilon_b - \varepsilon_r - \varepsilon_s}
+- \sum_{a,b,r,s} 
+\dfrac{\Braket{ab|sr}\Braket{rs|ab}}{\varepsilon_a + \varepsilon_b - \varepsilon_r - \varepsilon_s}
+- \sum_{a,b,r,s} 
+\dfrac{ \Braket{ab|rs}\Braket{sr|ab}}{\varepsilon_a + \varepsilon_b - \varepsilon_r - \varepsilon_s}
++ \sum_{a,b,r,s} 
+\dfrac{\Braket{ab|sr}\Braket{sr|ab}}{\varepsilon_a + \varepsilon_b - \varepsilon_r - \varepsilon_s}
+] \notag\\
+&= \dfrac{1}{4}\qty[2\sum_{a,b,r,s} 
+\dfrac{\Braket{ab|rs}\Braket{rs|ab}}{\varepsilon_a + \varepsilon_b - \varepsilon_r - \varepsilon_s}
+- 2\sum_{a,b,r,s} 
+\dfrac{\Braket{ab|rs}\Braket{sr|ab}}{\varepsilon_a + \varepsilon_b - \varepsilon_r - \varepsilon_s}
+] \notag\\
+&= \dfrac{1}{2}\sum_{a,b,r,s} 
+\dfrac{\Braket{ab|rs}\Braket{rs|ab}}{\varepsilon_a + \varepsilon_b - \varepsilon_r - \varepsilon_s}
+- \dfrac{1}{2}\sum_{a,b,r,s} 
+\dfrac{\Braket{ab|rs}\Braket{rs|ba}}{\varepsilon_a + \varepsilon_b - \varepsilon_r - \varepsilon_s}
+\end{align}
+For a closed-shell system, the possible spin part of $ a,b,r,s $ of the non-zero terms are\\
+first term: $ \alpha,\alpha,\alpha,\alpha $;\quad $ \alpha,\beta,\alpha,\beta $;\quad $ \beta,\alpha,\beta,\alpha $;\quad $ \beta,\beta,\beta,\beta $\\
+second term: $ \alpha,\alpha,\alpha,\alpha $;\quad $ \beta,\beta,\beta,\beta $\\
+thus
+\begin{align}
+E_0^{(2)} &= 2\sum_{a,b,r,s}^{N/2}
+\dfrac{\Braket{ab|rs}\Braket{rs|ab}}{\varepsilon_a + \varepsilon_b - \varepsilon_r - \varepsilon_s}
+- \sum_{a,b,r,s}^{N/2}
+\dfrac{\Braket{ab|rs}\Braket{rs|ba}}{\varepsilon_a + \varepsilon_b - \varepsilon_r - \varepsilon_s}
+\end{align}
+
+\ex{6.9}
+\begin{align}
+E_{\corr} &= \Delta - (\Delta^2 + K_{12}^2)^{1/2} \notag\\
+&= \Delta - \qty[\Delta + \dfrac{K_{12}^2}{2\Delta}] \notag\\
+&= - \dfrac{K_{12}^2}{2\Delta} \notag\\
+&= - \dfrac{K_{12}^2}{2(\varepsilon_2-\varepsilon_1) + J_{11} + J_{22} - 4J_{12} + 2K_{12}} \notag\\
+&= - K_{12}^2 \qty(\dfrac{1}{2(\varepsilon_2-\varepsilon_1)} - \dfrac{ J_{11} + J_{22} - 4J_{12} + 2K_{12}}{4(\varepsilon_2-\varepsilon_1)^2}) \notag\\
+&= \dfrac{K_{12}^2}{2(\varepsilon_1-\varepsilon_2)} + \dfrac{K_{12}^2 (J_{11} + J_{22} - 4J_{12} + 2K_{12})}{4(\varepsilon_1-\varepsilon_2)^2})
+\end{align}
+
+\subsection{The $ N $-dependence of the RS Perturbation Expansion}
+\ex{6.10}
+\begin{align}
+E_0^{(1)} &= \Braket{\Psi_0 | \mathscr{V} | \Psi_0} \notag\\
+&= \Braket{\Psi_0 | \sum_{i<j} r_{ij}^{-1} - \sum_i v^{\text{HF}}(i) | \Psi_0} \notag\\
+\end{align}
 
 
 
