@@ -830,10 +830,45 @@ E_{\corr} &= \Delta - (\Delta^2 + K_{12}^2)^{1/2} \notag\\
 
 \subsection{The $ N $-dependence of the RS Perturbation Expansion}
 \ex{6.10}
+From Eq 6.68, we get
 \begin{align}
-E_0^{(1)} &= \Braket{\Psi_0 | \mathscr{V} | \Psi_0} \notag\\
-&= \Braket{\Psi_0 | \sum_{i<j} r_{ij}^{-1} - \sum_i v^{\text{HF}}(i) | \Psi_0} \notag\\
+E_0^{(1)} &= \Braket{\Psi_0 | \mathscr{V} | \Psi_0} = -\dfrac{1}{2}\sum_{ab}\Braket{ab||ab} \notag\\
+&= -\dfrac{1}{2}\sum_{i=1}^N \qty[\Braket{1_i \bar{1}_i|| 1_i \bar{1}_i} + \Braket{\bar{1}_i 1_i || \bar{1}_i 1_i}] \notag\\
+&= -\dfrac{1}{2}\sum_{i=1}^N 
+\qty[\Braket{1_i \bar{1}_i| 1_i \bar{1}_i} 
+- \Braket{1_i \bar{1}_i| \bar{1}_i 1_i} 
++ \Braket{\bar{1}_i 1_i | \bar{1}_i 1_i}
+- \Braket{\bar{1}_i 1_i | 1_i \bar{1}_i} ] \notag\\
+&= -\dfrac{1}{2}\times 2N [1_i 1_i| 1_i 1_i] \notag\\
+&= -N J_{11}
 \end{align}
+\begin{align}
+\Braket{\Psi_{1_i\bar{1}_i}^{2_i\bar{2}_i} | \mathscr{V} | \Psi_{1_i\bar{1}_i}^{2_i\bar{2}_i}} 
+&= \Braket{\Psi_{1_i\bar{1}_i}^{2_i\bar{2}_i} | \sH | \Psi_{1_i\bar{1}_i}^{2_i\bar{2}_i}} 
+- \Braket{\Psi_{1_i\bar{1}_i}^{2_i\bar{2}_i} | \sH_0 | \Psi_{1_i\bar{1}_i}^{2_i\bar{2}_i}} \notag\\
+&= (2N-2) h_{11} + 2h_{22} + (N-1)J_{11} + J_{22} - (2N-2)\varepsilon_1 - 2\varepsilon_2 \notag\\
+&= (2N-2) h_{11} + 2h_{22} + (N-1)J_{11} + J_{22} - (2N-2)(h_{11} + J_{11}) - 2(h_{22} + 2J_{12} - K_{12}) \notag\\
+&= -(N-1)J_{11} + J_{22} - 4J_{12} + 2K_{12}
+\end{align}
+
+\subsection{Diagrammatic Representation of the Perturbation Expansion of the Correlation Energy}
+
+\subsubsection{Hugenholtz Diagrams}
+\ex{6.11}
+The numerator and denominator are obvious.\\
+$ h=5 $, and $ l=2 $ since closed loops are $ r\ra a\ra d\ra t\ra e\ra r; \; s\ra c\ra b\ra s $. The number of quivalent line pairs is one ($ r,s $). Thus the pre-factor is $ -\dfrac{1}{2} $.
+
+\subsubsection{Goldstone Diagrams}
+\ex{6.12}
+
+\subsubsection{Summation of Diagrams}
+
+\subsubsection{What Is the Linked-Cluster Theorem?}
+\ex{6.13}
+
+\subsection{Some Illustrative Calculations}
+
+
 
 
 
