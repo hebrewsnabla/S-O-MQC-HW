@@ -287,14 +287,46 @@ thus
 %\qquad
 \end{equation}
 
-~\\
-\begin{minipage}{\linewidth}
-\hskip-2cm
+\ex{7.4}
 \begin{align}
-a =b
+\phi_n(x)\phi_n^*(x') &= \lim_{E\ra E_n} (E - E_n) \dfrac{1}{\I(2E)^{1/2}} \qty[\e^{\I(2E)^{1/2}\abs{x-x'}} 
+- \dfrac{\e^{\I(2E)^{1/2}(\abs{x} + \abs{x'})}}{1 + \I(2E)^{1/2}}] \notag\\
+&= \lim_{E\ra -1/2} (E + 1/2) \dfrac{1}{-1} \qty[\e^{-\abs{x-x'}} 
+- \dfrac{\e^{-(\abs{x} + \abs{x'})}}{1 + \I(2E)^{1/2}}] \notag\\
+&= -\lim_{E\ra -1/2} (E + 1/2) \e^{-\abs{x-x'}} 
++ \lim_{E\ra -1/2}(E + 1/2)\dfrac{\e^{-(\abs{x} + \abs{x'})}}{1 + \I(2E)^{1/2}} \notag\\
+&= 0 + \lim_{E\ra -1/2}(E + 1/2)\dfrac{\e^{-(\abs{x} + \abs{x'})}(1 - \I(2E)^{1/2})}{(1 + \I(2E)^{1/2})(1 - \I(2E)^{1/2})} \notag\\
+&= \lim_{E\ra -1/2}(E + 1/2)\dfrac{\e^{-(\abs{x} + \abs{x'})}(1 - \I(2E)^{1/2})}{1 + 2E} \notag\\
+&= \dfrac{1}{2}\e^{-(\abs{x} + \abs{x'})}(1 - (-1)) \notag\\
+&= \e^{-(\abs{x} + \abs{x'})}
 \end{align}
-\end{minipage}
+Let $ x=x' $,
+\begin{equation}\label{key}
+\phi_n^2(x) = \e^{-2\abs{x}}
+\end{equation}
+thus
+\begin{equation}\label{key}
+\phi_n(x) = \e^{-\abs{x}}
+\end{equation}
 
+\ex{7.5}
+\begin{align}
+\sH \phi &= \qty[-\dfrac{1}{2}\dv[2]{x} - \delta(x)]\e^{-\abs{x}} \notag\\
+&= -\dfrac{1}{2}\dv{x}\qty[\e^{-\abs{x}}\qty(-\dv{x}\abs{x})] - \delta(x)\e^{-\abs{x}} \notag\\
+&= \dfrac{1}{2}\qty[-\e^{-\abs{x}}(\dv{x}\abs{x})^2 + \e^{-\abs{x}}\dv[2]{x}\abs{x}] - \delta(x)\e^{-\abs{x}} \notag\\
+&= \dfrac{1}{2}\qty[-\e^{-\abs{x}} + \e^{-\abs{x}}\times 2\delta(x)] - \delta(x)\e^{-\abs{x}} \notag\\
+&= -\dfrac{1}{2}\e^{-\abs{x}} 
+\end{align}
+thus the eigenvalue is $ -\dfrac{1}{2} $.
+
+\ex{7.6}
+\subex{a.}
+\begin{align}
+\I\pdv{t}\phi(x,t) &= \I\int\dd x' \pdv{G(x,x',t)}{t} \psi(x') \notag\\
+&= \int\dd x' \sH G(x,x',t) \psi(x') \notag\\
+&= \sH \phi(x,t)
+\end{align}
+\subex{b.}
 
 
 
