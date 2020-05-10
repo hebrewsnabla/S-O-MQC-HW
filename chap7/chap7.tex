@@ -225,6 +225,77 @@ i.e.
 \end{equation}
 
 \ex{7.2}
+\subex{a.}
+When $ x=0 $,
+\begin{align}
+\dv[2]{x} \abs{x} \Bigg|_{x=0} &= \lim_{\epsilon\ra 0} \dfrac{\dv{\abs{x}}{x}\Big|_{x=\epsilon} - \dv{\abs{x}}{x}\Big|_{x=-\epsilon}}{2\epsilon} \qquad (\epsilon>0)\notag\\
+&= \lim_{\epsilon\ra 0} \dfrac{1 - (-1)}{2\epsilon} \notag\\
+&= \infty
+\end{align}
+otherwise,
+\begin{align}
+\dv[2]{x} \abs{x}  &= \dv[2]{x} [x \;\mathrm{sgn}(x)] \notag\\
+&= \dv{x} [1\times \mathrm{sgn}(x) + x\times 0] \notag\\
+&= 0
+\end{align}
+\subex{b.}
+\begin{align}\label{key}
+\intdinf \dv[2]{x} \abs{x} \dd x &= \intdinf \dd(\dv{x} \abs{x}) \notag\\
+&= \dv{x} \abs{x} \Bigg|_{-\infty}^{\infty} \notag\\
+&= 1 - (-1) \notag\\
+&= 2
+\end{align}
+thus
+\begin{equation}\label{key}
+\dv[2]{x} \abs{x} = 2\delta(x)
+\end{equation}
+\subex{c.}
+\begin{align}
+\dv[2]{x} a(x) &= \dv[2]{x} \dfrac{1}{2}\int_\alpha^\beta \dd x' 
+\abs{x - x'} b(x') \notag\\
+&= \dv[2]{x} \dfrac{1}{2}\int_\alpha^x \dd x' 
+(x - x') b(x') + \dv[2]{x} \dfrac{1}{2}\int_x^\beta \dd x' 
+[-(x - x')] b(x') \notag\\
+&= \dv{x} \dfrac{1}{2}\int_\alpha^x \dd x' 
+ b(x') - \dv{x} \dfrac{1}{2}\int_x^\beta \dd x' b(x') \notag\\
+&= \dfrac{1}{2}b(x) - \dfrac{1}{2} [-b(x)] \notag\\
+&= b(x)
+\end{align}
+
+\ex{7.3}
+
+\begin{equation}\label{key}
+\hskip-1cm
+\begin{aligned}
+\qty(E + \dfrac{1}{2}\dv[2]{x}) G_0(x,x',E) 
+&= \qty(E + \dfrac{1}{2}\dv[2]{x}) \dfrac{1}{\I(2E)^{1/2}} \e^{\I(2E)^{1/2}\abs{x-x'}} \\
+&=  \dfrac{E}{\I(2E)^{1/2}} \e^{\I(2E)^{1/2}\abs{x-x'}} +  \dfrac{1}{2}\dfrac{1}{\I(2E)^{1/2}} \dv[2]{x} \e^{\I(2E)^{1/2}\abs{x-x'}} \\
+&= \dfrac{E}{\I(2E)^{1/2}} \e^{\I(2E)^{1/2}\abs{x-x'}} +  \dfrac{1}{2}\dfrac{1}{\I(2E)^{1/2}} \dv{x} \qty [\e^{\I(2E)^{1/2}\abs{x-x'}} \I(2E)^{1/2}\dv{x}\abs{x-x'} ] \\
+&= \dfrac{E}{\I(2E)^{1/2}} \e^{\I(2E)^{1/2}\abs{x-x'}} 
++ \dfrac{1}{2} 
+\qty [\e^{\I(2E)^{1/2}\abs{x-x'}}\I(2E)^{1/2} \qty(\dv{x}\abs{x-x'} )^2
++ \e^{\I(2E)^{1/2}\abs{x-x'}} \dv[2]{x}\abs{x-x'}] \\
+&= \dfrac{E}{\I(2E)^{1/2}} \e^{\I(2E)^{1/2}\abs{x-x'}} 
++ \dfrac{1}{2} \e^{\I(2E)^{1/2}\abs{x-x'}}
+\qty [\I(2E)^{1/2} \times 1
++ 2\delta(x-x')] \\
+&= \e^{\I(2E)^{1/2}\abs{x-x'}}
+\qty [\dfrac{E}{\I(2E)^{1/2}} + \dfrac{-E}{\I(2E)^{1/2}} + \delta(x-x')] \\
+&= \e^{\I(2E)^{1/2}\abs{x-x'}} \delta(x-x') \\
+&= \delta(x-x') 
+\end{aligned}
+%\qquad
+\end{equation}
+
+~\\
+\begin{minipage}{\linewidth}
+\hskip-2cm
+\begin{align}
+a =b
+\end{align}
+\end{minipage}
+
+
 
 
 \end{document}
