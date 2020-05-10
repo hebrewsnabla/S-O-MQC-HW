@@ -327,6 +327,70 @@ thus the eigenvalue is $ -\dfrac{1}{2} $.
 &= \sH \phi(x,t)
 \end{align}
 \subex{b.}
+From
+\begin{equation}\label{key}
+\I\pdv{G(x,x',t)}{t} = \sH G(x,x',t)
+\end{equation}
+we get
+\begin{equation}\label{key}
+\lim_{\varepsilon\ra 0} 
+\intinf\dd t \I\pdv{G(x,x',t)}{t} [-\I\e^{(\I E - \varepsilon)t}] 
+= \lim_{\varepsilon\ra 0} 
+ \intinf\dd t \sH G(x,x',t)[-\I\e^{(\I E - \varepsilon)t}]
+\end{equation}
+\begin{align}\label{key}
+\lim_{\varepsilon\ra 0}  \intinf\dd t \pdv{G(x,x',t)}{t} \e^{(\I E - \varepsilon)t}
+&= \intinf\dd t \sH G(x,x',t) [-\I\e^{\I E t}] \notag\\
+&= \sH G(x,x',E)
+\end{align}
+thus
+\begin{align}\label{key}
+\lim_{\varepsilon\ra 0} 
+\qty[G(x,x',t)\e^{(\I E - \varepsilon)t} \Bigg|_{t=0}^\infty 
+- \intinf\dd t G(x,x',t) \e^{(\I E - \varepsilon)t} (\I E - \varepsilon) ] 
+= \sH G(x,x',E)
+\end{align}
+\begin{align}
+\sH G(x,x',E) &= -G(x,x',0) 
+- \I E \intinf\dd t G(x,x',t) \e^{\I E t}   \notag\\
+&= -G(x,x',0) - \I E G(x,x',E) / (-\I)  \notag\\
+&= -\delta(x-x') + E G(x,x',E) 
+\end{align}
+$ \therefore $
+\begin{equation}\label{key}
+(E - \sH)G(x,x',E) = \delta(x-x')
+\end{equation}
+
+\subex{c.}
+\begin{align}
+\I \pdv{t}\mathscr{G}(t) &= \I \pdv{t}\e^{-\I\sH t} \notag\\
+&= \I \e^{-\I\sH t}(-\I\sH) \notag\\
+&= \sH \mathscr{G}(t)
+\end{align}
+\begin{align}
+\lim_{\varepsilon\ra 0} \intinf\dd t \e^{(\I E - \varepsilon)t} \I \pdv{t}\mathscr{G}(t) = \lim_{\varepsilon\ra 0} \intinf\dd t \e^{(\I E - \varepsilon)t} \sH \mathscr{G}(t)
+\end{align}
+\begin{align}
+\lim_{\varepsilon\ra 0} 
+\qty[\e^{(\I E - \varepsilon)t}\mathscr{G}(t) \Bigg|_0^\infty 
+- (\I E - \varepsilon)\intinf\dd t \e^{(\I E - \varepsilon)t} \mathscr{G}(t) ] 
+= \sH\mathscr{G}(E)
+\end{align}
+$ \therefore $
+\begin{align}
+\sH\mathscr{G}(E) &=\lim_{\varepsilon\ra 0} 
+\qty[-\mathscr{G}(0)
+- (\I E - \varepsilon)\intinf\dd t \e^{(\I E - \varepsilon)t} \mathscr{G}(t) ] \notag\\
+&= -\mathscr{G}(0) + E \mathscr{G}(E) \notag\\
+&= -1 + E \mathscr{G}(E) 
+\end{align}
+thus
+\begin{equation}\label{key}
+\mathscr{G}(E) = \dfrac{1}{E - \sH}
+\end{equation}
+
+\subsection{The 1-Particle Many-body Green's Function}
+
 
 
 
