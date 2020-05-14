@@ -709,7 +709,24 @@ Solve Eq for $ \vb{a} $
 G_0(x,x',E) = \sum_\alpha \dfrac{\psi_\alpha(x) \psi_\alpha^*(x')}{E - E_\alpha^{(0)}}
 \end{equation}
 
+\subsection{The 1-Particle Many-body Green's Function}
+HF Green's function
+\begin{equation}\label{key}
+G_0(\vb{x}, \vb{x}', E) = \sum_i \dfrac{\chi_i(\vb{x})\chi_i^*(\vb{x}')}{E - \varepsilon_i}
+\end{equation}
+\begin{equation}\label{key}
+[G_0(E)]_{ij} = \dfrac{\delta_{ij}}{E - \varepsilon_i}
+\end{equation}
+i.e.
+\begin{equation}\label{key}
+\vb{G}_0(E) = (E\iden - \bm\varepsilon)^{-1}
+\end{equation}
 
+\subsubsection{The Self-Energy}
+Dyson equation
+\begin{equation}\label{key}
+\vb{G}(E) = \vb{G}_0(E) + \vb{G}_0(E)\bm\Sigma(E)\vb{G}(E)
+\end{equation}
 
 
 \end{document}

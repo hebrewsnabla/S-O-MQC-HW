@@ -390,8 +390,38 @@ thus
 \end{equation}
 
 \subsection{The 1-Particle Many-body Green's Function}
-
-
+\subsubsection{The Self-Energy}
+\ex{7.7}
+\begin{align}
+\Sigma_{ij}^{(2)}(E) &= \dfrac{1}{2} \sum_{ars}\dfrac{\Braket{rs||ia}\Braket{ja||rs}}{E+\varepsilon_a -\varepsilon_r-\varepsilon_s} 
++ \dfrac{1}{2} \sum_{abr}\dfrac{\Braket{ab||ir}\Braket{jr||ab}}{E+\varepsilon_r -\varepsilon_a-\varepsilon_b} \notag\\
+&= \dfrac{1}{2} \sum_{ars} 
+\dfrac{(\Braket{rs|ia} - \Braket{rs|ai}) (\Braket{ja|rs} - \Braket{ja|sr})
+}{E+\varepsilon_a -\varepsilon_r-\varepsilon_s} 
++ \dfrac{1}{2} \sum_{abr} 
+\dfrac{(\Braket{ab|ir} - \Braket{ab|ri}) (\Braket{jr|ab} - \Braket{jr|ba}) }{E+\varepsilon_r -\varepsilon_a-\varepsilon_b} %\notag\\
+%&= 
+\end{align}
+%For convenience, suppose $ i $'s spin is $ \alpha $
+In the 1st summation: \\
+To make the terms non-zero, the spin of $ r $ is fixed in the first and last term, and $ r,s,a $ are all fixed in the second and third term, thus
+\begin{align}
+\text{the 1st term} &= \dfrac{1}{2} \sum_{ars}^{N/2}
+\dfrac{1}{E+\varepsilon_a -\varepsilon_r-\varepsilon_s} \qty[2\Braket{rs|ia}\Braket{ja|rs} - \Braket{rs|ai}\Braket{ja|rs} 
+- \Braket{rs|ia}\Braket{ja|sr} + 2\Braket{rs|ai}\Braket{ja|sr}] \notag\\
+&= \sum_{ars}^{N/2} 
+\dfrac{1}{E+\varepsilon_a -\varepsilon_r-\varepsilon_s} \qty[2\Braket{rs|ia}\Braket{ja|rs} - \Braket{rs|ia}\Braket{ja|sr} ] \notag\\
+&= \sum_{ars}^{N/2} 
+\dfrac{\Braket{rs|ia} \qty[2\Braket{ja|rs} - \Braket{aj|rs}] }{E+\varepsilon_a -\varepsilon_r-\varepsilon_s} 
+\end{align}
+Similarly,
+\begin{align}
+\Sigma_{ij}^{(2)}(E) = \sum_{ars}^{N/2} 
+\dfrac{\Braket{rs|ia} \qty[2\Braket{ja|rs} - \Braket{aj|rs}] }{E+\varepsilon_a -\varepsilon_r-\varepsilon_s} 
++ \sum_{abr}^{N/2} 
+\dfrac{\Braket{ab|ir} \qty[2\Braket{jr|ab} - \Braket{rj|ab}]
+}{E+\varepsilon_r -\varepsilon_a-\varepsilon_b} 
+\end{align}
 
 
 \end{document}
