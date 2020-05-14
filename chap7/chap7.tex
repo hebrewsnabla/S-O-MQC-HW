@@ -423,5 +423,38 @@ Similarly,
 }{E+\varepsilon_r -\varepsilon_a-\varepsilon_b} 
 \end{align}
 
+\ex{7.8}
+\begin{align}
+[\vb{G}_0(E)]_{ij} &= \sum_m 
+\dfrac{\Braket{^N\Psi_0 | a_i^\dagger a_m | ^N\Psi_0} 
+	\Braket{a_m {^N\Psi}_0| a_j | ^N\Psi_0}
+}{E - \qty(\Braket{^N\Psi_0|\sH |^N\Psi_0} 
+- \Braket{a_m {^N\Psi}_0|\sH|a_m {^N\Psi}_0} )}
++ \sum_p
+\dfrac{\Braket{^N\Psi_0 | a_j a_p^\dagger | ^N\Psi_0} 
+	\Braket{a_p^\dagger {^N\Psi}_0| a_i^\dagger | ^N\Psi_0}
+}{E + \qty(\Braket{^N\Psi_0|\sH |^N\Psi_0} 
+	- \Braket{a_p^\dagger {^N\Psi}_0|\sH|a_p^\dagger {^N\Psi}_0} )} \notag\\
+%&= \sum_m 
+%\dfrac{\Braket{^N\Psi_0 | a_i^\dagger a_m | ^N\Psi_0} 
+%	\Braket{ {^N\Psi}_0|a_m^\dagger a_j | ^N\Psi_0}
+%}{E - \qty(\Braket{^N\Psi_0|\sH |^N\Psi_0} 
+%	- \Braket{ {^N\Psi}_0|a_m^\dagger\sH a_m| {^N\Psi}_0} )}
+%+ \sum_p
+%\dfrac{\Braket{^N\Psi_0 | a_j a_p^\dagger | ^N\Psi_0} 
+%	\Braket{ {^N\Psi}_0| a_p a_i^\dagger | ^N\Psi_0}
+%}{E + \qty(\Braket{^N\Psi_0|\sH |^N\Psi_0} 
+%	- \Braket{{^N\Psi}_0|a_p \sH a_p^\dagger| {^N\Psi}_0} )} \notag\\
+&= \sum_m \dfrac{\delta_{im}\delta_{mj}}{E - \varepsilon_m} + 0 \notag\\
+&= \sum_m \dfrac{\delta_{ij}}{E - \varepsilon_m}
+\end{align}
+
+\subsubsection{The Solution of the Dyson Equation}
+
+\subsection{Application of the Formalism to \ce{H_2} and \ce{HeH^+}}
+\ex{7.9}
+\subex{a.}
+
+
 
 \end{document}
