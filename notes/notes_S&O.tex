@@ -178,8 +178,8 @@
 \numberwithin{equation}{section}
 
 \title{Notes of \textbf{Modern Quantum Chemistry, Szabo \& Ostlund}}
-\author{hebrewsnabla}
-%\date{} % Activate to display a given date or no date (if empty),
+\author{wsr}
+\date{\today} % Activate to display a given date or no date (if empty),
          % otherwise the current date is printed 
 
 \begin{document}
@@ -747,10 +747,51 @@ Dyson equation
 \subsection{Introduction}
 
 \subsection{General Considerations}
+\begin{equation}\label{key}
+E(\vb{X}_1) = E(\vb{X}) + \vb{q}^\dagger \vb{f}(\vb{X}) + \dfrac{1}{2}\vb{q}^\dagger \vb{H}(\vb{X}) \vb{q} + \cdots
+\end{equation}
+where
+\begin{align}
+& \vb{q} = \vb{X}_1 - \vb{X} && f_i = \pdv{E(\vb{X})}{X_i} && H_{ij} = \pdv{E(\vb{X})}{X_i}{X_j} &
+\end{align}
+\begin{equation}\label{key}
+\vb{f}(\vb{X}_1) = \vb{f}(\vb{X}) + \vb{H}(\vb{X})\vb{q}
+\end{equation}
+%At stationary point
+%\begin{equation}\label{key}
+%E(\vb{X}_1) = E(\vb{X}_e) + \dfrac{1}{2}\vb{q}^\dagger \vb{H}(\vb{X}_e) \vb{q}
+%\end{equation}
+Let $ \vb{X}_1 = \vb{X}_e $
+\begin{equation}\label{key}
+\vb{f}(\vb{X}) = - \vb{H}(\vb{X})\vb{q}
+\end{equation}
+i.e.
+\begin{equation}\label{key}
+\vb{q} = - \vb{H}^{-1}(\vb{X})\vb{f}(\vb{X})
+\end{equation}
 
 \subsection{Analytic Derivatives}
+for HF
+\begin{align}
+\pdv{E}{X_A} &= \sum_{\mu\nu} P_{\nu\mu} \pdv{H_{\mu\nu}^{\core}}{X_A} 
++ \dfrac{1}{2}\sum_{\mu\nu\lambda\sigma} P_{\nu\mu}P_{\lambda\sigma} \pdv{(\mu\nu||\sigma\lambda)}{X_A} 
++ \pdv{V_{NN}}{X_A} \notag\\
+&\quad {}
++ \sum_{\mu\nu} \pdv{P_{\nu\mu}}{X_A} H_{\mu\nu}^{\core}
++ \sum_{\mu\nu\lambda\sigma} \pdv{P_{\nu\mu}}{X_A}P_{\lambda\sigma} (\mu\nu||\sigma\lambda) \notag\\
+&= ... \notag\\
+&= \sum_{\mu\nu} P_{\nu\mu} \pdv{H_{\mu\nu}^{\core}}{X_A} 
++ \dfrac{1}{2}\sum_{\mu\nu\lambda\sigma} P_{\nu\mu}P_{\lambda\sigma} \pdv{(\mu\nu||\sigma\lambda)}{X_A} 
++ \pdv{V_{NN}}{X_A} \notag\\
+&\quad {} - \sum_{\mu\nu} Q_{\nu\mu} \pdv{S_{\mu\nu}}{X_A}
+\end{align}
+where
+\begin{equation}\label{key}
+Q_{\nu\mu} = 2\sum_a \varepsilon_a C_{\mu a} C_{\nu a}
+\end{equation}
 
 \subsection{Optimization Techniques}
+
 
 \subsection{Some Optimization Algorithms}
 
