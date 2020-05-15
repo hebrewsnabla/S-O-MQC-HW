@@ -224,6 +224,24 @@
 
 \subsection{Some Optimization Algorithms}
 \ex{C.1}
+\subex{(a)}
+\begin{align}
+\vb{H} &= \mqty(\dis\pdv[2]{E}{x} & \dis\pdv{E}{x}{y} \vspace{5pt}\\ \dis\pdv{E}{y}{x} & \dis\pdv[2]{E}{y}) \notag\\
+&= \mqty(K & K'' \\ K'' & K')
+\end{align}
+\begin{align}
+\vb{f}(\vb{X}) &= \mqty(\dis\pdv{E}{x} \vspace{5pt}\\ \dis\pdv{E}{y}) \notag\\
+&= \mqty(K(x-a) + K''y \\ K'(y-b) + K''x) \notag\\
+&= \mqty(K & K'' \\ K'' & K')\mqty(x\\ y) - \mqty(K a \\ K' b) \notag\\
+&= \mqty(K & K'' \\ K'' & K')\vb{X} - \mqty(K a \\ K' b)
+\end{align}
+\begin{align}
+\vb{q} &= -\vb{H}^{-1}\vb{f} \notag\\
+&= -\vb{X} + \mqty(K & K'' \\ K'' & K')^{-1} \mqty(K a \\ K' b) \notag\\
+&= -\vb{X} + \dfrac{1}{KK' - K''^2} \mqty(K' & -K''\\ -K'' & K) \mqty(K a \\ K' b) \notag\\
+&= -\vb{X} + \dfrac{1}{KK' - K''^2} \mqty(KK' a - K'K'' b \\ -KK'' a + KK' b) \notag\\
+&= -\vb{X} + \dfrac{1}{KK' - K''^2} \mqty(KK' & K'K'' \\ -KK'' & KK' ) \mqty(a\\ b)
+\end{align}
 
 \ex{C.2}
 
