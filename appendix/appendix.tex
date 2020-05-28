@@ -240,10 +240,50 @@
 &= -\vb{X} + \mqty(K & K'' \\ K'' & K')^{-1} \mqty(K a \\ K' b) \notag\\
 &= -\vb{X} + \dfrac{1}{KK' - K''^2} \mqty(K' & -K''\\ -K'' & K) \mqty(K a \\ K' b) \notag\\
 &= -\vb{X} + \dfrac{1}{KK' - K''^2} \mqty(KK' a - K'K'' b \\ -KK'' a + KK' b) \notag\\
-&= -\vb{X} + \dfrac{1}{KK' - K''^2} \mqty(KK' & K'K'' \\ -KK'' & KK' ) \mqty(a\\ b)
+&= -\vb{X} + \dfrac{1}{KK' - K''^2} \mqty(KK' & -K'K'' \\ -KK'' & KK' ) \mqty(a\\ b)
 \end{align}
 
+\subex{(b)}
+Since $ \vb{q} = \vb{X}_e - \vb{X} $,
+\begin{align}
+\vb{X}_e &= \dfrac{1}{KK' - K''^2} \mqty(KK' & -K'K'' \\ -KK'' & KK' ) \mqty(a\\ b) \notag\\
+&= \dfrac{1}{0.1 - K''^2} \mqty(0.1 & -0.1 K'' \\ -K'' & 0.1 ) \mqty(3\\ 2) %\notag\\
+\end{align}
+
+\begin{table}
+	\centering
+	\begin{tabular}{cc}
+		\hline
+		$ K'' $ & $ \vb{X}_e = (x_e, y_e) $\\ \hline
+		0 & (3.00, 2.00)\\
+		0.010 & (3.02, 1.70)\\
+		0.030 & (3.08, 1.10)\\ \hline
+	\end{tabular}
+\end{table}
+
 \ex{C.2}
+\begin{align}
+\vb{H} 
+&= \mqty(K & K'' \\ K'' & K') \notag\\
+&= \mqty(1.000 & 0.030\\ 0.030 & 0.100)
+\end{align}
+\begin{align}
+\vb{f} 
+&= \mqty(K & K'' \\ K'' & K')\vb{X} - \mqty(K a \\ K' b) \notag\\
+&= \mqty(1.000 & 0.030\\ 0.030 & 0.100)\mqty(3.3\\ 1.8) 
+- \mqty(1.000\times 3.00\\ 0.100\times 2.00) \notag\\
+&= \mqty(0.354\\ 0.079)
+\end{align}
+\begin{align}
+\vb{q} &= -\vb{H}^{-1}\vb{f} \notag\\
+&= -\mqty(1.000 & 0.030\\ 0.030 & 0.100)^{-1} \mqty(0.354\\ 0.079) \notag\\
+&= \mqty(-0.333, -0.690)
+\end{align}
+thus
+\begin{align}
+\vb{X}_e &= \vb{q} + \vb{X} \notag\\
+&= \mqty(2.967, 1.110)
+\end{align}
 
 \ex{C.3}
 
