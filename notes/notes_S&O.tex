@@ -793,7 +793,28 @@ Q_{\nu\mu} = 2\sum_a \varepsilon_a C_{\mu a} C_{\nu a}
 \subsection{Optimization Techniques}
 
 \subsection{Some Optimization Algorithms}
+\begin{verbatim}
+h=1
+while(true):
+  X* = (1+a) Xbar - a X[h] 
+  if Emin < E* < E[h] :
+    update(X[h], X*)
+  elif E* < Emin:
+    X** = v X* + (1-v) Xbar
+    if E** < Emin:
+      update(X[h], X**)
+    else:
+      update(X[h], X*)
+  else:
+    X** = b X[h] + (1-b) Xbar
+    if E** > E[h]:
+      h += 1
+    else:
+      update(X[h], X**)    
+\end{verbatim}
 
+    
+  
 
 \subsection{Transition States}
 
