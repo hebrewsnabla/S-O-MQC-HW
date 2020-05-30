@@ -793,8 +793,9 @@ Q_{\nu\mu} = 2\sum_a \varepsilon_a C_{\mu a} C_{\nu a}
 \subsection{Optimization Techniques}
 
 \subsection{Some Optimization Algorithms}
+\paragraph{Nelder-Mead Optimization}
 \begin{verbatim}
-h=1
+find(h)
 while(true):
   X* = (1+a) Xbar - a X[h] 
   if Emin < E* < E[h] :
@@ -808,12 +809,37 @@ while(true):
   else:
     X** = b X[h] + (1-b) Xbar
     if E** > E[h]:
-      h += 1
+      pass
     else:
       update(X[h], X**)    
 \end{verbatim}
 
-    
+\paragraph{Quasi-Newton Optimization}~\\
+Murtagh-Sargent
+\begin{equation}\label{key}
+\vb{q}_n = -\alpha_{n-1}\vb{G}_{n-1}\vb{f}_{n-1}
+\end{equation}
+\begin{enumerate}
+	\item Set $ \alpha_0 = 1 $ and $ \vb{G_0} = \iden $.\\
+	While ($ E_1 > E_0 $) set $ \alpha_0 \leftarrow \alpha_0/2 $
+	\item 
+	\begin{align}
+	\vb{U}_k &= -\alpha_{k-1}\vb{G}_{k-1}\vb{f}_{k-1} - \vb{G}_{k-1} (\vb{f}_k - \vb{f}_{k-1}) = -\vb{G}_{k-1}[\vb{f}_k + \vb{f}_{k-1}(\alpha_{k-1}-1)] \\
+	a_k^{-1} &= \vb{U}_k^\dagger \vb{d}_k = \vb{U}_k^\dagger (\vb{f}_k - \vb{f}_{k-1}) \\
+	T_k = \vb{U}_k^\dagger\vb{U}_k
+	\end{align}
+	if $ a_k^{-1} < 10^{-5} T_k $ or $ a_k\vb{U}_k^\dagger\vb{f}_{k-1} > 10^{-5} $, goto step 1\\
+	else
+	\begin{align}
+	\vb{G}_k &= \vb{G}_{k-1} + a_k\vb{U}_k\vb{U}_k^\dagger \\
+	\alpha_k &= 1
+	\end{align}
+	\item 
+	\begin{align}
+	\vb{q}_k &= -\alpha_{k-1}\vb{G}_{k-1}\vb{f}_{k-1} \\
+	%E_k &= \text{getE}(\vb{X}_k) \\
+	\end{align}
+\end{enumerate}
   
 
 \subsection{Transition States}
