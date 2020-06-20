@@ -166,6 +166,8 @@
 \newcommand{\el}{edge label}
 
 %%% MQC
+\DeclareMathOperator{\sH}{\mathscr{H}}
+\DeclareMathOperator{\sA}{\mathscr{A}}
 \newcommand{\iden}{{\large \bm{1}}}
 \newcommand{\qed}{$ \Square $}
 \newcommand{\tPhi}{\tilde{\Phi} }
@@ -643,6 +645,15 @@ Truncated CI is not size-consistent.
 
 \section{Pair and Coupled-pair Theories}
 \subsection{The Independent Electron Pair Approximation}
+Full CI
+\begin{equation}\label{key}
+E_{\corr} = \sum_{a<b} e_{ab}
+\end{equation}
+\begin{equation}\label{key}
+e_{ab} = \sum_{r<s} c_{ab}^{rs} \Braket{\Psi_0 | \sH | \Psi_{ab}^{rs}}
+\end{equation}
+
+
 \subsubsection{Invariance under Unitary Transformations: An Example}
 2 independent \ce{H_2} \\
 MOs localized on the 2 monomers: $ 1_1, 2_1, 1_2, 2_2 $\\
