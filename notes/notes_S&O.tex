@@ -653,6 +653,17 @@ E_{\corr} = \sum_{a<b} e_{ab}
 e_{ab} = \sum_{r<s} c_{ab}^{rs} \Braket{\Psi_0 | \sH | \Psi_{ab}^{rs}}
 \end{equation}
 
+IEPA: Do CID for each pair separately.\\
+Do some approx., we get Epstein-Nesbet pair corr. E:
+\begin{equation}\label{key}
+e_{ab}^{\text{EN}} = -\sum_{r<s} \dfrac{\abs{\Braket{\Psi_0|\sH|\Psi_{ab}^{rs}}}^2}{\Braket{\Psi_{ab}^{rs} | \sH - E_0 | \Psi_{ab}^{rs}}}
+\end{equation}
+more approx., first-order pair E:
+\begin{equation}\label{key}
+e_{ab}^{\text{FO}} = \sum_{r<s} \dfrac{\abs{\Braket{\Psi_0|\sH|\Psi_{ab}^{rs}}}^2}{\varepsilon_a + \varepsilon_b - \varepsilon_r - \varepsilon_s}
+\end{equation}
+
+
 
 \subsubsection{Invariance under Unitary Transformations: An Example}
 2 independent \ce{H_2} \\
@@ -665,9 +676,27 @@ r &= \dfrac{1}{\sqrt{2}} (2_1 - 2_2) \\
 s &= \dfrac{1}{\sqrt{2}} (2_1 + 2_2) 
 \end{align}
 \subsubsection{Some Illustrative Calculations}
+IEPA is not variational.\\
+works bad for \ce{Ne} and \ce{N_2}.
 
 \subsection{Coupled-pair Theories}
+Ignore single, triple, etc.
+\begin{equation}\label{key}
+\ket{\Phi_0} = \ket{\Psi_0} + \sum_{a<b,r<s} c_{ab}^{rs} \ket{\Psi_{ab}^{rs}} + \sum_{a<b<c<d,r<s<t<u} c_{abcd}^{rstu} \ket{\Psi_{abcd}^{rstu}} + \cdots
+\end{equation}
+then
+\begin{align}
+& \sum_{c<d, t<u} \Braket{\Psi_0 | \sH | \Psi_{cd}^{tu}} c_{cd}^{tu} = E_{\corr} \notag\\
+& \Braket{\Psi_{ab}^{rs} | \sH | \Psi_0} + \sum_{c<d, t<u} \Braket{\Psi_{ab}^{rs} | \sH - E_0 | \Psi_{cd}^{tu}} c_{cd}^{tu} + \sum_{c<d, t<u} \Braket{\Psi_{ab}^{rs} | \sH | \Psi_{abcd}^{rstu}} c_{abcd}^{rstu} = E_{\corr} c_{ab}^{rs} \notag\\
+& \cdots
+\end{align}
+How to truncate/decouple?\\
+~\\
+$ c_{abcd}^{rstu} := 0 \; \dra $ CID,\\
+or, use CC.
+
 \subsubsection{The Coupled-cluster Approximation}
+
 
 \subsubsection{The Cluster Expansion of the Wave Function}
 
