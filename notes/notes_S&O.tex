@@ -686,7 +686,7 @@ Ignore single, triple, etc.
 \end{equation}
 then
 \begin{align}
-& \sum_{c<d, t<u} \Braket{\Psi_0 | \sH | \Psi_{cd}^{tu}} c_{cd}^{tu} = E_{\corr} \notag\\
+& \sum_{c<d, t<u} \Braket{\Psi_0 | \sH | \Psi_{cd}^{tu}} c_{cd}^{tu} = E_{\corr} \label{Ecorr}\\
 & \Braket{\Psi_{ab}^{rs} | \sH | \Psi_0} + \sum_{c<d, t<u} \Braket{\Psi_{ab}^{rs} | \sH - E_0 | \Psi_{cd}^{tu}} c_{cd}^{tu} + \sum_{c<d, t<u} \Braket{\Psi_{ab}^{rs} | \sH | \Psi_{abcd}^{rstu}} c_{abcd}^{rstu} = E_{\corr} c_{ab}^{rs} \notag\\
 & \cdots
 \end{align}
@@ -696,6 +696,33 @@ $ c_{abcd}^{rstu} := 0 \; \dra $ CID,\\
 or, use CC.
 
 \subsubsection{The Coupled-cluster Approximation}
+Suppose
+\begin{equation}\label{key}
+c_{abcd}^{rstu} \approx c_{ab}^{rs} * c_{cd}^{tu} = ...
+\end{equation}
+thus
+\begin{equation}\label{key}
+\begin{aligned}
+\Braket{\Psi_{ab}^{rs} | \sH | \Psi_0} &+ \sum_{c<d, t<u} \Braket{\Psi_{ab}^{rs} | \sH - E_0 | \Psi_{cd}^{tu}} c_{cd}^{tu} \\
+&+ \sum_{c<d, t<u} \Braket{\Psi_{ab}^{rs} | \sH | \Psi_{abcd}^{rstu}} (c_{ab}^{rs} * c_{cd}^{tu}) = \qty(\sum_{c<d, t<u} \Braket{\Psi_0 | \sH | \Psi_{cd}^{tu}} c_{cd}^{tu}) c_{ab}^{rs} 
+\end{aligned}
+\end{equation}
+after some tricks
+\begin{equation}\label{key}
+\begin{aligned}
+\Braket{\Psi_{ab}^{rs} | \sH | \Psi_0} &+ \sum_{c<d, t<u} \Braket{\Psi_{ab}^{rs} | \sH - E_0 | \Psi_{cd}^{tu}} c_{cd}^{tu} \\
+&+ \sum_{c<d, t<u} \Braket{\Psi_0 | \sH | \Psi_{cd}^{tu}} \qty(c_{ab}^{rs} c_{cd}^{tu} - < c_{ab}^{rs} * c_{cd}^{tu} > ) = \qty(\sum_{c<d, t<u} \Braket{\Psi_0 | \sH | \Psi_{cd}^{tu}} c_{cd}^{tu}) c_{ab}^{rs} 
+\end{aligned}
+\end{equation}
+\begin{equation}\label{key}
+%\begin{aligned}
+\Braket{\Psi_{ab}^{rs} | \sH | \Psi_0} + \sum_{c<d, t<u} \Braket{\Psi_{ab}^{rs} | \sH - E_0 | \Psi_{cd}^{tu}} c_{cd}^{tu} 
+- \sum_{c<d, t<u} \Braket{\Psi_0 | \sH | \Psi_{cd}^{tu}} < c_{ab}^{rs} * c_{cd}^{tu} > = 0
+%\end{aligned}
+\end{equation}
+along with \eqref{Ecorr}, we get the energy of Coupled-Pair Many-Electron Theory (CPMET), aka CCA.\\
+
+CCA is derived by J. \v{C}i\v{z}ek and J. Paldus.
 
 
 \subsubsection{The Cluster Expansion of the Wave Function}
