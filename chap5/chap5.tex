@@ -466,6 +466,7 @@ E_{\corr}(\text{FO}) &= \sum_{A<B}\sum_{R<S} \dfrac{\abs{\Braket{AB||RS}}^2}{\va
 
 \subsubsection{The Cluster Expansion of the Wave Function}
 \ex{5.11}
+Eq. 5.49 gives
 \begin{align}
 \ket{\Phi_0} &= \ket{1_1 \bar{1}_1 1_2 \bar{1}_2} 
 + c_{1_1 \bar{1}_1}^{2_1 \bar{2}_1} \ket{2_1\bar{2}_1 1_2\bar{1}_2}
@@ -480,7 +481,37 @@ while
 \begin{align}
 & \quad \exp(c_{1_1 \bar{1}_1}^{2_1 \bar{2}_1} a^\dagger_{2_1}a^\dagger_{\bar{2}_1} a_{\bar{1}_1}a_{1_1} + c_{1_2 \bar{1}_2}^{2_2 \bar{2}_2} a^\dagger_{2_2}a^\dagger_{\bar{2}_2} a_{\bar{1}_2}a_{1_2}
 ) \ket{1_1 \bar{1}_1 1_2 \bar{1}_2} \notag\\
-&= 
+&= \qty[ 1 
++ \qty(c_{1_1 \bar{1}_1}^{2_1 \bar{2}_1} a^\dagger_{2_1}a^\dagger_{\bar{2}_1} a_{\bar{1}_1}a_{1_1} + c_{1_2 \bar{1}_2}^{2_2 \bar{2}_2} a^\dagger_{2_2}a^\dagger_{\bar{2}_2} a_{\bar{1}_2}a_{1_2}) 
++ \qty(c_{1_1 \bar{1}_1}^{2_1 \bar{2}_1} a^\dagger_{2_1}a^\dagger_{\bar{2}_1} a_{\bar{1}_1}a_{1_1} + c_{1_2 \bar{1}_2}^{2_2 \bar{2}_2} a^\dagger_{2_2}a^\dagger_{\bar{2}_2} a_{\bar{1}_2}a_{1_2})^2 + \cdots
+] \ket{1_1 \bar{1}_1 1_2 \bar{1}_2} %\notag\\
+%&= 
+\end{align}
+since we cannot annihilate or create any orbital twice, the terms over 3rd power must be zero, thus
+\begin{align}
+& \quad \exp(c_{1_1 \bar{1}_1}^{2_1 \bar{2}_1} a^\dagger_{2_1}a^\dagger_{\bar{2}_1} a_{\bar{1}_1}a_{1_1} + c_{1_2 \bar{1}_2}^{2_2 \bar{2}_2} a^\dagger_{2_2}a^\dagger_{\bar{2}_2} a_{\bar{1}_2}a_{1_2}
+) \ket{1_1 \bar{1}_1 1_2 \bar{1}_2} \notag\\
+&= \qty[ 1 
++ \qty(c_{1_1 \bar{1}_1}^{2_1 \bar{2}_1} a^\dagger_{2_1}a^\dagger_{\bar{2}_1} a_{\bar{1}_1}a_{1_1} + c_{1_2 \bar{1}_2}^{2_2 \bar{2}_2} a^\dagger_{2_2}a^\dagger_{\bar{2}_2} a_{\bar{1}_2}a_{1_2}) 
++ \qty(c_{1_1 \bar{1}_1}^{2_1 \bar{2}_1} a^\dagger_{2_1}a^\dagger_{\bar{2}_1} a_{\bar{1}_1}a_{1_1} + c_{1_2 \bar{1}_2}^{2_2 \bar{2}_2} a^\dagger_{2_2}a^\dagger_{\bar{2}_2} a_{\bar{1}_2}a_{1_2})^2
+] \ket{1_1 \bar{1}_1 1_2 \bar{1}_2} \notag\\
+&= \left[ 1 
++ \qty(c_{1_1 \bar{1}_1}^{2_1 \bar{2}_1} a^\dagger_{2_1}a^\dagger_{\bar{2}_1} a_{\bar{1}_1}a_{1_1} + c_{1_2 \bar{1}_2}^{2_2 \bar{2}_2} a^\dagger_{2_2}a^\dagger_{\bar{2}_2} a_{\bar{1}_2}a_{1_2}) 
+  + \qty(c_{1_1 \bar{1}_1}^{2_1 \bar{2}_1} a^\dagger_{2_1}a^\dagger_{\bar{2}_1} a_{\bar{1}_1}a_{1_1})^2 
+  + \qty(c_{1_2 \bar{1}_2}^{2_2 \bar{2}_2} a^\dagger_{2_2}a^\dagger_{\bar{2}_2} a_{\bar{1}_2}a_{1_2})^2 \right. \notag\\
+&{} \qquad \left.
+  + c_{1_1 \bar{1}_1}^{2_1 \bar{2}_1}c_{1_2 \bar{1}_2}^{2_2 \bar{2}_2} a^\dagger_{2_1}a^\dagger_{\bar{2}_1} a^\dagger_{2_2}a^\dagger_{\bar{2}_2} a_{\bar{1}_1}a_{1_1}  a_{\bar{1}_2}a_{1_2}
+\right] \ket{1_1 \bar{1}_1 1_2 \bar{1}_2} \notag\\
+&= \qty[1 
++ c_{1_1 \bar{1}_1}^{2_1 \bar{2}_1} a^\dagger_{2_1}a^\dagger_{\bar{2}_1} a_{\bar{1}_1}a_{1_1} 
++ c_{1_2 \bar{1}_2}^{2_2 \bar{2}_2} a^\dagger_{2_2}a^\dagger_{\bar{2}_2} a_{\bar{1}_2}a_{1_2}
++ c_{1_1 \bar{1}_1}^{2_1 \bar{2}_1}c_{1_2 \bar{1}_2}^{2_2 \bar{2}_2} a^\dagger_{2_1}a^\dagger_{\bar{2}_1} a^\dagger_{2_2}a^\dagger_{\bar{2}_2} a_{\bar{1}_1}a_{1_1}  a_{\bar{1}_2}a_{1_2} 
+] \ket{1_1 \bar{1}_1 1_2 \bar{1}_2} \notag\\
+&= \qty[1 
++ c_{1_1 \bar{1}_1}^{2_1 \bar{2}_1} a^\dagger_{2_1}a^\dagger_{\bar{2}_1} a_{\bar{1}_1}a_{1_1} 
++ c_{1_2 \bar{1}_2}^{2_2 \bar{2}_2} a^\dagger_{2_2}a^\dagger_{\bar{2}_2} a_{\bar{1}_2}a_{1_2}
++ c_{1_1 \bar{1}_1 1_2 \bar{1}_2}^{2_1 \bar{2}_1 2_2 \bar{2}_2}  a^\dagger_{2_1}a^\dagger_{\bar{2}_1} a^\dagger_{2_2}a^\dagger_{\bar{2}_2} a_{\bar{1}_1}a_{1_1}  a_{\bar{1}_2}a_{1_2} 
+] \ket{1_1 \bar{1}_1 1_2 \bar{1}_2} 
 \end{align}
 
 \subsubsection{Linear CCA and the Coupled-Electron Pair Approximation}
