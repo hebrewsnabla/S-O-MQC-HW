@@ -516,6 +516,20 @@ since we cannot annihilate or create any orbital twice, the terms over 3rd power
 
 \subsubsection{Linear CCA and the Coupled-Electron Pair Approximation}
 \ex{5.12}
+\subex{a.}
+The diagonal elements of $ \vb{D} $ is
+\begin{align}
+\vb{D}_{rasb, rasb} &= \Braket{\Psi_{ab}^{rs} | \sH - E_0 | \Psi_{ab}^{rs}} %\notag\\
+%&= \Braket{\Psi_{ab}^{rs} | \sH | \Psi_{ab}^{rs}} - E_0 \notag\\
+%&= h_{rr} + h_{ss} - h_{aa} - h_{bb} + 
+\end{align}
+thus
+\begin{align}
+E_{\corr} &= -\vb{B}^\dagger \vb{D} \vb{B} \notag\\
+&= - \dfrac{\Braket{\Psi_0 | \sH | \Psi_{ab}^{rs}}^\dagger \Braket{\Psi_0 | \sH | \Psi_{ab}^{rs}} }{\Braket{\Psi_{ab}^{rs} | \sH - E_0 | \Psi_{ab}^{rs}}} \notag\\
+&= - \dfrac{\abs{\Braket{\Psi_0 | \sH | \Psi_{ab}^{rs}}}^2 }{\Braket{\Psi_{ab}^{rs} | \sH - E_0 | \Psi_{ab}^{rs}}} 
+\end{align}
+which matches Eq. 5.15 and 5.16.
 
 \subsubsection{Some Illustrative Calculations}
 
