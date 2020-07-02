@@ -715,7 +715,7 @@ after some tricks
 &+ \sum_{c<d, t<u} \Braket{\Psi_0 | \sH | \Psi_{cd}^{tu}} \qty(c_{ab}^{rs} c_{cd}^{tu} - < c_{ab}^{rs} * c_{cd}^{tu} > ) = \qty(\sum_{c<d, t<u} \Braket{\Psi_0 | \sH | \Psi_{cd}^{tu}} c_{cd}^{tu}) c_{ab}^{rs} 
 \end{aligned}
 \end{equation}
-\begin{equation}\label{key}
+\begin{equation}\label{cca}
 %\begin{aligned}
 \Braket{\Psi_{ab}^{rs} | \sH | \Psi_0} + \sum_{c<d, t<u} \Braket{\Psi_{ab}^{rs} | \sH - E_0 | \Psi_{cd}^{tu}} c_{cd}^{tu} 
 - \sum_{c<d, t<u} \Braket{\Psi_0 | \sH | \Psi_{cd}^{tu}} < c_{ab}^{rs} * c_{cd}^{tu} > = 0
@@ -733,8 +733,12 @@ But, CC is not variational.
 
 \subsubsection{The Cluster Expansion of the Wave Function}
 
-
 \subsubsection{Linear CCA and the Coupled-Electron Pair Approximation}
+linear CCA: set $ < c_{ab}^{rs} * c_{cd}^{tu} > = 0 $ in \eqref{cca}\\
+\begin{equation}\label{key}
+E_{\corr}(\text{L-CCA}) = -\vb{B}^\dagger \vb{D}^{-1}\vb{B}
+\end{equation}
+L-CCA is size-consistent.
 
 \subsubsection{Some Illustrative Calculations}
 
