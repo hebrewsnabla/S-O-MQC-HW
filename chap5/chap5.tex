@@ -625,9 +625,39 @@ $ \Braket{i^*|j^*} $ is similar.
 
 For Eq. 5.140
 \begin{align}
-\Braket{i | h_{\eff} | i} = 
+\Braket{i | h_{\eff} | i} &= \dfrac{1}{2}\qty(\bra{\phi_{2i-1}} + \bra{\phi_{2i}}) h_{\eff} \qty(\ket{\phi_{2i-1}} + \ket{\phi_{2i}}) \notag\\
+&= \dfrac{1}{2} (\alpha + \beta + \beta + \alpha) \notag\\
+&= \alpha + \beta
 \end{align}
-
+\begin{align}
+\Braket{i^* | h_{\eff} | i^*} &= \dfrac{1}{2}\qty(\bra{\phi_{2i-1}} - \bra{\phi_{2i}}) h_{\eff} \qty(\ket{\phi_{2i-1}} - \ket{\phi_{2i}}) \notag\\
+&= \dfrac{1}{2} (\alpha - \beta - \beta + \alpha) \notag\\
+&= \alpha - \beta
+\end{align}
+\begin{align}
+\Braket{i | h_{\eff} | i\pm 1} &= \dfrac{1}{2}\qty(\bra{\phi_{2i-1}} + \bra{\phi_{2i}}) h_{\eff} \qty(\ket{\phi_{2i-1\pm 2}} + \ket{\phi_{2i\pm 2}}) \notag\\
+&= \left\{ 
+\mqty{\dfrac{1}{2} (0 + 0 + \beta + 0) \qquad +  \\ ~\\
+	  \dfrac{1}{2} (0 + \beta + 0 + 0) \qquad -
+}\right. \notag\\
+&= \beta/2
+\end{align}
+\begin{align}
+\Braket{i^* | h_{\eff} | (i\pm 1)^*} &= \dfrac{1}{2} \qty(\bra{\phi_{2i-1}} - \bra{\phi_{2i}}) h_{\eff} \qty(\ket{\phi_{2i-1\pm 2}} - \ket{\phi_{2i\pm 2}}) \notag\\
+&= \left\{ 
+\mqty{\dfrac{1}{2} (0 - 0 - \beta + 0) \qquad +  \\ ~\\
+	\dfrac{1}{2} (0 - \beta - 0 + 0) \qquad -
+}\right. \notag\\
+&= -\beta/2
+\end{align}
+\begin{align}
+\Braket{i | h_{\eff} | (i\pm 1)^*} &= \dfrac{1}{2}\qty(\bra{\phi_{2i-1}} + \bra{\phi_{2i}}) h_{\eff} \qty(\ket{\phi_{2i-1\pm 2}} - \ket{\phi_{2i\pm 2}}) \notag\\
+&= \left\{ 
+\mqty{\dfrac{1}{2} (0 - 0 + \beta - 0) \qquad +  \\ ~\\
+	\dfrac{1}{2} (0 - \beta + 0 - 0) \qquad -
+}\right. \notag\\
+&= \pm\beta/2
+\end{align}
 
 \ex{5.18}
 
