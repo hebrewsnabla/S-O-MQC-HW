@@ -740,6 +740,17 @@ E_{\corr}(\text{L-CCA}) = -\vb{B}^\dagger \vb{D}^{-1}\vb{B}
 \end{equation}
 L-CCA is size-consistent. L-CCA is unitary invariant.
 
+CEPA: set $ < c_{ab}^{rs} * c_{cd}^{tu} > = c_{ab}^{rs}c_{ab}^{tu} $
+\begin{equation}\label{key}
+e_{ab} = \sum_{t<u} \Braket{\Psi_0 | \sH | \Psi_{ab}^{tu}} c_{ab}^{tu}
+\end{equation}
+\begin{equation}\label{key}
+\Braket{\Psi_{ab}^{rs} | \sH | \Psi_0} + \sum_{c<d,t<u} \Braket{\Psi_{ab}^{rs} | \sH-E_0 | \Psi_{cd}^{tu}}c_{cd}^{tu} = e_{ab}c_{ab}^{rs}
+\end{equation}
+\begin{equation}\label{key}
+E_{\corr}(\text{CEPA}) = \sum_{a<b} e_{ab}
+\end{equation}
+
 \subsubsection{Some Illustrative Calculations}
 
 \subsection{Many-electron Theories with Single Particle Hamiltonians}
