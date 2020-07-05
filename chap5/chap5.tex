@@ -165,7 +165,7 @@
 \DeclareMathOperator{\SF}{\mathrm{SF}}
 \DeclareMathOperator{\corr}{\mathrm{corr}}
 \DeclareMathOperator{\gvb}{\mathrm{GVB}}
-
+\DeclareMathOperator{\eff}{\mathrm{eff}}
 
 \newcommand{\subsbul}{\subsection*{$ \bullet $}}
 \newcommand{\ex}[1]{\paragraph{Ex #1}}
@@ -608,6 +608,26 @@ The total energy is
 which agrees with Eq. 5.132.
 
 \ex{5.17}
+For Eq. 5.139
+\begin{align}
+\Braket{i|j} &= \dfrac{1}{2}\qty(\bra{\phi_{2i-1}} + \bra{\phi_{2i}}) \qty(\ket{\phi_{2j-1}} + \ket{\phi_{2j}}) \notag\\
+&= \dfrac{1}{2}\qty(\delta_{2i-1,2j-1} + 0 + 0 + \delta_{2i,2j}) \notag\\
+&= \dfrac{1}{2}\qty(\delta_{i,j} + \delta_{i,j}) \notag\\
+&= \delta_{i,j}
+\end{align}
+$ \Braket{i^*|j^*} $ is similar.
+\begin{align}
+\Braket{i|j^*} &= \dfrac{1}{2}\qty(\bra{\phi_{2i-1}} + \bra{\phi_{2i}}) \qty(\ket{\phi_{2j-1}} - \ket{\phi_{2j}}) \notag\\
+&= \dfrac{1}{2}\qty(\delta_{2i-1,2j-1} - 0 + 0 - \delta_{2i,2j}) \notag\\
+&= \dfrac{1}{2}\qty(\delta_{i,j} - \delta_{i,j}) \notag\\
+&= 0
+\end{align}
+
+For Eq. 5.140
+\begin{align}
+\Braket{i | h_{\eff} | i} = 
+\end{align}
+
 
 \ex{5.18}
 
