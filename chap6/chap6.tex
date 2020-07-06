@@ -860,6 +860,90 @@ $ h=5 $, and $ l=2 $ since closed loops are $ r\ra a\ra d\ra t\ra e\ra r; \; s\r
 
 \subsubsection{Goldstone Diagrams}
 \ex{6.12}
+~\\
+\begin{minipage}{0.4\linewidth}
+	\centering
+\begin{tikzpicture}
+\begin{feynman}[large]
+\vertex (a); \vertex [below=of a] (b);
+\vertex [right=of a] (c); \vertex [right=of b] (d);
+
+\diagram[%inline=(e.base)
+]{
+	(a) -- [fermion,  quarter left, edge label=r] (b)
+	-- [fermion, quarter left, edge label=a] (a),
+	(c)-- [fermion, quarter left, edge label=s] (d)
+	-- [fermion, quarter left, edge label=b] (c),
+	(a) -- [scalar] (c),
+	(b) -- [scalar] (d),
+	%-- [fermion, quarter right, edge label'=2] (a),
+};
+\end{feynman}
+\end{tikzpicture}
+\end{minipage}
+$ \lra  $
+\begin{minipage}{0.4\linewidth}
+	\centering
+	\begin{tikzpicture}
+	\begin{feynman}[large]
+	\vertex (a); \vertex [below=of a] (b);
+	%\vertex [right=of a] (c); %\vertex [right=of b] (d);
+	\diagram[%inline=(e.base)
+	]{
+		(a) -- [fermion,  half left, edge label=r] (b)
+		-- [fermion, half left, edge label=a] (a),
+		(a)-- [fermion, quarter left, edge label=s] (b)
+		-- [fermion, quarter left, edge label=b] (a),
+		%(a) -- [scalar] (c),
+		%(b) -- [scalar] (d),
+		%-- [fermion, quarter right, edge label'=2] (a),
+	};
+	\end{feynman}
+	\end{tikzpicture}
+\end{minipage}
+~\\
+~\vspace{10pt}\\
+\begin{minipage}{0.4\linewidth}
+	\centering
+	\begin{tikzpicture}
+	\begin{feynman}[large]
+	\vertex (a); \vertex [below=of a] (b);
+	\vertex [right=of a] (c); \vertex [right=of b] (d);
+	
+	\diagram[%inline=(e.base)
+	]{
+		(a) -- [fermion, out=-60, in=150, edge label'=b] (d)
+		-- [fermion, quarter right, edge label=s] (c),
+		(c)-- [fermion, out=240, in=30, edge label=a] (b)
+		-- [fermion, quarter left, edge label=r] (a),
+		(a) -- [scalar] (c),
+		(b) -- [scalar] (d),
+		%-- [fermion, quarter right, edge label'=2] (a),
+	};
+	\end{feynman}
+	\end{tikzpicture}
+\end{minipage}
+$ \lra  $
+\begin{minipage}{0.4\linewidth}
+	\centering
+	\begin{tikzpicture}
+	\begin{feynman}[large]
+	\vertex (a); \vertex [below=of a] (b);
+	%\vertex [right=of a] (c); %\vertex [right=of b] (d);
+	\diagram[%inline=(e.base)
+	]{
+		(b) -- [fermion,  half right, edge label'=r] (a),
+		(b) -- [fermion, half left, edge label'=s] (a),
+		(a)-- [fermion, quarter left, edge label=a] (b),
+		(a) -- [fermion, quarter right, edge label=b] (b),
+		%(a) -- [scalar] (c),
+		%(b) -- [scalar] (d),
+		%-- [fermion, quarter right, edge label'=2] (a),
+	};
+	\end{feynman}
+	\end{tikzpicture}
+\end{minipage}
+
 
 \subsubsection{Summation of Diagrams}
 
