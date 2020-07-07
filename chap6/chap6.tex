@@ -1466,8 +1466,65 @@ $ \lra  $
 	\end{feynman}
 	\end{tikzpicture}
 \end{minipage}
-
-
+~\\~\vspace{10pt}\\
+12
+\begin{minipage}{0.4\linewidth}
+	\centering
+	\begin{tikzpicture}
+	\begin{feynman}[large]
+	\vertex (a); \vertex [below=2.4cm of a] (b);
+	\vertex [right=of a] (c); \vertex [right=3.5cm of b] (d);
+	\vertex [above=1.2cm of d] (f); \vertex [below=1.2cm of c] (e);	
+	\diagram[]{
+		(a) -- [fermion,  \el'=a] (e) -- [ fermion, \qr, \el'=s] (c)
+		-- [ fermion,  \el=b] (b) -- [ fermion, \ql, \el=r] (a),
+		(f) -- [fermion, \ql, \el=c] (d) -- [fermion,\ql, \el=t] (f),
+		(a) -- [scalar] (c), 	(b) -- [scalar] (d), (e) -- [scalar] (f),
+	};
+	\end{feynman}
+	\end{tikzpicture}
+\end{minipage}
+$ \lra  $
+\begin{minipage}{0.4\linewidth}
+	\centering
+	\begin{tikzpicture}
+	\begin{feynman}[large]
+	\vertex (a); \vertex [below=2.4cm of a] (b);
+	%\vertex [right=of a] (c); \vertex [right=3.5cm of b] (d);
+	%\vertex [above=1.2cm of d] (f); 
+	\vertex [below=1.2cm of a] (e);	
+	\diagram[]{
+		(a) -- [fermion, \qr, \el'=a] (e) -- [ fermion, \qr, \el'=s] (a)
+		-- [ fermion, \hfl, \el=b] (b) -- [ fermion, \hfl, \el=r] (a),
+		(e) -- [fermion, \ql, \el=c] (b) -- [fermion,\ql, \el=t] (e),
+		%(a) -- [scalar] (c), 	(b) -- [scalar] (d), (e) -- [scalar] (f),
+	};
+	\end{feynman}
+	\end{tikzpicture}
+\end{minipage}
+~\\
+~\\
+For the Hugenholtz diagram provided, its value is\\
+\begin{minipage}{0.3\linewidth}
+	\centering
+	\begin{tikzpicture}
+	\begin{feynman}[large]
+	\vertex (a); \vertex [below=of a] (b);
+	%\vertex [right=of a] (c); %\vertex [right=of b] (d);
+	\vertex at ($(a)!0.5!(b) $) (e);
+	\diagram[%inline=(e.base)
+	]{
+		(a) -- [anti fermion,  quarter left, edge label=t] (e) 
+		-- [anti fermion,  quarter left, edge label=r] (b)
+		-- [anti fermion, half left, edge label=a] (a),
+		(a) -- [fermion, half left, edge label=b] (b)
+		-- [fermion, quarter left, edge label=u] (e)
+		-- [fermion, quarter left, edge label=s] (a),
+	};
+	\end{feynman}
+	\end{tikzpicture}
+\end{minipage}
+$ = \qty(\dfrac{1}{2})^3 (-1)^{2+l} \sum_{} \dfrac{\Braket{ab||ru} \Braket{ru||ts}\Braket{ts||ab}}{(\varepsilon_a + \varepsilon_b - \varepsilon_u - \varepsilon_r)(\varepsilon_a + \varepsilon_b - \varepsilon_s - \varepsilon_t)} $
 
 \subsubsection{Summation of Diagrams}
 
