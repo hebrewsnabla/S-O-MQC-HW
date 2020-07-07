@@ -861,6 +861,7 @@ $ h=5 $, and $ l=2 $ since closed loops are $ r\ra a\ra d\ra t\ra e\ra r; \; s\r
 \subsubsection{Goldstone Diagrams}
 \ex{6.12}
 ~\\
+1
 \begin{minipage}{0.4\linewidth}
 	\centering
 \begin{tikzpicture}
@@ -903,6 +904,7 @@ $ \lra  $
 \end{minipage}
 ~\\
 ~\vspace{10pt}\\
+2
 \begin{minipage}{0.4\linewidth}
 	\centering
 	\begin{tikzpicture}
@@ -945,6 +947,7 @@ $ \lra  $
 \end{minipage}
 ~\\
 ~\vspace{10pt}\\
+1
 \begin{minipage}{0.4\linewidth}
 	\centering
 	\begin{tikzpicture}
@@ -991,6 +994,7 @@ $ \lra  $
 \end{minipage}
 ~\\
 ~\vspace{10pt}\\
+2
 \begin{minipage}{0.4\linewidth}
 	\centering
 	\begin{tikzpicture}
@@ -1043,6 +1047,7 @@ $ \lra  $
 \end{minipage}
 ~\\
 ~\vspace{10pt}\\
+3
 \begin{minipage}{0.4\linewidth}
 	\centering
 	\begin{tikzpicture}
@@ -1093,6 +1098,177 @@ $ \lra $
 	\end{feynman}
 	\end{tikzpicture}
 \end{minipage}
+~\\
+~\vspace{10pt}\\
+4
+\begin{minipage}{0.4\linewidth}
+	\centering
+	\begin{tikzpicture}
+	\begin{feynman}[large]
+	\vertex (a); \vertex [below=2.4cm of a] (b);
+	\vertex [right=2.5cm of a] (c); \vertex [right=2.5cm of b] (d);
+	\vertex at ($(a)!0.5!(b) + (-0.7cm, 0)$) (e); \vertex at ($(a)!0.5!(b) + (0.7cm, 0)$) (f);
+	
+	\diagram[%inline=(e.base)
+	]{
+		(a) -- [fermion,  quarter left, edge label=a] (f) 
+		-- [ fermion,  quarter left, edge label=b] (b)
+		-- [ fermion, quarter left, edge label=r] (e)
+		-- [ fermion, quarter left, edge label=s] (a),
+		(c) -- [fermion, quarter left, edge label=c] (d)
+		%-- [anti fermion, quarter left, edge label=d] (f)
+		-- [fermion, quarter left, edge label=t] (c),
+		(a) -- [scalar] (c),
+		(b) -- [scalar] (d),
+		(e) -- [scalar] (f),
+		%-- [fermion, quarter right, edge label'=2] (a),
+	};
+	\end{feynman}
+	\end{tikzpicture}
+\end{minipage}
+$ \lra  $
+\begin{minipage}{0.4\linewidth}
+	\centering
+	\begin{tikzpicture}
+	\begin{feynman}[large]
+	\vertex (a); \vertex [below=2.4cm of a] (b);
+	%\vertex [right=2.5cm of a] (c); \vertex [right=2.5cm of b] (d);
+	\vertex at ($(a)!0.5!(b) $) (e); 
+	%\vertex at ($(a)!0.5!(b) + (0.7cm, 0)$) (f);
+	
+	\diagram[%inline=(e.base)
+	]{
+		(a) -- [fermion,  quarter left, edge label=a] (e) 
+		-- [ fermion,  quarter left, edge label=b] (b)
+		-- [ fermion, quarter left, edge label=r] (e)
+		-- [ fermion, quarter left, edge label=s] (a),
+		(a) -- [fermion, half left, edge label=c] (b)
+		%-- [anti fermion, quarter left, edge label=d] (f)
+		-- [fermion, half left, edge label=t] (a),
+		%(a) -- [scalar] (c),
+		%(b) -- [scalar] (d),
+		%(e) -- [scalar] (f),
+		%-- [fermion, quarter right, edge label'=2] (a),
+	};
+	\end{feynman}
+	\end{tikzpicture}
+\end{minipage}
+~\\
+~\vspace{10pt}\\
+5
+\begin{minipage}{0.4\linewidth}
+	\centering
+	\begin{tikzpicture}
+	\begin{feynman}[large]
+	\vertex (a); \vertex [below=2.4cm of a] (b);
+	\vertex [right= of a] (c); \vertex [right=4cm of b] (d);
+	\vertex [below=1.2cm of c] (e); \vertex [right= of e] (f);
+	
+	\diagram[%inline=(e.base)
+	]{
+		(a) %-- [fermion,  quarter left, edge label=a] (f) 
+		-- [ fermion,  quarter left, edge label=a] (b)
+		%-- [ fermion, quarter left, edge label=r] (e)
+		-- [ fermion, quarter left, edge label=r] (a),
+		(c) -- [fermion, quarter left, edge label=b] (e)
+		%-- [anti fermion, quarter left, edge label=d] (f)
+		-- [fermion, quarter left, edge label=s] (c),
+		(f) -- [fermion, quarter left, edge label=c] (d)
+		%-- [anti fermion, quarter left, edge label=d] (f)
+		-- [fermion, quarter left, edge label=t] (f),
+		(a) -- [scalar] (c),
+		(b) -- [scalar] (d),
+		(e) -- [scalar] (f),
+		%-- [fermion, quarter right, edge label'=2] (a),
+	};
+	\end{feynman}
+	\end{tikzpicture}
+\end{minipage}
+$ \lra  $
+\begin{minipage}{0.4\linewidth}
+	\centering
+	\begin{tikzpicture}
+	\begin{feynman}[large]
+	\vertex (a); \vertex [below=2.4cm of a] (b);
+	%\vertex [right= of a] (c); \vertex [right=4cm of b] (d);
+	\vertex [below=1.2cm of a] (e); %\vertex [right= of e] (f);
+	
+	\diagram[%inline=(e.base)
+	]{
+		(a) %-- [fermion,  quarter left, edge label=a] (f) 
+		-- [ fermion,  half left, edge label=a] (b)
+		%-- [ fermion, quarter left, edge label=r] (e)
+		-- [ fermion, half left, edge label=r] (a),
+		(a) -- [fermion, quarter left, edge label=b] (e)
+		%-- [anti fermion, quarter left, edge label=d] (f)
+		-- [fermion, quarter left, edge label=s] (a),
+		(e) -- [fermion, quarter left, edge label=c] (b)
+		%-- [anti fermion, quarter left, edge label=d] (f)
+		-- [fermion, quarter left, edge label=t] (e),
+		%(a) -- [scalar] (c),
+		%(b) -- [scalar] (d),
+		%(e) -- [scalar] (f),
+		%-- [fermion, quarter right, edge label'=2] (a),
+	};
+	\end{feynman}
+	\end{tikzpicture}
+\end{minipage}
+
+~\\
+~\vspace{10pt}\\
+6
+\begin{minipage}{0.4\linewidth}
+	\centering
+	\begin{tikzpicture}
+	\begin{feynman}[large]
+	\vertex (a); \vertex [below=2.4cm of a] (b);
+	\vertex [right=2.5cm of a] (c); \vertex [right=2.5cm of b] (d);
+	\vertex at ($(a)!0.5!(b) + (0.6cm, 0)$) (e); \vertex at ($(c)!0.5!(d) + (-0.6cm, 0)$) (f);
+	
+	\diagram[%inline=(e.base)
+	]{
+		(a) -- [fermion,  quarter left, edge label=a] (e) 
+		-- [ fermion,  edge label=s] (c)
+		-- [ fermion, quarter left, edge label=b] (d)
+		-- [ fermion, quarter left, edge label=t] (f)
+		-- [fermion, edge label=c] (b)
+		%-- [anti fermion, quarter left, edge label=d] (f)
+		-- [fermion, quarter left, edge label=r] (a),
+		(a) -- [scalar] (c),
+		(b) -- [scalar] (d),
+		(e) -- [scalar] (f),
+		%-- [fermion, quarter right, edge label'=2] (a),
+	};
+	\end{feynman}
+	\end{tikzpicture}
+\end{minipage}
+$ \lra  $
+\begin{minipage}{0.4\linewidth}
+	\centering
+	\begin{tikzpicture}
+	\begin{feynman}[large]
+	\vertex (a); \vertex [below=2.4cm of a] (b);
+	%\vertex [right=2.5cm of a] (c); \vertex [right=2.5cm of b] (d);
+	\vertex at ($(a)!0.5!(b)$) (e); %\vertex at ($(c)!0.5!(d) + (-0.6cm, 0)$) (f);
+	
+	\diagram[%inline=(e.base)
+	]{
+		(a) -- [fermion,  quarter left, edge label=a] (e) 
+		-- [ fermion,  quarter left, edge label=s] (a)
+		-- [ fermion, half left, edge label=b] (b)
+		-- [ fermion, quarter left, edge label=t] (e)
+		-- [fermion, quarter left, edge label=c] (b)
+		%-- [anti fermion, quarter left, edge label=d] (f)
+		-- [fermion, half left, edge label=r] (a),
+		%(a) -- [scalar] (c),
+		%(b) -- [scalar] (d),
+		%(e) -- [scalar] (f),
+		%-- [fermion, quarter right, edge label'=2] (a),
+	};
+	\end{feynman}
+	\end{tikzpicture}
+\end{minipage}
+
 
 
 \subsubsection{Summation of Diagrams}
