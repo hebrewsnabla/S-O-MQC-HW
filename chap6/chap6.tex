@@ -167,6 +167,12 @@
 \DeclareMathOperator{\corr}{\mathrm{corr}}
 \DeclareMathOperator{\gvb}{\mathrm{GVB}}
 
+% TikZFeynman
+\newcommand{\qr}{quarter right}
+\newcommand{\ql}{quarter left}
+\newcommand{\hfr}{half right}
+\newcommand{\hfl}{half left}
+\newcommand{\el}{edge label}
 
 \newcommand{\subsbul}{\subsection*{$ \bullet $}}
 \newcommand{\ex}[1]{\paragraph{Ex #1}}
@@ -1264,6 +1270,198 @@ $ \lra  $
 		%(b) -- [scalar] (d),
 		%(e) -- [scalar] (f),
 		%-- [fermion, quarter right, edge label'=2] (a),
+	};
+	\end{feynman}
+	\end{tikzpicture}
+\end{minipage}
+~\\
+~\vspace{10pt}\\
+7
+\begin{minipage}{0.4\linewidth}
+	\centering
+	\begin{tikzpicture}
+	\begin{feynman}[large]
+	\vertex (a); \vertex [below=2.4cm of a] (b);
+	\vertex [right=2.5cm of a] (c); \vertex [right=2.5cm of b] (d);
+	\vertex at ($(a)!0.5!(b) + (-0.6cm, 0)$) (e); \vertex at ($(c)!0.5!(d) + (0.6cm, 0)$) (f);
+	
+	\diagram[]{
+		(a) -- [fermion,  quarter right, edge label'=d] (e) 
+		-- [ fermion,  quarter right,  edge label'=a] (b)
+		-- [ fermion,out=20, in=-120,  edge label'=r] (c)
+		-- [ fermion, quarter left, edge label=b] (f)
+		-- [fermion, quarter left, edge label=c] (d)
+		%-- [anti fermion, quarter left, edge label=d] (f)
+		-- [fermion,out=160, in=-60, edge label=s] (a),
+		(a) -- [scalar] (c),
+		(b) -- [scalar] (d),
+		(e) -- [scalar] (f),
+	};
+	\end{feynman}
+	\end{tikzpicture}
+\end{minipage}
+$ \lra  $
+\begin{minipage}{0.4\linewidth}
+	\centering
+	\begin{tikzpicture}
+	\begin{feynman}[large]
+	\vertex (a); \vertex [below=2.4cm of a] (b);
+	%\vertex [right=2.5cm of a] (c); \vertex [right=2.5cm of b] (d);
+	\vertex at ($(a)!0.5!(b) $) (e); %\vertex at ($(c)!0.5!(d) + (0.6cm, 0)$) (f);
+	
+	\diagram[]{
+		(a) -- [fermion,  \qr, \el'=d] (e) -- [ fermion,  \qr,  \el'=a] (b)
+		-- [ fermion, \hfr,  \el'=r] (a) -- [ fermion, \ql, \el=b] (e)
+		-- [fermion, \ql, \el=c] (b)
+		%-- [anti fermion, quarter left, edge label=d] (f)
+		-- [fermion, \hfl, \el=s] (a),
+		%(a) -- [scalar] (c),
+		%(b) -- [scalar] (d),
+		%(e) -- [scalar] (f),
+	};
+	\end{feynman}
+	\end{tikzpicture}
+\end{minipage}
+~\\
+~\vspace{10pt}\\
+8
+\begin{minipage}{0.4\linewidth}
+	\centering
+	\begin{tikzpicture}
+	\begin{feynman}[large]
+	\vertex (a); \vertex [below=2.4cm of a] (b);
+	\vertex [right=2.5cm of a] (c); \vertex [right=2.5cm of b] (d);
+	\vertex at ($(a)!0.5!(b) + (0.7cm, 0)$) (e); \vertex at ($(c)!0.5!(d) + (-0.7cm, 0)$) (f);	
+	\diagram[]{
+		(a) -- [fermion,  \qr, \el'=a] (b) -- [ fermion, \el=r] (f)
+		-- [ fermion,  \el'=s] (c) -- [ fermion, \ql, \el=b] (d)
+		-- [fermion,  \el'=t] (e) -- [fermion, \el=u] (a),
+		(a) -- [scalar] (c), 	(b) -- [scalar] (d), (e) -- [scalar] (f),
+	};
+	\end{feynman}
+	\end{tikzpicture}
+\end{minipage}
+$ \lra  $
+\begin{minipage}{0.4\linewidth}
+	\centering
+	\begin{tikzpicture}
+	\begin{feynman}[large]
+	\vertex (a); \vertex [below=2.4cm of a] (b);
+	%\vertex [right=2.5cm of a] (c); \vertex [right=2.5cm of b] (d);
+	\vertex at ($(a)!0.5!(b) $) (e); %\vertex at ($(c)!0.5!(d) + (-0.7cm, 0)$) (f);	
+	\diagram[]{
+		(a) -- [fermion,  \hfr, \el'=a] (b) -- [ fermion,\qr, \el'=r] (e)
+		-- [ fermion, \qr, \el'=s] (a) -- [ fermion, \hfl, \el=b] (b)
+		-- [fermion, \ql, \el=t] (e) -- [fermion, \ql,\el=u] (a),
+		%(a) -- [scalar] (c), 	(b) -- [scalar] (d), (e) -- [scalar] (f),
+	};
+	\end{feynman}
+	\end{tikzpicture}
+\end{minipage}
+~\\
+~\vspace{10pt}\\
+9
+\begin{minipage}{0.4\linewidth}
+	\centering
+	\begin{tikzpicture}
+	\begin{feynman}[large]
+	\vertex (a); \vertex [below=2.4cm of a] (b);
+	\vertex [right=2.5cm of a] (c); \vertex [right=2.5cm of b] (d);
+	\vertex at ($(a)!0.5!(b) + (-0.7cm, 0)$) (e); \vertex at ($(a)!0.5!(b) + (0.7cm, 0)$) (f);	
+	\diagram[]{
+		(a) -- [fermion,  \qr, \el'=a] (e) -- [ fermion, \qr, \el'=b] (b)
+		-- [ fermion,  \el'=r] (f) -- [ fermion, \el=s] (c)
+		-- [fermion, \ql, \el'=c] (d) -- [fermion, \el'=t] (a),
+		(a) -- [scalar] (c), 	(b) -- [scalar] (d), (e) -- [scalar] (f),
+	};
+	\end{feynman}
+	\end{tikzpicture}
+\end{minipage}
+$ \lra  $
+\begin{minipage}{0.4\linewidth}
+	\centering
+	\begin{tikzpicture}
+	\begin{feynman}[large]
+	\vertex (a); \vertex [below=2.4cm of a] (b);
+	%\vertex [right=2.5cm of a] (c); \vertex [right=2.5cm of b] (d);
+	\vertex at ($(a)!0.5!(b) $) (e); %\vertex at ($(a)!0.5!(b) + (0.7cm, 0)$) (f);	
+	\diagram[]{
+		(a) -- [fermion,  \qr, \el'=a] (e) -- [ fermion, \qr, \el'=b] (b)
+		-- [ fermion, \qr, \el'=r] (e) -- [ fermion, \qr, \el'=s] (a)
+		-- [fermion, \hfl, \el=c] (b) -- [fermion, \hfl, \el=t] (a),
+		%(a) -- [scalar] (c), 	(b) -- [scalar] (d), (e) -- [scalar] (f),
+	};
+	\end{feynman}
+	\end{tikzpicture}
+\end{minipage}
+~\\
+~\vspace{10pt}\\
+10
+\begin{minipage}{0.4\linewidth}
+	\centering
+	\begin{tikzpicture}
+	\begin{feynman}[large]
+	\vertex (a); \vertex [below=2.4cm of a] (b);
+	\vertex [right=2.5cm of a] (c); \vertex [right=2.5cm of b] (d);
+	\vertex at ($(a)!0.5!(b) + (-0.7cm, 0)$) (e); \vertex at ($(a)!0.5!(b) + (0.7cm, 0)$) (f);	
+	\diagram[]{
+		(a) -- [fermion,  \el'=s] (f) -- [ fermion, \el'=r] (d)
+		-- [ fermion, \qr,  \el'=c] (c) -- [ fermion, \el'=t] (b)
+		-- [fermion, \ql, \el=b] (e) -- [fermion,\ql, \el=a] (a),
+		(a) -- [scalar] (c), 	(b) -- [scalar] (d), (e) -- [scalar] (f),
+	};
+	\end{feynman}
+	\end{tikzpicture}
+\end{minipage}
+$ \lra  $
+\begin{minipage}{0.4\linewidth}
+	\centering
+	\begin{tikzpicture}
+	\begin{feynman}[large]
+	\vertex (a); \vertex [below=2.4cm of a] (b);
+	%\vertex [right=2.5cm of a] (c); \vertex [right=2.5cm of b] (d);
+	\vertex at ($(a)!0.5!(b) $) (e); %\vertex at ($(a)!0.5!(b) + (0.7cm, 0)$) (f);	
+	\diagram[]{
+		(a) -- [fermion, \ql, \el=s] (e) -- [ fermion,\ql, \el=r] (b)
+		-- [ fermion, \hfr,  \el'=c] (a) -- [ fermion, \hfr, \el'=t] (b)
+		-- [fermion, \ql, \el=b] (e) -- [fermion,\ql, \el=a] (a),
+		%(a) -- [scalar] (c), 	(b) -- [scalar] (d), (e) -- [scalar] (f),
+	};
+	\end{feynman}
+	\end{tikzpicture}
+\end{minipage}
+~\\
+~\vspace{10pt}\\
+11
+\begin{minipage}{0.4\linewidth}
+	\centering
+	\begin{tikzpicture}
+	\begin{feynman}[large]
+	\vertex (a); \vertex [below=2.4cm of a] (b);
+	\vertex [right=3.5cm of a] (c); \vertex [right= of b] (d);
+	\vertex [above=1.2cm of d] (e); \vertex [below=1.2cm of c] (f);	
+	\diagram[]{
+		(a) -- [fermion,  \el'=b] (d) -- [ fermion, \qr, \el'=s] (e)
+		-- [ fermion,  \el=a] (b) -- [ fermion, \ql, \el=r] (a),
+		(c) -- [fermion, \ql, \el=c] (f) -- [fermion,\ql, \el=t] (c),
+		(a) -- [scalar] (c), 	(b) -- [scalar] (d), (e) -- [scalar] (f),
+	};
+	\end{feynman}
+	\end{tikzpicture}
+\end{minipage}
+$ \lra  $
+\begin{minipage}{0.4\linewidth}
+	\centering
+	\begin{tikzpicture}
+	\begin{feynman}[large]
+	\vertex (a); \vertex [below=2.4cm of a] (b);
+	%\vertex [right=3.5cm of a] (c); \vertex [right= of b] (d);
+	\vertex at ($(a)!0.5!(b)$) (e); %\vertex [below=1.2cm of c] (f);	
+	\diagram[]{
+		(a) -- [fermion, \hfl, \el=b] (b) -- [ fermion, \qr, \el'=s] (e)
+		-- [ fermion, \qr, \el'=a] (b) -- [ fermion, \hfl, \el=r] (a),
+		(a) -- [fermion, \ql, \el=c] (e) -- [fermion,\ql, \el=t] (a),
+		%(a) -- [scalar] (c), 	(b) -- [scalar] (d), (e) -- [scalar] (f),
 	};
 	\end{feynman}
 	\end{tikzpicture}
