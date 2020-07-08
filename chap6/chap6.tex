@@ -1524,7 +1524,19 @@ For the Hugenholtz diagram provided, its value is\\
 	\end{feynman}
 	\end{tikzpicture}
 \end{minipage}
-$ = \qty(\dfrac{1}{2})^3 (-1)^{2+l} \sum_{} \dfrac{\Braket{ab||ru} \Braket{ru||ts}\Braket{ts||ab}}{(\varepsilon_a + \varepsilon_b - \varepsilon_u - \varepsilon_r)(\varepsilon_a + \varepsilon_b - \varepsilon_s - \varepsilon_t)} $
+\begin{minipage}{0.6\linewidth}
+	\vskip0.6cm
+\begin{align}
+&= \qty(\dfrac{1}{2})^3 (-1)^{2+2} \sum_{a,b,r,s,u,t} \dfrac{\Braket{ab||ru} \Braket{ru||ts}\Braket{ts||ab}}{(\varepsilon_a + \varepsilon_b - \varepsilon_u - \varepsilon_r)(\varepsilon_a + \varepsilon_b - \varepsilon_s - \varepsilon_t)} &&& \notag\\
+& =\dfrac{1}{8} \sum_{a,b,r,s,u,t} \dfrac{\Braket{ab||ru} \Braket{ru||ts}\Braket{ts||ab}}{(\varepsilon_a + \varepsilon_b - \varepsilon_u - \varepsilon_r)(\varepsilon_a + \varepsilon_b - \varepsilon_s - \varepsilon_t)}  &&&
+\notag
+\end{align}
+\end{minipage}
+\begin{align}
+&=\dfrac{1}{8} \sum_{a,b,r,s,u,t} \dfrac{(\Braket{ab|ru}-\Braket{ab|ur}) (\Braket{ru|ts}-\Braket{ru|st}) (\Braket{ts|ab}-\Braket{ts|ba})}{(\varepsilon_a + \varepsilon_b - \varepsilon_u - \varepsilon_r)(\varepsilon_a + \varepsilon_b - \varepsilon_s - \varepsilon_t)}  \notag\\
+&=
+\notag
+\end{align}
 
 \subsubsection{Summation of Diagrams}
 
