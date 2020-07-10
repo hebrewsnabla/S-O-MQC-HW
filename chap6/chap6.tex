@@ -1503,7 +1503,7 @@ $ \lra  $
 	\end{tikzpicture}
 \end{minipage}
 ~\\
-~\\
+~\\~\\
 For the Hugenholtz diagram provided, its value is\\
 \begin{minipage}{0.3\linewidth}
 	\centering
@@ -1534,9 +1534,77 @@ For the Hugenholtz diagram provided, its value is\\
 \end{minipage}
 \begin{align}
 &=\dfrac{1}{8} \sum_{a,b,r,s,u,t} \dfrac{(\Braket{ab|ru}-\Braket{ab|ur}) (\Braket{ru|ts}-\Braket{ru|st}) (\Braket{ts|ab}-\Braket{ts|ba})}{(\varepsilon_a + \varepsilon_b - \varepsilon_u - \varepsilon_r)(\varepsilon_a + \varepsilon_b - \varepsilon_s - \varepsilon_t)}  \notag\\
-&=
-\notag
+&= \dfrac{1}{8} \sum_{a,b,r,s,u,t} \dfrac{\Braket{ab|ru} \Braket{ru|ts} \Braket{ts|ab}}{(\varepsilon_a + \varepsilon_b - \varepsilon_u - \varepsilon_r)(\varepsilon_a + \varepsilon_b - \varepsilon_s - \varepsilon_t)} 
+- \dfrac{1}{8} \sum_{a,b,r,s,u,t} \dfrac{\Braket{ab|ur} \Braket{ru|ts} \Braket{ts|ab}}{(\varepsilon_a + \varepsilon_b - \varepsilon_u - \varepsilon_r)(\varepsilon_a + \varepsilon_b - \varepsilon_s - \varepsilon_t)} \notag\\
+&\quad{} - \dfrac{1}{8} \sum_{a,b,r,s,u,t} \dfrac{\Braket{ab|ru} \Braket{ru|st} \Braket{ts|ab}}{(\varepsilon_a + \varepsilon_b - \varepsilon_u - \varepsilon_r)(\varepsilon_a + \varepsilon_b - \varepsilon_s - \varepsilon_t)} 
++ \dfrac{1}{8} \sum_{a,b,r,s,u,t} \dfrac{\Braket{ab|ur} \Braket{ru|st} \Braket{ts|ab}}{(\varepsilon_a + \varepsilon_b - \varepsilon_u - \varepsilon_r)(\varepsilon_a + \varepsilon_b - \varepsilon_s - \varepsilon_t)} 
+\notag\\
+&\quad{} - \dfrac{1}{8} \sum_{a,b,r,s,u,t} \dfrac{\Braket{ab|ru} \Braket{ru|ts} \Braket{ts|ba}}{(\varepsilon_a + \varepsilon_b - \varepsilon_u - \varepsilon_r)(\varepsilon_a + \varepsilon_b - \varepsilon_s - \varepsilon_t)} 
++ \dfrac{1}{8} \sum_{a,b,r,s,u,t} + \dfrac{\Braket{ab|ur} \Braket{ru|ts} \Braket{ts|ba}}{(\varepsilon_a + \varepsilon_b - \varepsilon_u - \varepsilon_r)(\varepsilon_a + \varepsilon_b - \varepsilon_s - \varepsilon_t)} \notag\\
+&\quad{} + \dfrac{1}{8} \sum_{a,b,r,s,u,t} \dfrac{\Braket{ab|ru} \Braket{ru|st} \Braket{ts|ba}}{(\varepsilon_a + \varepsilon_b - \varepsilon_u - \varepsilon_r)(\varepsilon_a + \varepsilon_b - \varepsilon_s - \varepsilon_t)} 
+- \dfrac{1}{8} \sum_{a,b,r,s,u,t} \dfrac{\Braket{ab|ur} \Braket{ru|st} \Braket{ts|ba}}{(\varepsilon_a + \varepsilon_b - \varepsilon_u - \varepsilon_r)(\varepsilon_a + \varepsilon_b - \varepsilon_s - \varepsilon_t)}  \notag\\
+&= \dfrac{1}{8} \sum_{a,b,r,s,u,t} \dfrac{\Braket{ab|ru} \Braket{ru|ts} \Braket{ts|ab}}{(\varepsilon_a + \varepsilon_b - \varepsilon_u - \varepsilon_r)(\varepsilon_a + \varepsilon_b - \varepsilon_s - \varepsilon_t)} 
+- \dfrac{1}{8} \sum_{a,b,r,s,u,t} \dfrac{\Braket{ab|ur} \Braket{ru|ts} \Braket{ts|ab}}{(\varepsilon_a + \varepsilon_b - \varepsilon_u - \varepsilon_r)(\varepsilon_a + \varepsilon_b - \varepsilon_s - \varepsilon_t)} \notag\\
+&\quad{} - \dfrac{1}{8} \sum_{a,b,r,s,u,t} \dfrac{\Braket{ab|ur} \Braket{ur|st} \Braket{ts|ab}}{(\varepsilon_a + \varepsilon_b - \varepsilon_r - \varepsilon_u)(\varepsilon_a + \varepsilon_b - \varepsilon_s - \varepsilon_t)} 
++ \dfrac{1}{8} \sum_{a,b,r,s,u,t} \dfrac{\Braket{ab|ru} \Braket{ur|st} \Braket{ts|ab}}{(\varepsilon_a + \varepsilon_b - \varepsilon_r - \varepsilon_u)(\varepsilon_a + \varepsilon_b - \varepsilon_s - \varepsilon_t)} 
+\notag\\
+&\quad{} - \dfrac{1}{8} \sum_{a,b,r,s,u,t} \dfrac{\Braket{ab|ru} \Braket{ru|ts} \Braket{ts|ba}}{(\varepsilon_a + \varepsilon_b - \varepsilon_u - \varepsilon_r)(\varepsilon_a + \varepsilon_b - \varepsilon_s - \varepsilon_t)} 
++ \dfrac{1}{8} \sum_{a,b,r,s,u,t} + \dfrac{\Braket{ab|ur} \Braket{ru|ts} \Braket{ts|ba}}{(\varepsilon_a + \varepsilon_b - \varepsilon_u - \varepsilon_r)(\varepsilon_a + \varepsilon_b - \varepsilon_s - \varepsilon_t)} \notag\\
+&\quad{} + \dfrac{1}{8} \sum_{a,b,r,s,u,t} \dfrac{\Braket{ab|ur} \Braket{ur|st} \Braket{ts|ba}}{(\varepsilon_a + \varepsilon_b - \varepsilon_r - \varepsilon_u)(\varepsilon_a + \varepsilon_b - \varepsilon_s - \varepsilon_t)} 
+- \dfrac{1}{8} \sum_{a,b,r,s,u,t} \dfrac{\Braket{ab|ru} \Braket{ur|st} \Braket{ts|ba}}{(\varepsilon_a + \varepsilon_b - \varepsilon_r - \varepsilon_u)(\varepsilon_a + \varepsilon_b - \varepsilon_s - \varepsilon_t)}  \notag\\
+&= \dfrac{1}{4} \sum_{a,b,r,s,u,t} \dfrac{\Braket{ab|ru} \Braket{ru|ts} \Braket{ts|ab}}{(\varepsilon_a + \varepsilon_b - \varepsilon_u - \varepsilon_r)(\varepsilon_a + \varepsilon_b - \varepsilon_s - \varepsilon_t)} 
+- \dfrac{1}{4} \sum_{a,b,r,s,u,t} \dfrac{\Braket{ab|ur} \Braket{ru|ts} \Braket{ts|ab}}{(\varepsilon_a + \varepsilon_b - \varepsilon_u - \varepsilon_r)(\varepsilon_a + \varepsilon_b - \varepsilon_s - \varepsilon_t)} \notag\\
+&\quad{} - \dfrac{1}{4} \sum_{a,b,r,s,u,t} \dfrac{\Braket{ab|ru} \Braket{ru|ts} \Braket{ts|ba}}{(\varepsilon_a + \varepsilon_b - \varepsilon_u - \varepsilon_r)(\varepsilon_a + \varepsilon_b - \varepsilon_s - \varepsilon_t)} 
++ \dfrac{1}{4} \sum_{a,b,r,s,u,t} + \dfrac{\Braket{ab|ur} \Braket{ru|ts} \Braket{ts|ba}}{(\varepsilon_a + \varepsilon_b - \varepsilon_u - \varepsilon_r)(\varepsilon_a + \varepsilon_b - \varepsilon_s - \varepsilon_t)} \notag\\
+&= \dfrac{1}{4} \sum_{a,b,r,s,u,t} \dfrac{\Braket{ab|ru} \Braket{ru|ts} \Braket{ts|ab}}{(\varepsilon_a + \varepsilon_b - \varepsilon_u - \varepsilon_r)(\varepsilon_a + \varepsilon_b - \varepsilon_s - \varepsilon_t)} 
+- \dfrac{1}{4} \sum_{a,b,r,s,u,t} \dfrac{\Braket{ab|ur} \Braket{ru|ts} \Braket{ts|ab}}{(\varepsilon_a + \varepsilon_b - \varepsilon_u - \varepsilon_r)(\varepsilon_a + \varepsilon_b - \varepsilon_s - \varepsilon_t)} \notag\\
+&\quad{} - \dfrac{1}{4} \sum_{a,b,r,s,u,t} \dfrac{\Braket{ba|ru} \Braket{ru|ts} \Braket{ts|ab}}{(\varepsilon_a + \varepsilon_b - \varepsilon_u - \varepsilon_r)(\varepsilon_a + \varepsilon_b - \varepsilon_s - \varepsilon_t)} 
++ \dfrac{1}{4} \sum_{a,b,r,s,u,t} + \dfrac{\Braket{ba|ur} \Braket{ru|ts} \Braket{ts|ab}}{(\varepsilon_a + \varepsilon_b - \varepsilon_u - \varepsilon_r)(\varepsilon_a + \varepsilon_b - \varepsilon_s - \varepsilon_t)} \notag\\
+&= \dfrac{1}{2} \sum_{a,b,r,s,u,t} \dfrac{\Braket{ab|ru} \Braket{ru|ts} \Braket{ts|ab}}{(\varepsilon_a + \varepsilon_b - \varepsilon_u - \varepsilon_r)(\varepsilon_a + \varepsilon_b - \varepsilon_s - \varepsilon_t)} 
+- \dfrac{1}{2} \sum_{a,b,r,s,u,t} \dfrac{\Braket{ab|ur} \Braket{ru|ts} \Braket{ts|ab}}{(\varepsilon_a + \varepsilon_b - \varepsilon_u - \varepsilon_r)(\varepsilon_a + \varepsilon_b - \varepsilon_s - \varepsilon_t)} 
 \end{align}
+=
+\begin{minipage}{0.4\linewidth}
+	\centering
+	\begin{tikzpicture}
+	\begin{feynman}[large]
+	\vertex (a); \vertex [below=2.4cm of a] (b);
+	\vertex [right=2.5cm of a] (c); \vertex [right=2.5cm of b] (d);
+	\vertex at ($(a)!0.5!(b) + (0.7cm, 0)$) (e); \vertex at ($(c)!0.5!(d) + (-0.7cm, 0)$) (f);
+	
+	\diagram[%inline=(e.base)
+	]{
+		(a) -- [anti fermion,  quarter left, edge label=t] (e) 
+		-- [anti fermion,  quarter left, edge label=r] (b)
+		-- [anti fermion, quarter left, edge label=a] (a),
+		(c) -- [fermion, quarter left, edge label=b] (d)
+		-- [fermion, quarter left, edge label=u] (f)
+		-- [fermion, quarter left, edge label=s] (c),
+		(a) -- [scalar] (c),
+		(b) -- [scalar] (d),
+		(e) -- [scalar] (f),
+		%-- [fermion, quarter right, edge label'=2] (a),
+	};
+	\end{feynman}
+	\end{tikzpicture}
+\end{minipage}
++
+\begin{minipage}{0.4\linewidth}
+	\centering
+	\begin{tikzpicture}
+	\begin{feynman}[large]
+	\vertex (a); \vertex [below=2.4cm of a] (b);
+	\vertex [right=2.5cm of a] (c); \vertex [right=2.5cm of b] (d);
+	\vertex at ($(a)!0.5!(b) + (0.7cm, 0)$) (e); \vertex at ($(c)!0.5!(d) + (-0.7cm, 0)$) (f);	
+	\diagram[]{
+		(a) -- [fermion,  \qr, \el'=a] (b) -- [ fermion, \el=u] (f)
+		-- [ fermion,  \el'=s] (c) -- [ fermion, \ql, \el=b] (d)
+		-- [fermion,  \el'=r] (e) -- [fermion, \el=t] (a),
+		(a) -- [scalar] (c), 	(b) -- [scalar] (d), (e) -- [scalar] (f),
+	};
+	\end{feynman}
+	\end{tikzpicture}
+\end{minipage}
 
 \subsubsection{Summation of Diagrams}
 
