@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      3154,        113]
-NotebookOptionsPosition[      2720,         92]
-NotebookOutlinePosition[      3077,        108]
-CellTagsIndexPosition[      3034,        105]
+NotebookDataLength[      5196,        186]
+NotebookOptionsPosition[      4650,        161]
+NotebookOutlinePosition[      5005,        177]
+CellTagsIndexPosition[      4962,        174]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -88,10 +88,79 @@ Cell[BoxData[
    RowBox[{"a", "+", 
     RowBox[{"2", " ", "b"}]}]}], "}"}]], "Output",
  CellChangeTimes->{3.8029361884679937`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{"(*", " ", "5.18", " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"k", "=", 
+     RowBox[{"1", "/", 
+      RowBox[{"Sqrt", "[", "2", "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"Solve", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"k", " ", "beta", " ", "c"}], "\[Equal]", "e1"}], ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"k", " ", "beta"}], "-", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"3", "/", "2"}], ")"}], "beta", " ", "c"}]}], "\[Equal]", 
+        RowBox[{"e1", " ", "c"}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"e1", ",", "c"}], "}"}]}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.8034659498919716`*^9, 3.8034660724454236`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"e1", "\[Rule]", 
+      RowBox[{
+       FractionBox["1", "4"], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"-", "3"}], " ", "beta"}], "-", 
+         RowBox[{
+          SqrtBox["17"], " ", "beta"}]}], ")"}]}]}], ",", 
+     RowBox[{"c", "\[Rule]", 
+      FractionBox[
+       RowBox[{
+        RowBox[{"-", "3"}], "-", 
+        SqrtBox["17"]}], 
+       RowBox[{"2", " ", 
+        SqrtBox["2"]}]]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"e1", "\[Rule]", 
+      RowBox[{
+       FractionBox["1", "4"], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"-", "3"}], " ", "beta"}], "+", 
+         RowBox[{
+          SqrtBox["17"], " ", "beta"}]}], ")"}]}]}], ",", 
+     RowBox[{"c", "\[Rule]", 
+      FractionBox[
+       RowBox[{
+        RowBox[{"-", "3"}], "+", 
+        SqrtBox["17"]}], 
+       RowBox[{"2", " ", 
+        SqrtBox["2"]}]]}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.8034660732641926`*^9}]
 }, Open  ]]
 },
 WindowSize->{759, 677},
-WindowMargins->{{Automatic, 178}, {17, Automatic}},
+WindowMargins->{{33, Automatic}, {1, Automatic}},
 FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (2016\:5e747\:670828\
 \:65e5)",
 StyleDefinitions->"Default.nb"
@@ -113,11 +182,13 @@ Cell[1465, 48, 714, 21, 50, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[2216, 74, 134, 2, 47, "Input"],
-Cell[2353, 78, 351, 11, 62, "Output"]
+Cell[2353, 78, 351, 11, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2741, 94, 815, 23, 122, "Input"],
+Cell[3559, 119, 1075, 39, 124, "Output"]
 }, Open  ]]
 }
 ]
 *)
-
-(* End of internal cache information *)
 
