@@ -673,7 +673,7 @@ For Eq. 5.140
 - \Braket{\Psi_1^{2*} - \Psi_1^{3*} | E_0 | \Psi_1^{2*} - \Psi_1^{3*}}
 ] \notag\\
 &= \dfrac{1}{2} \qty[ 2(\alpha-\beta) - 2(-\beta/2) - 2E_0] \notag\\
-&= \alpha - \beta/2 - E_0
+&= \alpha - \beta/2 - E_0 \notag\\
 &= -\dfrac{3}{2}\beta
 \end{align}
 thus
@@ -692,6 +692,7 @@ e_1 = \dfrac{-3 + \sqrt{17}}{4}\beta
 \end{equation}
 
 \ex{5.19}
+\subex{a)}
 \begin{align}
 \ket{\Psi_1} = \ket{\Psi_0} + c_1\ket{\Psi_1^{1*}} + c_2\ket{\Psi_1^{2*}} + \cdots + c_n\ket{\Psi_1^{n*}}
 \end{align}
@@ -709,14 +710,35 @@ thus,
 \begin{equation}\label{key}
 \Ket{ \overset{*}{1}} = 2^{-1/2} \qty(\Ket{\Psi_1^{2*} } - \Ket{\Psi_1^{n*} })
 \end{equation}
-As before
+As before, we get
 \begin{align}
 \Braket{\Psi_0 | \sH | \overset{*}{1}} %&= 2^{-1/2} \Braket{\Psi_0 | \sH | \Psi_1^{2*} - \Psi_1^{3*}} \notag\\
 %&= 2^{-1/2}[\beta/2 - (-\beta/2)] \notag\\
 &= 2^{-1/2}\beta
 \end{align}
-
-
+but
+\begin{align}
+\Braket{ \overset{*}{1} | \sH - E_0 | \overset{*}{1}} 
+%&= \dfrac{1}{2} \Braket{\Psi_1^{2*} - \Psi_1^{n*} | \sH - E_0 | \Psi_1^{2*} - \Psi_1^{n*}}
+%\notag\\
+&= \dfrac{1}{2} \qty[
+\Braket{\Psi_1^{2*} - \Psi_1^{3*} | \sH | \Psi_1^{2*} - \Psi_1^{3*}} 
+- \Braket{\Psi_1^{2*} - \Psi_1^{3*} | E_0 | \Psi_1^{2*} - \Psi_1^{3*}}
+] \notag\\
+&= \dfrac{1}{2} \qty[ 2(\alpha-\beta) - 2\times 0 - 2E_0] \notag\\
+&= \alpha - \beta - E_0 \notag\\
+&= -2\beta
+\end{align}
+thus
+\begin{equation}\label{key}
+e_1 = \qty(-1 + \dfrac{\sqrt{6}}{2})\beta
+\end{equation}
+\begin{align}\label{key}
+E_R(\text{IEPA}) &= Ne_1 \notag\\
+&= \qty(-1 + \dfrac{\sqrt{6}}{2})N\beta \notag\\
+&= 0.2247 N\beta
+\end{align}
+\subex{b)}
 
 \ex{5.20}
 
