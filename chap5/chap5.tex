@@ -692,6 +692,31 @@ e_1 = \dfrac{-3 + \sqrt{17}}{4}\beta
 \end{equation}
 
 \ex{5.19}
+\begin{align}
+\ket{\Psi_1} = \ket{\Psi_0} + c_1\ket{\Psi_1^{1*}} + c_2\ket{\Psi_1^{2*}} + \cdots + c_n\ket{\Psi_1^{n*}}
+\end{align}
+Since
+\begin{align}
+\Braket{\Psi_0 | \sH | \Psi_1^{1*} } &= 0\\
+\Braket{\Psi_0 | \sH | \Psi_1^{2*} } &= \beta/2 \\
+\Braket{\Psi_0 | \sH | \Psi_1^{j*} } &= 0 \qquad (1<j<n)\\
+\Braket{\Psi_0 | \sH | \Psi_1^{n*} } &= -\beta/2 
+\end{align}
+thus, 
+\begin{align}
+\ket{\Psi_1} = \ket{\Psi_0} + c\Ket{ \overset{*}{1}} 
+\end{align}
+\begin{equation}\label{key}
+\Ket{ \overset{*}{1}} = 2^{-1/2} \qty(\Ket{\Psi_1^{2*} } - \Ket{\Psi_1^{n*} })
+\end{equation}
+As before
+\begin{align}
+\Braket{\Psi_0 | \sH | \overset{*}{1}} %&= 2^{-1/2} \Braket{\Psi_0 | \sH | \Psi_1^{2*} - \Psi_1^{3*}} \notag\\
+%&= 2^{-1/2}[\beta/2 - (-\beta/2)] \notag\\
+&= 2^{-1/2}\beta
+\end{align}
+
+
 
 \ex{5.20}
 
