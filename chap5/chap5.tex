@@ -738,7 +738,47 @@ E_R(\text{IEPA}) &= Ne_1 \notag\\
 &= \qty(-1 + \dfrac{\sqrt{6}}{2})N\beta \notag\\
 &= 0.2247 N\beta
 \end{align}
+
 \subex{b)}
+As $ N=10 $,
+\begin{align}
+\ket{\Psi_1} = \ket{\Psi_0} + c_1\ket{\Psi_1^{1*}} + c_2\ket{\Psi_1^{2*}} + c_3\ket{\Psi_1^{3*}} + + c_4\ket{\Psi_1^{4*}} + c_5\ket{\Psi_1^{5*}}
+\end{align}
+As before, let
+\begin{equation}\label{key}
+\Ket{\overset{*}{1}} = 2^{-1/2}\qty(\ket{\Psi_1^{1*}} - \ket{\Psi_1^{5*}})
+\end{equation}
+\begin{equation}\label{key}
+\ket{\Psi_1} = \ket{\Psi_0} + c_1\Ket{\overset{*}{1}} + c_3\ket{\Psi_1^{3*}} + + c_4\ket{\Psi_1^{4*}}
+\end{equation}
+then the "particle" equations will be
+\begin{align}
+\Braket{\Psi_0 | \sH | \overset{*}{1}} c_1 + \Braket{\Psi_0 | \sH | \Psi_1^{3*}}c_3 + \Braket{\Psi_0 | \sH | \Psi_1^{4*}}c_4 &= e_1 \\
+\Braket{\overset{*}{1} | \sH | \Psi_0} 
++ \Braket{\overset{*}{1} | \sH | \Psi_1^{3*}}c_3
++ \Braket{\overset{*}{1} | \sH | \Psi_1^{4*}}c_4
++ \Braket{\overset{*}{1} | \sH-E_0 | \overset{*}{1}}c_1 &= e_1 c_1 \\
+\Braket{\Psi_1^{3*} | \sH | \Psi_0} 
++ \Braket{\Psi_1^{3*} | \sH | \overset{*}{1}}c_1
++ \Braket{\Psi_1^{3*} | \sH | \Psi_1^{4*}}c_4
++ \Braket{\Psi_1^{3*} | \sH-E_0 | \Psi_1^{3*}}c_3 &= e_1 c_3 \\
+\Braket{\Psi_1^{4*} | \sH | \Psi_0} 
++ \Braket{\Psi_1^{4*} | \sH | \overset{*}{1}}c_1
++ \Braket{\Psi_1^{4*} | \sH | \Psi_1^{3*}}c_3
++ \Braket{\Psi_1^{4*} | \sH-E_0 | \Psi_1^{4*}}c_4 &= e_1 c_4 
+\end{align}
+where
+\begin{align}
+\Braket{\Psi_0 | \sH | \overset{*}{1}} = 2^{-1/2}\beta \\
+\Braket{\Psi_0 | \sH | \Psi_1^{3*}} = 0\\
+\Braket{\Psi_0 | \sH | \Psi_1^{4*}} = 0
+\end{align}
+\begin{align}
+\Braket{\overset{*}{1} | \sH-E_0 | \overset{*}{1}} = -2\beta
+\end{align}
+\begin{align}
+\Braket{\Psi_1^{3*} | \sH-E_0 | \Psi_1^{3*}} &= 
+\end{align}
 
 \ex{5.20}
 
