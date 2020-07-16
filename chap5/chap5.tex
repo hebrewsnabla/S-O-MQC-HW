@@ -781,10 +781,31 @@ where
 \end{align}
 \begin{align}
 \Braket{\overset{*}{1} | \sH | \Psi_1^{3*}} &= 2^{-1/2}\qty[\Braket{\Psi_1^{2*} | \sH | \Psi_1^{3*}} - \Braket{\Psi_1^{5*} | \sH | \Psi_1^{3*}}] \notag\\
-&=
+&= 2^{-1/2}(-\beta/2)
 \end{align}
 \begin{align}
-\Braket{\overset{*}{1} | \sH | \Psi_1^{4*}} &= 2^{-1/2}\qty[\Braket{\Psi_1^{2*} | \sH | \Psi_1^{4*}} - \Braket{\Psi_1^{5*} | \sH | \Psi_1^{4*}}]
+\Braket{\overset{*}{1} | \sH | \Psi_1^{4*}} &= 2^{-1/2}\qty[\Braket{\Psi_1^{2*} | \sH | \Psi_1^{4*}} - \Braket{\Psi_1^{5*} | \sH | \Psi_1^{4*}}] \notag\\
+&= 2^{-1/2} (\beta/2)
+\end{align}
+\begin{align}
+\Braket{\Psi_1^{3*} | \sH | \Psi_1^{4*}} 
+&= -\beta/2
+\end{align}
+thus
+\begin{align}
+2^{-1/2}\beta c_1 &= e_1 \\
+2^{-1/2}\beta + 2^{-1/2}(-\beta/2) c_3 + 2^{-1/2}(\beta/2) c_4 + (-2\beta) c_1 &= e_1 c_1\\
+2^{-1/2}(-\beta/2) c_1 + (-\beta/2) c_4 + (-2\beta) c_3 = e_1 c_3\\
+2^{-1/2} (\beta/2) c_1 + (-\beta/2) c_3 + (-2\beta) c_4 = e_1 c_4
+\end{align}
+or
+\begin{align}
+\mqty(0 & 2^{-1/2}\beta & 0 & 0\\
+      2^{-1/2}\beta & -2\beta & 2^{-1/2}(-\beta/2) & 2^{-1/2}(\beta/2)\\
+      0 & 2^{-1/2}(-\beta/2) & -2\beta & -\beta/2\\
+      0 & 2^{-1/2}(\beta/2) & -\beta/2 & -2\beta)
+\mqty(1 \\ c_1 \\ c_3 \\ c_4)
+= e_1 \mqty(1 \\ c_1 \\ c_3 \\ c_4)
 \end{align}
 
 \ex{5.20}
