@@ -908,9 +908,23 @@ else,
 \Braket{\overset{*}{i} | \sH-E_0 | \overset{*}{j}} 
 %&= \Braket{\overset{*}{i} | \sH | \overset{*}{j}} - E_0\delta_{ij} \notag\\
 &= \dfrac{1}{2}\Braket{\Psi_i^{(i+1)*} - \Psi_i^{(i-1)*} | \sH | \Psi_j^{(j+1)*} - \Psi_j^{(j-1)*}} \notag\\
-&= \dfrac{1}{2}\times 2 (\alpha-\beta) - E_0 \notag\\
-&= -2\beta
+&= - \dfrac{1}{2}\Braket{\Psi_i^{(i+1)*} | \sH |  \Psi_j^{(j-1)*}} 
+- \dfrac{1}{2}\Braket{\Psi_i^{(i-1)*} | \sH |  \Psi_j^{(j+1)*}} \notag\\
+&= 0
 \end{align}
-
+thus
+\begin{equation}\label{key}
+\Braket{\overset{*}{i} | \sH-E_0 | \overset{*}{j}} = -2\beta \delta_{ij}
+\end{equation}
+Similar to Ex. 5.20, the SCI equations are
+\begin{align}
+Nc\times 2^{-1/2}\beta &= E_R(\text{SCI}) \\
+2^{-1/2}\beta + c(-2\beta + 0) &= E_R(\text{SCI})c
+\end{align}
+$ \therefore $
+\begin{equation}\label{key}
+E_R(\text{SCI}) = \dfrac{-2 + \sqrt{2N + 4}}{2}\beta 
+= \qty[\sqrt{1+N/2} - 1] \beta
+\end{equation}
 
 \end{document}
