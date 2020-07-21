@@ -884,7 +884,33 @@ E_R(\text{SCI}) = \dfrac{-1+\sqrt{13}}{2}\beta
 \end{equation}
 
 \ex{5.21}
-
+It's clear that
+\begin{equation}\label{key}
+\Braket{\Psi_0 | \sH |\overset{*}{i}} = 2^{-1/2}\beta
+\end{equation}
+while
+\begin{align}
+\Braket{\overset{*}{i} | \sH-E_0 | \overset{*}{j}} 
+&= \Braket{\overset{*}{i} | \sH | \overset{*}{j}} - E_0\delta_{ij} \notag\\
+&= \Braket{\Psi_i^{(i+1)*} - \Psi_i^{(i-1)*} | \sH | \Psi_j^{(j+1)*} - \Psi_j^{(j-1)*}} - E_0\delta_{ij} %\notag\\
+\end{align}
+If $ i=j $,
+\begin{align}
+\Braket{\overset{*}{i} | \sH-E_0 | \overset{*}{j}} 
+%&= \Braket{\overset{*}{i} | \sH | \overset{*}{j}} - E_0\delta_{ij} \notag\\
+&= \dfrac{1}{2}\Braket{\Psi_i^{(i+1)*} - \Psi_i^{(i-1)*} | \sH | \Psi_i^{(i+1)*} - \Psi_i^{(i-1)*}} - E_0 \notag\\
+%%% See 5.19
+&= \dfrac{1}{2}\times 2 (\alpha-\beta) - E_0 \notag\\
+&= -2\beta
+\end{align}
+else,
+\begin{align}
+\Braket{\overset{*}{i} | \sH-E_0 | \overset{*}{j}} 
+%&= \Braket{\overset{*}{i} | \sH | \overset{*}{j}} - E_0\delta_{ij} \notag\\
+&= \dfrac{1}{2}\Braket{\Psi_i^{(i+1)*} - \Psi_i^{(i-1)*} | \sH | \Psi_j^{(j+1)*} - \Psi_j^{(j-1)*}} \notag\\
+&= \dfrac{1}{2}\times 2 (\alpha-\beta) - E_0 \notag\\
+&= -2\beta
+\end{align}
 
 
 \end{document}
