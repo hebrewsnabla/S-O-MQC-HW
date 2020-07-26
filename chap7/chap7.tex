@@ -459,6 +459,11 @@ Similarly,
 \end{align}
 
 
+
+
+
+
+
 \ex{7.10}
 Since
 \begin{align}
@@ -508,8 +513,26 @@ thus
 
 
 \ex{7.11}
-
-
+From
+\begin{align}
+\mqty(h_{11} & h_{22}\\ h_{12} & h_{22}) \mqty(1\\ c) = ^{N-1}\mathscr{E}_0 \mqty(1\\ c)
+\end{align}
+we get
+\begin{align}
+h_{11} + h_{12} c &= ^{N-1}\mathscr{E}_0 \\
+h_{12} + h_{22} c &= ^{N-1}\mathscr{E}_0 c
+\end{align}
+thus
+\begin{align}
+^{N-1}\mathscr{E}_0 = h_{11} + h_{12}\dfrac{h_{12}}{^{N-1}\mathscr{E}_0 - h_{22}} 
+\end{align}
+\begin{align}
+h_{11} + ^{N-1}E_R = h_{11} + h_{12}\dfrac{h_{12}}{h_{11} + ^{N-1}E_R - h_{22}} 
+\end{align}
+\begin{align}
+^{N-1}E_R &= \dfrac{h_{12}^2}{h_{11} + ^{N-1}E_R - h_{22}} \notag\\
+&= \dfrac{\abs{\Braket{11|12}}^2}{\varepsilon_1 - \varepsilon_2 - (J_{11} - 2J_{12} + K_{12}) + ^{N-1}E_R } 
+\end{align}
 
 \ex{7.12}
 
