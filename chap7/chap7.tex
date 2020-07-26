@@ -462,12 +462,49 @@ Similarly,
 \ex{7.10}
 Since
 \begin{align}
-\Sigma_{11}^{(2)}(E) &= \dfrac{K_{12}}{E + \varepsilon_1 - 2\varepsilon_2} \\
-\Sigma_{11}^{(3)}(E) &= 
-\dfrac{K_{12}^2 (J_{22} - 2J_{12} + K_{12})}{(E - 2\varepsilon_2 + \varepsilon_1)^2} 
-+ \dfrac{K_{12}^2 (J_{11} - 2J_{12} + K_{12})}{(E - 2\varepsilon_2 + \varepsilon_1)(\varepsilon_1 - \varepsilon_2)}
-+ \dfrac{K_{12}^2 (2J_{12} - K_{12} - J_{11})}{4(\varepsilon_1 - \varepsilon_2)^2}
+\Sigma_{11}^{(2)}(\varepsilon_1) &= \dfrac{K_{12}}{\varepsilon_1 + \varepsilon_1 - 2\varepsilon_2} \notag\\
+&= \dfrac{K_{12}}{2(\varepsilon_1 - \varepsilon_2)} 
 \end{align}
+\begin{align}
+\Sigma_{11}^{(3)}(\varepsilon_1) &= 
+\dfrac{K_{12}^2 (J_{22} - 2J_{12} + K_{12})}{(\varepsilon_1 - 2\varepsilon_2 + \varepsilon_1)^2} 
++ \dfrac{K_{12}^2 (J_{11} - 2J_{12} + K_{12})}{(\varepsilon_1 - 2\varepsilon_2 + \varepsilon_1)(\varepsilon_1 - \varepsilon_2)}
++ \dfrac{K_{12}^2 (2J_{12} - K_{12} - J_{11})}{4(\varepsilon_1 - \varepsilon_2)^2} \notag\\
+&= \dfrac{K_{12}^2 (J_{22} - 2J_{12} + K_{12})}{4(\varepsilon_1 - \varepsilon_2)^2} 
++ \dfrac{K_{12}^2 (J_{11} - 2J_{12} + K_{12})}{2(\varepsilon_1 - \varepsilon_2)^2}
++ \dfrac{K_{12}^2 (2J_{12} - K_{12} - J_{11})}{4(\varepsilon_1 - \varepsilon_2)^2} \notag\\
+&= \dfrac{K_{12}^2 (J_{22}  + J_{11} - 4J_{12} + 2K_{12}  )}{4(\varepsilon_1 - \varepsilon_2)^2} 
+\end{align}
+thus
+\begin{equation}\label{key}
+\Sigma_{11}^{(2)}(\varepsilon_1)  = E_0^{(2)}
+\end{equation}
+\begin{equation}\label{key}
+\Sigma_{11}^{(3)}(\varepsilon_1) = E_0^{(3)}
+\end{equation}
+
+Similarly,
+\begin{align}
+\Sigma_{22}^{(2)}(\varepsilon_2) &= \dfrac{K_{12}}{\varepsilon_2 + \varepsilon_2 - 2\varepsilon_1} \notag\\
+&= \dfrac{K_{12}}{2(\varepsilon_2 - \varepsilon_1)} 
+\end{align}
+\begin{align}
+\Sigma_{22}^{(3)}(\varepsilon_2) &= 
+\dfrac{K_{12}^2 (2J_{12} - K_{12} - J_{11})}{(\varepsilon_2 - 2\varepsilon_1 + \varepsilon_2)^2} 
++ \dfrac{K_{12}^2 (J_{22} - 2J_{12} + K_{12})}{(\varepsilon_2 - 2\varepsilon_1 + \varepsilon_2)(\varepsilon_1 - \varepsilon_2)}
++ \dfrac{K_{12}^2 (J_{22} + K_{12} - 2J_{12})}{4(\varepsilon_1 - \varepsilon_2)^2} \notag\\
+&= \dfrac{K_{12}^2 (2J_{12} - K_{12} - J_{11})}{4(\varepsilon_1 - \varepsilon_2)^2} 
+- \dfrac{K_{12}^2 (J_{22} - 2J_{12} + K_{12})}{2(\varepsilon_1 - \varepsilon_2)^2}
++ \dfrac{K_{12}^2 (J_{22} + K_{12} - 2J_{12})}{4(\varepsilon_1 - \varepsilon_2)^2} \notag\\
+&= \dfrac{K_{12}^2 (  - J_{11} - J_{22} + 4J_{12} - 2K_{12}  )}{4(\varepsilon_1 - \varepsilon_2)^2} 
+\end{align}
+thus
+\begin{equation}\label{key}
+\Sigma_{22}^{(2)}(\varepsilon_2)  = -E_0^{(2)}
+\end{equation}
+\begin{equation}\label{key}
+\Sigma_{22}^{(3)}(\varepsilon_2) = -E_0^{(3)}
+\end{equation}
 
 
 \ex{7.11}
