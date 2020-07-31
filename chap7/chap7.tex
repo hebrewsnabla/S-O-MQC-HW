@@ -562,11 +562,32 @@ thus
 \end{equation}
 
 \ex{7.14}
-
-
+\begin{align}
+{^{N-1}}\tilde{E}_R^{(2)}\mqty(r\\ a) &= -\sum_{ar}\dfrac{\abs{\Braket{ac||cr}}^2}{\varepsilon_r - \varepsilon_a} \notag\\
+&= -\dfrac{\abs{\Braket{1\bar{1}||\bar{1}2}}^2}{\varepsilon_2 - \varepsilon_1} - \dfrac{\abs{\Braket{\bar{1} 1||1\bar{2}}}^2}{\varepsilon_2 - \varepsilon_1} \notag\\
+&= \dfrac{\abs{\Braket{1\bar{1}|\bar{1}2} - \Braket{1\bar{1}|2\bar{1}}}^2}{\varepsilon_1 - \varepsilon_2} \notag\\
+&= \dfrac{\abs{\Braket{1\bar{1}|2\bar{1}}}^2}{\varepsilon_1 - \varepsilon_2} \notag\\
+&= \dfrac{\abs{\Braket{11|12}}^2}{\varepsilon_1 - \varepsilon_2} 
+\end{align}
 
 \ex{7.15}
-
+\begin{align}
+{^{N-1}}\tilde{E}_R^{(2)}\mqty(r\\ a) 
+&= \sum_{a\neq c}\sum_r \dfrac{\abs{
+		\Braket{^{N-1}\Psi_c | \mathscr{V}^{N-1} | ^{N-1}\Psi_{ca}^r} 
+	}^2	}{\varepsilon_a - \varepsilon_r} \notag\\
+&= \sum_{a\neq c}\sum_r \dfrac{\abs{
+		\sum_{b\neq c} \Braket{ab||rb} - \sum_b \Braket{ab||rb}
+	}^2	}{\varepsilon_a - \varepsilon_r} \notag\\
+&= \sum_{a\neq c}\sum_r \dfrac{\abs{\Braket{ac||rc}	}^2	}{\varepsilon_a - \varepsilon_r} \notag\\
+&= \sum_{a\neq c}\sum_r \dfrac{\abs{\Braket{ac||cr}	}^2	}{\varepsilon_a - \varepsilon_r}
+\end{align}
+\begin{align}
+{^{N-1}}\tilde{E}_R^{(2)}\mqty(rs\\ ab) 
+&= \sum_{a\neq c}\sum_r \dfrac{\abs{
+		\Braket{^{N-1}\Psi_c | \mathscr{V}^{N-1} | ^{N-1}\Psi_{cab}^{rs}} 
+	}^2	}{\varepsilon_a - \varepsilon_r} \notag\\
+\end{align}
 
 \subsection{Some Illustrative Calculations}
 \ex{7.16}
