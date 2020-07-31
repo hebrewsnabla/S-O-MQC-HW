@@ -547,11 +547,19 @@ h_{11} + ^{N-1}E_R = h_{11} + h_{12}\dfrac{h_{12}}{h_{11} + ^{N-1}E_R - h_{22}}
 \subsection{Perturbation Theory and the Green's Function Method}
 \ex{7.13}
 \begin{align}
-\Braket{^{N-1}\Psi_c | \mathscr{V}^{N-1} | ^{N-1}\Psi_c} &= \Braket{^{N-1}\Psi_c | \sum_{i<j}^{N-1} r_{ij}^{-1} - \sum_i^{N-1} v^{\text{HF}}(i) | ^{N-1}\Psi_c} \notag\\
-&=
+\Braket{^{N-1}\Psi_c | \mathscr{V}^{N-1} | ^{N-1}\Psi_c} &= \Braket{^{N-1}\Psi_c | \sum_{i<j}^{N-1} r_{ij}^{-1} - \sum_i^{N-1} v^{\text{HF}}_N(i) | ^{N-1}\Psi_c} \notag\\
+&=  \sum_{i<j}^{N-1} \Braket{^{N-1}\Psi_c | r_{ij}^{-1} | ^{N-1}\Psi_c} 
+- \sum_i^{N-1} \Braket{^{N-1}\Psi_c | v^{\text{HF}}_N(i) | ^{N-1}\Psi_c} \notag\\
+&= \dfrac{1}{2}\sum_{a\neq c}\sum_{b\neq c} \Braket{ab||ab} - \sum_{a\neq c}\sum_{b} \Braket{ab||ab} \notag\\
+&= -\dfrac{1}{2}\sum_{a\neq c}\sum_{b\neq c} \Braket{ab||ab} + \sum_{a\neq c} \Braket{ac||ac} \notag\\
+&= -\dfrac{1}{2}\qty(\sum_{a}\sum_{b} \Braket{ab||ab} - \sum_a\Braket{ac||ac} - \sum_b\Braket{cb||cb} + \Braket{cc||cc}) + \sum_{a} \Braket{ac||ac}  \notag\\
+&= -\dfrac{1}{2}\qty(\sum_{a}\sum_{b} \Braket{ab||ab} - 2\sum_a\Braket{ac||ac}  + 0) + \sum_{a} \Braket{ac||ac}  \notag\\
+&= -\dfrac{1}{2}\sum_{a}\sum_{b} \Braket{ab||ab}
 \end{align}
-
-
+thus
+\begin{equation}\label{key}
+\Braket{^{N-1}\Psi_c | \mathscr{V}^{N-1} | ^{N-1}\Psi_c} = {^N}E_0^{(1)}
+\end{equation}
 
 \ex{7.14}
 
