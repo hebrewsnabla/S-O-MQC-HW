@@ -584,9 +584,26 @@ thus
 \end{align}
 \begin{align}
 {^{N-1}}\tilde{E}_R^{(2)}\mqty(rs\\ ab) 
-&= \sum_{a\neq c}\sum_r \dfrac{\abs{
+&= \dfrac{1}{4}\sum_{a\neq c}\sum_{b\neq c}\sum_r\sum_s \dfrac{\abs{
 		\Braket{^{N-1}\Psi_c | \mathscr{V}^{N-1} | ^{N-1}\Psi_{cab}^{rs}} 
-	}^2	}{\varepsilon_a - \varepsilon_r} \notag\\
+	}^2	}{\varepsilon_a + \varepsilon_b - \varepsilon_r - \varepsilon_s} \notag\\
+&= \dfrac{1}{4}\sum_{a\neq c}\sum_{b\neq c}\sum_r\sum_s \dfrac{\abs{
+		\Braket{ab||rs}
+	}^2	}{\varepsilon_a + \varepsilon_b - \varepsilon_r - \varepsilon_s} \\
+&= \dfrac{1}{4}\sum_{a}\sum_{b}\sum_r\sum_s \dfrac{\abs{\Braket{ab||rs}}^2	}{\varepsilon_a + \varepsilon_b - \varepsilon_r - \varepsilon_s}
+- \dfrac{1}{4}\sum_{b}\sum_r\sum_s \dfrac{\abs{\Braket{cb||rs}}^2	}{\varepsilon_c + \varepsilon_b - \varepsilon_r - \varepsilon_s}
+- \dfrac{1}{4}\sum_{a}\sum_r\sum_s \dfrac{\abs{\Braket{ac||rs}}^2	}{\varepsilon_a + \varepsilon_c - \varepsilon_r - \varepsilon_s} \notag\\
+&= \dfrac{1}{4}\sum_{a}\sum_{b}\sum_r\sum_s \dfrac{\abs{\Braket{ab||rs}}^2	}{\varepsilon_a + \varepsilon_b - \varepsilon_r - \varepsilon_s}
+- \dfrac{1}{2}\sum_{a}\sum_r\sum_s \dfrac{\abs{\Braket{ca||rs}}^2	}{\varepsilon_a + \varepsilon_c - \varepsilon_r - \varepsilon_s} \notag\\
+&= {^N}E_0^{(2)}
++ \dfrac{1}{2}\sum_{a,r,s} \dfrac{\abs{\Braket{rs||ac}}^2	}{\varepsilon_r + \varepsilon_s - \varepsilon_a - \varepsilon_c}
+\end{align}
+\begin{align}
+{^{N-1}}\tilde{E}_R^{(2)}\mqty(cr\\ ab) 
+&= \dfrac{1}{2}\sum_{a\neq c}\sum_{b\neq c}\sum_r \dfrac{\abs{
+		\Braket{^{N-1}\Psi_c | \mathscr{V}^{N-1} | ^{N-1}\Psi_{cab}^{cr}} 
+	}^2	}{\varepsilon_a + \varepsilon_b - \varepsilon_r - \varepsilon_c} \notag\\
+&=
 \end{align}
 
 \subsection{Some Illustrative Calculations}
