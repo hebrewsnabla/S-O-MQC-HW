@@ -603,7 +603,12 @@ thus
 &= \dfrac{1}{2}\sum_{a\neq c}\sum_{b\neq c}\sum_r \dfrac{\abs{
 		\Braket{^{N-1}\Psi_c | \mathscr{V}^{N-1} | ^{N-1}\Psi_{cab}^{cr}} 
 	}^2	}{\varepsilon_a + \varepsilon_b - \varepsilon_r - \varepsilon_c} \notag\\
-&=
+&= \dfrac{1}{2}\sum_{a\neq c}\sum_{b\neq c}\sum_r \dfrac{\abs{
+		\Braket{ab||cr} 
+	}^2	}{\varepsilon_a + \varepsilon_b - \varepsilon_r - \varepsilon_c} \notag\\
+&= -\dfrac{1}{2}\sum_{a\neq c}\sum_{b\neq c}\sum_r \dfrac{\abs{
+		\Braket{ab||cr} 
+	}^2	}{\varepsilon_c + \varepsilon_r - \varepsilon_a - \varepsilon_b} 
 \end{align}
 
 \subsection{Some Illustrative Calculations}
