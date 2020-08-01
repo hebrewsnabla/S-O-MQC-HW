@@ -613,6 +613,26 @@ thus
 
 \subsection{Some Illustrative Calculations}
 \ex{7.16}
+For 2-electron system, in
+\begin{align}
+\text{PRX} &= -\dfrac{1}{2}\sum_{a\neq c}\sum_{b\neq c}\sum_r \dfrac{\abs{
+		\Braket{ab||cr}
+	}^2	}{\varepsilon_r + \varepsilon_c - \varepsilon_a - \varepsilon_b} %\notag\\
+%&= -\dfrac{1}{2}\dfrac{\abs{\Braket{11||\bar{1}2}}^2}{\varepsilon_2 + \varepsilon_1 - \varepsilon_1 - \varepsilon_1}
+\end{align}
+$ a,b $ must be the same, thus $ \Braket{ab||cr} = 0 $, thus
+\begin{equation}\label{key}
+\text{PRX} = 0
+\end{equation}
+
+\begin{align}
+\text{PRM} &= \dfrac{1}{2}\sum_{a,r,s} \dfrac{\abs{ \Braket{rs||ca} }^2 }{\varepsilon_r + \varepsilon_s - \varepsilon_a - \varepsilon_c} \notag\\
+&= \dfrac{1}{2} \qty(\dfrac{\abs{ \Braket{\bar{2}2||\bar{1}1} }^2 }{\varepsilon_2 + \varepsilon_2 - \varepsilon_1 - \varepsilon_1}
++ \dfrac{\abs{ \Braket{2\bar{2}||\bar{1}1} }^2 }{\varepsilon_2 + \varepsilon_2 - \varepsilon_1 - \varepsilon_1}) \notag\\
+&= \dfrac{1}{2} \times 2 \dfrac{\abs{ \Braket{22||11} }^2 }{2(\varepsilon_2 - \varepsilon_1)}
+ \notag\\
+&= \dfrac{K_{12}^2 }{2(\varepsilon_2 - \varepsilon_1)}
+\end{align}
 
 
 
