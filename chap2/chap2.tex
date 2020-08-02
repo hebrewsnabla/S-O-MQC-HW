@@ -453,17 +453,16 @@ Since the integral inside equals $ 0 $ when $ \mathscr{P}_n \neq \mathscr{P}_m $
 \end{equation}
 
 \ex{2.16}
-Suppose
-\begin{equation}\label{key}
-c = \Braket{K^{HP} | \mathscr{H} | L} = \Braket{K^{HP} | \mathscr{H} | \sum_{m=1}^{N!}(-1)^{p_m}\mathscr{P}_m L^{HP}}
-\end{equation}
-thus
-\begin{equation}\label{key}
-\Braket{K | \mathscr{H} | L} = \sum_{n=1}^{N!} (-1)^{p_n} \Braket{\mathscr{P}_n K^{HP} | \mathscr{H} | \sum_{m=1}^{N!}(-1)^{p_m}\mathscr{P}_m L^{HP}}
-\end{equation}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% TBD
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{equation}\label{key}
+%\Braket{K^{HP} | \mathscr{H} | L} = \dfrac{1}{\sqrt{N!}}\Braket{K^{HP} | \mathscr{H} | \sum_{m=1}^{N!}(-1)^{p_m}\mathscr{P}_m L^{HP}}
+%\end{equation}
+%
+\begin{align}\label{key}
+\Braket{K | \mathscr{H} | L} &= \dfrac{1}{\sqrt{N!}} \sum_{n=1}^{N!}  \Braket{(-1)^{p_n} \mathscr{P}_n K^{HP} | \mathscr{H} | L} \notag\\
+&= \dfrac{1}{\sqrt{N!}} \sum_{n=1}^{N!}  \Braket{  K^{HP} | \mathscr{H} | L} \notag\\
+&= \dfrac{1}{\sqrt{N!}} \times N! \Braket{  K^{HP} | \mathscr{H} | L} \notag\\
+&= \sqrt{N!} \Braket{  K^{HP} | \mathscr{H} | L}
+\end{align}
 
 \subsubsection{Transition from Spin Orbitals to Spatial Orbitals}
 \ex{2.17}
