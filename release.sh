@@ -1,6 +1,6 @@
 ver=$1
 name=SzaboSolutions
-mkdir ../$name-$ver
+mkdir release/$name-$ver
 for i in {1..7}
 do
   cp chap$i/chap$i.pdf ../$name-$ver
