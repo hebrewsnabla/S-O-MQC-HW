@@ -1,12 +1,19 @@
 ver=$1
 name=SzaboSolutions
-mkdir release/$name-$ver
+targ=release/$name-$ver
+mkdir $targ
 for i in {1..7}
 do
-  cp chap$i/chap$i.pdf ../$name-$ver
+  cp chap$i/chap$i.pdf $targ
 done
-cp appendix/appendix.pdf ../$name-$ver
+cp appendix/appendix.pdf $targ
 
-tar czvf ../$name-$ver.tar.gz ../$name-$ver
+mkdir $targ/codes
+for j in chap1/1-1.nb "chap4/4-11,12.nb" appendix/C-3.py appendix/C-4.py
+do
+  cp $j $targ/codes
+done
+
+tar czvf $targ.tar.gz $targ
 
 
