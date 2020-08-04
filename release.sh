@@ -9,7 +9,7 @@ done
 cp appendix/appendix.pdf $targ
 
 mkdir $targ/codes
-for j in chap1/1-1.nb "chap4/4-11,12.nb" appendix/C-3.py appendix/C-4.py
+for j in chap1/1-1.nb "chap4/4-11,12.nb" chap5/5-7.nb appendix/C-3.py appendix/C-4.py
 do
   cp $j $targ/codes
 done

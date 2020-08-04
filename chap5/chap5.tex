@@ -563,7 +563,39 @@ while the eigenvalues of the matrix is
 \ex{5.14}
 \subex{a.}
 \begin{align}
-\Braket{\Psi_0 | \sH | \Psi_b^s} &=
+\Braket{\Psi_0 | \sH | \Psi_b^s} &= \Braket{\Psi_0 | \sum_i [h_0(i) + v(i)] | \Psi_b^s} \notag\\
+&= v_{bs}
+\end{align}
+\subex{b.}
+Similarly
+\begin{align}
+\Braket{\Psi_a^r | \sH | \Psi_0} = v_{ra}
+\end{align}
+\subex{c.}
+\begin{align}
+\Braket{\Psi_a^r | \sH - E_0 | \Psi_b^s} 
+&= \Braket{\Psi_a^r | \sH | \Psi_b^s} - E_0\Braket{\Psi_a^r | \Psi_b^s} \notag\\
+&= \left\{\mqty{
+	0 + 0 & a\neq b, r\neq s\\
+	v_{rs} + 0 & a=b, r\neq s\\
+	-v_{ba} + 0 & a\neq b, r=s\\
+	E_0 + \varepsilon_r^{(0)} + v_{rr} - \varepsilon_a^{(0)} - v_{aa} - E_0 & a=b, r=s
+}\right. \notag\\
+&= \left\{\mqty{
+	0  & a\neq b, r\neq s\\
+	v_{rs}  & a=b, r\neq s\\
+	-v_{ba}  & a\neq b, r=s\\
+	\varepsilon_r^{(0)} + v_{rr} - \varepsilon_a^{(0)} - v_{aa} & a=b, r=s
+}\right.
+\end{align}
+\subex{d.}
+Since we cannot create or annihilate an orbital twice,
+\begin{align}
+\Braket{\Psi_a^r | \sH - E_0 | \Psi_{ab}^{rs}} = 
+\left\{\mqty{
+	v_{bs} & a\neq b, r\neq s\\
+	0 & \text{otherwise}
+}\right.
 \end{align}
 
 %\paragraph{2. SCI}
