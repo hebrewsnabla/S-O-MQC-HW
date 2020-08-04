@@ -630,13 +630,26 @@ a_1b_1\cdot 0 + a_1 b_2 \ket{\chi_1^{(0)}\chi_2^{(0)}}
 + (a_1 b_3 - a_3 b_1)\ket{\chi_1^{(0)}\chi_3^{(0)}} 
 + (a_1 b_4 - a_4 b_1)\ket{\chi_1^{(0)}\chi_4^{(0)}} \notag\\
 &\quad{}
-+ (a_2 b_3 - a_3 b_2)\ket{\chi_2^{(0)}\chi_3^{(0)}} 
-+ (a_2 b_4 - a_4 b_2)\ket{\chi_2^{(0)}\chi_4^{(0)}}
+- (a_2 b_3 - a_3 b_2)\ket{\chi_3^{(0)}\chi_2^{(0)}} 
+- (a_2 b_4 - a_4 b_2)\ket{\chi_4^{(0)}\chi_2^{(0)}}
 + (a_3 b_4 - a_4 b_3)\ket{\chi_3^{(0)}\chi_4^{(0)}}
 \end{align}
-thus
+thus, with intermediate normalization
 \begin{align}
-\Ket{\Phi_0} = 
+\Ket{\Phi_0} &= \ket{\Psi_0} 
++ \dfrac{a_1 b_3 - a_3 b_1}{a_1 b_2 - a_2 b_1}\ket{\Psi_2^3} 
++ \dfrac{a_1 b_4 - a_4 b_1}{a_1 b_2 - a_2 b_1}\ket{\Psi_2^4} \notag\\
+&\quad{}
+- \dfrac{a_2 b_3 - a_3 b_2}{a_1 b_2 - a_2 b_1}\ket{\Psi_1^3} 
+- \dfrac{a_2 b_4 - a_4 b_2}{a_1 b_2 - a_2 b_1}\ket{\Psi_1^4}
++ \dfrac{a_3 b_4 - a_4 b_3}{a_1 b_2 - a_2 b_1}\ket{\Psi_{12}^{34}} 
+\end{align}
+\begin{align}
+c_1^3 c_2^4 - c_1^4 c_2^3 &= -\dfrac{a_2 b_3 - a_3 b_2}{a_1 b_2 - a_2 b_1}\dfrac{a_1 b_4 - a_4 b_1}{a_1 b_2 - a_2 b_1} + \dfrac{a_2 b_4 - a_4 b_2}{a_1 b_2 - a_2 b_1}\dfrac{a_1 b_3 - a_3 b_1}{a_1 b_2 - a_2 b_1} \notag\\
+&= \dfrac{a_2a_4b_1b_3 + a_1a_3b_2b_4 - a_2a_3b_1b_4 - a_1a_4b_2b_3}{(a_1 b_2 - a_2 b_1)^2} \notag\\
+&= \dfrac{(a_1b_2 - a_2b_1)(a_3b_4-a_4b_3) }{(a_1 b_2 - a_2 b_1)^2} \notag\\
+&= \dfrac{a_3b_4-a_4b_3 }{a_1 b_2 - a_2 b_1} \notag\\
+&= c_{12}^{34}
 \end{align}
 \subex{b.}
 
