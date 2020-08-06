@@ -486,7 +486,46 @@ E_{\corr}(\text{FO}) &= \sum_{A<B}\sum_{R<S} \dfrac{\abs{\Braket{AB||RS}}^2}{\va
 thus EN pairs is not invariant to unitary transformations.
 
 \ex{5.10}
-
+From Ex 5.7,
+\begin{align}
+\Braket{\Psi_0 | \sH | \Psi_{a\bar{a}}^{**}} &= \Braket{\Psi_0 | \sH | \Psi_{b\bar{b}}^{**}} = 2^{-1/2}K_{12} \\
+\Braket{\Psi_{a\bar{a}}^{**} | \sH-E_0 | \Psi_{a\bar{a}}^{**}} &= \Braket{\Psi_{b\bar{b}}^{**} | \sH-E_0 | \Psi_{b\bar{b}}^{**}} = 2\Delta' \\
+\Braket{\Psi_{a\bar{a}}^{**} | \sH-E_0 | \Psi_{b\bar{b}}^{**}} &= \dfrac{1}{2}J_{11}
+\end{align}
+From Eq 5.42 in the textbook,
+\begin{align}
+\Braket{\Psi_0 | \sH | {^B}\Psi_{ab}^{rs}} &= K_{12} \\
+\Braket{{^B}\Psi_{ab}^{rs} | \sH-E_0 | {^B}\Psi_{ab}^{rs}} &= 2\Delta''
+\end{align}
+and
+\begin{align}
+\Braket{\Psi_{a\bar{a}}^{**} | \sH | {^B}\Psi_{ab}^{rs}} &= 2^{-3/2}\Braket{\Psi_{a\bar{a}}^{r\bar{r}} + \Psi_{a\bar{a}}^{s\bar{s}} | \sH | \Psi_{\bar{a}b}^{\bar{s}r} + \Psi_{\bar{a}b}^{\bar{r}s} + \Psi_{a\bar{b}}^{r\bar{s}} + \Psi_{a\bar{b}}^{s\bar{r}} } \notag\\
+&= 2^{-3/2} \qty(
+-\Braket{\bar{r}b||\bar{s}a} + \Braket{rb||as} 
++ \Braket{\bar{r}\bar{b}||\bar{a}\bar{s}} - \Braket{r\bar{b}||s\bar{a}}
++ \Braket{sb||ar} - \Braket{\bar{s}b||\bar{r}a} 
+- \Braket{s\bar{b}||r\bar{a}} + \Braket{\bar{s}\bar{b}||\bar{a}\bar{r}}
+) \notag\\
+&= 2^{-3/2} \qty( -8(rs|ba) + 2(ra|bs) + 2(sa|br) ) \notag\\
+&= 2^{-3/2} \qty( -8\times \dfrac{1}{2}J_{12} + 4\times\dfrac{1}{2} K_{12}) \notag\\
+&= 2^{-1/2} \qty( K_{12} - 2J_{12} )
+\end{align}
+similarly,
+\begin{equation}\label{key}
+\Braket{\Psi_{b\bar{b}}^{**} | \sH | {^B}\Psi_{ab}^{rs}} = 2^{-1/2} \qty( \times K_{12} - 2J_{12} )
+\end{equation}
+thus the DCI equation is
+\begin{equation}\label{key}
+\mqty( 0 & 2^{-1/2}K_{12} & 2^{-1/2}K_{12} & K_{12} \\
+2^{-1/2}K_{12} & 2\Delta' & \dfrac{1}{2}J_{11} & 2^{-1/2} \qty( K_{12} - 2J_{12})\\
+2^{-1/2}K_{12} & \dfrac{1}{2}J_{11} & 2\Delta' & 2^{-1/2} \qty(K_{12} - 2J_{12})\\
+K_{12} & 2^{-1/2} \qty( K_{12} - 2J_{12} ) & 2^{-1/2} \qty( K_{12} - 2J_{12} ) & 2\Delta'' ) \mqty(1\\ c_1 \\ c_2 \\ c_3)
+= {^2}E_{\corr}(\text{DCI}) \mqty(1\\ c_1 \\ c_2 \\ c_3)
+\end{equation}
+by solving the DCI equation,
+\begin{align}
+{^2}E_{\corr}(\text{DCI}) = \Delta - \sqrt{\Delta^2 + 2K_{12}^2}
+\end{align}
 
 
 \subsubsection{Some Illustrative Calculations}
