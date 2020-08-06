@@ -453,16 +453,30 @@ E_{\corr}(\text{FO}) &= \sum_{A<B}\sum_{R<S} \dfrac{\abs{\Braket{AB||RS}}^2}{\va
 \ex{5.9}
 \subex{a.}
 \begin{align}
-^2 E_{\corr}(\text{EN(L)}) &= -\sum_{a<b} \sum_{r<s} \dfrac{\abs{\Braket{\Psi_0|\sH|\Psi_{ab}^{rs}}}^2}{\Braket{\Psi_{ab}^{rs} | \sH - E_0 | \Psi_{ab}^{rs}}} \notag\\
+{^2 }E_{\corr}(\text{EN(L)}) 
+%&= -\sum_{a<b} \sum_{r<s} \dfrac{\abs{\Braket{\Psi_0|\sH|\Psi_{ab}^{rs}}}^2}{\Braket{\Psi_{ab}^{rs} | \sH - E_0 | \Psi_{ab}^{rs}}} \notag\\
 &= -\dfrac{\abs{\Braket{\Psi_0|\sH|\Psi_{1_1\bar{1}_1}^{2_1\bar{2}_1}}}^2 }{\Braket{\Psi_{1_1\bar{1}_1}^{2_1\bar{2}_1} | \sH - E_0 | \Psi_{1_1\bar{1}_1}^{2_1\bar{2}_1}}} 
 - \dfrac{\abs{\Braket{\Psi_0|\sH|\Psi_{1_1\bar{1}_1}^{2_1\bar{2}_1}}}^2 }{\Braket{\Psi_{1_1\bar{1}_1}^{2_1\bar{2}_1} | \sH - E_0 | \Psi_{1_1\bar{1}_1}^{2_1\bar{2}_1}}} \notag\\
 &= -\dfrac{K_{12}^2}{2\Delta}\times 2 \notag\\
 &= -\dfrac{K_{12}^2}{\Delta}
 \end{align}
 \subex{b.}
-
+\begin{align}
+{^2 }E_{\corr}(\text{EN(L)}) &= e_{a\bar{a}} + e_{b\bar{b}} + e_{a\bar{b}} + e_{\bar{a}b} \notag\\
+&= 2e_{a\bar{a}} + 2e_{a\bar{b}} \notag\\
+&= -2\dfrac{\abs{\Braket{\Psi_0|\sH|\Psi_{a\bar{a}}^{**}}}^2 }{\Braket{\Psi_{a\bar{a}}^{**} | \sH-E_0 | \Psi_{a\bar{a}}^{**}}} 
+- 2\dfrac{\abs{\Braket{\Psi_0|\sH|\Psi_{a\bar{b}}^{**}}}^2 }{\Braket{\Psi_{a\bar{b}}^{**} | \sH - E_0 | \Psi_{a\bar{b}}^{**}}} 
+\notag\\
+&= -2\dfrac{\abs{2^{-1/2}K_{12}}^2}{2\Delta'} -2\dfrac{\abs{2^{-1/2}K_{12}}^2}{2\Delta'} \notag\\
+&= -\dfrac{K_{12}^2}{2\Delta'}\times 2 \notag\\
+&= -\dfrac{K_{12}^2}{\Delta'}
+\end{align}
 \subex{c.}
-
+\begin{align}
+{^2 }E_{\corr}^{\text{singlet}}(\text{EN(L)}) &= e_{a\bar{a}} + e_{b\bar{b}} + e_{ab}^{\text{singlet}} \notag\\
+&= -\dfrac{K_{12}^2}{2\Delta'} -\dfrac{\abs{\Braket{\Psi_0|\sH| ^B\Psi_{ab}^{rs}}}^2 }{\Braket{ ^B\Psi_{ab}^{rs} | \sH-E_0 | ^B\Psi_{ab}^{rs}}}  \notag\\
+&= -\dfrac{K_{12}^2}{2\Delta'} -\dfrac{K_{12}^2}{2\Delta''}
+\end{align}
 \subex{d.}
 
 
