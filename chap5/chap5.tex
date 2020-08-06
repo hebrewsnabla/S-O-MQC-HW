@@ -527,8 +527,8 @@ by solving the DCI equation,
 {^2}E_{\corr}(\text{DCI}) = \Delta - \sqrt{\Delta^2 + 2K_{12}^2}
 \end{align}
 
-
 \subsubsection{Some Illustrative Calculations}
+
 
 \subsection{Coupled-pair Theories}
 \subsubsection{The Coupled-cluster Approximation}
@@ -594,12 +594,28 @@ The diagonal elements of $ \vb{D} $ is
 \end{align}
 thus
 \begin{align}
-E_{\corr} &= -\vb{B}^\dagger \vb{D} \vb{B} \notag\\
-&= - \dfrac{\Braket{\Psi_0 | \sH | \Psi_{ab}^{rs}}^\dagger \Braket{\Psi_0 | \sH | \Psi_{ab}^{rs}} }{\Braket{\Psi_{ab}^{rs} | \sH - E_0 | \Psi_{ab}^{rs}}} \notag\\
-&= - \dfrac{\abs{\Braket{\Psi_0 | \sH | \Psi_{ab}^{rs}}}^2 }{\Braket{\Psi_{ab}^{rs} | \sH - E_0 | \Psi_{ab}^{rs}}} 
+E_{\corr} &= -\vb{B}^\dagger \vb{D}^{-1} \vb{B} \notag\\
+&= - \sum_{a<b}\sum_{r<s}\dfrac{\Braket{\Psi_0 | \sH | \Psi_{ab}^{rs}}^\dagger \Braket{\Psi_0 | \sH | \Psi_{ab}^{rs}} }{\Braket{\Psi_{ab}^{rs} | \sH - E_0 | \Psi_{ab}^{rs}}} \notag\\
+&= - \sum_{a<b}\sum_{r<s}\dfrac{\abs{\Braket{\Psi_0 | \sH | \Psi_{ab}^{rs}}}^2 }{\Braket{\Psi_{ab}^{rs} | \sH - E_0 | \Psi_{ab}^{rs}}} 
 \end{align}
 which matches Eq. 5.15 and 5.16.
 \subex{b.}
+localized orbitals:\\
+From Ex 4.12, we get
+\begin{align}
+\vb{B} = \mqty( K_{12} \\ K_{12} )
+\end{align}
+\begin{align}
+\vb{D} = 
+\mqty( 2\Delta & 0  \\
+0 & 2\Delta )
+\end{align}
+thus
+\begin{align}
+E_{\corr}(\text{L-CCA}) &= -\vb{B}^\dagger \vb{D}^{-1} \vb{B} \notag\\
+&= -\dfrac{K_{12}^2}{\Delta}
+\end{align}
+delocalized orbitals:\\
 
 
 
