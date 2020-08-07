@@ -612,18 +612,26 @@ From Ex 4.12, we get
 \end{align}
 thus
 \begin{align}
-E_{\corr}(\text{L-CCA}) &= -\vb{B}^\dagger \vb{D}^{-1} \vb{B} \notag\\
+E_{\corr}(\text{L-CCA(L)}) &= -\vb{B}^\dagger \vb{D}^{-1} \vb{B} \notag\\
 &= -\dfrac{K_{12}^2}{\Delta}
 \end{align}
 delocalized orbitals:\\
-
-
-
-
-
-
-
-
+From Ex 5.7, we get
+\begin{align}
+\vb{B} = \mqty(2^{-1/2}K_{12} \\ 2^{-1/2}K_{12} \\ 2^{-1/2}K_{12} \\ 2^{-1/2}K_{12})
+\end{align}
+\begin{align}
+\vb{D} = 
+\mqty( 2\Delta' & \tfrac{1}{2}J_{11} & \tfrac{1}{2}K_{12} - J_{12} & \tfrac{1}{2}K_{12} - J_{12} \\
+\tfrac{1}{2}J_{11} & 2\Delta' & \tfrac{1}{2}K_{12} - J_{12} & \tfrac{1}{2}K_{12} - J_{12} \\
+\tfrac{1}{2}K_{12} - J_{12} & \tfrac{1}{2}K_{12} - J_{12} & 2\Delta' &\tfrac{1}{2}J_{11} \\
+\tfrac{1}{2}K_{12} - J_{12} & \tfrac{1}{2}K_{12} - J_{12} & \tfrac{1}{2}J_{11} & 2\Delta' )
+\end{align}
+thus
+\begin{align}
+E_{\corr}(\text{L-CCA(D)}) &= -\vb{B}^\dagger \vb{D}^{-1} \vb{B} \notag\\
+&= -\dfrac{K_{12}^2}{\Delta}
+\end{align}
 
 \subsubsection{Some Illustrative Calculations}
 
