@@ -224,31 +224,31 @@
 every vertex={black,dot},
 }
 
-\begin{multicols}{2}
-\hfill
-\begin{tikzpicture}
-\begin{feynman}[small]
-\vertex (a);
-\vertex [below=of a] (b);
-\vertex [below=of b] (c);
-\vertex [below=of c] (d);
-\vertex [below=of d] (e);
-\diagram[inline=(c)]{
-	(a) -- [fermion, quarter right, edge label'=1] (b)
-	-- [fermion, quarter right, edge label'=1] (c)
-	-- [fermion, quarter right, edge label'=1] (d)
-	-- [fermion, quarter right, edge label'=1] (e)
-	-- [fermion, quarter right, edge label'=2] (a),
-};
-\end{feynman}
-\end{tikzpicture}
-\columnbreak
-~\\
-\vspace{35pt}~\\
-$ = (-1)^5 \dfrac{V_{12}V_{21}V_{11}^3}{(E_1^{(0)} - E_2^{(0)})^4} = -\dfrac{V_{12}V_{21}V_{11}^3}{(E_1^{(0)} - E_2^{(0)})^4} $\\
-\end{multicols}
 
-\begin{multicols}{2}
+\begin{minipage}{0.3\linewidth}
+	\hfill
+	\begin{tikzpicture}
+	\begin{feynman}[small]
+	\vertex (a);
+	\vertex [below=of a] (b);
+	\vertex [below=of b] (c);
+	\vertex [below=of c] (d);
+	\vertex [below=of d] (e);
+	\diagram[inline=(c)]{
+		(a) -- [fermion, quarter right, edge label'=1] (b)
+		-- [fermion, quarter right, edge label'=1] (c)
+		-- [fermion, quarter right, edge label'=1] (d)
+		-- [fermion, quarter right, edge label'=1] (e)
+		-- [fermion, quarter right, edge label'=2] (a),
+	};
+	\end{feynman}
+	\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.7\linewidth}
+	$ = (-1)^5 \dfrac{V_{12}V_{21}V_{11}^3}{(E_1^{(0)} - E_2^{(0)})^4} = -\dfrac{V_{12}V_{21}V_{11}^3}{(E_1^{(0)} - E_2^{(0)})^4} $\\
+\end{minipage}
+~\vspace{15pt}\\
+\begin{minipage}{0.3\linewidth}
 	\hfill
 	\begin{tikzpicture}
 	\begin{feynman}[small]
@@ -266,13 +266,13 @@ $ = (-1)^5 \dfrac{V_{12}V_{21}V_{11}^3}{(E_1^{(0)} - E_2^{(0)})^4} = -\dfrac{V_{
 	};
 	\end{feynman}
 	\end{tikzpicture}
-	\columnbreak
-	~\\
-	\vspace{35pt}~\\
+\end{minipage}
+\begin{minipage}{0.7\linewidth}
 	$ = (-1)^2 \dfrac{V_{12}V_{21}V_{22}^3}{(E_1^{(0)} - E_2^{(0)})^4} = \dfrac{V_{12}V_{21}V_{22}^3}{(E_1^{(0)} - E_2^{(0)})^4} $\\
-\end{multicols}
+\end{minipage}
 
-\begin{multicols}{2}
+~\vspace{15pt}\\
+\begin{minipage}{0.3\linewidth}
 	\hfill
 	\begin{tikzpicture}
 	\begin{feynman}[small]
@@ -290,13 +290,13 @@ $ = (-1)^5 \dfrac{V_{12}V_{21}V_{11}^3}{(E_1^{(0)} - E_2^{(0)})^4} = -\dfrac{V_{
 	};
 	\end{feynman}
 	\end{tikzpicture}
-	\columnbreak
-	~\\
-	\vspace{35pt}~\\
+\end{minipage}
+\begin{minipage}{0.7\linewidth}
 	$ = (-1)^4 \dfrac{V_{12}V_{21}V_{11}^2 V_{22}}{(E_1^{(0)} - E_2^{(0)})^4} = \dfrac{V_{12}V_{21}V_{11}^2 V_{22}}{(E_1^{(0)} - E_2^{(0)})^4} $\\
-\end{multicols}
+\end{minipage}
 
-\begin{multicols}{2}
+~\vspace{15pt}\\
+\begin{minipage}{0.3\linewidth}
 	\hfill
 	\begin{tikzpicture}
 	\begin{feynman}[small]
@@ -314,15 +314,15 @@ $ = (-1)^5 \dfrac{V_{12}V_{21}V_{11}^3}{(E_1^{(0)} - E_2^{(0)})^4} = -\dfrac{V_{
 	};
 	\end{feynman}
 	\end{tikzpicture}
-	\columnbreak
-	~\\
-	\vspace{35pt}~\\
+\end{minipage}
+\begin{minipage}{0.7\linewidth}
 	$ = (-1)^3 \dfrac{V_{12}V_{21}V_{11} V_{22}^2}{(E_1^{(0)} - E_2^{(0)})^4} = -\dfrac{V_{12}V_{21}V_{11} V_{22}^2}{(E_1^{(0)} - E_2^{(0)})^4} $\\
-\end{multicols}
+\end{minipage}
 
 \newpage
-Similarly,
-\begin{multicols}{2}
+Similarly,\\
+%~\vspace{15pt}\\
+\begin{minipage}{0.2\linewidth}
 	\hfill
 	\begin{tikzpicture}
 	\begin{feynman}[small]
@@ -340,7 +340,10 @@ Similarly,
 	};
 	\end{feynman}
 	\end{tikzpicture}
-	,
+\end{minipage}
+,
+\begin{minipage}{0.15\linewidth}
+	%\hfill
 	\begin{tikzpicture}
 	\begin{feynman}[small]
 	\vertex (a);
@@ -357,13 +360,13 @@ Similarly,
 	};
 	\end{feynman}
 	\end{tikzpicture}
-	\columnbreak
-	~\\
-	\vspace{35pt}~\\
+\end{minipage}
+\begin{minipage}{0.6\linewidth}
 	$ = \dfrac{V_{12}V_{21}V_{11}^2 V_{22}}{(E_1^{(0)} - E_2^{(0)})^4} $\\
-\end{multicols}
+\end{minipage}
 
-\begin{multicols}{2}
+~\vspace{15pt}\\
+\begin{minipage}{0.2\linewidth}
 	\hfill
 	\begin{tikzpicture}
 	\begin{feynman}[small]
@@ -381,7 +384,9 @@ Similarly,
 	};
 	\end{feynman}
 	\end{tikzpicture}
-	,
+\end{minipage}
+,
+\begin{minipage}{0.15\linewidth}
 	\begin{tikzpicture}
 	\begin{feynman}[small]
 	\vertex (a);
@@ -398,11 +403,11 @@ Similarly,
 	};
 	\end{feynman}
 	\end{tikzpicture}
-	\columnbreak
-	~\\
-	\vspace{35pt}~\\
+\end{minipage}
+\begin{minipage}{0.6\linewidth}
 	$ = -\dfrac{V_{12}V_{21}V_{11} V_{22}^2}{(E_1^{(0)} - E_2^{(0)})^4} $\\
-\end{multicols}
+\end{minipage}
+~\vspace{10pt}\\
 thus, the sum of above terms is
 \begin{align}
 \dfrac{V_{12}V_{21}(V_{22}^3 - V_{11}^3)}{(E_1^{(0)} - E_2^{(0)})^4} + 3\times\dfrac{V_{12}V_{21}(V_{11}^2 V_{22} - V_{11}V_{22}^2)}{(E_1^{(0)} - E_2^{(0)})^4} 
