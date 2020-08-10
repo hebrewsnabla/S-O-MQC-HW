@@ -475,8 +475,30 @@ thus
 \end{align}
 \subex{b.}
 \begin{align}
-\varepsilon_{11}^+ &= \varepsilon_1 + 2(\varepsilon_2 - \varepsilon_1) - ^NE_0^{(2)} + \dfrac{K_{12}^4}{8(\varepsilon_1 - \varepsilon_2)^3} \notag\\
-&=
+\varepsilon_{11}^+ %&= \varepsilon_1 + 2(\varepsilon_2 - \varepsilon_1) - {^N}E_0^{(2)} + \dfrac{K_{12}^4}{8(\varepsilon_1 - \varepsilon_2)^3} \notag\\
+%&= 2\varepsilon_2 - \varepsilon_1 - \dfrac{K_{12}^2}{2(\varepsilon_1 - \varepsilon_2)} + \dfrac{K_{12}^4}{8(\varepsilon_1 - \varepsilon_2)^3} \notag\\
+%&\approx 2\varepsilon_2 - \varepsilon_1 - \dfrac{K_{12}^2}{2(\varepsilon_1 - \varepsilon_2)}
+&= \varepsilon_1 + (\varepsilon_2 - \varepsilon_1) + \sqrt{(\varepsilon_2 - \varepsilon_1)^2 + K_{12}^2} \notag\\
+&\approx \varepsilon_1 + (\varepsilon_2 - \varepsilon_1) + \Delta - \Delta + \sqrt{\Delta^2 + K_{12}^2} \notag\\
+&= \varepsilon_1 + (\varepsilon_2 - \varepsilon_1) + \Delta - {^N}E_{\corr} \notag\\
+&= \varepsilon_1 + (\varepsilon_2 - \varepsilon_1) + (\varepsilon_2 - \varepsilon_1) + \dfrac{1}{2}(J_{11} + J_{22}) - 2J_{12} + K_{12} - {^N}E_{\corr} \notag\\
+&\approx 2\varepsilon_2 - \varepsilon_1 + J_{22} - 2J_{12} + K_{12} - {^N}E_{\corr}
+\end{align}
+thus
+\begin{equation}\label{key}
+\varepsilon_{11}^+ \approx {^{N+1}}\mathscr{E}_1 - {^N}\mathscr{E}_0
+\end{equation}
+\subex{c.}
+\begin{equation}\label{key}
+E - \varepsilon_2 - \Sigma_{22}^{(2)}(E) = 0
+\end{equation}
+\begin{equation}\label{key}
+E - \varepsilon_2 - \dfrac{K_{12}^2}{E - \varepsilon_2 - 2(\varepsilon_1 - \varepsilon_2)} = 0
+\end{equation}
+$ \therefore $
+\begin{align}\label{key}
+\varepsilon_{22}^\pm &= \varepsilon_1 \pm \sqrt{(\varepsilon_1 - \varepsilon_2)^2 + K_{12}^2} \notag\\
+&= \varepsilon_2 - \qty[(\varepsilon_2 - \varepsilon_1) \mp \sqrt{(\varepsilon_2 - \varepsilon_1)^2 + K_{12}^2}]
 \end{align}
 
 
