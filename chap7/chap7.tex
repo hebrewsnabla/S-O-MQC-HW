@@ -517,11 +517,6 @@ $ \therefore $
 &= {^N}\mathscr{E}_0 - {^{N-1}}\mathscr{E}_1
 \end{align}
 
-
-
-
-
-
 \ex{7.10}
 Since
 \begin{align}
@@ -593,9 +588,46 @@ h_{11} + ^{N-1}E_R = h_{11} + h_{12}\dfrac{h_{12}}{h_{11} + ^{N-1}E_R - h_{22}}
 \end{align}
 
 \ex{7.12}
-
-
-
+\subex{a.}
+\begin{equation}\label{key}
+\ket{\Phi} = \ket{\Psi_0} + c\ket{\Psi_{\bar{1}}^{\bar{2}}}
+\end{equation}
+thus
+\begin{equation}\label{key}
+\mqty(0 & \Braket{\Psi_0 | \sH | \Psi_{\bar{1}}^{\bar{2}}}\\
+\Braket{\Psi_0 | \sH | \Psi_{\bar{1}}^{\bar{2}}} & \Braket{\Psi_{\bar{1}}^{\bar{2}} | \sH-{^{N+1}}E_0 | \Psi_{\bar{1}}^{\bar{2}}})
+\mqty(1 \\ c) = \qty({^{N+1}}\mathscr{E}_0 - {^{N+1}}E_0) \mqty(1 \\ c)
+\end{equation}
+$ \because $
+\begin{align}
+\Braket{\Psi_0 | \sH | \Psi_{\bar{1}}^{\bar{2}}} &= h_{12} + \sum_{b=1,2}\Braket{\bar{1}b||\bar{2}b} \notag\\
+&= -\Braket{11|12} + \Braket{11|12} + \Braket{12|22} \notag\\
+&= \Braket{12|22}
+\end{align}
+$ \therefore $
+\begin{equation}\label{ER}
+\mqty(0 &  \Braket{12|22} \\  \Braket{12|22} & \varepsilon_2 - \varepsilon_1 - 2J_{12} + K_{12} + J_{22})
+\mqty(1 \\ c) = \qty({^{N+1}}\mathscr{E}_0 - {^{N+1}}E_0) \mqty(1 \\ c)
+\end{equation}
+Let 
+\begin{equation}\label{key}
+{^{N+1}}E_R = {^{N+1}}\mathscr{E}_0 - {^{N+1}}E_0
+\end{equation}
+thus
+\begin{align}
+{^{N+1}}\mathscr{E}_0 &= {^{N+1}}E_0 + {^{N+1}}E_R \notag\\
+&= {^N}E_0 + \varepsilon_2 + {^{N+1}}E_R
+\end{align}
+\subex{b.}
+Solving $ \eqref{ER} $, we get
+\begin{align}
+{^{N+1}}E_R &= \dfrac{1}{2}\qty(D - \sqrt{D^2 + 4 \Braket{12|22}^2}) \notag\\
+&\approx \dfrac{1}{2}\qty(D - D \qty(1 + 2\dfrac{ \Braket{12|22}^2}{D^2})) \notag\\
+&= -\dfrac{ \Braket{12|22}^2}{D} \notag\\
+&\approx -\dfrac{ \Braket{12|22}^2}{\varepsilon_2 - \varepsilon_1} \notag\\
+&= \dfrac{ \Braket{12|22}^2}{\varepsilon_1 - \varepsilon_2}
+\end{align}
+\subex{c.}
 
 
 
