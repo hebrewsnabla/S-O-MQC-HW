@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      2146,         81]
-NotebookOptionsPosition[      1820,         64]
-NotebookOutlinePosition[      2177,         80]
-CellTagsIndexPosition[      2134,         77]
+NotebookDataLength[      4407,        162]
+NotebookOptionsPosition[      3971,        141]
+NotebookOutlinePosition[      4327,        157]
+CellTagsIndexPosition[      4284,        154]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -60,10 +60,87 @@ Cell[BoxData[
         SuperscriptBox["e2", "2"], "+", 
         SuperscriptBox["k12", "2"]}]]}]}], "}"}]}], "}"}]], "Output",
  CellChangeTimes->{3.806030643722413*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{"7", "-", "12"}], " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"0", ",", "h12"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"h12", ",", "d"}], "}"}]}], "}"}], ".", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", "1", "}"}], ",", 
+        RowBox[{"{", "c", "}"}]}], "}"}]}], "\[Equal]", 
+     RowBox[{"ER", "*", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", "1", "}"}], ",", 
+        RowBox[{"{", "c", "}"}]}], "}"}]}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"ER", ",", "c"}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.80614481809019*^9, 3.806144897084014*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"ER", "\[Rule]", 
+      RowBox[{
+       FractionBox["1", "2"], " ", 
+       RowBox[{"(", 
+        RowBox[{"d", "-", 
+         SqrtBox[
+          RowBox[{
+           SuperscriptBox["d", "2"], "+", 
+           RowBox[{"4", " ", 
+            SuperscriptBox["h12", "2"]}]}]]}], ")"}]}]}], ",", 
+     RowBox[{"c", "\[Rule]", 
+      FractionBox[
+       RowBox[{"d", "-", 
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox["d", "2"], "+", 
+          RowBox[{"4", " ", 
+           SuperscriptBox["h12", "2"]}]}]]}], 
+       RowBox[{"2", " ", "h12"}]]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"ER", "\[Rule]", 
+      RowBox[{
+       FractionBox["1", "2"], " ", 
+       RowBox[{"(", 
+        RowBox[{"d", "+", 
+         SqrtBox[
+          RowBox[{
+           SuperscriptBox["d", "2"], "+", 
+           RowBox[{"4", " ", 
+            SuperscriptBox["h12", "2"]}]}]]}], ")"}]}]}], ",", 
+     RowBox[{"c", "\[Rule]", 
+      FractionBox[
+       RowBox[{"d", "+", 
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox["d", "2"], "+", 
+          RowBox[{"4", " ", 
+           SuperscriptBox["h12", "2"]}]}]]}], 
+       RowBox[{"2", " ", "h12"}]]}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.806144897867915*^9}]
 }, Open  ]]
 },
 WindowSize->{759, 698},
-WindowMargins->{{Automatic, 54}, {-11, Automatic}},
+WindowMargins->{{Automatic, -21}, {8, Automatic}},
 FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (2016\:5e747\:670828\
 \:65e5)",
 StyleDefinitions->"Default.nb"
@@ -81,11 +158,13 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[580, 22, 542, 16, 66, "Input"],
-Cell[1125, 40, 679, 21, 103, "Output"]
+Cell[1125, 40, 679, 21, 47, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1841, 66, 788, 25, 66, "Input"],
+Cell[2632, 93, 1323, 45, 185, "Output"]
 }, Open  ]]
 }
 ]
 *)
-
-(* End of internal cache information *)
 
