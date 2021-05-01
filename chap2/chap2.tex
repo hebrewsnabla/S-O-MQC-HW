@@ -52,7 +52,7 @@
 \usepackage{physics}
 \usepackage{amsmath}
 %\usepackage{symbols}
-\usepackage{AMSFonts}
+\usepackage{amsfonts}
 \usepackage{bm}
 %\usepackage{eucal}
 \usepackage{mathrsfs}
@@ -827,7 +827,7 @@ thus $ \ket{^1\Psi_1^2} $ is singlet.
 \subex{$ \bullet $}
 \begin{align}
 \hsS^2\ket{^3\Psi_1^2} &= (\hsS_-\hsS_+ + \hsS_z + \hsS_z^2)\dfrac{1}{2}(\psi_1(1)\psi_2(2) - \psi_2(1)\psi_1(2))(\alpha(1)\beta(2) + \beta(1)\alpha(2)) \notag\\
-&= \dfrac{1}{2}(\psi_1(1)\psi_2(2) + \psi_2(1)\psi_1(2))(\hsS_-\hsS_+ + \hsS_z + \hsS_z^2)(\alpha(1)\beta(2) - \beta(1)\alpha(2))
+&= \dfrac{1}{2}(\psi_1(1)\psi_2(2) - \psi_2(1)\psi_1(2))(\hsS_-\hsS_+ + \hsS_z + \hsS_z^2)(\alpha(1)\beta(2) + \beta(1)\alpha(2))
 \end{align}
 $ \because $
 \begin{align}
@@ -843,8 +843,8 @@ thus $ \ket{^3\Psi_1^2} $ is triplet.
 
 \subex{$ \bullet $}
 \begin{align}
-\hsS^2\ket{\Psi_1^{\bar{2}}} &= (\hsS_-\hsS_+ + \hsS_z + \hsS_z^2)\dfrac{-1}{2}(\psi_1(1)\psi_2(2) - \psi_2(1)\psi_1(2))\beta(1)\beta(2) \notag\\
-&= \dfrac{-1}{2}(\psi_1(1)\psi_2(2) + \psi_2(1)\psi_1(2))(\hsS_-\hsS_+ + \hsS_z + \hsS_z^2)\beta(1)\beta(2)
+\hsS^2\ket{\Psi_1^{\bar{2}}} &= (\hsS_-\hsS_+ + \hsS_z + \hsS_z^2)\dfrac{-1}{\sqrt{2}}(\psi_1(1)\psi_2(2) - \psi_2(1)\psi_1(2))\beta(1)\beta(2) \notag\\
+&= \dfrac{-1}{\sqrt{2}}(\psi_1(1)\psi_2(2) - \psi_2(1)\psi_1(2))(\hsS_-\hsS_+ + \hsS_z + \hsS_z^2)\beta(1)\beta(2)
 \end{align}
 $ \because $
 \begin{align}
@@ -861,8 +861,8 @@ thus $ \ket{\Psi_1^{\bar{2}}} $ is triplet.
 
 \subex{$ \bullet $}
 \begin{align}
-\hsS^2\ket{\Psi_{\bar{1}}^2} &= (\hsS_-\hsS_+ + \hsS_z + \hsS_z^2)\dfrac{1}{2}(\psi_1(1)\psi_2(2) - \psi_2(1)\psi_1(2))\alpha(1)\alpha(2) \notag\\
-&= \dfrac{1}{2}(\psi_1(1)\psi_2(2) + \psi_2(1)\psi_1(2))(\hsS_-\hsS_+ + \hsS_z + \hsS_z^2)\alpha(1)\alpha(2)
+\hsS^2\ket{\Psi_{\bar{1}}^2} &= (\hsS_-\hsS_+ + \hsS_z + \hsS_z^2)\dfrac{1}{\sqrt{2}}(\psi_1(1)\psi_2(2) - \psi_2(1)\psi_1(2))\alpha(1)\alpha(2) \notag\\
+&= \dfrac{1}{\sqrt{2}}(\psi_1(1)\psi_2(2) - \psi_2(1)\psi_1(2))(\hsS_-\hsS_+ + \hsS_z + \hsS_z^2)\alpha(1)\alpha(2)
 \end{align}
 $ \because $
 \begin{align}
