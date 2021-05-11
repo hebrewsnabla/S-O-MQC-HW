@@ -291,7 +291,7 @@ Renormalize it, we get
 \begin{align}
 \gamma_{ji}^* &= \int\dd\vb{x}_1\dd\vb{x}'_1 \chi_j(\vb{x}_1) \gamma^*(\vb{x}_1,\vb{x}'_1) \chi_i^*(\vb{x}'_1) \notag\\
 &= \int\dd\vb{x}'_1\dd\vb{x}_1 \chi_j(\vb{x}'_1) \gamma^*(\vb{x}'_1,\vb{x}_1) \chi_i^*(\vb{x}_1) \notag\\
-&= \int\dd\vb{x}'_1\dd\vb{x}_1 \chi_j(\vb{x}'_1) \gamma(\vb{x}'_1,\vb{x}_1) \chi_i^*(\vb{x}_1) \notag\\
+&= \int\dd\vb{x}'_1\dd\vb{x}_1 \chi_j(\vb{x}'_1) \gamma(\vb{x}_1,\vb{x}'_1) \chi_i^*(\vb{x}_1) \notag\\
 &= \gamma_{ij}
 \end{align}
 $ \therefore \bm\gamma$ is Hermitian.
@@ -300,7 +300,7 @@ $ \therefore \bm\gamma$ is Hermitian.
 \begin{align}
 \Braket{\Phi | \Phi} 
 &= \dfrac{1}{N} \int\dd\vb{x}_1  \gamma(\vb{x}_1,\vb{x}_1) \notag\\
-&= \int\dd\vb{x}_1  \sum_{ij} \chi_i(\vb{x}_1) \gamma_{ij} \chi_j^*(\vb{x}_1) \notag\\
+&= \dfrac{1}{N} \int\dd\vb{x}_1  \sum_{ij} \chi_i(\vb{x}_1) \gamma_{ij} \chi_j^*(\vb{x}_1) \notag\\
 &= \dfrac{1}{N} \sum_{ij} \qty[\int\dd\vb{x}_1 \chi_j^*(\vb{x}_1) \chi_i(\vb{x}_1)] \gamma_{ij}  \notag\\
 &= \dfrac{1}{N} \sum_{ij} \delta_{ji} \gamma_{ij} \notag\\
 &= \dfrac{1}{N} \tr \bm\gamma
