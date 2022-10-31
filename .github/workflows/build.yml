@@ -38,9 +38,11 @@ jobs:
           bash release.sh latest
           #cd test
           #latexmk -xelatex  -halt-on-error -shell-escape main
+          mkdir all
+          mv release/SzaboSolutions-latest all
       - name: Upload PDF
         uses: actions/upload-artifact@v3
         with:
           name: SzaboSolutions-latest
           path:
-            ./release/SzaboSolutions-latest/
+            ./all/
