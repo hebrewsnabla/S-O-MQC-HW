@@ -48,4 +48,4 @@ jobs:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           prerelease: true
           files: |
-            ./SzaboSolutions-$VERSION.tar.gz
+            ./SzaboSolutions-v*.tar.gz
