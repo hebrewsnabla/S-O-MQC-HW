@@ -3,7 +3,7 @@ name: Build
 on:
   push:
     branches:
-      - v1.2
+      - master
 
   pull_request:
     branches:
@@ -43,4 +43,4 @@ jobs:
         with:
           name: SzaboSolutions-latest
           path:
-            ./release/SzaboSolutions-latest
+            ./release/SzaboSolutions-latest/

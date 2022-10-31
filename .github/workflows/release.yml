@@ -47,4 +47,4 @@ jobs:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           prerelease: true
           files: |
-            ./release/SzaboSolutions-$VERSION
+            ./release/SzaboSolutions-$VERSION/
