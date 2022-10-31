@@ -3,7 +3,12 @@
 *.gz
 *.toc
 *.out
+*.fdb*
+*.fls
+*.xdv
 sol/*
 *.djvu
 notes/*xlsx
 release/*
+chap*/chap*.pdf
+appendix/appendix.pdf

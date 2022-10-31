@@ -1,0 +1,50 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - master
+    
+    tags:
+      - v*
+
+env:
+  CTAN_URL: https://mirrors.rit.edu/CTAN
+  TL_PACKAGES: abstract amscls amsfonts amsmath anyfontsize blkarray booktabs braket caption endnotes extarrows fancyhdr fandol float fontspec graphics hyperref jknapltx latexmk libertinus-fonts luatex85 l3packages mathalpha mathtools metafont mhchem multirow needspace newfloat paralist pgfplots psnfss physics scalerel sectsty siunitx subfig threeparttable tikz-feynman times tocbibind tocloft tools ulem xcolor xecjk collection-fontsrecommended collection-fontsextra
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/v')
+    env:
+      SET_PATH: |
+        export PATH=/tmp/texlive/bin/x86_64-linux:$PATH
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v3
+
+      - name: Set Version
+        run: echo "VERSION=${GITHUB_REF##*/}" >> $GITHUB_ENV
+
+      - name: Install TeX Live
+        run: |
+          ${{ env.SET_PATH }}
+          wget ${{ env.CTAN_URL }}/systems/texlive/tlnet/install-tl-unx.tar.gz
+          tar -xzf install-tl-unx.tar.gz
+          cd install-tl-20* && ./install-tl --profile ../.github/workflows/texlive.profile
+          tlmgr install ${{ env.TL_PACKAGES }}
+          tlmgr update --self --all --no-auto-install --repository=${{ env.CTAN_URL }}/systems/texlive/tlnet/
+      - name: Compile test file
+        run: |
+          ${{ env.SET_PATH }}
+          bash release.sh $VERSION
+          #cd test
+          #latexmk -xelatex  -halt-on-error -shell-escape main
+
+      - name: Create release
+        uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          prerelease: true
+          files: |
+            ./release/SzaboSolutions-$VERSION/
