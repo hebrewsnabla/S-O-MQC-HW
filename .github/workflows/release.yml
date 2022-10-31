@@ -40,7 +40,8 @@ jobs:
           bash release.sh $VERSION
           #cd test
           #latexmk -xelatex  -halt-on-error -shell-escape main
-          tar czvf SzaboSolutions-$VERSION.tar.gz release/SzaboSolutions-$VERSION
+          cd release
+          tar czvf SzaboSolutions-$VERSION.tar.gz SzaboSolutions-$VERSION
 
       - name: Create release
         uses: "marvinpinto/action-automatic-releases@latest"
@@ -48,4 +49,4 @@ jobs:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           prerelease: false
           files: |
-            ./SzaboSolutions-v*.tar.gz
+            ./release/SzaboSolutions-v*.tar.gz
