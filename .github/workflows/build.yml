@@ -11,7 +11,8 @@ on:
 
 env:
   CTAN_URL: https://mirrors.rit.edu/CTAN
-  TL_PACKAGES: abstract amscls amsmath amsfonts anyfontsize blkarray booktabs braket caption endnotes extarrows fancyhdr fandol float fontspec graphics hyperref jknapltx latexmk libertinus-fonts luatex85 l3packages mathalpha mathtools metafont mhchem multirow needspace newfloat paralist pgfplots psnfss physics scalerel sectsty siunitx subfig threeparttable tikz-feynman times tocbibind tocloft tools ulem xcolor xecjk collection-fontsrecommended collection-fontsextra
+  TL_PACKAGES: abstract amscls amsmath anyfontsize blkarray booktabs braket caption extarrows fancyhdr float fontspec graphics hyperref latexmk luatex85 l3packages mathalpha mathtools metafont mhchem multirow needspace newfloat paralist pgfplots physics scalerel sectsty siunitx subfig threeparttable tikz-feynman times tocbibind tocloft tools ulem xcolor xecjk 
+  TL_FONT_PCK: amsfonts fandol inconsolata jknapltx libertinus-fonts psnfss collection-fontsrecommended 
 
 jobs:
   build-on-ubuntu:
@@ -30,7 +31,7 @@ jobs:
           wget ${{ env.CTAN_URL }}/systems/texlive/tlnet/install-tl-unx.tar.gz
           tar -xzf install-tl-unx.tar.gz
           cd install-tl-20* && ./install-tl --profile ../.github/workflows/texlive.profile
-          tlmgr install ${{ env.TL_PACKAGES }}
+          tlmgr install ${{ env.TL_PACKAGES }} ${{ env.TL_FONT_PCK }}
           tlmgr update --self --all --no-auto-install --repository=${{ env.CTAN_URL }}/systems/texlive/tlnet/
       - name: Compile test file
         run: |
